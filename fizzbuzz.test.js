@@ -1,4 +1,4 @@
-const { fizzbuzzConverter } = require("./fizzbuzz")
+//const { fizzbuzzConverter } = require("./fizzbuzz")
 
 test("fizzbuzzConverter(1) will return 1", () => {
     expect(fizzbuzzConverter(1)).toBe(1);
