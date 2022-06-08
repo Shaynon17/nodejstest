@@ -1,5 +1,8 @@
-//const { fizzbuzzConverter } = require("./fizzbuzz")
+const { fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop } = require("./fizzbuzz")
 
+
+
+/*
 test("fizzbuzzConverter(1) will return 1", () => {
     expect(fizzbuzzConverter(1)).toBe(1);
 })
@@ -26,4 +29,16 @@ test('fizzbuzzconverter(9) will return "buzz"', () => {
 
 test('fizzbuzzconverter(150) will return "buzz"', () => {
     expect(fizzbuzzConverter(150)).toBe('fizzbuzz');
+})
+*/
+test('Hello world steve returns steve', () => {
+    expect(helloWorld('Steve')).toBe('Hello Steve')
+})
+
+test('The square of 5 added to the square of 5 is 50', () => {
+    expect(sumOfSquares(5)).toBe(50)
+})
+
+test('ST returns as TS', () => {
+    expect(flipFlop('st')).toBe('ts')
 })

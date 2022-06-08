@@ -51,15 +51,15 @@ let isDivisibleBy = (larger, small) => {
 //was the function function (number)
 //(number === 0)
 
-function fizzbuzzConverter(number) {
+/*function fizzbuzzConverter(number) {
     return (number)
 }
-
-isDivisibleBy(larger, smaller); {
-    (larger % smaller === 0)
+*/
+function isDivisibleBy(larger, smaller) {
+    return (larger % smaller === 0)
 };
 
-fizzbuzzConverter(number) {
+module.exports.fizzbuzzConverter = (number) => {
     if (isDivisibleBy(number, 5) && isDivisibleBy(number, 3)) {
         return 'fizzbuzz'
     } else if (isDivisibleBy(number, 3)) {
@@ -69,4 +69,45 @@ fizzbuzzConverter(number) {
     } else {
         return number;
     }
+}
+
+
+/*
+// a private function only usable in this file
+function FUNCTION_NAME(PARAMETERS) {
+    FUNCTION_BODY_STATEMENTS;
+};
+or
+const FUNCTION_NAME = (PARAMETERS) => {
+    FUNCTION_BODY_STATEMENTS;
+};
+
+// a public/exported function usable in all files
+module.exports.FUNCTION_NAME = (PARAMETERS) => {
+    FUNCTION_BODY_STATEMENTS;
+};
+*/
+
+module.exports.helloWorld = (name) => {
+    return 'Hello ' + name
+}
+
+function square(number) {
+    return number * number;
+};
+
+module.exports.sumOfSquares = (number) => {
+    return square(number) + square(number)
+}
+
+function firstCharacter(input) {
+    return input.charAt(0);
+}
+
+function secondCharacter(input) {
+    return input.charAt(1);
+}
+
+module.exports.flipFlop = (flip) => {
+    return secondCharacter(flip) + firstCharacter(flip)
 }
