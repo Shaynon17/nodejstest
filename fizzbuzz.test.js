@@ -1,4 +1,4 @@
-const { fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop } = require("./fizzbuzz")
+const { fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize } = require("./fizzbuzz")
 
 
 
@@ -41,4 +41,8 @@ test('The square of 5 added to the square of 5 is 50', () => {
 
 test('ST returns as TS', () => {
     expect(flipFlop('st')).toBe('ts')
+})
+
+test('capitalize will uppercase the first letter', () => {
+    expect(capitalize('shannon')).toBe('Shannon')
 })

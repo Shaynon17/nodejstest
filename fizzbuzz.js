@@ -111,3 +111,7 @@ function secondCharacter(input) {
 module.exports.flipFlop = (flip) => {
     return secondCharacter(flip) + firstCharacter(flip)
 }
+
+module.exports.capitalize = (myName) => {
+    return (myName.charAt(0).toUpperCase() + myName.slice(1))
+}
