@@ -129,3 +129,10 @@ module.exports.capFirstLast = (name) => {
     let end = name.toUpperCase().slice(-1)
     return start + middle + end
 }
+
+//Write a JavaScript function that reverse a number
+/*
+module.exports.reverseNumb = (number) => {
+    let number = array()
+    return array().reverse(number)
+} */

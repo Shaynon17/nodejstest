@@ -1,4 +1,4 @@
-const { fizzbuzzConverter, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize } = require("./fizzbuzz")
+const { fizzbuzzConverter, reverseNumb, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum } = require("./fizzbuzz")
 
 
 
@@ -30,7 +30,7 @@ test('fizzbuzzconverter(9) will return "buzz"', () => {
 test('fizzbuzzconverter(150) will return "buzz"', () => {
     expect(fizzbuzzConverter(150)).toBe('fizzbuzz');
 })
-*/
+
 test('Hello world steve returns steve', () => {
     expect(helloWorld('Steve')).toBe('Hello Steve')
 })
@@ -47,10 +47,15 @@ test('capitalize will uppercase the first letter', () => {
     expect(capitalize('shannon')).toBe('Shannon')
 })
 
-/*test('Steve will get inverted and capitalized', () => {
+test('Steve will get inverted and capitalized', () => {
     expect(mixUp('steve')).toBe('Evets')
-}) */
+}) 
 
 test('capitalize first and last', () => {
     expect(capFirstLast('shannon')).toBe('ShannoN')
 }) 
+practice is below
+test('123456 will reverse', () => {
+    expect(array.reverseNumb(123456)).toBe(654321)
+})
+*/
