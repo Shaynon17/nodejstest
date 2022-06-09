@@ -119,3 +119,13 @@ module.exports.capitalize = (myName) => {
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 // practice the above string functions. These are the reccomended funstions
+
+//invert a name and captialize the first letter
+//capitalize the first and last letter
+
+module.exports.capFirstLast = (name) => {
+    let start = firstCharacter(name).toUpperCase();
+    let middle = name.slice(1, -1)
+    let end = name.toUpperCase().slice(-1)
+    return start + middle + end
+}

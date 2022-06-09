@@ -1,4 +1,4 @@
-const { fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize } = require("./fizzbuzz")
+const { fizzbuzzConverter, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize } = require("./fizzbuzz")
 
 
 
@@ -46,3 +46,11 @@ test('ST returns as TS', () => {
 test('capitalize will uppercase the first letter', () => {
     expect(capitalize('shannon')).toBe('Shannon')
 })
+
+/*test('Steve will get inverted and capitalized', () => {
+    expect(mixUp('steve')).toBe('Evets')
+}) */
+
+test('capitalize first and last', () => {
+    expect(capFirstLast('shannon')).toBe('ShannoN')
+}) 
