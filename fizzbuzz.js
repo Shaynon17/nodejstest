@@ -113,5 +113,9 @@ module.exports.flipFlop = (flip) => {
 }
 
 module.exports.capitalize = (myName) => {
-    return (myName.charAt(0).toUpperCase() + myName.slice(1))
+    return firstCharacter(myName).toUpperCase() + myName.slice(1)
+
 }
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
+// practice the above string functions. These are the reccomended funstions
