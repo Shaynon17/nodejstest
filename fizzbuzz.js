@@ -136,3 +136,29 @@ module.exports.reverseNumb = (number) => {
     let number = array()
     return array().reverse(number)
 } */
+let strang = 'test';
+let num = 4;
+let boolee = false;
+let object = { 'test': 5 };
+let arrays = [false, function (x) { return x + 5 }, [5, 4, 4], 4, { 'test': 5 }, 6, 'test', 6]
+//heterogeneous array --> allows any type, and all types
+
+let = false;
+let x = [1, 2, 3, 4];
+let strrangs = ['test', 'host', 'times'];
+let empatyArray = [];
+// arrays -> 99.9999% are homogenous (comparable)
+// objects -> 99.9999% are heterogenous (incomparable)
+function average(numbers) {
+    return (numbers.reduce(x, y => x + y)) / numbers.length;
+}
+let myNames = ['rooster', 'shannon', 'shay']
+myNames.length === 3
+myNames[0] === 'rooster'
+myNames.push('james')
+myNames.push('joe')
+
+'steve'.split('') === ['s', 't', 'e', 'v', 'e']
+['s', 't', 'e', 'v', 'e'].join('') === 'steve'
+
+myNames.join(", ") === "rooster, shannon, shay";
