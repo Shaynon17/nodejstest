@@ -130,35 +130,27 @@ module.exports.capFirstLast = (name) => {
     return start + middle + end
 }
 
-//Write a JavaScript function that reverse a number
-/*
-module.exports.reverseNumb = (number) => {
-    let number = array()
-    return array().reverse(number)
-} */
-let strang = 'test';
-let num = 4;
-let boolee = false;
-let object = { 'test': 5 };
-let arrays = [false, function (x) { return x + 5 }, [5, 4, 4], 4, { 'test': 5 }, 6, 'test', 6]
-//heterogeneous array --> allows any type, and all types
+//Write a JavaScript function that reverse a string
+// Array.reverse
+// turn a string into an array
+//split, reverse, join
+module.exports.reverseString = (string) => {
+    // let asArray = string.split('');
+    // let reversedArray = asArray.reverse()
+    // return reversedArray.join('')
 
-let = false;
-let x = [1, 2, 3, 4];
-let strrangs = ['test', 'host', 'times'];
-let empatyArray = [];
-// arrays -> 99.9999% are homogenous (comparable)
-// objects -> 99.9999% are heterogenous (incomparable)
-function average(numbers) {
-    return (numbers.reduce(x, y => x + y)) / numbers.length;
+    return string.split('').reverse().join('');
 }
-let myNames = ['rooster', 'shannon', 'shay']
-myNames.length === 3
-myNames[0] === 'rooster'
-myNames.push('james')
-myNames.push('joe')
 
-'steve'.split('') === ['s', 't', 'e', 'v', 'e']
-['s', 't', 'e', 'v', 'e'].join('') === 'steve'
+//let xs = [1,2,3,4,5]
+//xs.map(x => x++)
+//xs === [2,3,4,5,6]
 
-myNames.join(", ") === "rooster, shannon, shay";
+module.exports.upperCaser = (names) => {
+    return names.map(name => this.capitalize(name))
+}
+
+// map -> uses a function to transform each element in an array
+module.exports.firstCharacters = (names) => {
+    return names.map(name => name.charAt(0))
+}

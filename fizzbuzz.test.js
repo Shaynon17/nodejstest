@@ -1,4 +1,4 @@
-const { fizzbuzzConverter, reverseNumb, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum } = require("./fizzbuzz")
+const { firstCharacters, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum } = require("./fizzbuzz")
 
 
 
@@ -55,7 +55,17 @@ test('capitalize first and last', () => {
     expect(capFirstLast('shannon')).toBe('ShannoN')
 }) 
 practice is below
-test('123456 will reverse', () => {
-    expect(array.reverseNumb(123456)).toBe(654321)
-})
 */
+
+test('"123456" will reverse', () => {
+    expect(reverseString("123456")).toBe("654321")
+})
+
+
+test('will uppercase each name', () => {
+    expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
+})
+
+test('first letter of each', () => {
+    expect(firstCharacters(['steve', 'shannon', 'jimbob'])).toStrictEqual(['s', 's', 'j'])
+})
