@@ -147,7 +147,7 @@ xs[0] = 5
 xs[2] = 5
 
 module.exports.upperCaser = (names) => {
-    return names.map(name => this.capitalize(name))
+    return names.map(this.capitalize)
 }
 
 // map -> uses a function to transform each element in an array
@@ -162,3 +162,29 @@ module.exports.plusOne = (numbers) => {
 module.exports.lastLetter = (names) => {
     return names.map(letter => this.capitalize(letter.charAt(letter.length - 1)))
 }
+
+// parameter => ONE_STATEMENT_AUTO_RETURN
+// parameter => { return STATEMENT; }
+module.exports.lastLetter = (names) => {
+    const getLastAndCapitalize = letter => {
+        return this.capitalize(letter.charAt(letter.length - 1))
+    };
+
+    return names.map(name => getLastAndCapitalize(name))
+}
+
+// module.exports.lastLetter = (names) => {
+//     return
+//     names.map(name => name.charAt(name.length - 1))
+//         .map(letter => this.capitalize(letter))
+// }
+module.exports.stringCounter = (names) => {
+    return names.map(name => name.length)
+}
+
+module.exports.isCoolSClub = (names) => {
+    return names.map(name => name.charAt(0) === 's')
+}
+
+//charat(0) === s
+//transforms the names into the first character then have it decide if its s

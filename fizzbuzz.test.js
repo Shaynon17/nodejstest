@@ -1,4 +1,4 @@
-const { firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum } = require("./fizzbuzz")
+const { isCoolSClub, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum } = require("./fizzbuzz")
 
 
 
@@ -55,7 +55,7 @@ test('capitalize first and last', () => {
     expect(capFirstLast('shannon')).toBe('ShannoN')
 }) 
 practice is below
-*/
+
 
 test('"123456" will reverse', () => {
     expect(reverseString("123456")).toBe("654321")
@@ -72,9 +72,19 @@ test('first letter of each', () => {
 })
 test('add one', () => {
     expect(plusOne([1, 2, 3])).toStrictEqual([2, 3, 4])
-})
+}) 
 
 test('return and cap last letter', () => {
     expect(lastLetter(['shannon', 'steve']))
         .toStrictEqual(['N', 'E'])
+}) */
+
+test('returns the length of the strings', () => {
+    expect(stringCounter(['shannon', 'steve']))
+        .toStrictEqual([7, 5])
+})
+
+test('returns true for all strings with a first letter of S', () => {
+    expect(isCoolSClub(['shannon', 'jim', 'steve']))
+        .toStrictEqual([true, false, true])
 })
