@@ -142,9 +142,9 @@ module.exports.reverseString = (string) => {
     return string.split('').reverse().join('');
 }
 
-//let xs = [1,2,3,4,5]
-//xs.map(x => x++)
-//xs === [2,3,4,5,6]
+let xs = [1, 2, 3, 4, 5]
+xs[0] = 5
+xs[2] = 5
 
 module.exports.upperCaser = (names) => {
     return names.map(name => this.capitalize(name))
@@ -153,4 +153,12 @@ module.exports.upperCaser = (names) => {
 // map -> uses a function to transform each element in an array
 module.exports.firstCharacters = (names) => {
     return names.map(name => name.charAt(0))
+}
+
+module.exports.plusOne = (numbers) => {
+    return numbers.map(number => number + 1)
+}
+
+module.exports.lastLetter = (names) => {
+    return names.map(letter => this.capitalize(letter.charAt(letter.length - 1)))
 }

@@ -1,4 +1,4 @@
-const { firstCharacters, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum } = require("./fizzbuzz")
+const { firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum } = require("./fizzbuzz")
 
 
 
@@ -67,5 +67,14 @@ test('will uppercase each name', () => {
 })
 
 test('first letter of each', () => {
-    expect(firstCharacters(['steve', 'shannon', 'jimbob'])).toStrictEqual(['s', 's', 'j'])
+    expect(firstCharacters(['steve', 'shannon', 'jimbob']))
+        .toStrictEqual(['s', 's', 'j'])
+})
+test('add one', () => {
+    expect(plusOne([1, 2, 3])).toStrictEqual([2, 3, 4])
+})
+
+test('return and cap last letter', () => {
+    expect(lastLetter(['shannon', 'steve']))
+        .toStrictEqual(['N', 'E'])
 })
