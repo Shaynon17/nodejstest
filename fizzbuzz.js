@@ -14,12 +14,13 @@ module.exports.fizzbuzzConverter = (number) => {
     }
 }
 
- function isDivisbleBy(larger, small) {
+function isDivisbleBy(larger, small) {
     return (larger % small === 0)
-} 
+}
+
 let isDivisibleBy = (larger, small) => {
     return (larger % small === 0)
-} 
+}
 // try using the switch function
 // module.exports.fizzbuzzConverter()
 
@@ -47,14 +48,14 @@ let isDivisibleBy = (larger, small) => {
     return (larger % small === 0)
 }
 
-*/
+
 //was the function function (number)
 //(number === 0)
 
 /*function fizzbuzzConverter(number) {
     return (number)
 }
-*/
+
 function isDivisibleBy(larger, smaller) {
     return (larger % smaller === 0)
 };
@@ -72,7 +73,7 @@ module.exports.fizzbuzzConverter = (number) => {
 }
 
 
-/*
+
 // a private function only usable in this file
 function FUNCTION_NAME(PARAMETERS) {
     FUNCTION_BODY_STATEMENTS;
@@ -86,7 +87,7 @@ const FUNCTION_NAME = (PARAMETERS) => {
 module.exports.FUNCTION_NAME = (PARAMETERS) => {
     FUNCTION_BODY_STATEMENTS;
 };
-*/
+
 
 module.exports.helloWorld = (name) => {
     return 'Hello ' + name
@@ -188,3 +189,25 @@ module.exports.isCoolSClub = (names) => {
 
 //charat(0) === s
 //transforms the names into the first character then have it decide if its s
+
+
+let isDivisbleBy = (large, small) => {
+    return (large % small === 0)
+}
+
+module.exports.fizzbuzzConverter = (number) => {
+    if (isDivisbleBy(number, 3) && isDivisbleBy(number, 5)) {
+        return 'fizzbuzz'
+    } else if (isDivisbleBy(number, 3)) {
+        return 'fizz'
+    } else if (isDivisbleBy(number, 5)) {
+        return 'buzz'
+    } else {
+        return number
+    }
+}
+*/
+
+module.exports.sumOfSquares = (number) => {
+    return (number * number) + (number * number)
+}

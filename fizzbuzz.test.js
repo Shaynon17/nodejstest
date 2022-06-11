@@ -34,11 +34,11 @@ test('fizzbuzzconverter(150) will return "buzz"', () => {
 test('Hello world steve returns steve', () => {
     expect(helloWorld('Steve')).toBe('Hello Steve')
 })
-
+*/
 test('The square of 5 added to the square of 5 is 50', () => {
     expect(sumOfSquares(5)).toBe(50)
 })
-
+/*
 test('ST returns as TS', () => {
     expect(flipFlop('st')).toBe('ts')
 })
@@ -77,7 +77,7 @@ test('add one', () => {
 test('return and cap last letter', () => {
     expect(lastLetter(['shannon', 'steve']))
         .toStrictEqual(['N', 'E'])
-}) */
+}) 
 
 test('returns the length of the strings', () => {
     expect(stringCounter(['shannon', 'steve']))
@@ -88,3 +88,4 @@ test('returns true for all strings with a first letter of S', () => {
     expect(isCoolSClub(['shannon', 'jim', 'steve']))
         .toStrictEqual([true, false, true])
 })
+*/
