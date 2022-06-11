@@ -206,8 +206,17 @@ module.exports.fizzbuzzConverter = (number) => {
         return number
     }
 }
-*/
+
+module.exports.helloWorld = (name) => {
+    return ('Hello ' + name)
+}
 
 module.exports.sumOfSquares = (number) => {
     return (number * number) + (number * number)
+}
+*/
+
+module.exports.flipFlop = (name) => {
+    name = name.split()
+    return (name.reverse())
 }
