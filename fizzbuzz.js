@@ -300,11 +300,11 @@ module.exports.flipFlop = (word) => {
 module.exports.capitalize = (name) => {
     return firstLetter(name).toUpperCase() + name.slice(1)
 }
-
+/*
 function firstLetter(name) {
     return name.charAt(0)
 }
-
+*/
 function firstLet(name) {
     name.charAt(0).toUpperCase()
 }
@@ -313,5 +313,16 @@ module.exports.mixUp = (name) => {
     let names = name.split("")
     let reverseName = names.reverse()
     let joinName = reverseName.join("")
-    return
+    return joinName.charAt(0).toUpperCase() + joinName.slice(1)
+}
+module.exports.capFirstLast = (name) => {
+    return (firstLetter(name) + name.slice(1, -1) + lastLetter(name))
+}
+
+function firstLetter(name) {
+    return name.charAt(0).toUpperCase()
+}
+
+function lastLetter(name) {
+    return name.slice(-1).toUpperCase()
 }
