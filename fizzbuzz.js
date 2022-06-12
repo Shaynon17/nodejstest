@@ -1,6 +1,6 @@
 // have 3 = fizz
 //have 5 = buzz
-//have 15 = fizzbuzz 
+//have 15 = fizzbuzz
 /*
 module.exports.fizzbuzzConverter = (number) => {
     if (isDivisibleBy(number, 5) && isDivisibleBy(number, 3)) {
@@ -254,7 +254,7 @@ module.exports.reverseString = (string) => {
     let string2 = string1.reverse()
     return string3 = string2.join('')
 }
-*/
+
 module.exports.upperCaser = (names) => {
     return names.map(capFirstCharacter)
 }
@@ -267,4 +267,51 @@ module.exports.characterNums = (names) => {
     return names.map(name => name + ': ' + name.length)
 
 }
+*/
 
+module.exports.fizzbuzzConverter = (number) => {
+    if (isDivisbleBy(number, 3) && (isDivisbleBy(number, 5))) {
+        return 'fizzbuzz'
+    } else if (isDivisbleBy(number, 3)) {
+        return 'fizz'
+    } else if (isDivisbleBy(number, 5)) {
+        return 'buzz'
+    } else {
+        return number
+    }
+}
+
+function isDivisbleBy(x, y) {
+    return (x % y === 0)
+}
+
+module.exports.helloWorld = (name) => {
+    return 'Hello ' + name
+}
+
+module.exports.sumOfSquares = (number) => {
+    return (number * number) + (number * number)
+}
+
+module.exports.flipFlop = (word) => {
+    return word.charAt(1) + word.charAt(0)
+}
+
+module.exports.capitalize = (name) => {
+    return firstLetter(name).toUpperCase() + name.slice(1)
+}
+
+function firstLetter(name) {
+    return name.charAt(0)
+}
+
+function firstLet(name) {
+    name.charAt(0).toUpperCase()
+}
+
+module.exports.mixUp = (name) => {
+    let names = name.split("")
+    let reverseName = names.reverse()
+    let joinName = reverseName.join("")
+    return
+}

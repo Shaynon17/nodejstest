@@ -2,7 +2,7 @@ const { isCoolSClub, characterNums, stringCounter, firstCharacters, lastLetter, 
 
 
 
-/*
+
 test("fizzbuzzConverter(1) will return 1", () => {
     expect(fizzbuzzConverter(1)).toBe(1);
 })
@@ -50,7 +50,7 @@ test('capitalize will uppercase the first letter', () => {
 test('Steve will get inverted and capitalized', () => {
     expect(mixUp('steve')).toBe('Evets')
 })
-
+/*
 test('capitalize first and last', () => {
     expect(capFirstLast('shannon')).toBe('ShannoN')
 })
@@ -88,7 +88,7 @@ test('returns true for all strings with a first letter of S', () => {
     expect(isCoolSClub(['shannon', 'jim', 'steve']))
         .toStrictEqual([true, false, true])
 })
-*/
+
 
 //['steve', 'shannon']
 //['steve: 5', 'shannon: 7']
@@ -98,3 +98,4 @@ test('returns # of characters with name', () => {
     expect(characterNums(['shannon', 'steve']))
         .toStrictEqual(['shannon: 7', 'steve: 5'])
 })
+*/
