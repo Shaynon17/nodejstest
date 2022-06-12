@@ -52,7 +52,7 @@ let isDivisibleBy = (larger, small) => {
 //was the function function (number)
 //(number === 0)
 
-/*function fizzbuzzConverter(number) {
+function fizzbuzzConverter(number) {
     return (number)
 }
 
@@ -146,11 +146,11 @@ module.exports.reverseString = (string) => {
 let xs = [1, 2, 3, 4, 5]
 xs[0] = 5
 xs[2] = 5
-
+*/
 module.exports.upperCaser = (names) => {
     return names.map(this.capitalize)
 }
-
+/*
 // map -> uses a function to transform each element in an array
 module.exports.firstCharacters = (names) => {
     return names.map(name => name.charAt(0))
@@ -206,17 +206,61 @@ module.exports.fizzbuzzConverter = (number) => {
         return number
     }
 }
-
+//did the below without checking notes
 module.exports.helloWorld = (name) => {
     return ('Hello ' + name)
 }
 
+// did the below without checking notes
 module.exports.sumOfSquares = (number) => {
     return (number * number) + (number * number)
 }
-*/
+
+
+function firstCharacter(letter) {
+    return letter.charAt(0)
+
+}
+
+function secondCharacter(letter) {
+    return letter.charAt(1)
+}
 
 module.exports.flipFlop = (name) => {
-    name = name.split()
-    return (name.reverse())
+    return secondCharacter(name) + firstCharacter(name)
 }
+
+
+// did the below kata without checking notes
+// 'bingo'
+module.exports.capitalize = (name) => {
+    let result = name.slice(1)
+    return name.toUpperCase().charAt(0) + result
+}
+
+module.exports.capFirstLast = (name) => {
+    let result = name.slice(1, -1)
+    return name.toUpperCase().charAt(0)
+        + result + name.slice(-1).toUpperCase()
+}
+
+
+//had to look at notes :(
+    //split the string by re-assigning it, reverse the string the same way,
+    // then return it by each new function addind to the previous
+module.exports.reverseString = (string) => {
+    let string1 = string.split('')
+    let string2 = string1.reverse()
+    return string3 = string2.join('')
+}
+
+module.exports.upperCaser = (name) => {
+    return name.map(this.capitalize)
+} */
+
+
+
+
+
+
+// i'd like to go over maps again please

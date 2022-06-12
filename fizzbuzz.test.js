@@ -38,46 +38,46 @@ test('Hello world steve returns steve', () => {
 test('The square of 5 added to the square of 5 is 50', () => {
     expect(sumOfSquares(5)).toBe(50)
 })
-*/
+
 test('ST returns as TS', () => {
     expect(flipFlop('st')).toBe('ts')
 })
-/*
+
 test('capitalize will uppercase the first letter', () => {
     expect(capitalize('shannon')).toBe('Shannon')
 })
 
 test('Steve will get inverted and capitalized', () => {
     expect(mixUp('steve')).toBe('Evets')
-}) 
+})
 
 test('capitalize first and last', () => {
     expect(capFirstLast('shannon')).toBe('ShannoN')
-}) 
-practice is below
+})
+
 
 
 test('"123456" will reverse', () => {
     expect(reverseString("123456")).toBe("654321")
 })
 
-
+*/
 test('will uppercase each name', () => {
     expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
 })
-
+/*
 test('first letter of each', () => {
     expect(firstCharacters(['steve', 'shannon', 'jimbob']))
         .toStrictEqual(['s', 's', 'j'])
 })
 test('add one', () => {
     expect(plusOne([1, 2, 3])).toStrictEqual([2, 3, 4])
-}) 
+})
 
 test('return and cap last letter', () => {
     expect(lastLetter(['shannon', 'steve']))
         .toStrictEqual(['N', 'E'])
-}) 
+})
 
 test('returns the length of the strings', () => {
     expect(stringCounter(['shannon', 'steve']))
