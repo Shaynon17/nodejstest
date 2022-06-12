@@ -268,7 +268,7 @@ module.exports.characterNums = (names) => {
 
 }
 */
-
+/*
 module.exports.fizzbuzzConverter = (number) => {
     if (isDivisbleBy(number, 3) && (isDivisbleBy(number, 5))) {
         return 'fizzbuzz'
@@ -304,7 +304,7 @@ module.exports.capitalize = (name) => {
 function firstLetter(name) {
     return name.charAt(0)
 }
-*/
+
 function firstLet(name) {
     name.charAt(0).toUpperCase()
 }
@@ -325,4 +325,10 @@ function firstLetter(name) {
 
 function lastLetter(name) {
     return name.slice(-1).toUpperCase()
+}
+*/
+module.exports.reverseString = (number) => {
+    let numbers = number.split('')
+    let splitNumbers = numbers.reverse()
+    return joinNums = splitNumbers.join('')
 }

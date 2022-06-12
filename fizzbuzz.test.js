@@ -1,7 +1,7 @@
 const { isCoolSClub, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, } = require("./fizzbuzz")
 
 
-
+/*
 
 test("fizzbuzzConverter(1) will return 1", () => {
     expect(fizzbuzzConverter(1)).toBe(1);
@@ -54,39 +54,39 @@ test('Steve will get inverted and capitalized', () => {
 test('capitalize first and last', () => {
     expect(capFirstLast('shannon')).toBe('ShannoN')
 })
-/*
 
 
+*/
 test('"123456" will reverse', () => {
     expect(reverseString("123456")).toBe("654321")
 })
 
-*/ /*
-test('will uppercase each name', () => {
-    expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
-})
 /*
+test('will uppercase each name', () => {
+   expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
+})
+
 test('first letter of each', () => {
-    expect(firstCharacters(['steve', 'shannon', 'jimbob']))
-        .toStrictEqual(['s', 's', 'j'])
+   expect(firstCharacters(['steve', 'shannon', 'jimbob']))
+       .toStrictEqual(['s', 's', 'j'])
 })
 test('add one', () => {
-    expect(plusOne([1, 2, 3])).toStrictEqual([2, 3, 4])
+   expect(plusOne([1, 2, 3])).toStrictEqual([2, 3, 4])
 })
 
 test('return and cap last letter', () => {
-    expect(lastLetter(['shannon', 'steve']))
-        .toStrictEqual(['N', 'E'])
+   expect(lastLetter(['shannon', 'steve']))
+       .toStrictEqual(['N', 'E'])
 })
 
 test('returns the length of the strings', () => {
-    expect(stringCounter(['shannon', 'steve']))
-        .toStrictEqual([7, 5])
+   expect(stringCounter(['shannon', 'steve']))
+       .toStrictEqual([7, 5])
 })
 
 test('returns true for all strings with a first letter of S', () => {
-    expect(isCoolSClub(['shannon', 'jim', 'steve']))
-        .toStrictEqual([true, false, true])
+   expect(isCoolSClub(['shannon', 'jim', 'steve']))
+       .toStrictEqual([true, false, true])
 })
 
 
@@ -95,7 +95,7 @@ test('returns true for all strings with a first letter of S', () => {
 // the input is a name, the output is the name and # of characters
 
 test('returns # of characters with name', () => {
-    expect(characterNums(['shannon', 'steve']))
-        .toStrictEqual(['shannon: 7', 'steve: 5'])
+   expect(characterNums(['shannon', 'steve']))
+       .toStrictEqual(['shannon: 7', 'steve: 5'])
 })
 */
