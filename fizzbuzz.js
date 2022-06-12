@@ -130,11 +130,12 @@ module.exports.capFirstLast = (name) => {
     let end = name.toUpperCase().slice(-1)
     return start + middle + end
 }
-
+*/
 //Write a JavaScript function that reverse a string
 // Array.reverse
 // turn a string into an array
-//split, reverse, join
+//split, reverse, join 
+/*
 module.exports.reverseString = (string) => {
     // let asArray = string.split('');
     // let reversedArray = asArray.reverse()
@@ -146,10 +147,10 @@ module.exports.reverseString = (string) => {
 let xs = [1, 2, 3, 4, 5]
 xs[0] = 5
 xs[2] = 5
-*/
+
 module.exports.upperCaser = (names) => {
     return names.map(this.capitalize)
-}
+} */
 /*
 // map -> uses a function to transform each element in an array
 module.exports.firstCharacters = (names) => {
@@ -253,14 +254,17 @@ module.exports.reverseString = (string) => {
     let string2 = string1.reverse()
     return string3 = string2.join('')
 }
+*/
+module.exports.upperCaser = (names) => {
+    return names.map(capFirstCharacter)
+}
 
-module.exports.upperCaser = (name) => {
-    return name.map(this.capitalize)
-} */
+function capFirstCharacter(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1)
+}
 
+module.exports.characterNums = (names) => {
+    return names.map(name => name + ': ' + name.length)
 
+}
 
-
-
-
-// i'd like to go over maps again please

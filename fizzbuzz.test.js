@@ -1,4 +1,4 @@
-const { isCoolSClub, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum } = require("./fizzbuzz")
+const { isCoolSClub, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, } = require("./fizzbuzz")
 
 
 
@@ -61,7 +61,7 @@ test('"123456" will reverse', () => {
     expect(reverseString("123456")).toBe("654321")
 })
 
-*/
+*/ /*
 test('will uppercase each name', () => {
     expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
 })
@@ -89,3 +89,12 @@ test('returns true for all strings with a first letter of S', () => {
         .toStrictEqual([true, false, true])
 })
 */
+
+//['steve', 'shannon']
+//['steve: 5', 'shannon: 7']
+// the input is a name, the output is the name and # of characters
+
+test('returns # of characters with name', () => {
+    expect(characterNums(['shannon', 'steve']))
+        .toStrictEqual(['shannon: 7', 'steve: 5'])
+})
