@@ -315,7 +315,7 @@ module.exports.mixUp = (name) => {
     let joinName = reverseName.join("")
     return joinName.charAt(0).toUpperCase() + joinName.slice(1)
 }
-*/
+
 module.exports.capFirstLast = (name) => {
     return (firstLetter(name) + name.slice(1, -1) + lastLetter(name))
 }
@@ -406,4 +406,107 @@ module.exports.upperCaseContactNames = (contacts) => {
 module.exports.incrementZipCode = (contact) => {
     contact.zip = contact.zip + 1
     return contact;
+} */
+
+function isDivisbleBy(larger, smaller) {
+    return (larger % smaller === 0)
+}
+
+module.exports.fizzbuzzConverter = (number) => {
+    if (isDivisbleBy(number, 5) && (isDivisbleBy(number, 3))) {
+        return 'fizzbuzz'
+    } else if (isDivisbleBy(number, 3)) {
+        return 'fizz'
+    } else if (isDivisbleBy(number, 5)) {
+        return 'buzz'
+    } else {
+        return number
+    }
+}
+module.exports.helloWorld = (name) => {
+    return 'Hello ' + name
+}
+module.exports.sumOfSquares = (number) => {
+    return (number * number) + (number * number)
+}
+
+module.exports.flipFlop = (letters) => {
+    return letters.charAt(1) + letters.charAt(0)
+}
+
+module.exports.capitalize = (name) => {
+    return name.charAt(0).toUpperCase() + name.slice(1)
+}
+module.exports.mixUp = (name) => {
+    splitName = name.split('')
+    reverseName = splitName.reverse()
+    joinName = reverseName.join('')
+    return joinName.charAt(0).toUpperCase() + joinName.slice(1)
+}
+
+module.exports.capFirstLast = (name) => {
+    return name.charAt(0).toUpperCase()
+        + name.slice(1, -1)
+        + name.slice(-1).toUpperCase()
+}
+
+module.exports.reverseString = (number) => {
+    splitNumber = number.split('')
+    reverseNum = splitNumber.reverse()
+    joinNum = reverseNum.join('')
+    return joinNum
+}
+
+module.exports.upperCaser = (names) => {
+    return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
+}
+
+module.exports.firstCharacters = (names) => {
+    return names.map(name => name.charAt(0))
+}
+
+module.exports.plusOne = (numbers) => {
+    return numbers.map(number => number + 1)
+}
+
+module.exports.lastLetter = (names) => {
+    return names.map(name => name.slice(-1).toUpperCase())
+}
+
+module.exports.stringCounter = (names) => {
+    return names.map(name => name.length)
+}
+
+module.exports.isCoolSClub = (names) => {
+    return names.map(name => name.charAt(0) === 's')
+}
+
+module.exports.characterNums = (names) => {
+    return names.map(name => name + ': ' + name.length)
+}
+
+module.exports.getTemp = (data) => {
+    return data.temp
+}
+
+module.exports.getStreet = (data) => {
+    return data.street
+}
+
+module.exports.getZipCodes = (data) => {
+    return data.map(address => address.zip)
+}
+
+module.exports.upperCaseContactNames = (contacts) => {
+    return contacts.map(contact => contact.name.toUpperCase())
+}
+//i do not understand the kata directly below well
+module.exports.incrementZipCode = (contact) => {
+    contact.zip = contact.zip + 1
+    return contact
+}
+
+module.exports.upperCaseFirstLetter = (contacts) => {
+    return contacts.map(contact => contact.name.charAt(0).toUpperCase()
+        + contact.name.slice(1))
 }

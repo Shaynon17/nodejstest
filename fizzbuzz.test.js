@@ -1,7 +1,7 @@
-const { isCoolSClub, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, } = require("./fizzbuzz")
+const { isCoolSClub, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, } = require("./fizzbuzz")
 
 
-/*
+
 
 test("fizzbuzzConverter(1) will return 1", () => {
     expect(fizzbuzzConverter(1)).toBe(1);
@@ -56,7 +56,6 @@ test('capitalize first and last', () => {
 })
 
 
-*/
 test('"123456" will reverse', () => {
     expect(reverseString("123456")).toBe("654321")
 })
@@ -162,4 +161,18 @@ test('changes the zip code to be +1', () => {
     let result = incrementZipCode(contact);
 
     expect(result.zip).toBe(11112)
+})
+
+test('uppercase all the first characts of the names of contacts', () => {
+    let contacts = [
+        {
+            name: 'steve',
+            zip: 11111
+        },
+        {
+            name: 'shannon',
+            zip: 44444
+        }
+    ];
+    expect(upperCaseFirstLetter(contacts)).toStrictEqual(["Steve", "Shannon"])
 })
