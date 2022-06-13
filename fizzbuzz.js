@@ -315,6 +315,7 @@ module.exports.mixUp = (name) => {
     let joinName = reverseName.join("")
     return joinName.charAt(0).toUpperCase() + joinName.slice(1)
 }
+*/
 module.exports.capFirstLast = (name) => {
     return (firstLetter(name) + name.slice(1, -1) + lastLetter(name))
 }
@@ -326,9 +327,42 @@ function firstLetter(name) {
 function lastLetter(name) {
     return name.slice(-1).toUpperCase()
 }
-*/
+
+function capFirst(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1,)
+}
+
+
 module.exports.reverseString = (number) => {
     let numbers = number.split('')
     let splitNumbers = numbers.reverse()
     return joinNums = splitNumbers.join('')
+}
+
+module.exports.upperCaser = (names) => {
+    return names.map(name => capFirst(name))
+}
+
+module.exports.firstCharacters = (names) => {
+    return names.map(name => name.charAt(0))
+}
+
+module.exports.plusOne = (numbers) => {
+    return numbers.map(number => number + 1)
+}
+
+module.exports.lastLetter = (names) => {
+    return names.map(name => name.slice(-1).toUpperCase())
+}
+
+module.exports.stringCounter = (names) => {
+    return names.map(name => name.length)
+}
+
+module.exports.isCoolSClub = (names) => {
+    return names.map(name => name.charAt(0) === 's')
+}
+
+module.exports.characterNums = (names) => {
+    return names.map(name => name + ': ' + name.length)
 }
