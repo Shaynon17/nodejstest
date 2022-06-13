@@ -366,3 +366,44 @@ module.exports.isCoolSClub = (names) => {
 module.exports.characterNums = (names) => {
     return names.map(name => name + ': ' + name.length)
 }
+
+//.tobe is for primitives: strings, booleans, numbers
+//.tostrictequal is for arrays and objects
+//curly brackets are for objects
+
+let contact1 = {
+    name: 'steve',
+    email: 'email@steveshogren.com'
+}
+
+let contact2 = {
+    name: 'shannon',
+    email: 'test@test.com'
+}
+contact1.name === 'steve'
+contact1['name'] === 'steve'
+
+let contacts = [contact1, contact2]
+let names = contacts.map(contact => contact.name)
+names === ['steve', 'shannon']
+
+module.exports.getTemp = (data) => {
+    return data.temp;
+}
+
+module.exports.getStreet = (contact) => {
+    return contact.street;
+}
+
+module.exports.getZipCodes = (addresses) => {
+    return addresses.map(address => address.zip)
+}
+
+module.exports.upperCaseContactNames = (contacts) => {
+    return contacts.map(contact => contact.name.toUpperCase())
+}
+
+module.exports.incrementZipCode = (contact) => {
+    contact.zip = contact.zip + 1
+    return contact;
+}

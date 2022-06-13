@@ -1,4 +1,4 @@
-const { isCoolSClub, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, } = require("./fizzbuzz")
+const { isCoolSClub, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, } = require("./fizzbuzz")
 
 
 /*
@@ -99,4 +99,67 @@ test('returns true for all strings with a first letter of S', () => {
 test('returns # of characters with name', () => {
     expect(characterNums(['shannon', 'steve']))
         .toStrictEqual(['shannon: 7', 'steve: 5'])
+})
+
+test('can extract the temp from the object', () => {
+    let data = {
+        temp: 47.5,
+        alt: 1300
+    }
+    expect(getTemp(data)).toBe(47.5)
+
+    let data2 = {
+        temp: 50,
+        alt: 1300
+    }
+    expect(getTemp(data2)).toBe(50)
+})
+
+
+test('can return street address from contact', () => {
+    let contact = {
+        street: '440 Germanhouse Ave',
+        zip: 11111
+    }
+    expect(getStreet(contact)).toBe('440 Germanhouse Ave')
+})
+
+test('can return zip codes from all addresses', () => {
+    let addresses = [
+        {
+            street: '440 Germanhouse Ave',
+            zip: 11111
+        },
+        {
+            street: '440 Germanhouse Ave',
+            zip: 44444
+        }
+    ];
+    expect(getZipCodes(addresses)).toStrictEqual([11111, 44444])
+})
+
+test('uppercase all the names of contacts', () => {
+    let contacts = [
+        {
+            name: 'steve',
+            zip: 11111
+        },
+        {
+            name: 'shannon',
+            zip: 44444
+        }
+    ];
+    expect(upperCaseContactNames(contacts)).toStrictEqual(["STEVE", "SHANNON"])
+})
+
+
+test('changes the zip code to be +1', () => {
+    let contact = {
+        name: 'steve',
+        zip: 11111
+    }
+
+    let result = incrementZipCode(contact);
+
+    expect(result.zip).toBe(11112)
 })
