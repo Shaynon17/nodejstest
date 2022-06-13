@@ -510,3 +510,15 @@ module.exports.upperCaseFirstLetter = (contacts) => {
     return contacts.map(contact => contact.name.charAt(0).toUpperCase()
         + contact.name.slice(1))
 }
+/*
+module.exports.palindrome = (names) => {
+
+}
+*/
+module.exports.palindromeName = (name) => {
+    splitName = name.split('')
+    reverseName = splitName.reverse()
+    joinName = reverseName.join('')
+    return name === joinName
+}
+// variable === variable reversed

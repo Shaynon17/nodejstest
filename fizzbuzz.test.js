@@ -1,4 +1,4 @@
-const { isCoolSClub, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, } = require("./fizzbuzz")
+const { isCoolSClub, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, } = require("./fizzbuzz")
 
 
 
@@ -175,4 +175,12 @@ test('uppercase all the first characts of the names of contacts', () => {
         }
     ];
     expect(upperCaseFirstLetter(contacts)).toStrictEqual(["Steve", "Shannon"])
+})
+
+test('is a word a palindrome', () => {
+    expect(palindromeName('madam')).toBe(true)
+})
+
+test('is a word a palindrome', () => {
+    expect(palindromeName('shannon')).toBe(false)
 })
