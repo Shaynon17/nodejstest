@@ -1,4 +1,4 @@
-const { isCoolSClub, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, } = require("./fizzbuzz")
+const { isCoolSClub, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, } = require("./fizzbuzz")
 
 
 
@@ -183,4 +183,12 @@ test('is a word a palindrome', () => {
 
 test('is a word a palindrome', () => {
     expect(palindromeName('shannon')).toBe(false)
+})
+
+test('cadb will return abcd', () => {
+    expect(alphabetize('cdab')).toBe('abcd')
+})
+
+test('3524 will return 2345', () => {
+    expect(alphabetize('3524')).toBe('2345')
 })

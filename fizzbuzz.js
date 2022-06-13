@@ -406,7 +406,7 @@ module.exports.upperCaseContactNames = (contacts) => {
 module.exports.incrementZipCode = (contact) => {
     contact.zip = contact.zip + 1
     return contact;
-} */
+} 
 
 function isDivisbleBy(larger, smaller) {
     return (larger % smaller === 0)
@@ -514,7 +514,7 @@ module.exports.upperCaseFirstLetter = (contacts) => {
 module.exports.palindrome = (names) => {
 
 }
-*/
+
 module.exports.palindromeName = (name) => {
     splitName = name.split('')
     reverseName = splitName.reverse()
@@ -522,3 +522,11 @@ module.exports.palindromeName = (name) => {
     return name === joinName
 }
 // variable === variable reversed
+
+module.exports.alphabetize = (name) => {
+    splitName = name.split('')
+    reverseName = splitName.sort()
+    joinName = reverseName.join('')
+    return joinName
+}
+*/
