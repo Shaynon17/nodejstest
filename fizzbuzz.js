@@ -530,3 +530,7 @@ module.exports.alphabetize = (name) => {
     return joinName
 }
 */
+
+module.exports.upperCaseWord = (words) => {
+    return words.map(word => word.split(' '))
+}

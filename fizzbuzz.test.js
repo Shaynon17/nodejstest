@@ -1,8 +1,8 @@
-const { isCoolSClub, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, } = require("./fizzbuzz")
+const { isCoolSClub, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 
 
-
+/*
 test("fizzbuzzConverter(1) will return 1", () => {
     expect(fizzbuzzConverter(1)).toBe(1);
 })
@@ -191,4 +191,9 @@ test('cadb will return abcd', () => {
 
 test('3524 will return 2345', () => {
     expect(alphabetize('3524')).toBe('2345')
-})
+}) 
+*/
+
+test('capitalize each first letter in each word"', () => {
+    expect(upperCaseWord(['how are you'])).toStrictEqual(['How Are You'])
+}) 
