@@ -514,7 +514,7 @@ module.exports.upperCaseFirstLetter = (contacts) => {
 module.exports.palindrome = (names) => {
 
 }
-
+*/
 module.exports.palindromeName = (name) => {
     splitName = name.split('')
     reverseName = splitName.reverse()
@@ -522,7 +522,7 @@ module.exports.palindromeName = (name) => {
     return name === joinName
 }
 // variable === variable reversed
-
+/*
 module.exports.alphabetize = (name) => {
     splitName = name.split('')
     reverseName = splitName.sort()
@@ -531,6 +531,9 @@ module.exports.alphabetize = (name) => {
 }
 */
 
+
+
+/*
 module.exports.upperCaseWord = (words) => {
     return words.map(word => word.split(' '))
-}
+} */

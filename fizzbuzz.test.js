@@ -184,16 +184,18 @@ test('is a word a palindrome', () => {
 test('is a word a palindrome', () => {
     expect(palindromeName('shannon')).toBe(false)
 })
-
+*/
 test('cadb will return abcd', () => {
     expect(alphabetize('cdab')).toBe('abcd')
 })
-
+/*
 test('3524 will return 2345', () => {
     expect(alphabetize('3524')).toBe('2345')
 }) 
 */
 
+
+/*
 test('capitalize each first letter in each word"', () => {
     expect(upperCaseWord(['how are you'])).toStrictEqual(['How Are You'])
-}) 
+}) */
