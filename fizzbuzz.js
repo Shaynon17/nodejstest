@@ -554,7 +554,8 @@ module.exports.flipFlop = (name) => {
 
 module.exports.capitalize = (name) => {
     return name.charAt(0).toUpperCase() + name.slice(1)
-}
+} 
+//testing github
 
 module.exports.mixUp = (name) => {
     splitName = name.split('')
