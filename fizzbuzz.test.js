@@ -2,7 +2,7 @@ const { isCoolSClub, alphabetize, palindromeName, upperCaseFirstLetter, incremen
 
 
 
-/*
+
 test("fizzbuzzConverter(1) will return 1", () => {
     expect(fizzbuzzConverter(1)).toBe(1);
 })
@@ -50,7 +50,7 @@ test('capitalize will uppercase the first letter', () => {
 test('Steve will get inverted and capitalized', () => {
     expect(mixUp('steve')).toBe('Evets')
 })
-
+/*
 test('capitalize first and last', () => {
     expect(capFirstLast('shannon')).toBe('ShannoN')
 })
@@ -184,11 +184,11 @@ test('is a word a palindrome', () => {
 test('is a word a palindrome', () => {
     expect(palindromeName('shannon')).toBe(false)
 })
-*/
+
 test('cadb will return abcd', () => {
     expect(alphabetize('cdab')).toBe('abcd')
 })
-/*
+
 test('3524 will return 2345', () => {
     expect(alphabetize('3524')).toBe('2345')
 }) 

@@ -1,7 +1,7 @@
 // have 3 = fizz
 //have 5 = buzz
 //have 15 = fizzbuzz
-/*
+
 module.exports.fizzbuzzConverter = (number) => {
     if (isDivisibleBy(number, 5) && isDivisibleBy(number, 3)) {
         return 'fizzbuzz'
@@ -14,10 +14,14 @@ module.exports.fizzbuzzConverter = (number) => {
     }
 }
 
-function isDivisbleBy(larger, small) {
+function isDivisibleBy(larger, small) {
     return (larger % small === 0)
-}
+};
+/*
 
+for test to work: have to have npm installed
+step 2 have to from the directory where the code is, run npm install
+step 3 from the directory where the code is run npm test
 let isDivisibleBy = (larger, small) => {
     return (larger % small === 0)
 }
@@ -514,7 +518,7 @@ module.exports.upperCaseFirstLetter = (contacts) => {
 module.exports.palindrome = (names) => {
 
 }
-*/
+
 module.exports.palindromeName = (name) => {
     splitName = name.split('')
     reverseName = splitName.reverse()
@@ -531,9 +535,31 @@ module.exports.alphabetize = (name) => {
 }
 */
 
-
-
 /*
 module.exports.upperCaseWord = (words) => {
     return words.map(word => word.split(' '))
 } */
+
+module.exports.helloWorld = (name) => {
+    return 'Hello ' + name
+}
+
+module.exports.sumOfSquares = (number) => {
+    return (number * number) + (number * number)
+}
+
+module.exports.flipFlop = (name) => {
+    return name.charAt(1) + name.charAt(0)
+}
+
+module.exports.capitalize = (name) => {
+    return name.charAt(0).toUpperCase() + name.slice(1)
+}
+
+module.exports.mixUp = (name) => {
+    splitName = name.split('')
+    reverseName = splitName.reverse()
+    joinName = reverseName.join('')
+    return joinName.charAt(0).toUpperCase() 
+    +joinName.slice(1)
+}
