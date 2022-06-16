@@ -564,3 +564,67 @@ module.exports.mixUp = (name) => {
     return joinName.charAt(0).toUpperCase() 
     +joinName.slice(1)
 }
+
+module.exports.capFirstLast = (name) => {
+    return name.charAt(0).toUpperCase() +
+     name.slice(1, -1) 
+    + name.slice(-1).toUpperCase()
+}
+
+module.exports.reverseString = (number) => {
+    splitNum = number.split('')
+    reverseNum = splitNum.reverse()
+    joinNum = reverseNum.join('')
+    return joinNum
+}
+
+module.exports.upperCaser = (names) => {
+    return names.map(name => name.charAt(0).toUpperCase() 
+    + name.slice(1))
+}
+
+module.exports.firstCharacters = (names) => {
+    return names.map(name => name.charAt(0))
+}
+
+module.exports.plusOne = (numbers) => {
+    return numbers.map(number => number + 1)
+}
+
+module.exports.lastLetter = (names) => {
+    return names.map(name => 
+        name.slice(-1).toUpperCase())
+}
+
+module.exports.stringCounter = (names) => {
+    return names.map(name => name.length)
+}
+
+module.exports.isCoolSClub = (names) => {
+    return names.map(name => name.charAt(0) === 's')
+}
+
+module.exports.characterNums = (names) => {
+    return names.map(name => name + ': ' + name.length)
+}
+module.exports.getTemp = (data) => {
+    return data.temp
+}
+
+module.exports.getStreet = (contact) => {
+    return contact.street
+}
+
+module.exports.getZipCodes = (addresses) => {
+    return addresses.map(address => address.zip)
+}
+
+module.exports.upperCaseContactNames = (contacts) => {
+    return contacts.map(contact => contact.name.toUpperCase())
+}
+
+//kind of makes sense now
+module.exports.incrementZipCode = (contact) => {
+    contact.zip = contact.zip + 1
+    return contact
+}

@@ -50,7 +50,7 @@ test('capitalize will uppercase the first letter', () => {
 test('Steve will get inverted and capitalized', () => {
     expect(mixUp('steve')).toBe('Evets')
 })
-/*
+
 test('capitalize first and last', () => {
     expect(capFirstLast('shannon')).toBe('ShannoN')
 })
@@ -64,6 +64,7 @@ test('"123456" will reverse', () => {
 test('will uppercase each name', () => {
     expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
 })
+
 
 test('first letter of each', () => {
     expect(firstCharacters(['steve', 'shannon', 'jimbob']))
@@ -162,7 +163,7 @@ test('changes the zip code to be +1', () => {
 
     expect(result.zip).toBe(11112)
 })
-
+/*
 test('uppercase all the first characts of the names of contacts', () => {
     let contacts = [
         {
