@@ -628,3 +628,23 @@ module.exports.incrementZipCode = (contact) => {
     contact.zip = contact.zip + 1
     return contact
 }
+
+module.exports.upperCaseFirstLetter =(contacts) => {
+    return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1)
+    )
+}
+
+module.exports.palindromeName = (name) => {
+    splitName = name.split('')
+    reverseName = splitName.reverse()
+    joinName = reverseName.join('')
+    return name === joinName
+}
+
+module.exports.alphabetize = (name) => {
+    splitName = name.split('')
+    sortName = splitName.sort()
+    joinName = sortName.join('')
+    return joinName
+}
+

@@ -163,7 +163,7 @@ test('changes the zip code to be +1', () => {
 
     expect(result.zip).toBe(11112)
 })
-/*
+
 test('uppercase all the first characts of the names of contacts', () => {
     let contacts = [
         {
@@ -193,10 +193,9 @@ test('cadb will return abcd', () => {
 test('3524 will return 2345', () => {
     expect(alphabetize('3524')).toBe('2345')
 }) 
-*/
-
-
 /*
+//idk how to do the below yet
 test('capitalize each first letter in each word"', () => {
     expect(upperCaseWord(['how are you'])).toStrictEqual(['How Are You'])
-}) */
+})
+*/
