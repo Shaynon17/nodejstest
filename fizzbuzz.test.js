@@ -38,7 +38,7 @@ test('Hello world steve returns steve', () => {
 test('The square of 5 added to the square of 5 is 50', () => {
     expect(sumOfSquares(5)).toBe(50)
 })
-
+/*
 test('ST returns as TS', () => {
     expect(flipFlop('st')).toBe('ts')
 })
@@ -193,7 +193,7 @@ test('cadb will return abcd', () => {
 test('3524 will return 2345', () => {
     expect(alphabetize('3524')).toBe('2345')
 }) 
-/*
+
 //idk how to do the below yet
 test('capitalize each first letter in each word"', () => {
     expect(upperCaseWord(['how are you'])).toStrictEqual(['How Are You'])

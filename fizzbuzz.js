@@ -1,7 +1,7 @@
 // have 3 = fizz
 //have 5 = buzz
 //have 15 = fizzbuzz
-
+/*
 module.exports.fizzbuzzConverter = (number) => {
     if (isDivisibleBy(number, 5) && isDivisibleBy(number, 3)) {
         return 'fizzbuzz'
@@ -17,7 +17,7 @@ module.exports.fizzbuzzConverter = (number) => {
 function isDivisibleBy(larger, small) {
     return (larger % small === 0)
 };
-/*
+
 
 for test to work: have to have npm installed
 step 2 have to from the directory where the code is, run npm install
@@ -526,19 +526,19 @@ module.exports.palindromeName = (name) => {
     return name === joinName
 }
 // variable === variable reversed
-/*
+
 module.exports.alphabetize = (name) => {
     splitName = name.split('')
     reverseName = splitName.sort()
     joinName = reverseName.join('')
     return joinName
 }
-*/
 
-/*
+
+
 module.exports.upperCaseWord = (words) => {
     return words.map(word => word.split(' '))
-} */
+} 
 
 module.exports.helloWorld = (name) => {
     return 'Hello ' + name
@@ -648,3 +648,27 @@ module.exports.alphabetize = (name) => {
     return joinName
 }
 
+*/
+module.exports.fizzbuzzConverter = (number) => {
+if (isDivisibleBy(number, 3) && isDivisibleBy(number, 5)) {
+    return 'fizzbuzz'
+} else if (isDivisibleBy(number, 3)) {
+    return 'fizz'
+} else if (isDivisibleBy(number, 5)) {
+    return 'buzz'
+} else {
+    return number;
+}
+}
+
+function isDivisibleBy(larger, smaller) {
+return (larger % smaller === 0)
+}
+
+module.exports.helloWorld =(name) => {
+    return "Hello " + name
+}
+
+module.exports.sumOfSquares = (number) => {
+    return (number * number) + (number * number)
+}
