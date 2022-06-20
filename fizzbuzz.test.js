@@ -38,7 +38,7 @@ test('Hello world steve returns steve', () => {
 test('The square of 5 added to the square of 5 is 50', () => {
     expect(sumOfSquares(5)).toBe(50)
 })
-/*
+
 test('ST returns as TS', () => {
     expect(flipFlop('st')).toBe('ts')
 })
@@ -100,7 +100,7 @@ test('returns # of characters with name', () => {
     expect(characterNums(['shannon', 'steve']))
         .toStrictEqual(['shannon: 7', 'steve: 5'])
 })
-
+/*
 test('can extract the temp from the object', () => {
     let data = {
         temp: 47.5,

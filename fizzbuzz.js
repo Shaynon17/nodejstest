@@ -672,3 +672,60 @@ module.exports.helloWorld =(name) => {
 module.exports.sumOfSquares = (number) => {
     return (number * number) + (number * number)
 }
+
+module.exports.flipFlop = (word) => {
+    return word.slice(1) + word.charAt(0)
+}
+
+module.exports.capitalize = (name) => {
+    return name.charAt(0).toUpperCase() + name.slice(1)
+}
+
+module.exports.mixUp = (name) => {
+    splitName = name.split('')
+    reverseName = splitName.reverse()
+    joinName = reverseName.join('')
+    return joinName.charAt(0).toUpperCase() + joinName.slice(1)
+}
+
+module.exports.capFirstLast = (name) => {
+    return name.charAt(0).toUpperCase() 
+    + name.slice(1, -1)
+    + name.slice(-1).toUpperCase()
+}
+
+module.exports.reverseString = (string) => {
+    splitString = string.split('')
+    reverseString = splitString.reverse()
+    joinString = reverseString.join('')
+    return joinString
+}
+
+module.exports.upperCaser = (names) => {
+    return names.map(name => name.charAt(0).toUpperCase()
+    + name.slice(1))
+}
+
+module.exports.firstCharacters = (names) => {
+    return names.map(name => name.charAt(0))
+}
+
+module.exports.plusOne = (numbers) => {
+    return numbers.map(number => number + 1)
+}
+
+module.exports.lastLetter = (names) => {
+    return names.map(name => name.slice(-1).toUpperCase())
+}
+
+module.exports.stringCounter = (names) => {
+    return names.map(name => name.length)
+}
+
+module.exports.isCoolSClub = (names) => {
+    return names.map(name => name.charAt(0) === 's')
+}
+
+module.exports.characterNums = (names) => {
+    return names.map(name => name + ': ' + name.length)
+}
