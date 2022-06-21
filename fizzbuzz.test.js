@@ -199,11 +199,11 @@ test('3524 will return 2345', () => {
 test('capitalize each first letter in each word"', () => {
     expect(upperCaseWord('how are you')).toBe('How Are You')
 })
-
+*/
 test('add one to each number', () => {
     expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
 })
-
+/*
 test('add one to each number', () => {
     expect(addOneMap([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
 })

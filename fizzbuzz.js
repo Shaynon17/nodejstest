@@ -840,3 +840,13 @@ module.exports.characterNums = (names) => {
     return finalNames
 }
 */
+
+module.exports.addOne = (numbers) => {
+    let endNums = []
+    for (x = 0; x < numbers.length; x++) {
+        let number = numbers[x]
+        let modNum = number + 1
+        endNums.push(modNum)
+    }
+    return endNums
+}
