@@ -768,7 +768,7 @@ function steveMap(array, fn) {
 let capWords = steveMap(splitWords, word =>
         word.charAt(0).toUpperCase() + word.slice(1))
 
-*/
+
 
 module.exports.addOne = (numbers) => {
     let theseNums = []
@@ -793,3 +793,50 @@ module.exports.firstCharacters = (numbers) => {
     }
     return theseNums
 }
+
+module.exports.upperCaser = (numbers) => {
+    let theseNums = []
+    for (let x = 0; x < numbers.length; x++) {                       // how many loops to do
+        let number = numbers[x];                                       // get the element to work on
+        let newNumber = number.charAt(0).toUpperCase()
+            + number.slice(1)  // do work on element
+        theseNums.push(newNumber)
+    }
+    return theseNums
+}
+
+module.exports.stringCounter = (strings) => {
+    let stringArray = []
+    for (let x = 0; x < strings.length; x++) {
+        let string = strings[x]
+        let newString = string.length
+        stringArray.push(newString)
+    }
+    return stringArray
+}
+
+module.exports.stringCounter = (strings) => {
+    return strings.map(string => string.length)
+}
+
+
+module.exports.isCoolSClub = (names) => {
+    let finalNames = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let changeName = name.charAt(0) === 's'
+        finalNames.push(changeName)
+    }
+    return finalNames
+}
+
+module.exports.characterNums = (names) => {
+    let finalNames = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let newName = name + ': ' + name.length
+        finalNames.push(newName)
+    }
+    return finalNames
+}
+*/

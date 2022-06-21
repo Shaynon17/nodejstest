@@ -1,5 +1,6 @@
 const { isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
+// cd ~/coding/nodejstest/
 
 
 /*
@@ -198,7 +199,7 @@ test('3524 will return 2345', () => {
 test('capitalize each first letter in each word"', () => {
     expect(upperCaseWord('how are you')).toBe('How Are You')
 })
-*/
+
 test('add one to each number', () => {
     expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
 })
@@ -211,3 +212,5 @@ test('first letter of each', () => {
     expect(firstCharacters(['steve', 'shannon', 'jimbob']))
         .toStrictEqual(['s', 's', 'j'])
 })
+
+*/
