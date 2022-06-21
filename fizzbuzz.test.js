@@ -1,8 +1,8 @@
-const { isCoolSClub, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 
 
-
+/*
 test("fizzbuzzConverter(1) will return 1", () => {
     expect(fizzbuzzConverter(1)).toBe(1);
 })
@@ -100,7 +100,7 @@ test('returns # of characters with name', () => {
     expect(characterNums(['shannon', 'steve']))
         .toStrictEqual(['shannon: 7', 'steve: 5'])
 })
-/*
+
 test('can extract the temp from the object', () => {
     let data = {
         temp: 47.5,
@@ -196,6 +196,18 @@ test('3524 will return 2345', () => {
 
 //idk how to do the below yet
 test('capitalize each first letter in each word"', () => {
-    expect(upperCaseWord(['how are you'])).toStrictEqual(['How Are You'])
+    expect(upperCaseWord('how are you')).toBe('How Are You')
 })
 */
+test('add one to each number', () => {
+    expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
+})
+
+test('add one to each number', () => {
+    expect(addOneMap([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
+})
+
+test('first letter of each', () => {
+    expect(firstCharacters(['steve', 'shannon', 'jimbob']))
+        .toStrictEqual(['s', 's', 'j'])
+})

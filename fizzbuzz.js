@@ -648,7 +648,7 @@ module.exports.alphabetize = (name) => {
     return joinName
 }
 
-*/
+
 module.exports.fizzbuzzConverter = (number) => {
 if (isDivisibleBy(number, 3) && isDivisibleBy(number, 5)) {
     return 'fizzbuzz'
@@ -728,4 +728,68 @@ module.exports.isCoolSClub = (names) => {
 
 module.exports.characterNums = (names) => {
     return names.map(name => name + ': ' + name.length)
+} 
+
+
+module.exports.upperCaseWord = (words) => {
+    let splitWords = words.split(' ')
+    let capWords = splitWords.map(word =>
+         word.charAt(0).toUpperCase() + word.slice(1))
+     return capWords.join(' ')
+}
+
+for (let step = 0; step < 5; step++) {
+    // Runs 5 times, with values of step 0 through 4.
+    console.log('Walking east one step');
+  }
+
+  module.exports.upperCaseWord = (words) => {
+    let splitWords = words.split(' ')
+    let capWords = [];
+    for (let x = 0; x < splitWords.length; x++) {                       // how many loops to do
+        let word = splitWords[x];                                       // get the element to work on
+        let changedWord = word.charAt(0).toUpperCase() + word.slice(1)  // do work on element
+        capWords.push(changedWord);                                     // push to new array
+    }
+    return capWords.join(' ')
+}
+
+function steveMap(array, fn) {
+    let ret = [];
+    for (let x = 0; x < array.length; x++) {                       // how many loops to do
+        let element = array[x];                                       // get the element to work on
+        let changedElement = fn(element)
+        ret.push(changedElement);                                     // push to new array
+    }
+    return ret;
+}
+
+
+let capWords = steveMap(splitWords, word =>
+        word.charAt(0).toUpperCase() + word.slice(1))
+
+*/
+
+module.exports.addOne = (numbers) => {
+    let theseNums = []
+    for (let x = 0; x < numbers.length; x++) {                       // how many loops to do
+        let number = numbers[x];                                       // get the element to work on
+        let newNumber = number + 1  // do work on element
+        theseNums.push(newNumber)
+    }
+    return theseNums
+}
+
+module.exports.addOneMap = (numbers) => {
+    return numbers.map(number => number + 1)
+}
+
+module.exports.firstCharacters = (numbers) => {
+    let theseNums = []
+    for (let x = 0; x < numbers.length; x++) {                       // how many loops to do
+        let number = numbers[x];                                       // get the element to work on
+        let newNumber = number.charAt(0)  // do work on element
+        theseNums.push(newNumber)
+    }
+    return theseNums
 }
