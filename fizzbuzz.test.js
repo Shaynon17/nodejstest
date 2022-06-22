@@ -1,4 +1,4 @@
-const { isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { onlyBigEnough, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -199,11 +199,11 @@ test('3524 will return 2345', () => {
 test('capitalize each first letter in each word"', () => {
     expect(upperCaseWord('how are you')).toBe('How Are You')
 })
-*/
+
 test('add one to each number', () => {
     expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
 })
-/*
+
 test('add one to each number', () => {
     expect(addOneMap([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
 })
@@ -214,3 +214,18 @@ test('first letter of each', () => {
 })
 
 */
+
+test('only evens', () => {
+    expect(onlyEvens([1, 2, 3, 4, 5, 6]))
+        .toStrictEqual([2, 4, 6])
+})
+
+test('only steve', () => {
+    expect(onlySteve(['steve', 'sam', 'steve']))
+        .toStrictEqual(['steve', 'steve'])
+})
+
+test('only words length 4 or more', () => {
+    expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
+        .toStrictEqual(['steve', 'horse'])
+})

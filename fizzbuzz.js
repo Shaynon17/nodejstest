@@ -850,3 +850,72 @@ module.exports.addOne = (numbers) => {
     }
     return endNums
 }
+
+
+module.exports.onlyEvens = (numbers) => {
+    let endNums = []
+    for (let i = 0; numbers.length > i; i++) {
+        let number = numbers[i]
+        let isEven = number % 2 === 0
+        if (isEven) {
+            endNums.push(number)
+        }
+    }
+    return endNums
+}
+
+module.exports.onlySteve = (names) => {
+    let endName = []
+    for (let i = 0; names.length > i; i++) {
+        let name = names[i]
+        let justSteve = name === 'steve'
+        if (justSteve) {
+            endName.push(name)
+        }
+    }
+    return endName
+}
+
+function filterStuff(array, shouldKeepFn) {
+    let toReturn = []
+    for (let i = 0; array.length > i; i++) {
+        let item = array[i]
+        let shouldKeep = shouldKeepFn(item)
+        if (shouldKeep) {
+            toReturn.push(item)
+        }
+    }
+    return toReturn
+}
+
+module.exports.onlySteve = (names) => {
+    return filterStuff(/*array*/names, /*2nd paramater/function*/ name => name === 'steve')
+}
+
+module.exports.onlyEvens = (numbers) => {
+    return filterStuff(numbers, number => number % 2 === 0)
+}
+
+module.exports.onlySteve = (names) => {
+    return names.filter(name => name === 'steve')
+}
+
+module.exports.onlyEvens = (numbers) => {
+    return numbers.filter(number => number % 2 === 0)
+}
+
+module.exports.onlyBigEnough = (names) => {
+    let endName = []
+    for (let i = 0; names.length > i; i++) {
+        let name = names[i]
+        let justSteve = name.length > 4
+        if (justSteve) {
+            endName.push(name)
+        }
+    }
+    return endName
+}
+
+module.exports.onlyBigEnough = (names) => {
+    return names.filter(name => name.length > 4)
+}
