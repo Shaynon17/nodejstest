@@ -1120,6 +1120,10 @@ module.exports.upperCaseFirstLetter = (contacts) => {
 }
 */
 
+module.exports.incrementNumber = (number) => {
+    return number + 1
+}
+
 module.exports.upperCaseFirstLetter = (contacts) => {
     let endContact = []
     for (x = 0; x < contacts.length; x++) {
@@ -1172,15 +1176,27 @@ module.exports.firstCharacters = (names) => {
 
 //did not understand this way or the maps way
 module.exports.onlyEvens = (numbers) => {
-    let endNumbers = []
+    let evenNumbers = []
     for (x = 0; x < numbers.length; x++) {
         let number = numbers[x]
-        let newNumber = number % 2 === 0
-        endNumbers.push(newNumber)
-    } if (true) {
-        return endNumbers
+        let isEven = number % 2 === 0
+        if (isEven) {
+            evenNumbers.push(number)
+        }
     }
-    ;
+    return evenNumbers
+}
+
+module.exports.onlySteve = (names) => {
+    let justSteve = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let isSteve = name === 'steve'
+        if (isSteve) {
+            justSteve.push(name)
+        }
+    }
+    return justSteve
 }
 
 //review notes
@@ -1191,3 +1207,6 @@ module.exports.onlyEvens = (numbers) => {
 
 //note 2
 //on line 734 and 198 on test.js... how can map be used and not have .toStrictEqual be in the test?
+// .toStrictEqual is only if you are returning an array or object. .toBe if you are returning a string, number, boolean
+
+//note 3: line 1173 of this document

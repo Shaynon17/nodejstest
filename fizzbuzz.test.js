@@ -1,4 +1,4 @@
-const { onlyBigEnough, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { onlyBigEnough, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -160,9 +160,17 @@ test('changes the zip code to be +1', () => {
         zip: 11111
     }
 
-    let result = incrementZipCode(contact);
+    contact = incrementZipCode(contact);
 
-    expect(result.zip).toBe(11112)
+    expect(contact.zip).toBe(11112)
+})
+
+test('changes the zip code to be +1', () => {
+    let number = 5
+
+    number = incrementNumber(number);
+
+    expect(number).toBe(6)
 })
 
 test('uppercase all the first characts of the names of contacts', () => {
@@ -219,12 +227,12 @@ test('only evens', () => {
     expect(onlyEvens([1, 2, 3, 4, 5, 6]))
         .toStrictEqual([2, 4, 6])
 })
-/*
+
 test('only steve', () => {
     expect(onlySteve(['steve', 'sam', 'steve']))
         .toStrictEqual(['steve', 'steve'])
 })
-
+/*
 test('only words length 4 or more', () => {
     expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
         .toStrictEqual(['steve', 'horse'])
