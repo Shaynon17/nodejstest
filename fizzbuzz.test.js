@@ -3,7 +3,7 @@ const { onlyBigEnough, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOn
 // cd ~/coding/nodejstest/
 
 
-
+/*
 test("fizzbuzzConverter(1) will return 1", () => {
     expect(fizzbuzzConverter(1)).toBe(1);
 })
@@ -61,7 +61,7 @@ test('"123456" will reverse', () => {
     expect(reverseString("123456")).toBe("654321")
 })
 
-
+*/
 test('will uppercase each name', () => {
     expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
 })
@@ -71,7 +71,7 @@ test('first letter of each', () => {
     expect(firstCharacters(['steve', 'shannon', 'jimbob']))
         .toStrictEqual(['s', 's', 'j'])
 })
-
+/*
 test('add one', () => {
     expect(plusOne([1, 2, 3])).toStrictEqual([2, 3, 4])
 })
@@ -232,9 +232,8 @@ test('only steve', () => {
     expect(onlySteve(['steve', 'sam', 'steve']))
         .toStrictEqual(['steve', 'steve'])
 })
-/*
+*/
 test('only words length 4 or more', () => {
     expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
         .toStrictEqual(['steve', 'horse'])
 })
-*/

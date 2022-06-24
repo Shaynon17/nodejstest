@@ -410,7 +410,7 @@ module.exports.upperCaseContactNames = (contacts) => {
 module.exports.incrementZipCode = (contact) => {
     contact.zip = contact.zip + 1
     return contact;
-} 
+}
 
 function isDivisbleBy(larger, smaller) {
     return (larger % smaller === 0)
@@ -554,20 +554,20 @@ module.exports.flipFlop = (name) => {
 
 module.exports.capitalize = (name) => {
     return name.charAt(0).toUpperCase() + name.slice(1)
-} 
+}
 //testing github
 
 module.exports.mixUp = (name) => {
     splitName = name.split('')
     reverseName = splitName.reverse()
     joinName = reverseName.join('')
-    return joinName.charAt(0).toUpperCase() 
+    return joinName.charAt(0).toUpperCase()
     +joinName.slice(1)
 }
 
 module.exports.capFirstLast = (name) => {
     return name.charAt(0).toUpperCase() +
-     name.slice(1, -1) 
+     name.slice(1, -1)
     + name.slice(-1).toUpperCase()
 }
 
@@ -579,7 +579,7 @@ module.exports.reverseString = (number) => {
 }
 
 module.exports.upperCaser = (names) => {
-    return names.map(name => name.charAt(0).toUpperCase() 
+    return names.map(name => name.charAt(0).toUpperCase()
     + name.slice(1))
 }
 
@@ -592,7 +592,7 @@ module.exports.plusOne = (numbers) => {
 }
 
 module.exports.lastLetter = (names) => {
-    return names.map(name => 
+    return names.map(name =>
         name.slice(-1).toUpperCase())
 }
 
@@ -689,7 +689,7 @@ module.exports.mixUp = (name) => {
 }
 
 module.exports.capFirstLast = (name) => {
-    return name.charAt(0).toUpperCase() 
+    return name.charAt(0).toUpperCase()
     + name.slice(1, -1)
     + name.slice(-1).toUpperCase()
 }
@@ -728,7 +728,7 @@ module.exports.isCoolSClub = (names) => {
 
 module.exports.characterNums = (names) => {
     return names.map(name => name + ': ' + name.length)
-} 
+}
 
 
 module.exports.upperCaseWord = (words) => {
@@ -919,7 +919,7 @@ module.exports.onlyBigEnough = (names) => {
 module.exports.onlyBigEnough = (names) => {
     return names.filter(name => name.length > 4)
 }
-*/
+
 
 function isDivisbleBy(larger, smaller) {
     return (larger % smaller === 0)
@@ -974,7 +974,7 @@ module.exports.reverseString = (string) => {
 module.exports.upperCaser = (names) => {
     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
 }
-*/
+
 module.exports.upperCaser = (names) => {
     let endNames = []
     for (x = 0; x < names.length; x++) {
@@ -984,11 +984,11 @@ module.exports.upperCaser = (names) => {
     }
     return endNames
 }
-/*
+
 module.exports.firstCharacters = (names) => {
     return names.map(name => name.charAt(0))
 }
-*/
+
 module.exports.firstCharacters = (names) => {
     let endNames = []
     for (x = 0; x < names.length; x++) {
@@ -998,11 +998,11 @@ module.exports.firstCharacters = (names) => {
     }
     return endNames
 }
-/*
+
 module.exports.plusOne = (numbers) => {
     return numbers.map(number => number + 1)
 }
-*/
+
 
 module.exports.plusOne = (numbers) => {
     let endNum = []
@@ -1013,11 +1013,11 @@ module.exports.plusOne = (numbers) => {
     }
     return endNum
 }
-/*
+
 module.exports.lastLetter = (names) => {
     return names.map(name => name.slice(-1).toUpperCase())
 }
-*/
+
 
 module.exports.lastLetter = (names) => {
     let endNames = []
@@ -1028,11 +1028,11 @@ module.exports.lastLetter = (names) => {
     }
     return endNames
 }
-/*
+
 module.exports.stringCounter = (names) => {
     return names.map(name => name.length)
-} 
-*/
+}
+
 
 module.exports.stringCounter = (names) => {
     let endNames = []
@@ -1043,11 +1043,11 @@ module.exports.stringCounter = (names) => {
     }
     return endNames
 }
-/*
+
 module.exports.isCoolSClub = (names) => {
     return names.map(name => name.charAt(0) === 's')
 }
-*/
+
 module.exports.isCoolSClub = (names) => {
     let endNames = []
     for (x = 0; x < names.length; x++) {
@@ -1057,11 +1057,11 @@ module.exports.isCoolSClub = (names) => {
     }
     return endNames
 }
-/*
+
 module.exports.characterNums = (names) => {
     return names.map(name => name + ': ' + name.length)
 }
-*/
+
 
 module.exports.characterNums = (names) => {
     let endNames = []
@@ -1080,11 +1080,11 @@ module.exports.getTemp = (data) => {
 module.exports.getStreet = (contact) => {
     return contact.street
 }
-/*
+
 module.exports.getZipCodes = (addresses) => {
     return addresses.map(addresses => addresses.zip)
 }
-*/
+
 module.exports.getZipCodes = (addresses) => {
     let endAddress = []
     for (x = 0; x < addresses.length; x++) {
@@ -1094,11 +1094,11 @@ module.exports.getZipCodes = (addresses) => {
     }
     return endAddress
 }
-/*
+
 module.exports.upperCaseContactNames = (contacts) => {
     return contacts.map(contact => contact.name.toUpperCase())
 }
-*/
+
 
 module.exports.upperCaseContactNames = (contacts) => {
     let endContact = []
@@ -1114,11 +1114,11 @@ module.exports.incrementZipCode = (contact) => {
     contact.zip = contact.zip + 1
     return contact;
 }
-/*
+
 module.exports.upperCaseFirstLetter = (contacts) => {
     return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
 }
-*/
+
 
 module.exports.incrementNumber = (number) => {
     return number + 1
@@ -1155,11 +1155,11 @@ module.exports.upperCaseWord = (string) => {
     let joinString = moddedString.join(' ')
     return joinString
 }
-/*
+
 module.exports.addOne = (numbers) => {
     return numbers.map(number => number + 1)
 }
-*/
+
 module.exports.addOne = (numbers) => {
     let endNumbers = []
     for (x = 0; x < numbers.length; x++) {
@@ -1198,7 +1198,7 @@ module.exports.onlySteve = (names) => {
     }
     return justSteve
 }
-
+*/
 //review notes
 //note 1
 // test on line 157 of test.js i struggle with. Why have 'let result' 
@@ -1210,3 +1210,46 @@ module.exports.onlySteve = (names) => {
 // .toStrictEqual is only if you are returning an array or object. .toBe if you are returning a string, number, boolean
 
 //note 3: line 1173 of this document
+/*
+module.exports.upperCaser = (names) => {
+    return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
+}
+*/
+
+module.exports.upperCaser = (names) => {
+    let endName = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let newName = name.charAt(0).toUpperCase() + name.slice(1)
+        endName.push(newName)
+    }
+    return endName
+}
+/*
+module.exports.firstCharacters = (names) => {
+    return names.map(name => name.charAt(0))
+}
+*/
+
+module.exports.firstCharacters = (names) => {
+    let endName = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let newName = name.charAt(0)
+        endName.push(newName)
+    }
+    return endName
+}
+
+module.exports.onlyBigEnough = (names) => {
+    let endNames = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let newName = name.length > 4
+        if (newName) {
+            endNames.push(name)
+        }
+    }
+    return endNames
+}
+
