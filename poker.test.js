@@ -1,52 +1,33 @@
-const { parseFace, parseSuit } = require("./poker")
-
-// let card = { 
-//     'suit': 'K', 
-//     'face': 3,
-//     'plusTwo' : (a) => { return a + 2},
-//     'cardInfo': {
-//         'cardBack': 'standard',
-//         'isGilded': false
-//     }
-// };
-
-// card.face === 3
-// card.suit === 'K'
-// card.cardInfo.cardBack === 'standard'
-// card.plusTwo(45) === 47
+const { parseFaceValue, parseSuit } = require("./poker")
 
 // whole poker kata
-// pokerWinner('D4 S5 HK C3 C8', 'D4 S4 H4 C9 CT') => player two wins
+// pokerWinner('4D 5S KH 3C 8C', '4D 4S 4H 9C TC') => "player two wins: three of a kind"
 // objects, strings, numbers, functions, if statements
 
-// let stringToNumber = {
-//     '3' : 3,
-//     '2' : 2,
-//     'K': 14
-// }
+// X parseSuit -> string
+// parseFaceValue -> number
+// parseCard -> object
+// parseHand -> object[]
+// detectHighCard -> bool
+// detectPair -> bool
+// detectThreeOfAKind -> bool
+// detectStraight -> bool
+// detectFlush -> bool
+// detectFourOfAKind -> bool
+// detectFullHouse -> bool
+// pokerWinner -> string
 
 test("parseSuit() will return a number for the suit", () => {
-    expect(parseSuit('D7')).toBe(1);
-    expect(parseSuit('S2')).toBe(2);
-    expect(parseSuit('C7')).toBe(3);
-    expect(parseSuit('H3')).toBe(4);
+    expect(parseSuit('3S')).toBe('S');
 });
 
-
-test("parseFace() will return number for the face", () => {
-    expect(parseFace('DA')).toBe(1);
-    expect(parseFace('D2')).toBe(2);
-    expect(parseFace('D3')).toBe(3);
-    expect(parseFace('D4')).toBe(4);
-    expect(parseFace('D5')).toBe(5);
-    expect(parseFace('D6')).toBe(6);
-    expect(parseFace('D7')).toBe(7);
-    expect(parseFace('D8')).toBe(8);
-    expect(parseFace('D9')).toBe(9);
-    expect(parseFace('DT')).toBe(10);
-    expect(parseFace('DJ')).toBe(11);
-    expect(parseFace('DQ')).toBe(12);
-    expect(parseFace('DK')).toBe(13);
+test("parseFaceValue() will return the number of the card", () => {
+    expect(parseFaceValue('3S')).toBe(3);
+    expect(parseFaceValue('TS')).toBe(10);
+    expect(parseFaceValue('JS')).toBe(11);
+    expect(parseFaceValue('QS')).toBe(12);
+    expect(parseFaceValue('KS')).toBe(13);
+    expect(parseFaceValue('AS')).toBe(14);
 });
 
 

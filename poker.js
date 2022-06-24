@@ -1,35 +1,21 @@
-
-const suitNumber = {
-    'D': 1,
-    'S': 2,
-    'C': 3,
-    'H': 4
-}
-module.exports.parseSuit = (cardString) => {
-    let suit = cardString.charAt(0);
-    return suitNumber[suit]
+module.exports.parseSuit = (card) => {
+    return card.charAt(1)
 }
 
-const cardLookup = {
-    'A': 1,
-    '2': 2,
-    '3': 3,
-    '4': 4,
-    '5': 5,
-    '6': 6,
-    '7': 7,
-    '8': 8,
-    '9': 9,
-    'T': 10,
-    'J': 11,
-    'Q': 12,
-    'K': 13
-
-}
-
-module.exports.parseFace = (cardString) => {
-    //cardString  === 'D7'
-    let faceCharacter = cardString.charAt(1);
-    // faceCharacter === '7'
-    return cardLookup[faceCharacter]
+module.exports.parseFaceValue = (cardString) => {
+    let firstCharacter = cardString.charAt(0);
+    let faceValue = parseInt(firstCharacter);
+    if (firstCharacter === 'T') {
+        return 10
+    } else if (firstCharacter === 'J') {
+        return 11
+    } else if (firstCharacter === 'Q') {
+        return 12
+    } else if (firstCharacter === 'K') {
+        return 13
+    } else if (firstCharacter === 'A') {
+        return 14
+    } else {
+        return faceValue
+    }
 }
