@@ -1253,3 +1253,14 @@ module.exports.onlyBigEnough = (names) => {
     return endNames
 }
 
+/* //try to chain all of the below code in previous katas
+module.exports.parseHand = (cards) => {
+    let splitCards = cards.split(' ')
+    let cardObjects = splitCards.map(card => this.parseCard(card))
+    return cardObjects
+}
+
+module.exports.parseHand = (cards) => {
+    return cards.split(' ').map(card => this.parseCard(card))
+}
+*/

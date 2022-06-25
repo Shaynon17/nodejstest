@@ -19,3 +19,47 @@ module.exports.parseFaceValue = (cardString) => {
         return faceValue
     }
 }
+
+module.exports.parseCard = (cardString) => {
+    let suit = this.parseSuit(cardString)
+    let face = this.parseFaceValue(cardString)
+    return { suit: suit, face: face }
+}
+
+module.exports.parseHand = (handString) => {
+    let splitCards = handString.split(' ')
+    let cardObjects = splitCards.map(card => this.parseCard(card))
+    return cardObjects
+}
+
+module.exports.countFaces = (cards) => {
+    let faceCounts = {
+        '2': 0,
+        '3': 0,
+        '4': 0,
+        '5': 0,
+        '6': 0,
+        '7': 0,
+        '8': 0,
+        '9': 0,
+        '10': 0,
+        '11': 0,
+        '12': 0,
+        '13': 0,
+        '14': 0
+    }
+    for (x = 0; x < cards.length; x++) {
+        let card = cards[x]
+        faceCounts[card.face]++
+    }
+    return faceCounts;
+}
+
+module.exports.detectPair = (handString) => {
+    let cards = this.parseHand(handString);
+    let faceCounts = this.countFaces(cards);
+    let values = Object.values(faceCounts)
+    let countMoreThanTwo = values.filter(count => count > 1)
+    let moreThanZeroPairs = countMoreThanTwo.length > 0
+    return moreThanZeroPairs;
+}

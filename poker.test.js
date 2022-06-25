@@ -1,20 +1,20 @@
-const { parseFaceValue, parseSuit } = require("./poker")
+const { countFaces, detectPair, parseHand, parseCard, parseFaceValue, parseSuit } = require("./poker")
 
 // whole poker kata
 // pokerWinner('4D 5S KH 3C 8C', '4D 4S 4H 9C TC') => "player two wins: three of a kind"
 // objects, strings, numbers, functions, if statements
 
 // X parseSuit -> string
-// parseFaceValue -> number
-// parseCard -> object
-// parseHand -> object[]
-// detectHighCard -> bool
-// detectPair -> bool
+// X parseFaceValue -> number
+// X parseCard -> object
+// X parseHand -> object[]
+// X detectPair -> bool
 // detectThreeOfAKind -> bool
 // detectStraight -> bool
 // detectFlush -> bool
 // detectFourOfAKind -> bool
 // detectFullHouse -> bool
+// detectHighCard -> bool
 // pokerWinner -> string
 
 test("parseSuit() will return a number for the suit", () => {
@@ -29,6 +29,61 @@ test("parseFaceValue() will return the number of the card", () => {
     expect(parseFaceValue('KS')).toBe(13);
     expect(parseFaceValue('AS')).toBe(14);
 });
+
+test("parseCard will return a card object", () => {
+    let expected =
+    {
+        suit: 'S',
+        face: 3
+    };
+    expect(parseCard("3S")).toStrictEqual(expected);
+});
+
+test("parseHand an array of card objects", () => {
+    let expected = [
+        {
+            suit: 'S',
+            face: 3
+        },
+        {
+            suit: 'H',
+            face: 14
+        }
+    ];
+    expect(parseHand("3S AH")).toStrictEqual(expected);
+});
+
+test("detectPair will detect pairs", () => {
+    expect(detectPair("3S AH 3C 5C 6S")).toBe(true);
+    expect(detectPair("3S AH 4C 5C 6S")).toBe(false);
+});
+
+test("countFaces does what it should", () => {
+
+    let expected = {
+        '2': 0,
+        '3': 0,
+        '4': 2,
+        '5': 1,
+        '6': 0,
+        '7': 0,
+        '8': 0,
+        '9': 0,
+        '10': 0,
+        '11': 0,
+        '12': 0,
+        '13': 0,
+        '14': 0
+    }
+    let input = [
+        { face: 4 },
+        { face: 5 },
+        { face: 4 },
+    ]
+    expect(countFaces(input)).toStrictEqual(expected);
+});
+
+
 
 
 
