@@ -1,7 +1,7 @@
 module.exports.parseSuit = (card) => {
     return card.charAt(1)
 }
-
+f
 module.exports.parseFaceValue = (cardString) => {
     let firstCharacter = cardString.charAt(0);
     let faceValue = parseInt(firstCharacter);
