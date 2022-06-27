@@ -5,6 +5,7 @@ module.exports.parseSuit = (card) => {
 //$  cd ~/coding/nodejstest
 //$ git push
 
+//Here we assign a numerical value to the playing card suits
 module.exports.parseFaceValue = (cardString) => {
     let firstCharacter = cardString.charAt(0);
     let faceValue = parseInt(firstCharacter);
@@ -23,18 +24,21 @@ module.exports.parseFaceValue = (cardString) => {
     }
 }
 
+//here we devide up each card into its suit and number
 module.exports.parseCard = (cardString) => {
     let suit = this.parseSuit(cardString)
     let face = this.parseFaceValue(cardString)
     return { suit: suit, face: face }
 }
 
+//here we split up an entire hand into individual suits and numbers per card
 module.exports.parseHand = (handString) => {
     let splitCards = handString.split(' ')
     let cardObjects = splitCards.map(card => this.parseCard(card))
     return cardObjects
 }
 
+//this is a loop that counts how many numbers in each hand
 module.exports.countFaces = (cards) => {
     let faceCounts = {
         '2': 0,
@@ -57,7 +61,7 @@ module.exports.countFaces = (cards) => {
     }
     return faceCounts;
 }
-
+//we parse the hand, count how many numbers, then it counts how many pairs
 module.exports.detectPair = (handString) => {
     let cards = this.parseHand(handString);
     let faceCounts = this.countFaces(cards);
