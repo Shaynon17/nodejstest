@@ -4,7 +4,7 @@ module.exports.parseSuit = (card) => {
 // instead of sync changes open the terminal
 //$  cd ~/coding/nodejstest
 //$ git push
-f
+
 //Here we assign a numerical value to the playing card suits
 module.exports.parseFaceValue = (cardString) => {
     let firstCharacter = cardString.charAt(0);
@@ -66,7 +66,31 @@ module.exports.detectPair = (handString) => {
     let cards = this.parseHand(handString);
     let faceCounts = this.countFaces(cards);
     let values = Object.values(faceCounts)
-    let countMoreThanTwo = values.filter(count => count > 1)
+    let countMoreThanTwo = values.filter(count => count === 2)
     let moreThanZeroPairs = countMoreThanTwo.length > 0
     return moreThanZeroPairs;
+}
+
+module.exports.detectThreeOfAKind = (handString) => {
+    let cards = this.parseHand(handString);
+    let faceCounts = this.countFaces(cards);
+    let values = Object.values(faceCounts)
+    let countMoreThanThree = values.filter(count => count === 3)
+    let hasThreeOfAKind = countMoreThanThree.length === 1
+    return hasThreeOfAKind;
+}
+
+module.exports.detectFullHouse = (handString) => {
+    let isPair = this.detectPair(handString);
+    let isThreeOfAKind = this.detectThreeOfAKind(handString);
+    return isPair && isThreeOfAKind;
+}
+
+module.exports.detectFourOfAKind = (handString) => {
+    let cards = this.parseHand(handString);
+    let faceCounts = this.countFaces(cards);
+    let values = Object.values(faceCounts)
+    let countMoreThanThree = values.filter(count => count === 4)
+    let hasFourOfAKind = countMoreThanThree.length === 1
+    return hasFourOfAKind;
 }

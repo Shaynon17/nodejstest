@@ -1,4 +1,4 @@
-const { countFaces, detectPair, parseHand, parseCard, parseFaceValue, parseSuit } = require("./poker")
+const { detectFourOfAKind, detectThreeOfAKind, detectFullHouse, countFaces, detectPair, parseHand, parseCard, parseFaceValue, parseSuit } = require("./poker")
 
 // whole poker kata
 // pokerWinner('4D 5S KH 3C 8C', '4D 4S 4H 9C TC') => "player two wins: three of a kind"
@@ -56,6 +56,7 @@ test("parseHand an array of card objects", () => {
 test("detectPair will detect pairs", () => {
     expect(detectPair("3S AH 3C 5C 6S")).toBe(true);
     expect(detectPair("3S AH 4C 5C 6S")).toBe(false);
+    expect(detectPair("3S AH 3C 5C 3S")).toBe(false);
 });
 
 test("countFaces does what it should", () => {
@@ -85,5 +86,19 @@ test("countFaces does what it should", () => {
 
 
 
+test("detectThreeOfAKind test", () => {
+    expect(detectThreeOfAKind("5S AH 3C 5C 5S")).toBe(true);
+    expect(detectThreeOfAKind("3S AH 4C 5C 6S")).toBe(false);
+    expect(detectThreeOfAKind("3S 3H 3C 3C 6S")).toBe(false);
+});
 
+test("detect a full house test", () => {
+    expect(detectFullHouse("5S 3H 3C 5C 5S")).toBe(true);
+    expect(detectFullHouse("3S AH 4C 5C 6S")).toBe(false);
+    expect(detectFullHouse("5S 5H 4C 5C 6S")).toBe(false);
+});
 
+test("detect a four of a kind test", () => {
+    expect(detectFourOfAKind("5S 5H 3C 5C 5S")).toBe(true);
+    expect(detectFourOfAKind("3S AH 4C 5C 6S")).toBe(false);
+}); 
