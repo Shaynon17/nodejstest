@@ -4,7 +4,7 @@ module.exports.parseSuit = (card) => {
 // instead of sync changes open the terminal
 //$  cd ~/coding/nodejstest
 //$ git push
-
+f
 //Here we assign a numerical value to the playing card suits
 module.exports.parseFaceValue = (cardString) => {
     let firstCharacter = cardString.charAt(0);
