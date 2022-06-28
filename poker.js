@@ -5,6 +5,9 @@ module.exports.parseSuit = (card) => {
 //$  cd ~/coding/nodejstest
 //$ git push
 
+//learn poker kata with steve,
+//then learn react while practicing poker kata on my own
+//TOP on my own
 //Here we assign a numerical value to the playing card suits
 module.exports.parseFaceValue = (cardString) => {
     let firstCharacter = cardString.charAt(0);
@@ -61,23 +64,23 @@ module.exports.countFaces = (cards) => {
     }
     return faceCounts;
 }
-//we parse the hand, count how many numbers, then it counts how many pairs
-module.exports.detectPair = (handString) => {
+
+const detectOfAKind = (handString, howMany) => {
     let cards = this.parseHand(handString);
     let faceCounts = this.countFaces(cards);
     let values = Object.values(faceCounts)
-    let countMoreThanTwo = values.filter(count => count === 2)
-    let moreThanZeroPairs = countMoreThanTwo.length > 0
-    return moreThanZeroPairs;
+    let countMoreThanThree = values.filter(count => count === howMany)
+    let hasThreeOfAKind = countMoreThanThree.length === 1
+    return hasThreeOfAKind;
+}
+
+//we parse the hand, count how many numbers, then it counts how many pairs
+module.exports.detectPair = (handString) => {
+    return detectOfAKind(handString, 2)
 }
 
 module.exports.detectThreeOfAKind = (handString) => {
-    let cards = this.parseHand(handString);
-    let faceCounts = this.countFaces(cards);
-    let values = Object.values(faceCounts)
-    let countMoreThanThree = values.filter(count => count === 3)
-    let hasThreeOfAKind = countMoreThanThree.length === 1
-    return hasThreeOfAKind;
+    return detectOfAKind(handString, 3)
 }
 
 module.exports.detectFullHouse = (handString) => {
@@ -87,10 +90,45 @@ module.exports.detectFullHouse = (handString) => {
 }
 
 module.exports.detectFourOfAKind = (handString) => {
-    let cards = this.parseHand(handString);
-    let faceCounts = this.countFaces(cards);
-    let values = Object.values(faceCounts)
-    let countMoreThanThree = values.filter(count => count === 4)
-    let hasFourOfAKind = countMoreThanThree.length === 1
-    return hasFourOfAKind;
+    return detectOfAKind(handString, 4)
 }
+
+module.exports.detectStraight = (handString) => {
+    let hand = this.parseHand(handString);
+    let faceCounts = this.countFaces(hand);
+    for (let face = 2; face < 11; face++) {
+        let count = faceCounts[face];
+        let count2nd = faceCounts[face + 1];
+        let count3rd = faceCounts[face + 2];
+        let count4th = faceCounts[face + 3];
+        let count5th = faceCounts[face + 4];
+        if (count === 1 && count2nd === 1 && count3rd === 1 && count4th === 1 && count5th === 1) {
+            return true;
+        }
+    }
+    return false;
+}
+
+module.exports.countSuits = (cards) => {
+    let suitCounts = {
+        'D': 0,
+        'H': 0,
+        'C': 0,
+        'S': 0,
+    }
+    for (x = 0; x < cards.length; x++) {
+        let card = cards[x]
+        suitCounts[card.suit]++
+    }
+    return suitCounts;
+}
+
+module.exports.detectFlush = (handString) => {
+    let cards = this.parseHand(handString);
+    let suitCounts = this.countSuits(cards);
+    let values = Object.values(suitCounts)
+    let countSameSuit = values.filter(count => count === 5)
+    let isOneSuit = countSameSuit.length === 1
+    return isOneSuit;
+}
+
