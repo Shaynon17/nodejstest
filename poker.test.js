@@ -1,4 +1,4 @@
-const { detectFlush, detectFourOfAKind, detectStraight, detectThreeOfAKind, detectFullHouse, countFaces, detectPair, parseHand, parseCard, parseFaceValue, parseSuit } = require("./poker")
+const { pokerWinner, detectHand, detectTwoPair, HandRank, detectFlush, detectFourOfAKind, detectStraight, detectThreeOfAKind, detectFullHouse, countFaces, detectPair, parseHand, parseCard, parseFaceValue, parseSuit } = require("./poker")
 
 // whole poker kata
 // pokerWinner('4D 5S KH 3C 8C', '4D 4S 4H 9C TC') => "player two wins: three of a kind"
@@ -14,8 +14,10 @@ const { detectFlush, detectFourOfAKind, detectStraight, detectThreeOfAKind, dete
 // XdetectFlush -> bool
 // XdetectFourOfAKind -> bool
 // XdetectFullHouse -> bool
-// detectHighCard -> bool
+// detectHand -> string
+// rankHands -> string
 // pokerWinner -> string
+// detectHighCard -> bool
 
 test("parseSuit() will return a number for the suit", () => {
     expect(parseSuit('3S')).toBe('S');
@@ -28,6 +30,7 @@ test("parseFaceValue() will return the number of the card", () => {
     expect(parseFaceValue('QS')).toBe(12);
     expect(parseFaceValue('KS')).toBe(13);
     expect(parseFaceValue('AS')).toBe(14);
+    expect(parseFaceValue('4S')).toBe(4);
 });
 
 test("parseCard will return a card object", () => {
@@ -112,4 +115,38 @@ test("detect a straight test", () => {
 test("detect a flush test", () => {
     expect(detectFlush("5S 6S 7S 8S 9S")).toBe(true);
     expect(detectFlush("3S AH 4C 5C 6S")).toBe(false);
-}); 
+});
+
+test("detect a two pair", () => {
+    expect(detectTwoPair("5S 5S 8S 8S 9S")).toBe(true);
+    expect(detectTwoPair("3S AH 4C 5C 6S")).toBe(false);
+});
+
+test("detect poker hand", () => {
+    expect(detectHand("5S 6S 7S 8D 9S")).toBe(HandRank.Straight);
+    expect(detectHand("5S 3S 5S 8S 9S")).toBe(HandRank.Flush);
+    expect(detectHand("5S 3S 5D 8S 9S")).toBe(HandRank.Pair);
+    expect(detectHand("5S 8S 5D 8S 9S")).toBe(HandRank.TwoPair);
+    expect(detectHand("8S 8S 5D 8S 9S")).toBe(HandRank.ThreeOfAKind);
+    expect(detectHand("8S 8S 5D 8S 5S")).toBe(HandRank.FullHouse);
+    expect(detectHand("8S 8S 8D 8S 5S")).toBe(HandRank.FourOfAKind);
+    expect(detectHand("5S 6S 7S 8S 9S")).toBe(HandRank.StraightFlush);
+    expect(detectHand("5S 5S 5S 5S 5S")).toBe(HandRank.FiveOfAKind);
+    expect(detectHand("2D 5S 6S 7S QS")).toBe(HandRank.HighCard);
+});
+
+test("detect poker winner", () => {
+    expect(pokerWinner("5S 6S 7S 8D 9S", "5S 5S 7S 5D 9S")).toBe("Player 1 wins: Straight beats Three of a kind");
+});
+
+
+// 1.1	Five of a kind
+// 1.2	Straight flush
+// 1.3	Four of a kind
+// 1.4	Full house
+// 1.5	Flush
+// 1.6	Straight
+// 1.7	Three of a kind
+// 1.8	Two pair
+// 1.9	One pair
+// 1.10	High card
