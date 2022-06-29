@@ -1,4 +1,4 @@
-const { onlyBigEnough, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -237,3 +237,8 @@ test('only words length 4 or more', () => {
     expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
         .toStrictEqual(['steve', 'horse'])
 })
+
+test('Cap first letter of each word', () => {
+    expect(capEachWord("how are you")).toBe("How Are You")
+})
+

@@ -1264,3 +1264,10 @@ module.exports.parseHand = (cards) => {
     return cards.split(' ').map(card => this.parseCard(card))
 }
 */
+
+module.exports.capEachWord = (string) => {
+    let splitString = string.split(' ')
+    let newString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1))
+    return joinString = newString.join(' ')
+
+}
