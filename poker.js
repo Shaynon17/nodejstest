@@ -217,16 +217,13 @@ const HandRankToOrder = {
 }
 
 function pokerWinner(player1HandString, player2HandString) {
-    console.log("player1HandString", player1HandString)
-    console.log("player2HandString", player2HandString)
     let player1HandRank = detectHand(player1HandString);
     let player2HandRank = detectHand(player2HandString);
-    console.log("player1HandRank", player1HandRank)
-    console.log("player2HandRank", player2HandRank)
-    console.log("playerOneHandRankOrder", HandRankToOrder[player1HandRank])
-    console.log("playerTwoHandRankOrder", HandRankToOrder[player2HandRank])
     if (HandRankToOrder[player1HandRank] > HandRankToOrder[player2HandRank]) {
-        console.log("trying to return player one winning")
-        return 'Player 1 wins: ' + player1HandString + ' beats ' + player2HandString
+        return 'Player 1 wins: ' + player1HandRank + ' beats ' + player2HandRank
+    } else if (HandRankToOrder[player1HandRank] < HandRankToOrder[player2HandRank]) {
+        return 'Player 2 wins: ' + player2HandRank + ' beats ' + player1HandRank
+    } else if (HandRankToOrder[player1HandRank] === HandRankToOrder[player2HandRank]) {
+        return 'Tie: both had ' + player1HandRank
     }
 }

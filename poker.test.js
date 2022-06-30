@@ -9,14 +9,14 @@ const { pokerWinner, detectHand, detectTwoPair, HandRank, detectFlush, detectFou
 // X parseCard -> object
 // X parseHand -> object[]
 // X detectPair -> bool
-// XdetectThreeOfAKind -> bool
-// XdetectStraight -> bool
-// XdetectFlush -> bool
-// XdetectFourOfAKind -> bool
-// XdetectFullHouse -> bool
-// detectHand -> string
-// rankHands -> string
-// pokerWinner -> string
+// X detectThreeOfAKind -> bool
+// X detectStraight -> bool
+// X detectFlush -> bool
+// X detectFourOfAKind -> bool
+// X detectFullHouse -> bool
+// X detectHand -> string
+// X rankHands -> string
+// X pokerWinner -> string
 // detectHighCard -> bool
 
 test("parseSuit() will return a number for the suit", () => {
@@ -137,6 +137,8 @@ test("detect poker hand", () => {
 
 test("detect poker winner", () => {
     expect(pokerWinner("5S 6S 7S 8D 9S", "5S 5S 7S 5D 9S")).toBe("Player 1 wins: Straight beats Three of a kind");
+    expect(pokerWinner("5S 5S 7S 5D 9S", "5S 6S 7S 8D 9S")).toBe("Player 2 wins: Straight beats Three of a kind");
+    expect(pokerWinner("5S 6S 7S 8D 9S", "5S 6S 7S 8D 9S")).toBe("Tie: both had Straight");
 });
 
 
