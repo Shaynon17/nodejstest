@@ -1,4 +1,4 @@
-const { parseSuit, parseFaceValue } = require("./poker")
+const { parseSuit, parseCard, parseFaceValue } = require("./poker")
 
 // whole poker kata
 // pokerWinner('4D 5S KH 3C 8C', '4D 4S 4H 9C TC') => "player two wins: three of a kind"
@@ -34,7 +34,7 @@ test("parseFaceValue() will return the number of the card", () => {
     expect(parseFaceValue('AS')).toBe(14);
     expect(parseFaceValue('4S')).toBe(4);
 });
-/*
+
 test("parseCard will return a card object", () => {
     let expected =
     {
@@ -43,7 +43,7 @@ test("parseCard will return a card object", () => {
     };
     expect(parseCard("3S")).toStrictEqual(expected);
 });
-
+/*
 test("parseHand an array of card objects", () => {
     let expected = [
         {

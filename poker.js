@@ -2,6 +2,7 @@
 module.exports = {
     parseSuit,
     parseFaceValue,
+    parseCard,
 }
 
 function parseSuit(cardString) {
@@ -37,5 +38,16 @@ function parseFaceValue(cardString) {
         return 14
     } else {
         return cardString
+    }
+}
+
+//could not figure this out and had to check github. 
+//need more practice with objects
+function parseCard(cardString) {
+    let suit = parseSuit(cardString)
+    let face = parseFaceValue(cardString)
+    return {
+        suit: suit,
+        face: face
     }
 }
