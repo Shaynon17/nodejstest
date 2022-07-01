@@ -1,4 +1,4 @@
-const { parseSuit, parseCard, parseFaceValue } = require("./poker")
+const { parseSuit, parseHand, parseCard, parseFaceValue } = require("./poker")
 
 // whole poker kata
 // pokerWinner('4D 5S KH 3C 8C', '4D 4S 4H 9C TC') => "player two wins: three of a kind"
@@ -43,7 +43,7 @@ test("parseCard will return a card object", () => {
     };
     expect(parseCard("3S")).toStrictEqual(expected);
 });
-/*
+
 test("parseHand an array of card objects", () => {
     let expected = [
         {
@@ -63,7 +63,7 @@ test("detectPair will detect pairs", () => {
     expect(detectPair("3S AH 4C 5C 6S")).toBe(false);
     expect(detectPair("3S AH 3C 5C 3S")).toBe(false);
 });
-
+/*
 test("detectNumOfPair will detect number of pair", () => {
     expect(detectNumOfPair("3S AH 3C 5C 6S")).toBe(3);
 });

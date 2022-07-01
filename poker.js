@@ -3,6 +3,7 @@ module.exports = {
     parseSuit,
     parseFaceValue,
     parseCard,
+    parseHand,
 }
 
 function parseSuit(cardString) {
@@ -51,3 +52,10 @@ function parseCard(cardString) {
         face: face
     }
 }
+
+function parseHand(cardString) {
+    let splitHand = cardString.split(' ') //here you split into an array
+    return splitHand.map(card => parseCard(card)) //parsing each card individually
+}
+
+// i need to practice loops, objects, and arrays
