@@ -1,27 +1,29 @@
-const { pokerWinner, detectHand, detectTwoPair, HandRank, detectFlush, detectFourOfAKind, detectStraight, detectThreeOfAKind, detectFullHouse, countFaces, detectPair, parseHand, parseCard, parseFaceValue, parseSuit } = require("./poker")
+const { parseSuit, parseFaceValue } = require("./poker")
 
 // whole poker kata
 // pokerWinner('4D 5S KH 3C 8C', '4D 4S 4H 9C TC') => "player two wins: three of a kind"
 // objects, strings, numbers, functions, if statements
 
-// X parseSuit -> string
-// X parseFaceValue -> number
-// X parseCard -> object
-// X parseHand -> object[]
-// X detectPair -> bool
-// X detectThreeOfAKind -> bool
-// X detectStraight -> bool
-// X detectFlush -> bool
-// X detectFourOfAKind -> bool
-// X detectFullHouse -> bool
-// X detectHand -> string
-// X rankHands -> string
-// X pokerWinner -> string
+//  parseSuit -> string
+//  parseFaceValue -> number
+//  parseCard -> object
+//  parseHand -> object[]
+//  detectPair -> bool
+//  detectThreeOfAKind -> bool
+//  detectStraight -> bool
+//  detectFlush -> bool
+//  detectFourOfAKind -> bool
+//  detectFullHouse -> bool
+//  detectHand -> string
+//  rankHands -> string
+//  pokerWinner -> string
+
 // detectHighCard -> bool
 
 test("parseSuit() will return a number for the suit", () => {
     expect(parseSuit('3S')).toBe('S');
 });
+
 
 test("parseFaceValue() will return the number of the card", () => {
     expect(parseFaceValue('3S')).toBe(3);
@@ -32,7 +34,7 @@ test("parseFaceValue() will return the number of the card", () => {
     expect(parseFaceValue('AS')).toBe(14);
     expect(parseFaceValue('4S')).toBe(4);
 });
-
+/*
 test("parseCard will return a card object", () => {
     let expected =
     {
@@ -60,6 +62,10 @@ test("detectPair will detect pairs", () => {
     expect(detectPair("3S AH 3C 5C 6S")).toBe(true);
     expect(detectPair("3S AH 4C 5C 6S")).toBe(false);
     expect(detectPair("3S AH 3C 5C 3S")).toBe(false);
+});
+
+test("detectNumOfPair will detect number of pair", () => {
+    expect(detectNumOfPair("3S AH 3C 5C 6S")).toBe(3);
 });
 
 test("countFaces does what it should", () => {
@@ -141,6 +147,7 @@ test("detect poker winner", () => {
     expect(pokerWinner("5S 6S 7S 8D 9S", "5S 6S 7S 8D 9S")).toBe("Tie: both had Straight");
 });
 
+*/
 
 // 1.1	Five of a kind
 // 1.2	Straight flush
