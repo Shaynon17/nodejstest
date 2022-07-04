@@ -1198,7 +1198,7 @@ module.exports.onlySteve = (names) => {
     }
     return justSteve
 }
-*/
+
 //review notes
 //note 1
 // test on line 157 of test.js i struggle with. Why have 'let result' 
@@ -1210,11 +1210,11 @@ module.exports.onlySteve = (names) => {
 // .toStrictEqual is only if you are returning an array or object. .toBe if you are returning a string, number, boolean
 
 //note 3: line 1173 of this document
-/*
+
 module.exports.upperCaser = (names) => {
     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
 }
-*/
+
 
 module.exports.upperCaser = (names) => {
     let endName = []
@@ -1225,11 +1225,11 @@ module.exports.upperCaser = (names) => {
     }
     return endName
 }
-/*
+
 module.exports.firstCharacters = (names) => {
     return names.map(name => name.charAt(0))
 }
-*/
+
 
 module.exports.firstCharacters = (names) => {
     let endName = []
@@ -1253,7 +1253,7 @@ module.exports.onlyBigEnough = (names) => {
     return endNames
 }
 
-/* //try to chain all of the below code in previous katas
+ //try to chain all of the below code in previous katas
 module.exports.parseHand = (cards) => {
     let splitCards = cards.split(' ')
     let cardObjects = splitCards.map(card => this.parseCard(card))
@@ -1263,11 +1263,75 @@ module.exports.parseHand = (cards) => {
 module.exports.parseHand = (cards) => {
     return cards.split(' ').map(card => this.parseCard(card))
 }
-*/
+
 
 module.exports.capEachWord = (string) => {
     let splitString = string.split(' ')
     let newString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1))
     return joinString = newString.join(' ')
 
+}
+*/
+
+module.exports.fizzbuzzConverter = (number) => {
+    if (isDivisbleBy(number, 3) && (isDivisbleBy(number, 5))) {
+        return 'fizzbuzz'
+    } else if (isDivisbleBy(number, 3)) {
+        return 'fizz'
+    } else if (isDivisbleBy(number, 5)) {
+        return 'buzz'
+    } else {
+        return number
+    }
+}
+
+function isDivisbleBy(larger, smaller) {
+    return (larger % smaller === 0)
+}
+
+module.exports.helloWorld = (name) => {
+    return 'Hello ' + name
+}
+
+module.exports.sumOfSquares = (number) => {
+    return (number * number) + (number * number)
+}
+
+module.exports.flipFlop = (string) => {
+    return string.charAt(1) + string.charAt(0)
+}
+
+module.exports.capitalize = (name) => {
+    return name.charAt(0).toUpperCase() + name.slice(1)
+}
+
+module.exports.mixUp = (name) => {
+    splitName = name.split('')
+    reverseName = splitName.reverse()
+    joinName = reverseName.join('')
+    return joinName.charAt(0).toUpperCase() + joinName.slice(1)
+}
+
+module.exports.capFirstLast = (name) => {
+    return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase()
+}
+
+module.exports.reverseString = (number) => {
+    splitNum = number.split('')
+    reverseNum = splitNum.reverse()
+    return joinNum = reverseNum.join('')
+}
+/*
+module.exports.upperCaser = (names) => {
+    return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
+} */
+
+module.exports.upperCaser = (names) => {
+    let endName = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let modName = name.charAt(0).toUpperCase() + name.slice(1)
+        names.push(modName)
+    }
+    return endName
 }
