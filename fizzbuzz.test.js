@@ -260,10 +260,10 @@ test('Cap first letter of each word', () => {
 //     expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 });
 
 
-//     let names = collectCharacterNames(xerath, garen, wukong);
+//     let names = collectCharacterNames([xerath, garen, wukong]);
 //     expect(names).toBe("Xerath, Garen, Wukong");
 
-//     let manaTotal = totalMana(xerath, garen, wukong);
+//     let manaTotal = totalMana([xerath, garen, wukong]);
 //     expect(manaTotal).toBe(1000);
 
 //     let tower = makeTower(1500, 20);
@@ -273,3 +273,30 @@ test('Cap first letter of each word', () => {
 //     expect(towerAfterHit).toStrictEqual({ health: 1450 });
 
 // })
+
+test('can get out the suit from an array of cards', () => {
+    let input = [
+        {
+            suit: 'S',
+            face: 3
+        },
+        {
+            suit: 'H',
+            face: 14
+        }
+    ];
+    expect(getFirstSuit(input)).toBe('S');
+    expect(getSecondFace(input)).toBe(14);
+    expect(sumFaces(input)).toBe(17);
+    expect(combineSuits(input)).toBe("SH");
+})
+
+test('can sum array inside an object', () => {
+    let input =
+    {
+        temps: [70, 40, 80],
+        location: "Philly"
+    };
+    expect(sumTemps(input)).toBe(190);
+    expect(getFirstTemp(input)).toBe(70);
+})

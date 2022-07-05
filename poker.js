@@ -4,6 +4,7 @@ module.exports = {
     parseFaceValue,
     parseCard,
     parseHand,
+    detectPair,
 }
 
 function parseSuit(cardString) {
@@ -11,51 +12,45 @@ function parseSuit(cardString) {
 }
 
 function parseFaceValue(cardString) {
-    if (cardString.charAt(0) === '2') {
-        return 2
-    } else if (cardString.charAt(0) === '3') {
-        return 3
-    } else if (cardString.charAt(0) === '4') {
-        return 4
-    } else if (cardString.charAt(0) === '5') {
-        return 5
-    } else if (cardString.charAt(0) === '6') {
-        return 6
-    } else if (cardString.charAt(0) === '7') {
-        return 7
-    } else if (cardString.charAt(0) === '8') {
-        return 8
-    } else if (cardString.charAt(0) === '9') {
-        return 9
-    } else if (cardString.charAt(0) === 'T') {
+    let faceCharacter = cardString.charAt(0);
+    if (faceCharacter === 'T') {
         return 10
-    } else if (cardString.charAt(0) === 'J') {
+    } else if (faceCharacter === 'J') {
         return 11
-    } else if (cardString.charAt(0) === 'Q') {
+    } else if (faceCharacter === 'Q') {
         return 12
-    } else if (cardString.charAt(0) === 'K') {
+    } else if (faceCharacter === 'K') {
         return 13
-    } else if (cardString.charAt(0) === 'A') {
+    } else if (faceCharacter === 'A') {
         return 14
     } else {
-        return cardString
+        return parseInt(faceCharacter);
     }
 }
 
-//could not figure this out and had to check github. 
-//need more practice with objects
 function parseCard(cardString) {
-    let suit = parseSuit(cardString)
-    let face = parseFaceValue(cardString)
-    return {
-        suit: suit,
-        face: face
-    }
+    let parsedSuit = parseSuit(cardString);
+    let card = {
+        suit: parsedSuit,
+        face: parseFaceValue(cardString)
+    };
+    return card;
 }
 
 function parseHand(cardString) {
-    let splitHand = cardString.split(' ') //here you split into an array
-    return splitHand.map(card => parseCard(card)) //parsing each card individually
+    let splitHand = cardString.split(' ')
+    let parseEaechCard = splitHand.map(hand => parseCard(hand))
+    return parseEaechCard
 }
 
-// i need to practice loops, objects, and arrays
+function detectPair(cardString) {
+    let hand = parseHand(cardString)
+    return hand;
+    // let pair = []
+    // for (x = 0; x < cardString.length; x++) {
+    //     let card = cardString[x]
+    //     let modHand = parseFaceValue(card)
+    //     pair.push(modHand)
+    // }
+    // return pair
+}
