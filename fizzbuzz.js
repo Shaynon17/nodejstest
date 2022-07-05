@@ -1331,7 +1331,7 @@ module.exports.upperCaser = (names) => {
     for (x = 0; x < names.length; x++) {
         let name = names[x]
         let modName = name.charAt(0).toUpperCase() + name.slice(1)
-        names.push(modName)
+        endName.push(modName)
     }
     return endName
 }
