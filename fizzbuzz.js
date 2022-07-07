@@ -1273,7 +1273,7 @@ module.exports.capEachWord = (string) => {
 }
 */
 
-module.exports.fizzbuzzConverter = (number) => {
+function fizzbuzzConverter(number) {
     if (isDivisbleBy(number, 3) && (isDivisbleBy(number, 5))) {
         return 'fizzbuzz'
     } else if (isDivisbleBy(number, 3)) {
@@ -1289,34 +1289,34 @@ function isDivisbleBy(larger, smaller) {
     return (larger % smaller === 0)
 }
 
-module.exports.helloWorld = (name) => {
+function helloWorld(name) {
     return 'Hello ' + name
 }
 
-module.exports.sumOfSquares = (number) => {
+function sumOfSquares(number) {
     return (number * number) + (number * number)
 }
 
-module.exports.flipFlop = (string) => {
+function flipFlop(string) {
     return string.charAt(1) + string.charAt(0)
 }
 
-module.exports.capitalize = (name) => {
+function capitalize(name) {
     return name.charAt(0).toUpperCase() + name.slice(1)
 }
 
-module.exports.mixUp = (name) => {
+function mixUp(name) {
     splitName = name.split('')
     reverseName = splitName.reverse()
     joinName = reverseName.join('')
     return joinName.charAt(0).toUpperCase() + joinName.slice(1)
 }
 
-module.exports.capFirstLast = (name) => {
+function capFirstLast(name) {
     return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase()
 }
 
-module.exports.reverseString = (number) => {
+function reverseString(number) {
     splitNum = number.split('')
     reverseNum = splitNum.reverse()
     return joinNum = reverseNum.join('')
@@ -1326,7 +1326,7 @@ module.exports.upperCaser = (names) => {
     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
 } */
 
-module.exports.upperCaser = (names) => {
+function upperCaser(names) {
     let endName = []
     for (x = 0; x < names.length; x++) {
         let name = names[x]
@@ -1334,4 +1334,95 @@ module.exports.upperCaser = (names) => {
         endName.push(modName)
     }
     return endName
+}
+
+function getFirstSuit(input) {
+    return input[0].suit
+}
+
+function getSecondFace(input) {
+    return input[1].face
+}
+
+function sumFaces(input) {
+    let endFaces = 0;
+    for (x = 0; x < input.length; x++) {
+        let card = input[x]
+        let newSum = endFaces + card.face
+        endFaces = newSum
+        // x = 0;     endFaces = 0 + 3
+        // x = 1;     endFaces = 3 + 14
+    }
+    return endFaces
+}
+
+function combineSuits(input) {
+    let endSuits = '';
+    for (x = 0; x < input.length; x++) {
+        let card = input[x]
+        let newSum = endSuits + card.suit
+        endSuits = newSum
+    }
+    return endSuits
+}
+
+function sumTemps(input) {
+    let endNum = 0;
+    for (x = 0; x < input.temps.length; x++) {
+        let num = input.temps[x]
+        let newNum = endNum + num
+        endNum = newNum
+    }
+    return endNum
+}
+
+function getFirstTemp(input) {
+    return input.temps[0]
+}
+
+// function makeSentence(input) {
+//     return input[0] + ' ' + input[1] + ' ' + input[2]
+// }
+
+function makeSentence(input) {
+    let endSentence = ''
+    for (x = 0; x < input.length; x++) {
+        let sentence = input[x]
+        let newSentence = endSentence + ' ' + sentence
+        endSentence = newSentence
+    }
+    return endSentence.trim()
+}
+
+// function averageNumbers(input) {
+//     return ((input[0] + input[1] + input[2] + input[3]) / 4)
+// }
+
+function averageNumbers(input) {
+    let endNum = 0;
+    for (x = 0; x < input.length; x++) {
+        let num = input[x]
+        let newNum = (endNum + num)
+        endNum = newNum
+    }
+    return endNum / input.length
+}
+
+module.exports = {
+    fizzbuzzConverter, upperCaser,
+    isDivisbleBy,
+    reverseString,
+    sumOfSquares,
+    helloWorld,
+    mixUp,
+    flipFlop,
+    capitalize, capFirstLast,
+    getFirstSuit,
+    getSecondFace,
+    sumFaces,
+    combineSuits,
+    sumTemps,
+    getFirstTemp,
+    makeSentence,
+    averageNumbers,
 }

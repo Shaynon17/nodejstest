@@ -1,4 +1,4 @@
-const { onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -275,7 +275,7 @@ test('Cap first letter of each word', () => {
 // })
 
 test('can get out the suit from an array of cards', () => {
-    let input = [
+    let input = [ /* square brackets make an array, curly brackets make an object */
         {
             suit: 'S',
             face: 3
@@ -287,6 +287,8 @@ test('can get out the suit from an array of cards', () => {
     ];
     expect(getFirstSuit(input)).toBe('S');
     expect(getSecondFace(input)).toBe(14);
+
+    // do with both hardcoded and for loop
     expect(sumFaces(input)).toBe(17);
     expect(combineSuits(input)).toBe("SH");
 })
@@ -297,6 +299,46 @@ test('can sum array inside an object', () => {
         temps: [70, 40, 80],
         location: "Philly"
     };
+    // do with both hardcoded and for loop
     expect(sumTemps(input)).toBe(190);
     expect(getFirstTemp(input)).toBe(70);
 })
+
+test('can reduce strings into sentence', () => {
+    let input = ['hey', 'there', 'horseman'];
+    // do with both hardcoded and for loop
+    expect(makeSentence(input)).toBe("hey there horseman");
+})
+
+test('can reduce numbers into average', () => {
+    let input = [10, 20, 30, 40];
+    // do with both hardcoded and for loop
+    expect(averageNumbers(input)).toBe(25);
+})
+
+
+// get first element from array "names"
+// let names = ['steve', 'sam']
+//      names[0]
+
+// change 2nd element in array "names"  to be "steve"
+// let names = ['horse', 'sam']
+//      names[1] = "steve"
+
+// make object with name and address
+//      {name: 'steve', address: 'here'}
+
+// two ways to read address from object "person"
+// let person = {name: 'steve', address: 'here'}
+//      person.address
+//      person['address']
+
+// two ways to change name in object "person" to "shannon"
+// let person = {name: 'steve', address: 'here'}
+//      person.name = "shannon"
+//      person["name"] = "shannon"
+
+// two ways get name from first object in an array of objects called "people"
+// [{name: 'steve'}, {name: 'jimbob'}]
+//      people[0].name
+//      people[0]['name']
