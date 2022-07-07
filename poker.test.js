@@ -58,12 +58,12 @@ test("parseHand an array of card objects", () => {
     expect(parseHand("3S AH")).toStrictEqual(expected);
 });
 
-// test("detectPair will detect pairs", () => {
-    // {6: 1, 14: 1, 3: 2, 5: 1}
-    // expect(detectPair("6S AH 3C 5C 3S")).toBe(true);
-    // expect(detectPair("3S AH 4C 5C 6S")).toBe(false);
+test("detectPair will detect pairs", () => {
+    // { 6: 1, 14: 1, 3: 2, 5: 1 }
+    expect(detectPair("6S AH 3C 5C 3S")).toBe(true);
+    expect(detectPair("3S AH 4C 5C 6S")).toBe(false);
     // expect(detectPair("3S AH 3C 5C 3S")).toBe(false);
-// });
+});
 /*
 test("detectNumOfPair will detect number of pair", () => {
     expect(detectNumOfPair("3S AH 3C 5C 6S")).toBe(3);

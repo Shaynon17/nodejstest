@@ -317,6 +317,22 @@ test('can reduce numbers into average', () => {
 })
 
 
+test('can count up numbers in array of objects', () => {
+    let input = [
+        { id: 4 },
+        { id: 2 },
+        { id: 1 },
+        { id: 4 },
+    ];
+    let output = {
+        '1': 1,
+        '2': 1,
+        '4': 2
+    }
+    // do with both hardcoded and for loop
+    expect(countIds(input)).toStrictEqual(output);
+})
+
 // get first element from array "names"
 // let names = ['steve', 'sam']
 //      names[0]

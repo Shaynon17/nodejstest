@@ -29,9 +29,8 @@ function parseFaceValue(cardString) {
 }
 
 function parseCard(cardString) {
-    let parsedSuit = parseSuit(cardString);
     let card = {
-        suit: parsedSuit,
+        suit: parseSuit(cardString),
         face: parseFaceValue(cardString)
     };
     return card;
@@ -45,12 +44,14 @@ function parseHand(cardString) {
 
 function detectPair(cardString) {
     let hand = parseHand(cardString)
-    return hand;
-    // let pair = []
-    // for (x = 0; x < cardString.length; x++) {
-    //     let card = cardString[x]
-    //     let modHand = parseFaceValue(card)
-    //     pair.push(modHand)
-    // }
-    // return pair
+    let faces = []
+    for (x = 0; x < hand.length; x++) {
+        let card = hand[x]
+        let cardNum = card.face
+        if (faces.includes(cardNum)) {
+            return true
+        }
+        faces.push(cardNum)
+    }
+    return false;
 }
