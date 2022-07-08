@@ -1363,14 +1363,109 @@ function upperCaseContactNames(contacts) {
     return contacts.map(contact => contact.name.toUpperCase())
 }
 
-function incrementZipCode(contact) {
-    let contact.zip = contact.zip + 1
+// function incrementZipCode(zip) {
+//     return contact.zip + 1
+// }
+
+function incrementNumber(number) {
+    return number + 1
+}
+
+/*
+function upperCaseFirstLetter(contacts) {
+    return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
+}
+*/
+
+function upperCaseFirstLetter(contacts) {
+    let endContact = []
+    for (x = 0; x < contacts.length; x++) {
+        let contact = contacts[x]
+        let modContact = contact.name.charAt(0).toUpperCase() + contact.name.slice(1)
+        endContact.push(modContact)
+    }
+    return endContact
+}
+
+function palindromeName(name) {
+    let splitName = name.split('')
+    let reverseName = splitName.reverse()
+    let joinName = reverseName.join('')
+    if (name === joinName) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function alphabetize(string) {
+    let splitString = string.split('')
+    let sortString = splitString.sort()
+    return joinString = sortString.join('')
+}
+
+function upperCaseWord(string) {
+    let splitString = string.split(' ')
+    let modString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1))
+    return joinString = modString.join(' ')
+}
+/*
+function addOne(numbers) {
+    return numbers.map(number => number + 1)
+}
+*/
+
+function addOne(numbers) {
+    let endNums = []
+    for (x = 0; x < numbers.length; x++) {
+        let number = numbers[x]
+        let modNumber = number + 1
+        endNums.push(modNumber)
+    }
+    return endNums
+}
+/*
+function firstCharacterss(names) {
+    return names.map(name => name.charAt(0))
+}
+*/
+
+function firstCharacterss(names) {
+    let endNames = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let modName = name.charAt(0)
+        endNames.push(modName)
+    }
+    return endNames
 }
 
 
+function onlyEvens(numbers) {
+    let endNums = []
+    for (x = 0; x < numbers.length; x++) {
+        let number = numbers[x]
+        if (number % 2 === 0) {
+            endNums.push(number)
+        }
+    }
+    return endNums
+}
+
+function onlySteve(names) {
+    let onlySteve = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        if (name === 'steve') {
+            onlySteve.push(name)
+        }
+    }
+    return onlySteve
+}
+
 module.exports = {
-    fizzbuzzConverter, characterNums, upperCaser, plusOne, lastLetter, stringCounter, isCoolSClub,
-    isDivisbleBy, getTemp, getStreet, getZipCodes, upperCaseContactNames, incrementZipCode,
+    fizzbuzzConverter, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, upperCaseFirstLetter, characterNums, upperCaser, plusOne, lastLetter, stringCounter, isCoolSClub,
+    isDivisbleBy, palindromeName, incrementNumber, getTemp, getStreet, getZipCodes, upperCaseContactNames, 
     reverseString,
     sumOfSquares,
     helloWorld,
