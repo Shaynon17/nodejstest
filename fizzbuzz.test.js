@@ -1,4 +1,4 @@
-const { averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { countAttendees, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -329,9 +329,45 @@ test('can count up numbers in array of objects', () => {
         '2': 1,
         '4': 2
     }
-    // do with both hardcoded and for loop
     expect(countIds(input)).toStrictEqual(output);
 })
+
+test('will count letters in word', () => {
+    let output = {
+        e: 1,
+        h: 1,
+        l: 2,
+        o: 1
+    }
+    expect(countLetters("hello")).toStrictEqual(output);
+})
+
+test('will count numbers in string', () => {
+    let output = {
+        '1': 3,
+        '2': 1,
+        '3': 1
+    }
+    expect(countNumbersString("1,1,2,3,1")).toStrictEqual(output);
+})
+
+
+test('will count attendees', () => {
+    let input = [
+        { name: "steve" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "jimjam" },
+    ];
+    let output = {
+        'jimjam': 1,
+        'shannon': 3,
+        'steve': 1
+    }
+    expect(countAttendees(input)).toStrictEqual(output);
+})
+
 
 // get first element from array "names"
 // let names = ['steve', 'sam']

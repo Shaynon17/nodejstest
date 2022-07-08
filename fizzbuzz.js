@@ -1408,6 +1408,63 @@ function averageNumbers(input) {
     return endNum / input.length
 }
 
+
+
+function countIds(input) {
+    let endOutput = {
+        '1': 0,
+        '2': 0,
+        '4': 0
+    }
+    for (x = 0; x < input.length; x++) {
+        let num = input[x]
+        let id = num.id
+        endOutput[id]++
+    }
+    return endOutput
+}
+
+function countLetters(letters) {
+    let endOutput = {
+        e: 0,
+        h: 0,
+        l: 0,
+        o: 0
+    };
+    for (x = 0; x < letters.length; x++) {
+        let letter = letters[x];
+        endOutput[letter]++
+    }
+    return endOutput
+}
+
+function countNumbersString(input) {
+    let output = {
+        '1': 0,
+        '2': 0,
+        '3': 0,
+    }
+    for (x = 0; x < input.length; x++) {
+        let number = input[x]
+        output[number]++
+    }
+    delete output[',']
+    return output
+}
+
+function countAttendees(input) {
+    let output = {
+        jimjam: 0,
+        shannon: 0,
+        steve: 0
+    }
+    for (x = 0; x < input.length; x++) {
+        let name = input[x].name
+        output[name]++
+    }
+    return output
+}
+
 module.exports = {
     fizzbuzzConverter, upperCaser,
     isDivisbleBy,
@@ -1425,4 +1482,8 @@ module.exports = {
     getFirstTemp,
     makeSentence,
     averageNumbers,
+    countIds,
+    countLetters,
+    countNumbersString,
+    countAttendees,
 }
