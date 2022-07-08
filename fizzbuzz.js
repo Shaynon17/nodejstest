@@ -1321,6 +1321,77 @@ function reverseString(number) {
     reverseNum = splitNum.reverse()
     return joinNum = reverseNum.join('')
 }
+
+function firstCharacters(names) {
+    return names.map(name => name.charAt(0))
+}
+
+function plusOne(numbers) {
+    return numbers.map(number => number + 1)
+}
+
+function lastLetter(names) {
+    return names.map(name => name.slice(-1).toUpperCase())
+}
+
+function stringCounter(names) {
+    return names.map(name => name.length)
+}
+
+function isCoolSClub(names) {
+    return names.map(name => name.charAt(0) === 's')
+}
+
+function characterNums(names) {
+    return names.map(name => name + ': ' + name.length)
+}
+
+
+function getTemp(data) {
+    return data.temp
+}
+
+function getStreet(contact) {
+    return contact.street
+}
+
+function getZipCodes(addresses) {
+    return addresses.map(address => address.zip)
+}
+
+function upperCaseContactNames(contacts) {
+    return contacts.map(contact => contact.name.toUpperCase())
+}
+
+function incrementZipCode(contact) {
+    let contact.zip = contact.zip + 1
+}
+
+
+module.exports = {
+    fizzbuzzConverter, characterNums, upperCaser, plusOne, lastLetter, stringCounter, isCoolSClub,
+    isDivisbleBy, getTemp, getStreet, getZipCodes, upperCaseContactNames, incrementZipCode,
+    reverseString,
+    sumOfSquares,
+    helloWorld,
+    mixUp,
+    flipFlop,
+    capitalize, capFirstLast,
+    getFirstSuit,
+    getSecondFace,
+    sumFaces,
+    combineSuits,
+    sumTemps,
+    getFirstTemp,
+    makeSentence,
+    averageNumbers,
+    countIds,
+    countLetters,
+    countNumbersString,
+    countAttendees,
+    firstCharacters,
+}
+
 /*
 module.exports.upperCaser = (names) => {
     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
@@ -1465,25 +1536,8 @@ function countAttendees(input) {
     return output
 }
 
-module.exports = {
-    fizzbuzzConverter, upperCaser,
-    isDivisbleBy,
-    reverseString,
-    sumOfSquares,
-    helloWorld,
-    mixUp,
-    flipFlop,
-    capitalize, capFirstLast,
-    getFirstSuit,
-    getSecondFace,
-    sumFaces,
-    combineSuits,
-    sumTemps,
-    getFirstTemp,
-    makeSentence,
-    averageNumbers,
-    countIds,
-    countLetters,
-    countNumbersString,
-    countAttendees,
-}
+
+
+
+
+

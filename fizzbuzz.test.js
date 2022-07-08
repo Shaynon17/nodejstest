@@ -65,7 +65,7 @@ test('"123456" will reverse', () => {
 test('will uppercase each name', () => {
     expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
 })
-/*
+
 
 test('first letter of each', () => {
     expect(firstCharacters(['steve', 'shannon', 'jimbob']))
@@ -153,7 +153,7 @@ test('uppercase all the names of contacts', () => {
     expect(upperCaseContactNames(contacts)).toStrictEqual(["STEVE", "SHANNON"])
 })
 
-
+//struggling with this one
 test('changes the zip code to be +1', () => {
     let contact = {
         name: 'steve',
@@ -164,7 +164,7 @@ test('changes the zip code to be +1', () => {
 
     expect(contact.zip).toBe(11112)
 })
-
+/*
 test('changes the zip code to be +1', () => {
     let number = 5
 
