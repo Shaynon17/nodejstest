@@ -1463,8 +1463,33 @@ function onlySteve(names) {
     return onlySteve
 }
 
+function onlyBigEnough(names) {
+    let endName = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        if (name.length > 4) {
+            endName.push(name)
+        } else {
+
+        }
+    }
+    return endName
+}
+
+function capEachWord(string) {
+    let splitString = string.split(' ')
+    let modString = splitString.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    return joinString = modString.join(' ')
+}
+
+// const makeLeagueCharacter {
+//     name: name
+//     //     dps: '0'
+//     // mana: '0'
+// }
+
 module.exports = {
-    fizzbuzzConverter, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, upperCaseFirstLetter, characterNums, upperCaser, plusOne, lastLetter, stringCounter, isCoolSClub,
+    fizzbuzzConverter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, upperCaseFirstLetter, characterNums, upperCaser, plusOne, lastLetter, stringCounter, isCoolSClub,
     isDivisbleBy, palindromeName, incrementNumber, getTemp, getStreet, getZipCodes, upperCaseContactNames, 
     reverseString,
     sumOfSquares,
