@@ -1488,27 +1488,47 @@ function capEachWord(string) {
 //     // mana: '0'
 // }
 
+//had to look at notes
+function getFirstSuit(input) {
+    return input[0].suit
+}
+//had to look at notes
+function getSecondFace(input) {
+    return input[1].face
+}
+
+function sumFaces(input) {
+    return input[0].face + input[1].face
+}
+
+function combineSuits(input) {
+    return input[0].suit + input[1].suit
+}
+
+function getFirstTemp(input) {
+    return input.temps[0]
+}
+
+function sumTemps(input) {
+    return input.temps[0] + input.temps[1] + input.temps[2]
+}
+
+// function makeSentence(string) {
+// let
+// }
+
 module.exports = {
-    fizzbuzzConverter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, upperCaseFirstLetter, characterNums, upperCaser, plusOne, lastLetter, stringCounter, isCoolSClub,
+    fizzbuzzConverter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, upperCaseFirstLetter, characterNums, plusOne, lastLetter, stringCounter, isCoolSClub,
     isDivisbleBy, palindromeName, incrementNumber, getTemp, getStreet, getZipCodes, upperCaseContactNames, 
-    reverseString,
+    reverseString, getFirstTemp, sumTemps, makeSentence,
     sumOfSquares,
+    getSecondFace,
     helloWorld,
+    sumFaces, combineSuits,
     mixUp,
     flipFlop,
     capitalize, capFirstLast,
     getFirstSuit,
-    getSecondFace,
-    sumFaces,
-    combineSuits,
-    sumTemps,
-    getFirstTemp,
-    makeSentence,
-    averageNumbers,
-    countIds,
-    countLetters,
-    countNumbersString,
-    countAttendees,
     firstCharacters,
 }
 
@@ -1517,144 +1537,144 @@ module.exports.upperCaser = (names) => {
     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
 } */
 
-function upperCaser(names) {
-    let endName = []
-    for (x = 0; x < names.length; x++) {
-        let name = names[x]
-        let modName = name.charAt(0).toUpperCase() + name.slice(1)
-        endName.push(modName)
-    }
-    return endName
-}
+// function upperCaser(names) {
+//     let endName = []
+//     for (x = 0; x < names.length; x++) {
+//         let name = names[x]
+//         let modName = name.charAt(0).toUpperCase() + name.slice(1)
+//         endName.push(modName)
+//     }
+//     return endName
+// }
 
-function getFirstSuit(input) {
-    return input[0].suit
-}
+// function getFirstSuit(input) {
+//     return input[0].suit
+// }
 
-function getSecondFace(input) {
-    return input[1].face
-}
+// function getSecondFace(input) {
+//     return input[1].face
+// }
 
-function sumFaces(input) {
-    let endFaces = 0;
-    for (x = 0; x < input.length; x++) {
-        let card = input[x]
-        let newSum = endFaces + card.face
-        endFaces = newSum
-        // x = 0;     endFaces = 0 + 3
-        // x = 1;     endFaces = 3 + 14
-    }
-    return endFaces
-}
+// function sumFaces(input) {
+//     let endFaces = 0;
+//     for (x = 0; x < input.length; x++) {
+//         let card = input[x]
+//         let newSum = endFaces + card.face
+//         endFaces = newSum
+//         // x = 0;     endFaces = 0 + 3
+//         // x = 1;     endFaces = 3 + 14
+//     }
+//     return endFaces
+// }
 
-function combineSuits(input) {
-    let endSuits = '';
-    for (x = 0; x < input.length; x++) {
-        let card = input[x]
-        let newSum = endSuits + card.suit
-        endSuits = newSum
-    }
-    return endSuits
-}
+// function combineSuits(input) {
+//     let endSuits = '';
+//     for (x = 0; x < input.length; x++) {
+//         let card = input[x]
+//         let newSum = endSuits + card.suit
+//         endSuits = newSum
+//     }
+//     return endSuits
+// }
 
-function sumTemps(input) {
-    let endNum = 0;
-    for (x = 0; x < input.temps.length; x++) {
-        let num = input.temps[x]
-        let newNum = endNum + num
-        endNum = newNum
-    }
-    return endNum
-}
+// function sumTemps(input) {
+//     let endNum = 0;
+//     for (x = 0; x < input.temps.length; x++) {
+//         let num = input.temps[x]
+//         let newNum = endNum + num
+//         endNum = newNum
+//     }
+//     return endNum
+// }
 
-function getFirstTemp(input) {
-    return input.temps[0]
-}
+// function getFirstTemp(input) {
+//     return input.temps[0]
+// }
+
+// // function makeSentence(input) {
+// //     return input[0] + ' ' + input[1] + ' ' + input[2]
+// // }
 
 // function makeSentence(input) {
-//     return input[0] + ' ' + input[1] + ' ' + input[2]
+//     let endSentence = ''
+//     for (x = 0; x < input.length; x++) {
+//         let sentence = input[x]
+//         let newSentence = endSentence + ' ' + sentence
+//         endSentence = newSentence
+//     }
+//     return endSentence.trim()
 // }
 
-function makeSentence(input) {
-    let endSentence = ''
-    for (x = 0; x < input.length; x++) {
-        let sentence = input[x]
-        let newSentence = endSentence + ' ' + sentence
-        endSentence = newSentence
-    }
-    return endSentence.trim()
-}
+// // function averageNumbers(input) {
+// //     return ((input[0] + input[1] + input[2] + input[3]) / 4)
+// // }
 
 // function averageNumbers(input) {
-//     return ((input[0] + input[1] + input[2] + input[3]) / 4)
+//     let endNum = 0;
+//     for (x = 0; x < input.length; x++) {
+//         let num = input[x]
+//         let newNum = (endNum + num)
+//         endNum = newNum
+//     }
+//     return endNum / input.length
 // }
 
-function averageNumbers(input) {
-    let endNum = 0;
-    for (x = 0; x < input.length; x++) {
-        let num = input[x]
-        let newNum = (endNum + num)
-        endNum = newNum
-    }
-    return endNum / input.length
-}
 
 
+// function countIds(input) {
+//     let endOutput = {
+//         '1': 0,
+//         '2': 0,
+//         '4': 0
+//     }
+//     for (x = 0; x < input.length; x++) {
+//         let num = input[x]
+//         let id = num.id
+//         endOutput[id]++
+//     }
+//     return endOutput
+// }
 
-function countIds(input) {
-    let endOutput = {
-        '1': 0,
-        '2': 0,
-        '4': 0
-    }
-    for (x = 0; x < input.length; x++) {
-        let num = input[x]
-        let id = num.id
-        endOutput[id]++
-    }
-    return endOutput
-}
+// function countLetters(letters) {
+//     let endOutput = {
+//         e: 0,
+//         h: 0,
+//         l: 0,
+//         o: 0
+//     };
+//     for (x = 0; x < letters.length; x++) {
+//         let letter = letters[x];
+//         endOutput[letter]++
+//     }
+//     return endOutput
+// }
 
-function countLetters(letters) {
-    let endOutput = {
-        e: 0,
-        h: 0,
-        l: 0,
-        o: 0
-    };
-    for (x = 0; x < letters.length; x++) {
-        let letter = letters[x];
-        endOutput[letter]++
-    }
-    return endOutput
-}
+// function countNumbersString(input) {
+//     let output = {
+//         '1': 0,
+//         '2': 0,
+//         '3': 0,
+//     }
+//     for (x = 0; x < input.length; x++) {
+//         let number = input[x]
+//         output[number]++
+//     }
+//     delete output[',']
+//     return output
+// }
 
-function countNumbersString(input) {
-    let output = {
-        '1': 0,
-        '2': 0,
-        '3': 0,
-    }
-    for (x = 0; x < input.length; x++) {
-        let number = input[x]
-        output[number]++
-    }
-    delete output[',']
-    return output
-}
-
-function countAttendees(input) {
-    let output = {
-        jimjam: 0,
-        shannon: 0,
-        steve: 0
-    }
-    for (x = 0; x < input.length; x++) {
-        let name = input[x].name
-        output[name]++
-    }
-    return output
-}
+// function countAttendees(input) {
+//     let output = {
+//         jimjam: 0,
+//         shannon: 0,
+//         steve: 0
+//     }
+//     for (x = 0; x < input.length; x++) {
+//         let name = input[x].name
+//         output[name]++
+//     }
+//     return output
+// }
 
 
 
