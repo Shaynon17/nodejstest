@@ -298,17 +298,18 @@ test('can sum array inside an object', () => {
     expect(getFirstTemp(input)).toBe(70);
 })
 
+//had to look at notes the day before
 test('can reduce strings into sentence', () => {
     let input = ['hey', 'there', 'horseman'];
     // do with both hardcoded and for loop
     expect(makeSentence(input)).toBe("hey there horseman");
 })
 
-// test('can reduce numbers into average', () => {
-//     let input = [10, 20, 30, 40];
-//     // do with both hardcoded and for loop
-//     expect(averageNumbers(input)).toBe(25);
-// })
+test('can reduce numbers into average', () => {
+    let input = [10, 20, 30, 40];
+    // do with both hardcoded and for loop
+    expect(averageNumbers(input)).toBe(25);
+})
 
 
 // test('can count up numbers in array of objects', () => {

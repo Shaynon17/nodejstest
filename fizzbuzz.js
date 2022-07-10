@@ -1513,14 +1513,36 @@ function sumTemps(input) {
     return input.temps[0] + input.temps[1] + input.temps[2]
 }
 
-// function makeSentence(string) {
-// let
+function makeSentence(input) {
+    return input[0] + ' ' + input[1] + ' ' + input[2]
+}
+
+function averageNumbers(input) {
+    let combine = input[0] + input[1] + input[2] + input[3]
+    return combine / input.length
+}
+
+//could not get without looking at notes
+// function countIds(input) {
+//     let endOutput = {
+//         '1': 0,
+//         '2': 0,
+//         '4': 0,
+//     }
+//     for (x = 0; x < input.length; x++) {
+//         let put = input[x]
+//         let id = put.id
+//         endOutput[id]++
+//     }
+//     return endOutput
 // }
+
+function 
 
 module.exports = {
     fizzbuzzConverter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, upperCaseFirstLetter, characterNums, plusOne, lastLetter, stringCounter, isCoolSClub,
     isDivisbleBy, palindromeName, incrementNumber, getTemp, getStreet, getZipCodes, upperCaseContactNames, 
-    reverseString, getFirstTemp, sumTemps, makeSentence,
+    reverseString, getFirstTemp, sumTemps, makeSentence, averageNumbers,
     sumOfSquares,
     getSecondFace,
     helloWorld,
