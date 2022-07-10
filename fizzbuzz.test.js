@@ -327,6 +327,8 @@ test('can reduce numbers into average', () => {
 //     expect(countIds(input)).toStrictEqual(output);
 // })
 
+
+//had to look at notes :(
 // test('will count letters in word', () => {
 //     let output = {
 //         e: 1,
@@ -337,6 +339,7 @@ test('can reduce numbers into average', () => {
 //     expect(countLetters("hello")).toStrictEqual(output);
 // })
 
+//almost had it
 // test('will count numbers in string', () => {
 //     let output = {
 //         '1': 3,
@@ -347,21 +350,22 @@ test('can reduce numbers into average', () => {
 // })
 
 
-// test('will count attendees', () => {
-//     let input = [
-//         { name: "steve" },
-//         { name: "shannon" },
-//         { name: "shannon" },
-//         { name: "shannon" },
-//         { name: "jimjam" },
-//     ];
-//     let output = {
-//         'jimjam': 1,
-//         'shannon': 3,
-//         'steve': 1
-//     }
-//     expect(countAttendees(input)).toStrictEqual(output);
-// })
+//had to look at notes
+test('will count attendees', () => {
+    let input = [
+        { name: "steve" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "jimjam" },
+    ];
+    let output = {
+        'jimjam': 1,
+        'shannon': 3,
+        'steve': 1
+    }
+    expect(countAttendees(input)).toStrictEqual(output);
+})
 
 
 // get first element from array "names"

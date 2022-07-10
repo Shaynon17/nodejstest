@@ -1537,13 +1537,54 @@ function averageNumbers(input) {
 //     return endOutput
 // }
 
-function 
+// function countLetters(word) {
+//     let output = {
+//         e: 0,
+//         h: 0,
+//         l: 0,
+//         o: 0
+//     }
+//     for (x = 0; x < word.length; x++) {
+//         let letters = word[x]
+//         output[letters]++
+//     }
+//     return output
+// }
+
+
+// function countNumbersString(string) {
+//     let output = {
+//         '1': 0,
+//         '2': 0,
+//         '3': 0
+//     }
+//     for (x = 0; x < string.length; x++) {
+//         let nums = string[x]
+//         output[nums]++
+//     }
+//     delete output[','] // couldnt figure out this part/ how to - ','
+//     return output
+// }
+
+function countAttendees(input) {
+    let output = {
+        jimjam: 0,
+        shannon: 0,
+        steve: 0
+    }
+    for (x = 0; x < input.length; x++) {
+        let count = input[x].name //had to look at notes for .name
+        output[count]++
+    }
+    return output
+}
+
 
 module.exports = {
     fizzbuzzConverter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, upperCaseFirstLetter, characterNums, plusOne, lastLetter, stringCounter, isCoolSClub,
     isDivisbleBy, palindromeName, incrementNumber, getTemp, getStreet, getZipCodes, upperCaseContactNames, 
     reverseString, getFirstTemp, sumTemps, makeSentence, averageNumbers,
-    sumOfSquares,
+    sumOfSquares, countAttendees,
     getSecondFace,
     helloWorld,
     sumFaces, combineSuits,
