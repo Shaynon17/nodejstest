@@ -367,7 +367,64 @@ test('will count attendees', () => {
     expect(countAttendees(input)).toStrictEqual(output);
 })
 
+test('can find most common letter', () => {
+    let input = "aabbbbbccccccca";
+    let output = "c"
+    expect(findMostCommonLetter(input)).toBe(output);
+})
 
+test('show count of each letter', () => {
+    let input = "aabbbbbccccccca";
+    let output = "a: 3 , b: 5, c: 7"
+    expect(countAllLettersStringOutput(input)).toBe(output);
+})
+
+test('user id of user with longest name', () => {
+    let input = [
+        { name: "steve", id: 1 },
+        { name: "shannon", id: 2 },
+        { name: "jimjam", id: 3 }
+    ]
+    let output = 2;
+    expect(getUserIdWithLongestName(input)).toBe(output);
+})
+
+test('get average temp for philly', () => {
+    let input = [
+        { city: "philly", temps: [10, 20, 30] },
+        { city: "chicago", temps: [30, 30, 30] }
+    ]
+    expect(getAverageTempForCity(input, "philly")).toBe(20);
+    expect(getAverageTempForCity(input, "chicago")).toBe(30);
+})
+
+test('are all numbers the same', () => {
+    expect(allNumbersTheSame([1, 2, 3, 4, 5, 6])).toBe(false);
+    expect(allNumbersTheSame([2, 2, 2, 2, 2, 2])).toBe(true);
+})
+
+test('does number occur four times?', () => {
+    expect(numberHappensFourTimes(2, [1, 2, 3, 4, 6])).toBe(false);
+    expect(numberHappensFourTimes(2, [1, 2, 2, 2, 2])).toBe(true);
+})
+
+test('are all numbers unique?', () => {
+    expect(allNumbersUnqiue([1, 2, 3, 4, 6])).toBe(true);
+    expect(allNumbersUnqiue([1, 2, 2, 2, 2])).toBe(false);
+})
+
+test('return any numbers in both', () => {
+    expect(numbersInBoth([1, 2, 3], [4, 5, 6])).toStrictEqual([]);
+    expect(numbersInBoth([1, 2, 3], [4, 5, 6, 2, 1])).toStrictEqual([1, 2]);
+})
+
+test('return any numbers not in both', () => {
+    expect(numbersNotInBoth([1, 2, 3], [4, 5, 6])).toStrictEqual([1, 2, 3, 4, 5, 6]);
+    expect(numbersNotInBoth([1, 2, 3], [3, 4, 5, 6])).toStrictEqual([1, 2, 4, 5, 6]);
+})
+
+
+//notecards 
 // get first element from array "names"
 // let names = ['steve', 'sam']
 //      names[0]
