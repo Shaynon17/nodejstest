@@ -1627,10 +1627,36 @@ function countNumbersString(input) {
     return output
 }
 
+function countAttendees(input) {
+    let output = {
+        jimjam: 0,
+        shannon: 0,
+        steve: 0,
+    }
+    for (x = 0; x < input.length; x++) {
+        let names = input[x].name
+        console.log(names)
+        output[names]++
+    }
+    return output
+}
+
+function countAllLettersStringOutput(input) {
+    let output = {
+        a: 0,
+        b: 0,
+        c: 0
+    }
+    for (x = 0; x < input.length; x++) {
+        let letters = input[x]
+        output[letters]++
+    }
+    return output
+}
 
 
 module.exports = {
-    makeSentence, countLetters, countNumbersString,
+    makeSentence, countLetters, countNumbersString, countAttendees, countAllLettersStringOutput,
 }
 
 /*

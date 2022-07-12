@@ -1,4 +1,4 @@
-const { countAttendees, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { countAttendees, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -351,21 +351,21 @@ test('will count numbers in string', () => {
 
 
 // //had to look at notes
-// test('will count attendees', () => {
-//     let input = [
-//         { name: "steve" },
-//         { name: "shannon" },
-//         { name: "shannon" },
-//         { name: "shannon" },
-//         { name: "jimjam" },
-//     ];
-//     let output = {
-//         'jimjam': 1,
-//         'shannon': 3,
-//         'steve': 1
-//     }
-//     expect(countAttendees(input)).toStrictEqual(output);
-// })
+test('will count attendees', () => {
+    let input = [
+        { name: "steve" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "jimjam" },
+    ];
+    let output = {
+        'jimjam': 1,
+        'shannon': 3,
+        'steve': 1
+    }
+    expect(countAttendees(input)).toStrictEqual(output);
+})
 
 // test('can find most common letter', () => {
 //     let input = "aabbbbbccccccca";
@@ -373,11 +373,11 @@ test('will count numbers in string', () => {
 //     expect(findMostCommonLetter(input)).toBe(output);
 // })
 
-// test('show count of each letter', () => {
-//     let input = "aabbbbbccccccca";
-//     let output = "a: 3 , b: 5, c: 7"
-//     expect(countAllLettersStringOutput(input)).toBe(output);
-// })
+test('show count of each letter', () => {
+    let input = "aabbbbbccccccca";
+    let output = "a: 3 , b: 5, c: 7"
+    expect(countAllLettersStringOutput(input)).toBe(output);
+})
 
 // test('user id of user with longest name', () => {
 //     let input = [
