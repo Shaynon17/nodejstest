@@ -1,4 +1,4 @@
-const { countAttendees, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { countAttendees, getAverageTempForCity, getUserIdWithLongestName, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -373,12 +373,14 @@ test('will count attendees', () => {
 //     expect(findMostCommonLetter(input)).toBe(output);
 // })
 
-test('show count of each letter', () => {
-    let input = "aabbbbbccccccca";
-    let output = "a: 3 , b: 5, c: 7"
-    expect(countAllLettersStringOutput(input)).toBe(output);
-})
+////////////////////////check with steve line 1644
+// test('show count of each letter', () => {
+//     let input = "aabbbbbccccccca";
+//     let output = "a: 3, b: 5, c: 7"
+//     expect(countAllLettersStringOutput(input)).toBe(output);
+// })
 
+///////////nope
 // test('user id of user with longest name', () => {
 //     let input = [
 //         { name: "steve", id: 1 },
@@ -395,13 +397,13 @@ test('show count of each letter', () => {
 //         { city: "chicago", temps: [30, 30, 30] }
 //     ]
 //     expect(getAverageTempForCity(input, "philly")).toBe(20);
-//     expect(getAverageTempForCity(input, "chicago")).toBe(30);
+    // expect(getAverageTempForCity(input, "chicago")).toBe(30);
 // })
 
-// test('are all numbers the same', () => {
-//     expect(allNumbersTheSame([1, 2, 3, 4, 5, 6])).toBe(false);
-//     expect(allNumbersTheSame([2, 2, 2, 2, 2, 2])).toBe(true);
-// })
+test('are all numbers the same', () => {
+    expect(allNumbersTheSame([1, 2, 3, 4, 5, 6])).toBe(false);
+    expect(allNumbersTheSame([2, 2, 2, 2, 2, 2])).toBe(true);
+})
 
 // test('does number occur four times?', () => {
 //     expect(numberHappensFourTimes(2, [1, 2, 3, 4, 6])).toBe(false);

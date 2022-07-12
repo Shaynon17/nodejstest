@@ -1635,28 +1635,41 @@ function countAttendees(input) {
     }
     for (x = 0; x < input.length; x++) {
         let names = input[x].name
-        console.log(names)
         output[names]++
     }
     return output
 }
 
-function countAllLettersStringOutput(input) {
-    let output = {
-        a: 0,
-        b: 0,
-        c: 0
-    }
-    for (x = 0; x < input.length; x++) {
-        let letters = input[x]
-        output[letters]++
-    }
-    return output
-}
+/////////////////////////////////check with steve line 367
+// function countAllLettersStringOutput(input) {
+//     let output = {
+//         a: 0,
+//         b: 0,
+//         c: 0
+//     }
+//     for (x = 0; x < input.length; x++) {
+//         let letters = input[x]
+//         output[letters]++
+//     }
+//     return output
+// }
 
+// function getUserIdWithLongestName(input) {
+//     let output = []
+//     for (x = 0; x < input.name; x++) {
+//         let eachName = input[x].length
+
+//     }
+//     return output
+// }
+
+// function getAverageTempForCity(input) {
+//     return input.city[0].temps[0]
+// }
 
 module.exports = {
-    makeSentence, countLetters, countNumbersString, countAttendees, countAllLettersStringOutput,
+    makeSentence, countLetters, countNumbersString, countAttendees,
+    getAverageTempForCity,
 }
 
 /*
