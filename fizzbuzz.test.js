@@ -1,4 +1,4 @@
-const { countAttendees, getAverageTempForCity, getUserIdWithLongestName, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { countAttendees, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, getUserIdWithLongestName, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -238,24 +238,24 @@ const { countAttendees, getAverageTempForCity, getUserIdWithLongestName, countAl
 
 
 
-// test('make a league character factory', () => {
-//     let xerath = makeLeagueCharacter("Xerath", 4, 300);
-//     expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
+test('make a league character factory', () => {
+    let xerath = makeLeagueCharacter("Xerath", 4, 300);
+    expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
 
-    // let garen = makeLeagueCharacter("Garen", 3, 200);
+    let garen = makeLeagueCharacter("Garen", 3, 200);
 
-    // let totalDps = sumCharacterDpses([xerath, garen]);
-    // expect(totalDps).toBe(7);
+    let totalDps = sumCharacterDpses([xerath, garen]);
+    expect(totalDps).toBe(7);
 
-    // let stats = prettyPrintStats(xerath);
-    // expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");
+    let stats = prettyPrintStats(xerath); 
+    expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");
 
-    // let wukong = makeCharacterFromString("Wukong 6 500");
-    // expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 });
+    let wukong = makeCharacterFromString("Wukong 6 500");
+    expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 });
 
 
-    // let names = collectCharacterNames([xerath, garen, wukong]);
-    // expect(names).toBe("Xerath, Garen, Wukong");
+    let names = collectCharacterNames([xerath, garen, wukong]);
+    expect(names).toBe("Xerath, Garen, Wukong");
 
     // let manaTotal = totalMana([xerath, garen, wukong]);
     // expect(manaTotal).toBe(1000);
@@ -266,7 +266,7 @@ const { countAttendees, getAverageTempForCity, getUserIdWithLongestName, countAl
     // let towerAfterHit = hitTower(tower, 50);
     // expect(towerAfterHit).toStrictEqual({ health: 1450 });
 
-// })
+})
 
 // test('can get out the suit from an array of cards', () => {
 //     let input = [ /* square brackets make an array, curly brackets make an object */
@@ -400,10 +400,10 @@ test('will count attendees', () => {
     // expect(getAverageTempForCity(input, "chicago")).toBe(30);
 // })
 
-test('are all numbers the same', () => {
-    expect(allNumbersTheSame([1, 2, 3, 4, 5, 6])).toBe(false);
-    expect(allNumbersTheSame([2, 2, 2, 2, 2, 2])).toBe(true);
-})
+// test('are all numbers the same', () => {
+//     expect(allNumbersTheSame([1, 2, 3, 4, 5, 6])).toBe(false);
+//     expect(allNumbersTheSame([2, 2, 2, 2, 2, 2])).toBe(true);
+// })
 
 // test('does number occur four times?', () => {
 //     expect(numberHappensFourTimes(2, [1, 2, 3, 4, 6])).toBe(false);

@@ -1585,15 +1585,19 @@ module.exports.capEachWord = (string) => {
 
 //incomplete /////////////////////////////////////////////////////////////////////////////////
 // function incrementZipCode(contact) {
-//     let contact = contact.zip + 1
+//     contact.zip = contact.zip + 1; //modify
+//     return contact; //then return
 // }
 
-/////////////////////////////////////////////////////////////////
-// function makeLeagueCharacter(champ) {
-//     'name' champ,
-//         'dps': 0,
-//             'mana': 0
-// }
+
+function makeLeagueCharacter(champ, dps, mana) {
+    let stats = {
+        name: champ,
+        dps: dps,
+        mana: mana
+    }
+    return stats
+}
 
 function makeSentence(input) {
     return input[0] + ' ' + input[1] + ' ' + input[2]
@@ -1612,6 +1616,30 @@ function countLetters(input) {
     }
     return output
 }
+
+function sumCharacterDpses(champs) {
+    let output = 0
+    for (x = 0; x < champs.length; x++) {
+        let champ = champs[x].dps
+        output = output + champ
+    }
+    return output
+}
+
+function prettyPrintStats(champ) {
+    return champ.name + ' - DPS: ' + champ.dps + ' - Mana: ' + champ.mana
+}
+
+function makeCharacterFromString(champ) {
+    let splitString = champ.split(' ')
+    let object = {
+        name: splitString[0],
+        dps: parseInt(splitString[1]),
+        mana: parseInt(splitString[2])
+    }
+    return object
+}
+
 
 function countNumbersString(input) {
     let output = {
@@ -1669,7 +1697,7 @@ function countAttendees(input) {
 
 module.exports = {
     makeSentence, countLetters, countNumbersString, countAttendees,
-    getAverageTempForCity,
+    makeLeagueCharacter, sumCharacterDpses, prettyPrintStats, makeCharacterFromString,
 }
 
 /*
