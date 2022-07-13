@@ -1,4 +1,4 @@
-const { countAttendees, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, getUserIdWithLongestName, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -251,11 +251,11 @@ test('make a league character factory', () => {
     expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");
 
     let wukong = makeCharacterFromString("Wukong 6 500");
-    expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 });
+    expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 }); //
 
 
     let names = collectCharacterNames([xerath, garen, wukong]);
-    expect(names).toBe("Xerath, Garen, Wukong"); 
+    expect(names).toBe("Xerath, Garen, Wukong"); //do with for loop too 
 
     let manaTotal = totalMana([xerath, garen, wukong]);
     expect(manaTotal).toBe(1000);
@@ -373,24 +373,29 @@ test('will count attendees', () => {
 //     expect(findMostCommonLetter(input)).toBe(output);
 // })
 
-////////////////////////check with steve line 1644
-// test('show count of each letter', () => {
-//     let input = "aabbbbbccccccca";
-//     let output = "a: 3, b: 5, c: 7"
-//     expect(countAllLettersStringOutput(input)).toBe(output);
-// })
+////////////////////////check with steve line 1693
+test('show count of each letter', () => {
+    let input = "aabbbbbccccccca";
+    let output = "a: 3, b: 5, c: 7"
+    expect(countAllLettersStringOutput(input)).toBe(output);
+})
 
-///////////nope
-// test('user id of user with longest name', () => {
-//     let input = [
-//         { name: "steve", id: 1 },
-//         { name: "shannon", id: 2 },
-//         { name: "jimjam", id: 3 }
-//     ]
-//     let output = 2;
-//     expect(getUserIdWithLongestName(input)).toBe(output);
-// })
+///////////do it ALOT
+test('user id of user with longest name', () => {
+    let input = [
+        { name: "steve", id: 1 },
+        { name: "shannon", id: 2 },
+        { name: "jimjam", id: 3 }
+    ]
+    let output = 2;
+    expect(getUserIdWithLongestName(input)).toBe(output);
+})
 
+
+
+//WORK ON THESE NEXT
+
+//line 1766
 // test('get average temp for philly', () => {
 //     let input = [
 //         { city: "philly", temps: [10, 20, 30] },
@@ -426,7 +431,10 @@ test('will count attendees', () => {
 // })
 
 
-//notecards 
+// (for), if, function, (array), (objects)
+// map, filter, reduce, forEach, countBy, groupBy
+
+//notecards
 // get first element from array "names"
 // let names = ['steve', 'sam']
 //      names[0]
@@ -452,3 +460,7 @@ test('will count attendees', () => {
 // [{name: 'steve'}, {name: 'jimbob'}]
 //      people[0].name
 //      people[0]['name']
+
+// adding to
+// numbers, strings     +
+// arrays               Array.prototype.push 

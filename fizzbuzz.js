@@ -1640,12 +1640,30 @@ function makeCharacterFromString(champ) {
     return object
 }
 
-function collectCharacterNames(champ) {
-    return champ[0].name + ', ' + champ[1].name + ', ' + champ[2].name
+// function collectCharacterNames(champ) {
+//     return champ[0].name + ', ' + champ[1].name + ', ' + champ[2].name
+// }
+
+function collectCharacterNames(champs) {
+    let output = ''
+    for (x = 0; x < champs.length; x++) {
+        let champ = champs[x].name
+        output = output + champ + ', '
+    }
+    return output.slice(0, -2)
 }
 
-function totalMana(champ) {
-    return champ[0].mana + champ[1].mana + champ[2].mana
+// function totalMana(champ) {
+//     return champ[0].mana + champ[1].mana + champ[2].mana
+// }
+
+function totalMana(champs) {
+    let output = 0
+    for (x = 0; x < champs.length; x++) {
+        let champ = champs[x].mana
+        output = output + champ
+    }
+    return output
 }
 
 function makeTower(tower) {
@@ -1691,36 +1709,68 @@ function countAttendees(input) {
 }
 
 /////////////////////////////////check with steve line 367
-// function countAllLettersStringOutput(input) {
-//     let output = {
-//         a: 0,
-//         b: 0,
-//         c: 0
+function countAllLettersStringOutput(input) {
+    let output = {
+        a: 0,
+        b: 0,
+        c: 0
+    }
+    for (x = 0; x < input.length; x++) {
+        let letters = input[x]
+        output[letters]++
+    }
+    // for loop over keys and values and put into string to return
+    let stringOutput = ''
+    let letters = Object.keys(output);
+    for (x = 0; x < letters.length; x++) {
+        let letter = letters[x];
+        let count = output[letter]
+        stringOutput = stringOutput + letter + ': ' + count + ', '
+    }
+    return stringOutput.slice(0, -2)
+}
+
+
+
+
+
+// function getUserIdWithLongestName(people) {
+//     // collect into an object the lengths of the names and the ids
+//     let countToId = {}
+//     for (let x = 0; x < people.length; x++) {
+//         let person = people[x];
+//         countToId[person.name.length] = person.id
 //     }
-//     for (x = 0; x < input.length; x++) {
-//         let letters = input[x]
-//         output[letters]++
-//     }
-//     return output
+//     let lengths = Object.keys(countToId).map(x => parseInt(x))
+
+//     let largestLength = lengths[lengths.length - 1]
+//     return (countToId[largestLength])
 // }
 
-// function getUserIdWithLongestName(input) {
-//     let output = []
-//     for (x = 0; x < input.name; x++) {
-//         let eachName = input[x].length
 
-//     }
-//     return output
-// }
+
+function getUserIdWithLongestName(people) {
+    let idOutput = 2;
+    let longestNameSoFar = 7;
+
+    for (x = 0; x < people.length; x++) {
+        let person = people[x];
+        if (person.name.length > longestNameSoFar) {
+            idOutput = person.id;
+            longestNameSoFar = person.name.length
+        }
+    }
+    return idOutput
+}
 
 // function getAverageTempForCity(input) {
 //     return input.city[0].temps[0]
 // }
 
 module.exports = {
-    makeSentence, countLetters, countNumbersString, countAttendees,
+    makeSentence, countLetters, countNumbersString, countAttendees, getUserIdWithLongestName,
     makeLeagueCharacter, sumCharacterDpses, prettyPrintStats, makeCharacterFromString,
-    collectCharacterNames, totalMana, makeTower, hitTower,
+    collectCharacterNames, totalMana, makeTower, hitTower, countAllLettersStringOutput,
 }
 
 /*
