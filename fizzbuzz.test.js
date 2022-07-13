@@ -1,4 +1,4 @@
-const { countAttendees, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, getUserIdWithLongestName, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { countAttendees, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, getUserIdWithLongestName, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -255,16 +255,16 @@ test('make a league character factory', () => {
 
 
     let names = collectCharacterNames([xerath, garen, wukong]);
-    expect(names).toBe("Xerath, Garen, Wukong");
+    expect(names).toBe("Xerath, Garen, Wukong"); 
 
-    // let manaTotal = totalMana([xerath, garen, wukong]);
-    // expect(manaTotal).toBe(1000);
+    let manaTotal = totalMana([xerath, garen, wukong]);
+    expect(manaTotal).toBe(1000);
 
-    // let tower = makeTower(1500, 20);
-    // expect(tower).toStrictEqual({ health: 1500 });
+    let tower = makeTower(1500, 20);
+    expect(tower).toStrictEqual({ health: 1500 });
 
-    // let towerAfterHit = hitTower(tower, 50);
-    // expect(towerAfterHit).toStrictEqual({ health: 1450 });
+    let towerAfterHit = hitTower(tower, 50);
+    expect(towerAfterHit).toStrictEqual({ health: 1450 });
 
 })
 

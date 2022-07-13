@@ -1640,6 +1640,28 @@ function makeCharacterFromString(champ) {
     return object
 }
 
+function collectCharacterNames(champ) {
+    return champ[0].name + ', ' + champ[1].name + ', ' + champ[2].name
+}
+
+function totalMana(champ) {
+    return champ[0].mana + champ[1].mana + champ[2].mana
+}
+
+function makeTower(tower) {
+    let output = {
+        health: tower
+    }
+    return output
+}
+
+function hitTower(tower, damage) {
+    let output = {
+        health: tower.health - damage
+    }
+    return output
+}
+
 
 function countNumbersString(input) {
     let output = {
@@ -1698,6 +1720,7 @@ function countAttendees(input) {
 module.exports = {
     makeSentence, countLetters, countNumbersString, countAttendees,
     makeLeagueCharacter, sumCharacterDpses, prettyPrintStats, makeCharacterFromString,
+    collectCharacterNames, totalMana, makeTower, hitTower,
 }
 
 /*
