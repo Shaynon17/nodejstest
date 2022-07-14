@@ -1,4 +1,4 @@
-const { countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { getIndexForCity, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -299,11 +299,11 @@ test('make a league character factory', () => {
 // })
 
 // //had to look at notes the day before
-test('can reduce strings into sentence', () => {
-    let input = ['hey', 'there', 'horseman'];
-    // do with both hardcoded and for loop
-    expect(makeSentence(input)).toBe("hey there horseman");
-})
+// test('can reduce strings into sentence', () => {
+//     let input = ['hey', 'there', 'horseman'];
+//     // do with both hardcoded and for loop
+//     expect(makeSentence(input)).toBe("hey there horseman");
+// })
 
 // test('can reduce numbers into average', () => {
 //     let input = [10, 20, 30, 40];
@@ -396,14 +396,23 @@ test('user id of user with longest name', () => {
 //WORK ON THESE NEXT
 
 //line 1766
-// test('get average temp for philly', () => {
-//     let input = [
-//         { city: "philly", temps: [10, 20, 30] },
-//         { city: "chicago", temps: [30, 30, 30] }
-//     ]
-//     expect(getAverageTempForCity(input, "philly")).toBe(20);
+test('get index for city in arrray ', () => {
+    let input = [
+        { name: "philly", temps: [10, 20, 30] },
+        { name: "chicago", temps: [30, 30, 30] }
+    ]
+    expect(getIndexForCity(input, "philly")).toBe(0);
+    expect(getIndexForCity(input, "chicago")).toBe(1);
+}) ///////////////////////////
+
+test('get average temp for philly', () => {
+    let input = [
+        { name: "philly", temps: [10, 20, 30] },
+        { name: "chicago", temps: [30, 30, 30] }
+    ]
+    expect(getAverageTempForCity(input, "philly")).toBe(20);
     // expect(getAverageTempForCity(input, "chicago")).toBe(30);
-// })
+})
 
 // test('are all numbers the same', () => {
 //     expect(allNumbersTheSame([1, 2, 3, 4, 5, 6])).toBe(false);
@@ -429,6 +438,10 @@ test('user id of user with longest name', () => {
 //     expect(numbersNotInBoth([1, 2, 3], [4, 5, 6])).toStrictEqual([1, 2, 3, 4, 5, 6]);
 //     expect(numbersNotInBoth([1, 2, 3], [3, 4, 5, 6])).toStrictEqual([1, 2, 4, 5, 6]);
 // })
+
+
+
+
 
 
 // (for), if, function, (array), (objects)

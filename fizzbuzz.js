@@ -1913,17 +1913,36 @@ module.exports.upperCaser = (names) => {
 //     return output
 // }
 
-// function getAverageTempForCity(input, city) {
-//     return input.temp[0]
-// }
-
-
-function makeSentence(strings) {
-    return strings[0] + ' ' + strings[1] + ' ' + strings[2]
+function getIndexForCity(cityInfo, cityName) {
+    let cityIndex = 0; // ??
+    for (x = 0; x < cityInfo.length; x++) {
+        let city = cityInfo[x]
+        console.log(city)
+        if (city.name === cityName) {
+            cityIndex = x
+        }
+    }
 }
 
+function getAverageTempForCity(cityInfo, cityName) {
+
+    // what index is city = Philly equal to?
+    let cityTemps = 0
+    for (x = 0; x < cityInfo[0].temps.length; x++) {
+        let temp = cityInfo[0].temps[x]
+        cityTemps = cityTemps + temp
+    }
+    return cityTemps / cityInfo[0].temps.length
+}
+
+
+// function makeSentence(strings) {
+//     return strings[0] + ' ' + strings[1] + ' ' + strings[2]
+// }
+
 module.exports = {
-    makeSentence, countLetters, countNumbersString, countAttendees, getUserIdWithLongestName,
+    getIndexForCity,
+    getAverageTempForCity, countLetters, countNumbersString, countAttendees, getUserIdWithLongestName,
     makeLeagueCharacter, sumCharacterDpses, prettyPrintStats, makeCharacterFromString,
     collectCharacterNames, totalMana, makeTower, hitTower, countAllLettersStringOutput,
 }
