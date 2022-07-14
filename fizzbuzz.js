@@ -1599,9 +1599,9 @@ function makeLeagueCharacter(champ, dps, mana) {
     return stats
 }
 
-function makeSentence(input) {
-    return input[0] + ' ' + input[1] + ' ' + input[2]
-}
+// function makeSentence(input) {
+//     return input[0] + ' ' + input[1] + ' ' + input[2]
+// }
 
 function countLetters(input) {
     let output = {
@@ -1767,11 +1767,7 @@ function getUserIdWithLongestName(people) {
 //     return input.city[0].temps[0]
 // }
 
-module.exports = {
-    makeSentence, countLetters, countNumbersString, countAttendees, getUserIdWithLongestName,
-    makeLeagueCharacter, sumCharacterDpses, prettyPrintStats, makeCharacterFromString,
-    collectCharacterNames, totalMana, makeTower, hitTower, countAllLettersStringOutput,
-}
+
 
 /*
 module.exports.upperCaser = (names) => {
@@ -1917,8 +1913,17 @@ module.exports.upperCaser = (names) => {
 //     return output
 // }
 
+// function getAverageTempForCity(input, city) {
+//     return input.temp[0]
+// }
 
 
+function makeSentence(strings) {
+    return strings[0] + ' ' + strings[1] + ' ' + strings[2]
+}
 
-
-
+module.exports = {
+    makeSentence, countLetters, countNumbersString, countAttendees, getUserIdWithLongestName,
+    makeLeagueCharacter, sumCharacterDpses, prettyPrintStats, makeCharacterFromString,
+    collectCharacterNames, totalMana, makeTower, hitTower, countAllLettersStringOutput,
+}
