@@ -1590,145 +1590,145 @@ module.exports.capEachWord = (string) => {
 // }
 
 
-function makeLeagueCharacter(champ, dps, mana) {
-    let stats = {
-        name: champ,
-        dps: dps,
-        mana: mana
-    }
-    return stats
-}
+// function makeLeagueCharacter(champ, dps, mana) {
+//     let stats = {
+//         name: champ,
+//         dps: dps,
+//         mana: mana
+//     }
+//     return stats
+// }
 
 // function makeSentence(input) {
 //     return input[0] + ' ' + input[1] + ' ' + input[2]
 // }
 
-function countLetters(input) {
-    let output = {
-        e: 0,
-        h: 0,
-        l: 0,
-        o: 0,
-    }
-    for (x = 0; x < input.length; x++) {
-        let letter = input[x]
-        output[letter]++
-    }
-    return output
-}
+// function countLetters(input) {
+//     let output = {
+//         e: 0,
+//         h: 0,
+//         l: 0,
+//         o: 0,
+//     }
+//     for (x = 0; x < input.length; x++) {
+//         let letter = input[x]
+//         output[letter]++
+//     }
+//     return output
+// }
 
-function sumCharacterDpses(champs) {
-    let output = 0
-    for (x = 0; x < champs.length; x++) {
-        let champ = champs[x].dps
-        output = output + champ
-    }
-    return output
-}
+// function sumCharacterDpses(champs) {
+//     let output = 0
+//     for (x = 0; x < champs.length; x++) {
+//         let champ = champs[x].dps
+//         output = output + champ
+//     }
+//     return output
+// }
 
-function prettyPrintStats(champ) {
-    return champ.name + ' - DPS: ' + champ.dps + ' - Mana: ' + champ.mana
-}
+// function prettyPrintStats(champ) {
+//     return champ.name + ' - DPS: ' + champ.dps + ' - Mana: ' + champ.mana
+// }
 
-function makeCharacterFromString(champ) {
-    let splitString = champ.split(' ')
-    let object = {
-        name: splitString[0],
-        dps: parseInt(splitString[1]),
-        mana: parseInt(splitString[2])
-    }
-    return object
-}
+// function makeCharacterFromString(champ) {
+//     let splitString = champ.split(' ')
+//     let object = {
+//         name: splitString[0],
+//         dps: parseInt(splitString[1]),
+//         mana: parseInt(splitString[2])
+//     }
+//     return object
+// }
 
 // function collectCharacterNames(champ) {
 //     return champ[0].name + ', ' + champ[1].name + ', ' + champ[2].name
 // }
 
-function collectCharacterNames(champs) {
-    let output = ''
-    for (x = 0; x < champs.length; x++) {
-        let champ = champs[x].name
-        output = output + champ + ', '
-    }
-    return output.slice(0, -2)
-}
+// function collectCharacterNames(champs) {
+//     let output = ''
+//     for (x = 0; x < champs.length; x++) {
+//         let champ = champs[x].name
+//         output = output + champ + ', '
+//     }
+//     return output.slice(0, -2)
+// }
 
 // function totalMana(champ) {
 //     return champ[0].mana + champ[1].mana + champ[2].mana
 // }
 
-function totalMana(champs) {
-    let output = 0
-    for (x = 0; x < champs.length; x++) {
-        let champ = champs[x].mana
-        output = output + champ
-    }
-    return output
-}
+// function totalMana(champs) {
+//     let output = 0
+//     for (x = 0; x < champs.length; x++) {
+//         let champ = champs[x].mana
+//         output = output + champ
+//     }
+//     return output
+// }
 
-function makeTower(tower) {
-    let output = {
-        health: tower
-    }
-    return output
-}
+// function makeTower(tower) {
+//     let output = {
+//         health: tower
+//     }
+//     return output
+// }
 
-function hitTower(tower, damage) {
-    let output = {
-        health: tower.health - damage
-    }
-    return output
-}
+// function hitTower(tower, damage) {
+//     let output = {
+//         health: tower.health - damage
+//     }
+//     return output
+// }
 
 
-function countNumbersString(input) {
-    let output = {
-        '1': 0,
-        '2': 0,
-        '3': 0,
-    }
-    for (x = 0; x < input.length; x++) {
-        let count = input[x]
-        output[count]++
-    }
-    delete output[','];
-    return output
-}
+// function countNumbersString(input) {
+//     let output = {
+//         '1': 0,
+//         '2': 0,
+//         '3': 0,
+//     }
+//     for (x = 0; x < input.length; x++) {
+//         let count = input[x]
+//         output[count]++
+//     }
+//     delete output[','];
+//     return output
+// }
 
-function countAttendees(input) {
-    let output = {
-        jimjam: 0,
-        shannon: 0,
-        steve: 0,
-    }
-    for (x = 0; x < input.length; x++) {
-        let names = input[x].name
-        output[names]++
-    }
-    return output
-}
+// function countAttendees(input) {
+//     let output = {
+//         jimjam: 0,
+//         shannon: 0,
+//         steve: 0,
+//     }
+//     for (x = 0; x < input.length; x++) {
+//         let names = input[x].name
+//         output[names]++
+//     }
+//     return output
+// }
 
 /////////////////////////////////check with steve line 367
-function countAllLettersStringOutput(input) {
-    let output = {
-        a: 0,
-        b: 0,
-        c: 0
-    }
-    for (x = 0; x < input.length; x++) {
-        let letters = input[x]
-        output[letters]++
-    }
-    // for loop over keys and values and put into string to return
-    let stringOutput = ''
-    let letters = Object.keys(output);
-    for (x = 0; x < letters.length; x++) {
-        let letter = letters[x];
-        let count = output[letter]
-        stringOutput = stringOutput + letter + ': ' + count + ', '
-    }
-    return stringOutput.slice(0, -2)
-}
+// function countAllLettersStringOutput(input) {
+//     let output = {
+//         a: 0,
+//         b: 0,
+//         c: 0
+//     }
+//     for (x = 0; x < input.length; x++) {
+//         let letters = input[x]
+//         output[letters]++
+//     }
+//     // for loop over keys and values and put into string to return
+//     let stringOutput = ''
+//     let letters = Object.keys(output);
+//     for (x = 0; x < letters.length; x++) {
+//         let letter = letters[x];
+//         let count = output[letter]
+//         stringOutput = stringOutput + letter + ': ' + count + ', '
+//     }
+//     return stringOutput.slice(0, -2)
+// }
 
 
 
@@ -1749,19 +1749,19 @@ function countAllLettersStringOutput(input) {
 
 
 
-function getUserIdWithLongestName(people) {
-    let idOutput = 2;
-    let longestNameSoFar = 7;
+// function getUserIdWithLongestName(people) {
+//     let idOutput = 0;
+//     let longestNameSoFar = 0;
 
-    for (x = 0; x < people.length; x++) {
-        let person = people[x];
-        if (person.name.length > longestNameSoFar) {
-            idOutput = person.id;
-            longestNameSoFar = person.name.length
-        }
-    }
-    return idOutput
-}
+//     for (x = 0; x < people.length; x++) {
+//         let person = people[x];
+//         if (person.name.length > longestNameSoFar) {
+//             idOutput = person.id;
+//             longestNameSoFar = person.name.length
+//         }
+//     }
+//     return idOutput
+// }
 
 // function getAverageTempForCity(input) {
 //     return input.city[0].temps[0]
@@ -1913,36 +1913,94 @@ module.exports.upperCaser = (names) => {
 //     return output
 // }
 
-function getIndexForCity(cityInfo, cityName) {
-    let cityIndex = 0; // ??
-    for (x = 0; x < cityInfo.length; x++) {
-        let city = cityInfo[x]
-        console.log(city)
-        if (city.name === cityName) {
-            cityIndex = x
-        }
-    }
-}
+// function getIndexForCity(cityInfo, cityName) {
+//     let cityIndex = 0; // ??
+//     for (x = 0; x < cityInfo.length; x++) {
+//         let city = cityInfo[x]
+//         console.log(city)
+//         if (city.name === cityName) {
+//             cityIndex = x
+//         }
+//     }
+// }
 
-function getAverageTempForCity(cityInfo, cityName) {
+// function getAverageTempForCity(cityInfo, cityName) {
 
-    // what index is city = Philly equal to?
-    let cityTemps = 0
-    for (x = 0; x < cityInfo[0].temps.length; x++) {
-        let temp = cityInfo[0].temps[x]
-        cityTemps = cityTemps + temp
-    }
-    return cityTemps / cityInfo[0].temps.length
-}
+//     // what index is city = Philly equal to?
+//     let cityTemps = 0
+//     for (x = 0; x < cityInfo[0].temps.length; x++) {
+//         let temp = cityInfo[0].temps[x]
+//         cityTemps = cityTemps + temp
+//     }
+//     return cityTemps / cityInfo[0].temps.length
+// }
 
 
 // function makeSentence(strings) {
 //     return strings[0] + ' ' + strings[1] + ' ' + strings[2]
 // }
 
-module.exports = {
-    getIndexForCity,
-    getAverageTempForCity, countLetters, countNumbersString, countAttendees, getUserIdWithLongestName,
-    makeLeagueCharacter, sumCharacterDpses, prettyPrintStats, makeCharacterFromString,
-    collectCharacterNames, totalMana, makeTower, hitTower, countAllLettersStringOutput,
+
+
+function fizzbuzzConverter(number) {
+    if (isDivisbleBy(number, 3) & isDivisbleBy(number, 5)) {
+        return 'fizzbuzz'
+    }
+    else if (isDivisbleBy(number, 3)) {
+        return 'fizz'
+    } else if (isDivisbleBy(number, 5)) {
+        return "buzz"
+    } else {
+        return number
+    }
 }
+
+function isDivisbleBy(larger, smaller) {
+    return (larger % smaller === 0)
+}
+
+function helloWorld(name) {
+    return "Hello " + name
+}
+
+function sumOfSquares(number){
+    return (number * number) + (number * number)
+}
+
+// function flipFlop(string){
+//     return string.charAt(1) + string.charAt(0)
+// }
+
+function flipFlop(string){
+    let splitString = string.split('')
+    let reverseString = splitString.reverse()
+    return joinString = reverseString.join('')
+}
+
+function capitalize(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1)
+}
+
+function mixUp (name) {
+    let splitName = name.split('')
+    let reverseName = splitName.reverse()
+    let joinName = reverseName.join('')
+    return joinName.charAt(0).toUpperCase() + joinName.slice(1)
+}
+
+function capFirstLast(name){
+    return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase()
+}
+
+function reverseString(name){
+    let splitName = name.split('')
+    let reverseName = splitName.reverse()
+    let joinName = reverseName.join('')
+    return joinName
+}
+
+module.exports = {
+    fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    reverseString,
+}
+

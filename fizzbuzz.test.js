@@ -4,62 +4,62 @@ const { getIndexForCity, countAttendees, getUserIdWithLongestName, hitTower, mak
 
 
 
-// test("fizzbuzzConverter(1) will return 1", () => {
-//     expect(fizzbuzzConverter(1)).toBe(1);
-// })
+test("fizzbuzzConverter(1) will return 1", () => {
+    expect(fizzbuzzConverter(1)).toBe(1);
+})
 
-// test("fizzbuzzConverter(3) will return 'fizz'", () => {
-//     expect(fizzbuzzConverter(3)).toBe('fizz');
-// })
+test("fizzbuzzConverter(3) will return 'fizz'", () => {
+    expect(fizzbuzzConverter(3)).toBe('fizz');
+})
 
-// test('fizzbuzzconverter(5) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(5)).toBe('buzz');
-// })
+test('fizzbuzzconverter(5) will return "buzz"', () => {
+    expect(fizzbuzzConverter(5)).toBe('buzz');
+})
 
-// test('fizzbuzzconverter(15) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(15)).toBe('fizzbuzz');
-// })
+test('fizzbuzzconverter(15) will return "buzz"', () => {
+    expect(fizzbuzzConverter(15)).toBe('fizzbuzz');
+})
 
-// test('fizzbuzzconverter(10) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(10)).toBe('buzz');
-// })
+test('fizzbuzzconverter(10) will return "buzz"', () => {
+    expect(fizzbuzzConverter(10)).toBe('buzz');
+})
 
-// test('fizzbuzzconverter(9) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(9)).toBe('fizz');
-// })
+test('fizzbuzzconverter(9) will return "buzz"', () => {
+    expect(fizzbuzzConverter(9)).toBe('fizz');
+})
 
-// test('fizzbuzzconverter(150) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(150)).toBe('fizzbuzz');
-// })
+test('fizzbuzzconverter(150) will return "buzz"', () => {
+    expect(fizzbuzzConverter(150)).toBe('fizzbuzz');
+})
 
-// test('Hello world steve returns steve', () => {
-//     expect(helloWorld('Steve')).toBe('Hello Steve')
-// })
+test('Hello world steve returns steve', () => {
+    expect(helloWorld('Steve')).toBe('Hello Steve')
+})
 
-// test('The square of 5 added to the square of 5 is 50', () => {
-//     expect(sumOfSquares(5)).toBe(50)
-// })
+test('The square of 5 added to the square of 5 is 50', () => {
+    expect(sumOfSquares(5)).toBe(50)
+})
 
-// test('ST returns as TS', () => {
-//     expect(flipFlop('st')).toBe('ts')
-// })
+test('ST returns as TS', () => {
+    expect(flipFlop('st')).toBe('ts')
+})
 
-// test('capitalize will uppercase the first letter', () => {
-//     expect(capitalize('shannon')).toBe('Shannon')
-// })
+test('capitalize will uppercase the first letter', () => {
+    expect(capitalize('shannon')).toBe('Shannon')
+})
 
-// test('Steve will get inverted and capitalized', () => {
-//     expect(mixUp('steve')).toBe('Evets')
-// })
+test('Steve will get inverted and capitalized', () => {
+    expect(mixUp('steve')).toBe('Evets')
+})
 
-// test('capitalize first and last', () => {
-//     expect(capFirstLast('shannon')).toBe('ShannoN')
-// })
+test('capitalize first and last', () => {
+    expect(capFirstLast('shannon')).toBe('ShannoN')
+})
 
 
-// test('"123456" will reverse', () => {
-//     expect(reverseString("123456")).toBe("654321")
-// })
+test('"123456" will reverse', () => {
+    expect(reverseString("123456")).toBe("654321")
+})
 
 
 // test('will uppercase each name', () => {
@@ -238,35 +238,35 @@ const { getIndexForCity, countAttendees, getUserIdWithLongestName, hitTower, mak
 
 
 
-test('make a league character factory', () => {
-    let xerath = makeLeagueCharacter("Xerath", 4, 300);
-    expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
+// test('make a league character factory', () => {
+//     let xerath = makeLeagueCharacter("Xerath", 4, 300);
+//     expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
 
-    let garen = makeLeagueCharacter("Garen", 3, 200);
+//     let garen = makeLeagueCharacter("Garen", 3, 200);
 
-    let totalDps = sumCharacterDpses([xerath, garen]);
-    expect(totalDps).toBe(7);
+//     let totalDps = sumCharacterDpses([xerath, garen]);
+//     expect(totalDps).toBe(7);
 
-    let stats = prettyPrintStats(xerath); 
-    expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");
+//     let stats = prettyPrintStats(xerath); 
+//     expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");
 
-    let wukong = makeCharacterFromString("Wukong 6 500");
-    expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 }); //
+//     let wukong = makeCharacterFromString("Wukong 6 500");
+//     expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 }); //
 
 
-    let names = collectCharacterNames([xerath, garen, wukong]);
-    expect(names).toBe("Xerath, Garen, Wukong"); //do with for loop too 
+//     let names = collectCharacterNames([xerath, garen, wukong]);
+//     expect(names).toBe("Xerath, Garen, Wukong"); //do with for loop too 
 
-    let manaTotal = totalMana([xerath, garen, wukong]);
-    expect(manaTotal).toBe(1000);
+//     let manaTotal = totalMana([xerath, garen, wukong]);
+//     expect(manaTotal).toBe(1000);
 
-    let tower = makeTower(1500, 20);
-    expect(tower).toStrictEqual({ health: 1500 });
+//     let tower = makeTower(1500, 20);
+//     expect(tower).toStrictEqual({ health: 1500 });
 
-    let towerAfterHit = hitTower(tower, 50);
-    expect(towerAfterHit).toStrictEqual({ health: 1450 });
+//     let towerAfterHit = hitTower(tower, 50);
+//     expect(towerAfterHit).toStrictEqual({ health: 1450 });
 
-})
+// })
 
 // test('can get out the suit from an array of cards', () => {
 //     let input = [ /* square brackets make an array, curly brackets make an object */
@@ -329,43 +329,43 @@ test('make a league character factory', () => {
 
 
 
-test('will count letters in word', () => {
-    let output = {
-        e: 1,
-        h: 1,
-        l: 2,
-        o: 1
-    }
-    expect(countLetters("hello")).toStrictEqual(output);
-})
+// test('will count letters in word', () => {
+//     let output = {
+//         e: 1,
+//         h: 1,
+//         l: 2,
+//         o: 1
+//     }
+//     expect(countLetters("hello")).toStrictEqual(output);
+// })
 
 // //almost had it
-test('will count numbers in string', () => {
-    let output = {
-        '1': 3,
-        '2': 1,
-        '3': 1
-    }
-    expect(countNumbersString("1,1,2,3,1")).toStrictEqual(output);
-})
+// test('will count numbers in string', () => {
+//     let output = {
+//         '1': 3,
+//         '2': 1,
+//         '3': 1
+//     }
+//     expect(countNumbersString("1,1,2,3,1")).toStrictEqual(output);
+// })
 
 
 // //had to look at notes
-test('will count attendees', () => {
-    let input = [
-        { name: "steve" },
-        { name: "shannon" },
-        { name: "shannon" },
-        { name: "shannon" },
-        { name: "jimjam" },
-    ];
-    let output = {
-        'jimjam': 1,
-        'shannon': 3,
-        'steve': 1
-    }
-    expect(countAttendees(input)).toStrictEqual(output);
-})
+// test('will count attendees', () => {
+//     let input = [
+//         { name: "steve" },
+//         { name: "shannon" },
+//         { name: "shannon" },
+//         { name: "shannon" },
+//         { name: "jimjam" },
+//     ];
+//     let output = {
+//         'jimjam': 1,
+//         'shannon': 3,
+//         'steve': 1
+//     }
+//     expect(countAttendees(input)).toStrictEqual(output);
+// })
 
 // test('can find most common letter', () => {
 //     let input = "aabbbbbccccccca";
@@ -374,45 +374,45 @@ test('will count attendees', () => {
 // })
 
 ////////////////////////check with steve line 1693
-test('show count of each letter', () => {
-    let input = "aabbbbbccccccca";
-    let output = "a: 3, b: 5, c: 7"
-    expect(countAllLettersStringOutput(input)).toBe(output);
-})
+// test('show count of each letter', () => {
+//     let input = "aabbbbbccccccca";
+//     let output = "a: 3, b: 5, c: 7"
+//     expect(countAllLettersStringOutput(input)).toBe(output);
+// })
 
-///////////do it ALOT
-test('user id of user with longest name', () => {
-    let input = [
-        { name: "steve", id: 1 },
-        { name: "shannon", id: 2 },
-        { name: "jimjam", id: 3 }
-    ]
-    let output = 2;
-    expect(getUserIdWithLongestName(input)).toBe(output);
-})
+// ///////////do it ALOT
+// test('user id of user with longest name', () => {
+//     let input = [
+//         { name: "steve", id: 1 },
+//         { name: "shannon", id: 2 },
+//         { name: "jimjam", id: 3 }
+//     ]
+//     let output = 2;
+//     expect(getUserIdWithLongestName(input)).toBe(output);
+// })
 
 
 
 //WORK ON THESE NEXT
 
 //line 1766
-test('get index for city in arrray ', () => {
-    let input = [
-        { name: "philly", temps: [10, 20, 30] },
-        { name: "chicago", temps: [30, 30, 30] }
-    ]
-    expect(getIndexForCity(input, "philly")).toBe(0);
-    expect(getIndexForCity(input, "chicago")).toBe(1);
-}) ///////////////////////////
+// test('get index for city in arrray ', () => {
+//     let input = [
+//         { name: "philly", temps: [10, 20, 30] },
+//         { name: "chicago", temps: [30, 30, 30] }
+//     ]
+//     expect(getIndexForCity(input, "philly")).toBe(0);
+//     expect(getIndexForCity(input, "chicago")).toBe(1);
+// }) ///////////////////////////
 
-test('get average temp for philly', () => {
-    let input = [
-        { name: "philly", temps: [10, 20, 30] },
-        { name: "chicago", temps: [30, 30, 30] }
-    ]
-    expect(getAverageTempForCity(input, "philly")).toBe(20);
-    // expect(getAverageTempForCity(input, "chicago")).toBe(30);
-})
+// test('get average temp for philly', () => {
+//     let input = [
+//         { name: "philly", temps: [10, 20, 30] },
+//         { name: "chicago", temps: [30, 30, 30] }
+//     ]
+//     expect(getAverageTempForCity(input, "philly")).toBe(20);
+//     // expect(getAverageTempForCity(input, "chicago")).toBe(30);
+// })
 
 // test('are all numbers the same', () => {
 //     expect(allNumbersTheSame([1, 2, 3, 4, 5, 6])).toBe(false);
