@@ -1999,8 +1999,52 @@ function reverseString(name){
     return joinName
 }
 
+// function upperCaser(names) {
+//     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
+// }
+
+function upperCaser(names) {
+    let endNames = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let modName = name.charAt(0).toUpperCase() + name.slice(1)
+        endNames.push(modName)
+    }
+    return endNames
+}
+
+function firstCharacters(names) {
+return names.map(name => name.charAt(0))
+}
+
+function plusOne(numbers) {
+    return numbers.map(number => number + 1)
+}
+
+function lastLetter(names) {
+    return names.map(name => name.slice(-1).toUpperCase())
+}
+
+function stringCounter(names) {
+    return names.map(name => name.length)
+}
+
+function isCoolSClub(names) {
+    return names.map(name => name.charAt(0) === 's')
+}
+
+function characterNums(names) {
+    return names.map(name => name + ': ' + name.length)
+}
+
+function getTemp(data) {
+    return data.temp
+}
+
+
 module.exports = {
     fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
-    reverseString,
+    reverseString, upperCaser, characterNums, getTemp,
+     firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub,
 }
 
