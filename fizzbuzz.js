@@ -2041,10 +2041,42 @@ function getTemp(data) {
     return data.temp
 }
 
+function getStreet(contact) {
+return contact.street
+}
+
+function getZipCodes(addresses) {
+    return addresses.map(address => address.zip)
+}
+
+function upperCaseContactNames(contacts) {
+    return contacts.map(contact => contact.name.toUpperCase())
+}
+
+function incrementZipCode(contact) {
+ contact.zip = contact.zip + 1
+ return contact
+}
+
+function incrementNumber(number) {
+    return number + 1
+}
+
+function upperCaseFirstLetter(contacts) {
+return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
+}
+
+function palindromeName(string) {
+let splitString = string.split('')
+let reverseString = splitString.reverse()
+let joinString = reverseString.join('')
+return string === joinString
+}
+
 
 module.exports = {
-    fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
-    reverseString, upperCaser, characterNums, getTemp,
-     firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub,
+    fizzbuzzConverter, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    reverseString, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
+     firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }
 
