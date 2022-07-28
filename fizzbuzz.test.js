@@ -196,27 +196,27 @@ test('is a word a palindrome', () => {
     expect(palindromeName('shannon')).toBe(false)
 })
 
-// test('cadb will return abcd', () => {
-//     expect(alphabetize('cdab')).toBe('abcd')
-// })
+test('cadb will return abcd', () => {
+    expect(alphabetize('cdab')).toBe('abcd')
+})
 
-// test('3524 will return 2345', () => {
-//     expect(alphabetize('3524')).toBe('2345')
-// })
+test('3524 will return 2345', () => {
+    expect(alphabetize('3524')).toBe('2345')
+})
 
-// test('capitalize each first letter in each word"', () => {
-//     expect(upperCaseWord('how are you')).toBe('How Are You')
-// })
+test('capitalize each first letter in each word"', () => {
+    expect(upperCaseWord('how are you')).toBe('How Are You')
+})
 
-// test('add one to each number', () => {
-//     expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
-// })
+test('add one to each number', () => {
+    expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
+})
 
 
-// test('first letter of each', () => {
-//     expect(firstCharacterss(['steve', 'shannon', 'jimbob']))
-//         .toStrictEqual(['s', 's', 'j'])
-// })
+test('first letter of each', () => {
+    expect(firstCharacterss(['steve', 'shannon', 'jimbob']))
+        .toStrictEqual(['s', 's', 'j'])
+})
 
 // test('only evens', () => {
 //     expect(onlyEvens([1, 2, 3, 4, 5, 6]))

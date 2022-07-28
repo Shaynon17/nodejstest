@@ -2073,10 +2073,35 @@ let joinString = reverseString.join('')
 return string === joinString
 }
 
+function alphabetize(string) {
+    let splitString = string.split('')
+    let sortString = splitString.sort()
+    let joinString = sortString.join('')
+    return joinString
+}
+
+function upperCaseWord(string) {
+    let splitString = string.split(' ')
+    let capString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1))
+    let joinString = capString.join(' ')
+    return joinString
+}
+
+// function upperCaseWord(strings) {
+//     return strings.map(string => string).charAt(0).toUpperCase() + string.slice(1)
+// }
+
+function addOne(numbers) {
+    return numbers.map(number => number + 1)
+}
+
+function firstCharacterss(names) {
+    return names.map(name => name.charAt(0))
+}
 
 module.exports = {
-    fizzbuzzConverter, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
-    reverseString, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
+    fizzbuzzConverter, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
      firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }
 
