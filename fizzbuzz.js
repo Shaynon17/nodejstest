@@ -2099,8 +2099,32 @@ function firstCharacterss(names) {
     return names.map(name => name.charAt(0))
 }
 
+function onlyEvens(numbers) {
+    let endNums = []
+    for (x = 0; x < numbers.length; x++) {
+        let nums = numbers[x]
+        let evenNums = nums % 2 === 0
+        if (evenNums) {
+            endNums.push(nums)
+        }
+    }
+    return endNums
+}
+
+function onlySteve(names) {
+    let endNames = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let onlySteve = name === 'steve'
+        if (onlySteve) {
+            endNames.push(name)
+        }
+    }
+    return endNames
+}
+
 module.exports = {
-    fizzbuzzConverter, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    fizzbuzzConverter, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
      firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }
