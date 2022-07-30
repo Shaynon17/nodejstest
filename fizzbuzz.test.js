@@ -229,14 +229,14 @@ test('only steve', () => {
         .toStrictEqual(['steve', 'steve'])
 })
 
-// test('only words length 4 or more', () => {
-//     expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
-//         .toStrictEqual(['steve', 'horse'])
-// })
+test('only words length 4 or more', () => {
+    expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
+        .toStrictEqual(['steve', 'horse'])
+})
 
-// test('Cap first letter of each word', () => {
-//     expect(capEachWord("how are you")).toBe("How Are You")
-// })
+test('Cap first letter of each word', () => {
+    expect(capEachWord("how are you")).toBe("How Are You")
+})
 
 
 

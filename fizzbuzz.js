@@ -2123,8 +2123,36 @@ function onlySteve(names) {
     return endNames
 }
 
+// function onlyBigEnough(words) {
+//     return words.map(map => map.length >= 4)
+// }
+
+function onlyBigEnough(words) {
+    let bigWords = [] 
+    for (x = 0; x < words.length; x++) {
+        let word = words[x] 
+        let finalArr = word.length >=4
+        if (finalArr) {
+            bigWords.push(word)
+        }
+    }
+    return bigWords
+}
+
+function capEachWord(string) {
+    let splitString = string.split(' ')
+    console.log(splitString)
+    let modString = splitString.map( word => word.charAt(0).toUpperCase() + word.slice(1))
+    let joinString = modString.join(' ')
+    return joinString
+}
+
+// function capEachWord(string) {
+//     return string.map(word => word.charAt(0) + word.slice(1))
+// }
+
 module.exports = {
-    fizzbuzzConverter, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    fizzbuzzConverter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
      firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }
