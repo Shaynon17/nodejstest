@@ -2151,8 +2151,56 @@ function capEachWord(string) {
 //     return string.map(word => word.charAt(0) + word.slice(1))
 // }
 
+function makeLeagueCharacter(champ, dps, mana) {
+   let stats = { name: champ,
+    dps: dps,
+    mana: mana,
+   } 
+   return stats
+}
+
+function sumCharacterDpses(arr) {
+    return arr[0].dps + arr[1].dps
+}
+
+function prettyPrintStats(champ) {
+    return `${champ.name} - DPS: ${champ.dps} - Mana: ${champ.mana}`
+}
+
+function makeCharacterFromString(string) {
+    let splitString = string.split(' ')
+    let stats = {
+        name: splitString[0],
+        dps: parseInt(splitString[1]),
+        mana: parseInt(splitString[2]),
+    }
+    return stats
+}
+
+function collectCharacterNames(arr) {
+    return `${arr[0].name}, ${arr[1].name}, ${arr[2].name}`
+}
+
+function totalMana(arr) {
+    let total = arr[0].mana + arr[1].mana + arr[2].mana;
+    return total 
+}
+
+function makeTower(health, hit) {
+    let stats = {
+        health: health,
+    }
+    return stats
+}
+
+function hitTower(tower, hit) {
+let stats = { health: tower.health - hit
+}
+    return stats
+}
+
 module.exports = {
-    fizzbuzzConverter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    fizzbuzzConverter,hitTower,  makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
      firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }

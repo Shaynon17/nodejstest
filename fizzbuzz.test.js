@@ -239,36 +239,36 @@ test('Cap first letter of each word', () => {
 })
 
 
+//had to look at notes
+test('make a league character factory', () => {
+    let xerath = makeLeagueCharacter("Xerath", 4, 300);
+    expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
 
-// test('make a league character factory', () => {
-//     let xerath = makeLeagueCharacter("Xerath", 4, 300);
-//     expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
+    let garen = makeLeagueCharacter("Garen", 3, 200);
 
-//     let garen = makeLeagueCharacter("Garen", 3, 200);
+    let totalDps = sumCharacterDpses([xerath, garen]);
+    expect(totalDps).toBe(7);
 
-//     let totalDps = sumCharacterDpses([xerath, garen]);
-//     expect(totalDps).toBe(7);
+    let stats = prettyPrintStats(xerath); 
+    expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");
 
-//     let stats = prettyPrintStats(xerath); 
-//     expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");
-
-//     let wukong = makeCharacterFromString("Wukong 6 500");
-//     expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 }); //
+    let wukong = makeCharacterFromString("Wukong 6 500");
+    expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 }); //
 
 
-//     let names = collectCharacterNames([xerath, garen, wukong]);
-//     expect(names).toBe("Xerath, Garen, Wukong"); //do with for loop too 
+    let names = collectCharacterNames([xerath, garen, wukong]);
+    expect(names).toBe("Xerath, Garen, Wukong"); //do with for loop too 
 
-//     let manaTotal = totalMana([xerath, garen, wukong]);
-//     expect(manaTotal).toBe(1000);
+    let manaTotal = totalMana([xerath, garen, wukong]);
+    expect(manaTotal).toBe(1000);
 
-//     let tower = makeTower(1500, 20);
-//     expect(tower).toStrictEqual({ health: 1500 });
+    let tower = makeTower(1500, 20);
+    expect(tower).toStrictEqual({ health: 1500 });
 
-//     let towerAfterHit = hitTower(tower, 50);
-//     expect(towerAfterHit).toStrictEqual({ health: 1450 });
+    let towerAfterHit = hitTower(tower, 50);
+    expect(towerAfterHit).toStrictEqual({ health: 1450 });
 
-// })
+})
 
 // test('can get out the suit from an array of cards', () => {
 //     let input = [ /* square brackets make an array, curly brackets make an object */
