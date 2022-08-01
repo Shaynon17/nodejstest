@@ -2199,8 +2199,30 @@ let stats = { health: tower.health - hit
     return stats
 }
 
+function getFirstSuit(input) {
+    return input[0].suit
+}
+
+function getSecondFace(input) {
+    return input[1].face
+}
+
+function sumFaces(input) {
+    let endFaces = 0;
+    for (x = 0; x < input.length; x++) {
+        let card = input[x].face
+        let newsum = endFaces + card
+        endFaces = newsum
+    }
+    return endFaces
+}
+
+function combineSuits(input) {
+    return input[0].suit + input[1].suit
+}
+
 module.exports = {
-    fizzbuzzConverter,hitTower,  makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    fizzbuzzConverter, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
      firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }

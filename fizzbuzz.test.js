@@ -270,24 +270,24 @@ test('make a league character factory', () => {
 
 })
 
-// test('can get out the suit from an array of cards', () => {
-//     let input = [ /* square brackets make an array, curly brackets make an object */
-//         {
-//             suit: 'S',
-//             face: 3
-//         },
-//         {
-//             suit: 'H',
-//             face: 14
-//         }
-//     ];
-//     expect(getFirstSuit(input)).toBe('S');
-//     expect(getSecondFace(input)).toBe(14);
+test('can get out the suit from an array of cards', () => {
+    let input = [ /* square brackets make an array, curly brackets make an object */
+        {
+            suit: 'S',
+            face: 3
+        },
+        {
+            suit: 'H',
+            face: 14
+        }
+    ];
+    expect(getFirstSuit(input)).toBe('S');
+    expect(getSecondFace(input)).toBe(14);
 
-//     // // do with both hardcoded and for loop
-//     expect(sumFaces(input)).toBe(17);
-//     expect(combineSuits(input)).toBe("SH");
-// })
+    // // // do with both hardcoded and for loop
+    expect(sumFaces(input)).toBe(17);
+    expect(combineSuits(input)).toBe("SH");
+})
 
 // test('can sum array inside an object', () => {
 //     let input =
