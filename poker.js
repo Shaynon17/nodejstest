@@ -1,57 +1,29 @@
-
-module.exports = {
-    parseSuit,
-    parseFaceValue,
-    parseCard,
-    parseHand,
-    detectPair,
-}
-
 function parseSuit(cardString) {
     return cardString.charAt(1)
 }
 
 function parseFaceValue(cardString) {
-    let faceCharacter = cardString.charAt(0);
-    if (faceCharacter === 'T') {
+    let face = cardString.charAt(0);
+    if (face === 'T') {
         return 10
-    } else if (faceCharacter === 'J') {
+    } else if ( face === 'J') {
         return 11
-    } else if (faceCharacter === 'Q') {
+    } else if (face === 'Q') {
         return 12
-    } else if (faceCharacter === 'K') {
+    } else if (face === 'K') {
         return 13
-    } else if (faceCharacter === 'A') {
+    } else if (face === 'A') {
         return 14
     } else {
-        return parseInt(faceCharacter);
+        return parseInt(face)
     }
 }
 
-function parseCard(cardString) {
-    let card = {
-        suit: parseSuit(cardString),
-        face: parseFaceValue(cardString)
-    };
-    return card;
-}
+// function parseCard(cardString) {
+//     let 
+// }
 
-function parseHand(cardString) {
-    let splitHand = cardString.split(' ')
-    let parseEaechCard = splitHand.map(hand => parseCard(hand))
-    return parseEaechCard
-}
 
-function detectPair(cardString) {
-    let hand = parseHand(cardString)
-    let faces = []
-    for (x = 0; x < hand.length; x++) {
-        let card = hand[x]
-        let cardNum = card.face
-        if (faces.includes(cardNum)) {
-            return true
-        }
-        faces.push(cardNum)
+    module.exports = {
+        parseSuit, parseFaceValue,
     }
-    return false;
-}

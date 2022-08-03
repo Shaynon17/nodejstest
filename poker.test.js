@@ -4,8 +4,8 @@ const { detectPair, parseSuit, parseHand, parseCard, parseFaceValue } = require(
 // pokerWinner('4D 5S KH 3C 8C', '4D 4S 4H 9C TC') => "player two wins: three of a kind"
 // objects, strings, numbers, functions, if statements
 
-//  parseSuit -> string
-//  parseFaceValue -> number
+// x parseSuit -> string
+// x parseFaceValue -> number
 //  parseCard -> object
 //  parseHand -> object[]
 //  detectPair -> bool
@@ -44,26 +44,26 @@ test("parseCard will return a card object", () => {
     expect(parseCard("3S")).toStrictEqual(expected);
 });
 
-test("parseHand an array of card objects", () => {
-    let expected = [
-        {
-            suit: 'S',
-            face: 3
-        },
-        {
-            suit: 'H',
-            face: 14
-        }
-    ];
-    expect(parseHand("3S AH")).toStrictEqual(expected);
-});
+// test("parseHand an array of card objects", () => {
+//     let expected = [
+//         {
+//             suit: 'S',
+//             face: 3
+//         },
+//         {
+//             suit: 'H',
+//             face: 14
+//         }
+//     ];
+//     expect(parseHand("3S AH")).toStrictEqual(expected);
+// });
 
-test("detectPair will detect pairs", () => {
-    // { 6: 1, 14: 1, 3: 2, 5: 1 }
-    expect(detectPair("6S AH 3C 5C 3S")).toBe(true);
-    expect(detectPair("3S AH 4C 5C 6S")).toBe(false);
-    // expect(detectPair("3S AH 3C 5C 3S")).toBe(false);
-});
+// test("detectPair will detect pairs", () => {
+//     // { 6: 1, 14: 1, 3: 2, 5: 1 }
+//     expect(detectPair("6S AH 3C 5C 3S")).toBe(true);
+//     expect(detectPair("3S AH 4C 5C 6S")).toBe(false);
+//     // expect(detectPair("3S AH 3C 5C 3S")).toBe(false);
+// });
 /*
 test("detectNumOfPair will detect number of pair", () => {
     expect(detectNumOfPair("3S AH 3C 5C 6S")).toBe(3);
