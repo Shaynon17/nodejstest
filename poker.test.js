@@ -6,8 +6,8 @@ const { detectPair, parseSuit, parseHand, parseCard, parseFaceValue } = require(
 
 // x parseSuit -> string
 // x parseFaceValue -> number
-//  parseCard -> object
-//  parseHand -> object[]
+// x parseCard -> object
+// x parseHand -> object[]
 //  detectPair -> bool
 //  detectThreeOfAKind -> bool
 //  detectStraight -> bool
@@ -44,19 +44,19 @@ test("parseCard will return a card object", () => {
     expect(parseCard("3S")).toStrictEqual(expected);
 });
 
-// test("parseHand an array of card objects", () => {
-//     let expected = [
-//         {
-//             suit: 'S',
-//             face: 3
-//         },
-//         {
-//             suit: 'H',
-//             face: 14
-//         }
-//     ];
-//     expect(parseHand("3S AH")).toStrictEqual(expected);
-// });
+test("parseHand an array of card objects", () => {
+    let expected = [
+        {
+            suit: 'S',
+            face: 3
+        },
+        {
+            suit: 'H',
+            face: 14
+        }
+    ];
+    expect(parseHand("3S AH")).toStrictEqual(expected);
+});
 
 // test("detectPair will detect pairs", () => {
 //     // { 6: 1, 14: 1, 3: 2, 5: 1 }

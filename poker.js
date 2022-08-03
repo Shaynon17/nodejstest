@@ -19,11 +19,25 @@ function parseFaceValue(cardString) {
     }
 }
 
-// function parseCard(cardString) {
-//     let 
+function parseCard(cardString) {
+    let card = {
+        suit: parseSuit(cardString),
+        face: parseFaceValue(cardString),
+
+    }
+    return card
+}
+
+function parseHand(handString) {
+let splitHand = handString.split(' ')
+let cards = splitHand.map(card => parseCard(card))
+return cards
+}
+
+// function detectPair(cardString) {
+
 // }
 
-
-    module.exports = {
-        parseSuit, parseFaceValue,
+module.exports = {
+    parseSuit, parseFaceValue, parseCard, parseHand, 
     }
