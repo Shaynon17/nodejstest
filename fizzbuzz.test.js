@@ -289,45 +289,45 @@ test('can get out the suit from an array of cards', () => {
     expect(combineSuits(input)).toBe("SH");
 })
 
-// test('can sum array inside an object', () => {
-//     let input =
-//     {
-//         temps: [70, 40, 80],
-//         location: "Philly"
-//     };
-//     // do with both hardcoded and for loop
-//     // expect(sumTemps(input)).toBe(190);
-//     expect(getFirstTemp(input)).toBe(70);
-// })
+test('can sum array inside an object', () => {
+    let input =
+    {
+        temps: [70, 40, 80],
+        location: "Philly"
+    };
+    // do with both hardcoded and for loop
+    // expect(sumTemps(input)).toBe(190);
+    expect(getFirstTemp(input)).toBe(70);
+})
 
-// //had to look at notes the day before
-// test('can reduce strings into sentence', () => {
-//     let input = ['hey', 'there', 'horseman'];
-//     // do with both hardcoded and for loop
-//     expect(makeSentence(input)).toBe("hey there horseman");
-// })
+//had to look at notes the day before //most recent time i aced
+test('can reduce strings into sentence', () => {
+    let input = ['hey', 'there', 'horseman'];
+    // do with both hardcoded and for loop
+    expect(makeSentence(input)).toBe("hey there horseman");
+})
 
-// test('can reduce numbers into average', () => {
-//     let input = [10, 20, 30, 40];
-//     // do with both hardcoded and for loop
-//     expect(averageNumbers(input)).toBe(25);
-// })
+test('can reduce numbers into average', () => {
+    let input = [10, 20, 30, 40];
+    // do with both hardcoded and for loop
+    expect(averageNumbers(input)).toBe(25);
+})
 
-
-// // test('can count up numbers in array of objects', () => {
-// //     let input = [
-// //         { id: 4 },
-// //         { id: 2 },
-// //         { id: 1 },
-// //         { id: 4 },
-// //     ];
-// //     let output = {
-// //         '1': 1,
-// //         '2': 1,
-// //         '4': 2
-// //     }
-// //     expect(countIds(input)).toStrictEqual(output);
-// // })
+//had to look at notes
+test('can count up numbers in array of objects', () => {
+    let input = [
+        { id: 4 },
+        { id: 2 },
+        { id: 1 },
+        { id: 4 },
+    ];
+    let output = {
+        '1': 1,
+        '2': 1,
+        '4': 2
+    }
+    expect(countIds(input)).toStrictEqual(output);
+})
 
 
 

@@ -2221,8 +2221,45 @@ function combineSuits(input) {
     return input[0].suit + input[1].suit
 }
 
+function getFirstTemp(input) {
+return input.temps[0]
+}
+
+function makeSentence(input) {
+return `${input[0]} ${input[1]} ${input[2]}`
+}
+
+// function averageNumbers(input) {
+// let total = input[0] + input[1] + input[2] + input[3];
+// return total / 4
+// }
+
+function averageNumbers(input) {
+    let output = 0;
+    for (i = 0; i < input.length; i++) {
+        let nums = input[i];
+         output = output + nums
+    }
+    return output / input.length
+}
+
+function countIds(input) {
+    let output = {
+        '1': 0,
+        '2': 0,
+        '4': 0,
+    } 
+    for (i = 0; i < input.length; i++) {
+        let nums = input[i];
+        let id = nums.id
+        output[id]++
+    }
+    return output
+}
+
+
 module.exports = {
-    fizzbuzzConverter, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    fizzbuzzConverter, averageNumbers, countIds, makeSentence, getFirstTemp, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
      firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }
