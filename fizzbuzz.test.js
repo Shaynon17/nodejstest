@@ -331,15 +331,15 @@ test('can count up numbers in array of objects', () => {
 
 
 
-// test('will count letters in word', () => {
-//     let output = {
-//         e: 1,
-//         h: 1,
-//         l: 2,
-//         o: 1
-//     }
-//     expect(countLetters("hello")).toStrictEqual(output);
-// })
+test('will count letters in word', () => {
+    let output = {
+        e: 1,
+        h: 1,
+        l: 2,
+        o: 1
+    }
+    expect(countLetters("hello")).toStrictEqual(output);
+})
 
 // //almost had it
 // test('will count numbers in string', () => {

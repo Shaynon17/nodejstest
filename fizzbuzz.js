@@ -2141,7 +2141,6 @@ function onlyBigEnough(words) {
 
 function capEachWord(string) {
     let splitString = string.split(' ')
-    console.log(splitString)
     let modString = splitString.map( word => word.charAt(0).toUpperCase() + word.slice(1))
     let joinString = modString.join(' ')
     return joinString
@@ -2257,9 +2256,23 @@ function countIds(input) {
     return output
 }
 
+function countLetters(input) {
+    let output = {
+        e: 0,
+        h: 0,
+        l: 0,
+        o: 0,
+    }
+    for (i = 0; i < input.length; i++) {
+        let letter = input[i];
+        output[letter]++
+    }
+    return output
+}
+
 
 module.exports = {
-    fizzbuzzConverter, averageNumbers, countIds, makeSentence, getFirstTemp, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    fizzbuzzConverter, countLetters, averageNumbers, countIds, makeSentence, getFirstTemp, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
      firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }
