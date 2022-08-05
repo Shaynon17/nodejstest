@@ -2270,9 +2270,23 @@ function countLetters(input) {
     return output
 }
 
+function countNumbersString(numbers) {
+    let output = {
+        '1': 0,
+        '2': 0,
+        '3': 0
+    }
+    for (i = 0; i < numbers.length; i++) {
+        let number = numbers[i];
+        output[number]++
+    }
+    delete output[',']
+    return output
+}
+
 
 module.exports = {
-    fizzbuzzConverter, countLetters, averageNumbers, countIds, makeSentence, getFirstTemp, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    fizzbuzzConverter, countNumbersString, countLetters, averageNumbers, countIds, makeSentence, getFirstTemp, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
      firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }

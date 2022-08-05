@@ -342,14 +342,14 @@ test('will count letters in word', () => {
 })
 
 // //almost had it
-// test('will count numbers in string', () => {
-//     let output = {
-//         '1': 3,
-//         '2': 1,
-//         '3': 1
-//     }
-//     expect(countNumbersString("1,1,2,3,1")).toStrictEqual(output);
-// })
+test('will count numbers in string', () => {
+    let output = {
+        '1': 3,
+        '2': 1,
+        '3': 1
+    }
+    expect(countNumbersString("1,1,2,3,1")).toStrictEqual(output);
+})
 
 
 // //had to look at notes
