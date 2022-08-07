@@ -34,10 +34,31 @@ let cards = splitHand.map(card => parseCard(card))
 return cards
 }
 
-// function detectPair(cardString) {
-
-// }
+function detectPair(cardString) {
+    let parse = parseHand(cardString)
+    let check = 
+    let hand = {
+        '2': 0,
+        '3': 0,
+        '4': 0,
+        '5': 0,
+        '6': 0,
+        '7': 0,
+        '8': 0,
+        '9': 0,
+        '10': 0,
+        '11': 0,
+        '12': 0,
+        '13': 0,
+        '14': 0
+    }
+    for (i = 0; i < parse.length; i++) {
+        let card = parse[i].face
+        hand[card]++
+    }
+    if (hand.filter())
+}
 
 module.exports = {
-    parseSuit, parseFaceValue, parseCard, parseHand, 
+    parseSuit, parseFaceValue, parseCard, parseHand, detectPair,
     }
