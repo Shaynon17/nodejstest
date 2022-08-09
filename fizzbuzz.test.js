@@ -352,22 +352,21 @@ test('will count numbers in string', () => {
 })
 
 
-// //had to look at notes
-// test('will count attendees', () => {
-//     let input = [
-//         { name: "steve" },
-//         { name: "shannon" },
-//         { name: "shannon" },
-//         { name: "shannon" },
-//         { name: "jimjam" },
-//     ];
-//     let output = {
-//         'jimjam': 1,
-//         'shannon': 3,
-//         'steve': 1
-//     }
-//     expect(countAttendees(input)).toStrictEqual(output);
-// })
+test('will count attendees', () => {
+    let input = [
+        { name: "steve" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "jimjam" },
+    ];
+    let output = {
+        'jimjam': 1,
+        'shannon': 3,
+        'steve': 1
+    }
+    expect(countAttendees(input)).toStrictEqual(output);
+})
 
 // test('can find most common letter', () => {
 //     let input = "aabbbbbccccccca";
@@ -376,11 +375,11 @@ test('will count numbers in string', () => {
 // })
 
 ////////////////////////check with steve line 1693
-// test('show count of each letter', () => {
-//     let input = "aabbbbbccccccca";
-//     let output = "a: 3, b: 5, c: 7"
-//     expect(countAllLettersStringOutput(input)).toBe(output);
-// })
+test('show count of each letter', () => {
+    let input = "aabbbbbccccccca";
+    let output = "a: 3, b: 5, c: 7"
+    expect(countAllLettersStringOutput(input)).toBe(output);
+})
 
 // ///////////do it ALOT
 // test('user id of user with longest name', () => {

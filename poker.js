@@ -60,5 +60,5 @@ return cards
 // }
 
 module.exports = {
-    parseSuit, parseFaceValue, parseCard, parseHand, detectPair,
+    parseSuit, parseFaceValue, parseCard, parseHand,
     }
