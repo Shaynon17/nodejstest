@@ -1942,22 +1942,22 @@ module.exports.upperCaser = (names) => {
 
 
 
-function fizzbuzzConverter(number) {
-    if (isDivisbleBy(number, 3) & isDivisbleBy(number, 5)) {
-        return 'fizzbuzz'
-    }
-    else if (isDivisbleBy(number, 3)) {
-        return 'fizz'
-    } else if (isDivisbleBy(number, 5)) {
-        return "buzz"
-    } else {
-        return number
-    }
-}
+// function fizzbuzzConverter(number) {
+//     if (isDivisbleBy(number, 3) & isDivisbleBy(number, 5)) {
+//         return 'fizzbuzz'
+//     }
+//     else if (isDivisbleBy(number, 3)) {
+//         return 'fizz'
+//     } else if (isDivisbleBy(number, 5)) {
+//         return "buzz"
+//     } else {
+//         return number
+//     }
+// }
 
-function isDivisbleBy(larger, smaller) {
-    return (larger % smaller === 0)
-}
+// function isDivisbleBy(larger, smaller) {
+//     return (larger % smaller === 0)
+// }
 
 function helloWorld(name) {
     return "Hello " + name
@@ -2308,6 +2308,29 @@ function countAllLettersStringOutput(input) {
         output[letter]++
     }
     return output.a
+}
+
+
+//     function allNumbersTheSame ( element, index, input) {
+//         return element >= 10;
+//         input.every()
+// } // mdn .every
+
+
+function fizzbuzzConverter(number) {
+    if (divide(number, 3) && divide(number, 5)) {
+        return 'fizzbuzz'
+    } else if (divide(number, 3)) {
+        return 'fizz'
+    } else if (divide(number, 5)) {
+        return 'buzz'
+    } else {
+        return number
+    }
+}
+
+function divide (number, num) {
+    return (number % num === 0)
 }
 
 module.exports = {
