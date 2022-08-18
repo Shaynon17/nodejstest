@@ -2333,8 +2333,21 @@ function divide (number, num) {
     return (number % num === 0)
 }
 
+function findMostCommonLetter(input) {
+    // let objectKey = Object.keys(output)[0]
+    const output = {
+        a: 0,
+        b: 0,
+        c: 0,
+    }
+    // for ( i = 0; i < input.length; i++) {
+    //     let 
+    // }
+    console.log(Object.keys(output))
+}
+
 module.exports = {
-    fizzbuzzConverter, countAllLettersStringOutput, countAttendees, countNumbersString, countLetters, averageNumbers, countIds, makeSentence, getFirstTemp, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    fizzbuzzConverter, findMostCommonLetter, countAllLettersStringOutput, countAttendees, countNumbersString, countLetters, averageNumbers, countIds, makeSentence, getFirstTemp, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
      firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
 }

@@ -368,11 +368,11 @@ test('will count attendees', () => {
     expect(countAttendees(input)).toStrictEqual(output);
 })
 
-// test('can find most common letter', () => {
-//     let input = "aabbbbbccccccca";
-//     let output = "c"
-//     expect(findMostCommonLetter(input)).toBe(output);
-// })
+test('can find most common letter', () => {
+    let input = "aabbbbbccccccca";
+    let output = "c"
+    expect(findMostCommonLetter(input)).toBe(output);
+})
 
 ////////////////////////check with steve line 1693
 // test('show count of each letter', () => {
