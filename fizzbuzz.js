@@ -2353,7 +2353,81 @@ module.exports.upperCaser = (names) => {
 //     }
 // }
 
+function fizzbuzzConverter(number) {
+    if (isDivisbleBy(number, 3) && (isDivisbleBy(number, 5))) {
+        return 'fizzbuzz'
+    } else if (isDivisbleBy(number, 3)) {
+        return 'fizz'
+    } else if (isDivisbleBy(number, 5)) {
+        return 'buzz'
+    } else {
+        return number
+    }
+}
+
+function isDivisbleBy(large, small) {
+    return (large % small === 0)
+}
+
+function helloWorld(string) {
+    return 'Hello ' + string
+}
+
+function sumOfSquares(number) {
+    return (number * number) + (number * number)
+}
+
+function flipFlop(string) {
+    return string.charAt(1) + string.charAt(0)
+}
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
+function mixUp(string) {
+    let splitString = string.split('');
+    let reverseString = splitString.reverse()
+    let joinString = reverseString.join('')
+    return joinString.charAt(0).toUpperCase() + joinString.slice(1)
+}
+
+function capFirstLast(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1, -1) + string.slice(-1).toUpperCase()
+}
+
+function reverseString(string) {
+    let splitString = string.split('');
+    let reverseString = splitString.reverse();
+    return joinString = reverseString.join('')
+}
+
+function upperCaser(strings) {
+    return strings.map(string => string.charAt(0).toUpperCase() + string.slice(1))
+}
+
+function firstCharacters(strings) {
+    return strings.map(string => string.charAt(0))
+}
+
+function plusOne(numbers) {
+    return numbers.map(number => number + 1)
+}
+
+function lastLetter(strings) {
+    return strings.map(string => string.slice(-1).toUpperCase())
+}
+
+function stringCounter(strings) {
+    return strings.map(string => string.length)
+}
+
+function isCoolSClub(strings) {
+    return strings.map(string => string.charAt(0) === 's')
+}
+
 module.exports = {
-    countToTen,
+    fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    upperCaser, reverseString, firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub,
 }
 
