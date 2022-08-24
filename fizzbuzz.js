@@ -2426,8 +2426,53 @@ function isCoolSClub(strings) {
     return strings.map(string => string.charAt(0) === 's')
 }
 
+function characterNums(input) {
+    return input.map(name => name + ': ' + name.length)
+}
+
+function getTemp(data) {
+return data.temp
+}
+
+function getStreet(contact) {
+    return contact.street
+}
+
+function getZipCodes(addresses) {
+return addresses.map(address => address.zip)
+}
+
+function upperCaseContactNames(contacts) {
+return contacts.map(contact => contact.name.toUpperCase())
+}
+
+function incrementZipCode(contact) {
+    contact.zip = contact.zip + 1
+    return contact
+}
+
+function incrementNumber(number) {
+    return number + 1
+}
+
+function upperCaseFirstLetter(contacts) {
+    return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
+}
+
+function palindromeName(string) {
+    let splitString = string.split('')
+    let reverseString = splitString.reverse()
+    let joinString = reverseString.join('')
+    if (string === joinString) {
+        return true
+    } else {
+        return false
+    }
+
+}
+
 module.exports = {
-    fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+  upperCaseFirstLetter, palindromeName, incrementNumber, characterNums, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     upperCaser, reverseString, firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub,
 }
 
