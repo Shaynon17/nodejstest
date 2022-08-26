@@ -2471,8 +2471,16 @@ function palindromeName(string) {
 
 }
 
+function alphabetize(string) {
+let splitString = string.split('');
+let sortString = splitString.sort();
+let joinString = sortString.join('')
+return joinString
+
+}
+
 module.exports = {
-  upperCaseFirstLetter, palindromeName, incrementNumber, characterNums, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+  upperCaseFirstLetter, alphabetize, palindromeName, incrementNumber, characterNums, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     upperCaser, reverseString, firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub,
 }
 
