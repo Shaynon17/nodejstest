@@ -2479,8 +2479,15 @@ return joinString
 
 }
 
+function upperCaseWord(string) {
+    let splitString = string.split(' ');
+    let capString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1));
+    let joinString = capString.join(' ')
+    return joinString
+}
+
 module.exports = {
-  upperCaseFirstLetter, alphabetize, palindromeName, incrementNumber, characterNums, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+  upperCaseFirstLetter, upperCaseWord, alphabetize, palindromeName, incrementNumber, characterNums, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     upperCaser, reverseString, firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub,
 }
 
