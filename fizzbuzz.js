@@ -2486,8 +2486,41 @@ function upperCaseWord(string) {
     return joinString
 }
 
+function addOne(array) {
+    return array.map(arr => arr + 1)
+}
+
+function firstCharacterss(array) {
+    return array.map(arr => arr.charAt(0))
+}
+
+function onlyEvens(array) {
+    let output = []
+    for (x = 0; x < array.length; x++) {
+        let number = array[x]
+        let num = number % 2 === 0
+        if (num) {
+            output.push(number)
+        }
+    }
+    return output
+}
+
+function onlySteve(names) {
+    let output = []
+    for (x = 0; x < names.length; x++) {
+        let name = names[x]
+        let num = name === 'steve'
+        if (num) {
+            output.push(name)
+        }
+    }
+    return output
+}
+
+
 module.exports = {
-  upperCaseFirstLetter, upperCaseWord, alphabetize, palindromeName, incrementNumber, characterNums, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    upperCaseFirstLetter, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, incrementNumber, characterNums, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
     upperCaser, reverseString, firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub,
 }
 

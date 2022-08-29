@@ -207,26 +207,26 @@ test('capitalize each first letter in each word"', () => {
     expect(upperCaseWord('how are you')).toBe('How Are You')
 })
 
-// test('add one to each number', () => {
-//     expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
-// })
+test('add one to each number', () => {
+    expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
+})
 
 
-// test('first letter of each', () => {
-//     expect(firstCharacterss(['steve', 'shannon', 'jimbob']))
-//         .toStrictEqual(['s', 's', 'j'])
-// })
+test('first letter of each', () => {
+    expect(firstCharacterss(['steve', 'shannon', 'jimbob']))
+        .toStrictEqual(['s', 's', 'j'])
+})
 
-// //struggled and had to look at previous code
-// test('only evens', () => {
-//     expect(onlyEvens([1, 2, 3, 4, 5, 6]))
-//         .toStrictEqual([2, 4, 6])
-// })
+//struggled and had to look at previous code
+test('only evens', () => {
+    expect(onlyEvens([1, 2, 3, 4, 5, 6]))
+        .toStrictEqual([2, 4, 6])
+})
 
-// test('only steve', () => {
-//     expect(onlySteve(['steve', 'sam', 'steve']))
-//         .toStrictEqual(['steve', 'steve'])
-// })
+test('only steve', () => {
+    expect(onlySteve(['steve', 'sam', 'steve']))
+        .toStrictEqual(['steve', 'steve'])
+})
 
 // test('only words length 4 or more', () => {
 //     expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
