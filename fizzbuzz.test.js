@@ -1,4 +1,4 @@
-const { getIndexForCity, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { getIndexForCity, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -57,9 +57,9 @@ test('capitalize first and last', () => {
 })
 
 
-test('"123456" will reverse', () => {
-    expect(reverseString("123456")).toBe("654321")
-})
+// test('"123456" will reverse', () => {
+//     expect(reverseString("123456")).toBe("654321")
+// })
 
 
 test('will uppercase each name', () => {
@@ -93,9 +93,9 @@ test('returns true for all strings with a first letter of S', () => {
 })
 
 
-// //['steve', 'shannon']
-// //['steve: 5', 'shannon: 7']
-// // the input is a name, the output is the name and # of characters
+// // //['steve', 'shannon']
+// // //['steve: 5', 'shannon: 7']
+// // // the input is a name, the output is the name and # of characters
 
 test('returns # of characters with name', () => {
     expect(characterNums(['shannon', 'steve']))
@@ -125,7 +125,6 @@ test('can return street address from contact', () => {
     expect(getStreet(contact)).toBe('440 Germanhouse Ave')
 })
 
-//had to look at notes :(
 test('can return zip codes from all addresses', () => {
     let addresses = [
         {
@@ -154,7 +153,7 @@ test('uppercase all the names of contacts', () => {
     expect(upperCaseContactNames(contacts)).toStrictEqual(["STEVE", "SHANNON"])
 })
 
-//struggling with this one /still struggling
+// hint: the body is two lines not one
 test('changes the zip code to be +1', () => {
     let contact = {
         name: 'steve',
@@ -174,7 +173,7 @@ test('changes the zip code to be +1', () => {
     expect(number).toBe(6)
 })
 
-test('uppercase all the first characts of the names of contacts', () => {
+test('uppercase all the first characters of the names of contacts', () => {
     let contacts = [
         {
             name: 'steve',
@@ -229,144 +228,144 @@ test('only steve', () => {
         .toStrictEqual(['steve', 'steve'])
 })
 
-test('only words length 4 or more', () => {
-    expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
-        .toStrictEqual(['steve', 'horse'])
-})
+// test('only words length 4 or more', () => {
+//     expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
+//         .toStrictEqual(['steve', 'horse'])
+// })
 
-test('Cap first letter of each word', () => {
-    expect(capEachWord("how are you")).toBe("How Are You")
-})
-
-
-//had to look at notes
-test('make a league character factory', () => {
-    let xerath = makeLeagueCharacter("Xerath", 4, 300);
-    expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
-
-    let garen = makeLeagueCharacter("Garen", 3, 200);
-
-    let totalDps = sumCharacterDpses([xerath, garen]);
-    expect(totalDps).toBe(7);
-
-    let stats = prettyPrintStats(xerath); 
-    expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");
-
-    let wukong = makeCharacterFromString("Wukong 6 500");
-    expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 }); //
+// test('Cap first letter of each word', () => {
+//     expect(capEachWord("how are you")).toBe("How Are You")
+// })
 
 
-    let names = collectCharacterNames([xerath, garen, wukong]);
-    expect(names).toBe("Xerath, Garen, Wukong"); //do with for loop too 
+// //had to look at notes
+// test('make a league character factory', () => {
+//     let xerath = makeLeagueCharacter("Xerath", 4, 300);
+//     expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
 
-    let manaTotal = totalMana([xerath, garen, wukong]);
-    expect(manaTotal).toBe(1000);
+//     let garen = makeLeagueCharacter("Garen", 3, 200);
 
-    let tower = makeTower(1500, 20);
-    expect(tower).toStrictEqual({ health: 1500 });
+//     let totalDps = sumCharacterDpses([xerath, garen]);
+//     expect(totalDps).toBe(7);
 
-    let towerAfterHit = hitTower(tower, 50);
-    expect(towerAfterHit).toStrictEqual({ health: 1450 });
+//     let stats = prettyPrintStats(xerath); 
+//     expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");
 
-})
-
-test('can get out the suit from an array of cards', () => {
-    let input = [ /* square brackets make an array, curly brackets make an object */
-        {
-            suit: 'S',
-            face: 3
-        },
-        {
-            suit: 'H',
-            face: 14
-        }
-    ];
-    expect(getFirstSuit(input)).toBe('S');
-    expect(getSecondFace(input)).toBe(14);
-
-    // // // do with both hardcoded and for loop
-    expect(sumFaces(input)).toBe(17);
-    expect(combineSuits(input)).toBe("SH");
-})
-
-test('can sum array inside an object', () => {
-    let input =
-    {
-        temps: [70, 40, 80],
-        location: "Philly"
-    };
-    // do with both hardcoded and for loop
-    // expect(sumTemps(input)).toBe(190);
-    expect(getFirstTemp(input)).toBe(70);
-})
-
-//had to look at notes the day before //most recent time i aced
-test('can reduce strings into sentence', () => {
-    let input = ['hey', 'there', 'horseman'];
-    // do with both hardcoded and for loop
-    expect(makeSentence(input)).toBe("hey there horseman");
-})
-
-test('can reduce numbers into average', () => {
-    let input = [10, 20, 30, 40];
-    // do with both hardcoded and for loop
-    expect(averageNumbers(input)).toBe(25);
-})
-
-//had to look at notes
-test('can count up numbers in array of objects', () => {
-    let input = [
-        { id: 4 },
-        { id: 2 },
-        { id: 1 },
-        { id: 4 },
-    ];
-    let output = {
-        '1': 1,
-        '2': 1,
-        '4': 2
-    }
-    expect(countIds(input)).toStrictEqual(output);
-})
+//     let wukong = makeCharacterFromString("Wukong 6 500");
+//     expect(wukong).toStrictEqual({ name: "Wukong", dps: 6, mana: 500 }); //
 
 
+//     let names = collectCharacterNames([xerath, garen, wukong]);
+//     expect(names).toBe("Xerath, Garen, Wukong"); //do with for loop too 
 
-test('will count letters in word', () => {
-    let output = {
-        e: 1,
-        h: 1,
-        l: 2,
-        o: 1
-    }
-    expect(countLetters("hello")).toStrictEqual(output);
-})
+//     let manaTotal = totalMana([xerath, garen, wukong]);
+//     expect(manaTotal).toBe(1000);
 
-// //almost had it
-test('will count numbers in string', () => {
-    let output = {
-        '1': 3,
-        '2': 1,
-        '3': 1
-    }
-    expect(countNumbersString("1,1,2,3,1")).toStrictEqual(output);
-})
+//     let tower = makeTower(1500, 20);
+//     expect(tower).toStrictEqual({ health: 1500 });
+
+//     let towerAfterHit = hitTower(tower, 50);
+//     expect(towerAfterHit).toStrictEqual({ health: 1450 });
+
+// })
+
+// test('can get out the suit from an array of cards', () => {
+//     let input = [ /* square brackets make an array, curly brackets make an object */
+//         {
+//             suit: 'S',
+//             face: 3
+//         },
+//         {
+//             suit: 'H',
+//             face: 14
+//         }
+//     ];
+//     expect(getFirstSuit(input)).toBe('S');
+//     expect(getSecondFace(input)).toBe(14);
+
+//     // // // do with both hardcoded and for loop
+//     expect(sumFaces(input)).toBe(17);
+//     expect(combineSuits(input)).toBe("SH");
+// })
+
+// test('can sum array inside an object', () => {
+//     let input =
+//     {
+//         temps: [70, 40, 80],
+//         location: "Philly"
+//     };
+//     // do with both hardcoded and for loop
+//     // expect(sumTemps(input)).toBe(190);
+//     expect(getFirstTemp(input)).toBe(70);
+// })
+
+// //had to look at notes the day before //most recent time i aced
+// test('can reduce strings into sentence', () => {
+//     let input = ['hey', 'there', 'horseman'];
+//     // do with both hardcoded and for loop
+//     expect(makeSentence(input)).toBe("hey there horseman");
+// })
+
+// test('can reduce numbers into average', () => {
+//     let input = [10, 20, 30, 40];
+//     // do with both hardcoded and for loop
+//     expect(averageNumbers(input)).toBe(25);
+// })
+
+// //had to look at notes
+// test('can count up numbers in array of objects', () => {
+//     let input = [
+//         { id: 4 },
+//         { id: 2 },
+//         { id: 1 },
+//         { id: 4 },
+//     ];
+//     let output = {
+//         '1': 1,
+//         '2': 1,
+//         '4': 2
+//     }
+//     expect(countIds(input)).toStrictEqual(output);
+// })
 
 
-test('will count attendees', () => {
-    let input = [
-        { name: "steve" },
-        { name: "shannon" },
-        { name: "shannon" },
-        { name: "shannon" },
-        { name: "jimjam" },
-    ];
-    let output = {
-        'jimjam': 1,
-        'shannon': 3,
-        'steve': 1
-    }
-    expect(countAttendees(input)).toStrictEqual(output);
-})
+
+// test('will count letters in word', () => {
+//     let output = {
+//         e: 1,
+//         h: 1,
+//         l: 2,
+//         o: 1
+//     }
+//     expect(countLetters("hello")).toStrictEqual(output);
+// })
+
+// // //almost had it
+// test('will count numbers in string', () => {
+//     let output = {
+//         '1': 3,
+//         '2': 1,
+//         '3': 1
+//     }
+//     expect(countNumbersString("1,1,2,3,1")).toStrictEqual(output);
+// })
+
+
+// test('will count attendees', () => {
+//     let input = [
+//         { name: "steve" },
+//         { name: "shannon" },
+//         { name: "shannon" },
+//         { name: "shannon" },
+//         { name: "jimjam" },
+//     ];
+//     let output = {
+//         'jimjam': 1,
+//         'shannon': 3,
+//         'steve': 1
+//     }
+//     expect(countAttendees(input)).toStrictEqual(output);
+// })
 
 // test('can find most common letter', () => {
 //     let input = "aabbbbbccccccca";
@@ -375,11 +374,11 @@ test('will count attendees', () => {
 // })
 
 ////////////////////////check with steve line 1693
-test('show count of each letter', () => {
-    let input = "aabbbbbccccccca";
-    let output = "a: 3, b: 5, c: 7"
-    expect(countAllLettersStringOutput(input)).toBe(output);
-})
+// test('show count of each letter', () => {
+//     let input = "aabbbbbccccccca";
+//     let output = "a: 3, b: 5, c: 7"
+//     expect(countAllLettersStringOutput(input)).toBe(output);
+// })
 
 // ///////////do it ALOT
 // test('user id of user with longest name', () => {
@@ -478,3 +477,4 @@ test('show count of each letter', () => {
 // adding to
 // numbers, strings     +
 // arrays               Array.prototype.push 
+

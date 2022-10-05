@@ -2,6 +2,7 @@
 //have 5 = buzz
 //have 15 = fizzbuzz
 /*
+//files got deleted, testing to see location
 module.exports.fizzbuzzConverter = (number) => {
     if (isDivisibleBy(number, 5) && isDivisibleBy(number, 3)) {
         return 'fizzbuzz'
@@ -1942,120 +1943,512 @@ module.exports.upperCaser = (names) => {
 
 
 
+// function fizzbuzzConverter(number) {
+//     if (isDivisbleBy(number, 3) & isDivisbleBy(number, 5)) {
+//         return 'fizzbuzz'
+//     }
+//     else if (isDivisbleBy(number, 3)) {
+//         return 'fizz'
+//     } else if (isDivisbleBy(number, 5)) {
+//         return "buzz"
+//     } else {
+//         return number
+//     }
+// }
+
+// function isDivisbleBy(larger, smaller) {
+//     return (larger % smaller === 0)
+// }
+
+// function helloWorld(name) {
+//     return "Hello " + name
+// }
+
+// function sumOfSquares(number){
+//     return (number * number) + (number * number)
+// }
+
+// // function flipFlop(string){
+// //     return string.charAt(1) + string.charAt(0)
+// // }
+
+// function flipFlop(string){
+//     let splitString = string.split('')
+//     let reverseString = splitString.reverse()
+//     return joinString = reverseString.join('')
+// }
+
+// function capitalize(name) {
+//     return name.charAt(0).toUpperCase() + name.slice(1)
+// }
+
+// function mixUp (name) {
+//     let splitName = name.split('')
+//     let reverseName = splitName.reverse()
+//     let joinName = reverseName.join('')
+//     return joinName.charAt(0).toUpperCase() + joinName.slice(1)
+// }
+
+// function capFirstLast(name){
+//     return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase()
+// }
+
+// function reverseString(name){
+//     let splitName = name.split('')
+//     let reverseName = splitName.reverse()
+//     let joinName = reverseName.join('')
+//     return joinName
+// }
+
+// // function upperCaser(names) {
+// //     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
+// // }
+
+// function upperCaser(names) {
+//     let endNames = []
+//     for (x = 0; x < names.length; x++) {
+//         let name = names[x]
+//         let modName = name.charAt(0).toUpperCase() + name.slice(1)
+//         endNames.push(modName)
+//     }
+//     return endNames
+// }
+
+// function firstCharacters(names) {
+// return names.map(name => name.charAt(0))
+// }
+
+// function plusOne(numbers) {
+//     return numbers.map(number => number + 1)
+// }
+
+// function lastLetter(names) {
+//     return names.map(name => name.slice(-1).toUpperCase())
+// }
+
+// function stringCounter(names) {
+//     return names.map(name => name.length)
+// }
+
+// function isCoolSClub(names) {
+//     return names.map(name => name.charAt(0) === 's')
+// }
+
+// function characterNums(names) {
+//     return names.map(name => name + ': ' + name.length)
+// }
+
+// function getTemp(data) {
+//     return data.temp
+// }
+
+// function getStreet(contact) {
+// return contact.street
+// }
+
+// function getZipCodes(addresses) {
+//     return addresses.map(address => address.zip)
+// }
+
+// function upperCaseContactNames(contacts) {
+//     return contacts.map(contact => contact.name.toUpperCase())
+// }
+
+// function incrementZipCode(contact) {
+//  contact.zip = contact.zip + 1
+//  return contact
+// }
+
+// function incrementNumber(number) {
+//     return number + 1
+// }
+
+// function upperCaseFirstLetter(contacts) {
+// return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
+// }
+
+// function palindromeName(string) {
+// let splitString = string.split('')
+// let reverseString = splitString.reverse()
+// let joinString = reverseString.join('')
+// return string === joinString
+// }
+
+// function alphabetize(string) {
+//     let splitString = string.split('')
+//     let sortString = splitString.sort()
+//     let joinString = sortString.join('')
+//     return joinString
+// }
+
+// function upperCaseWord(string) {
+//     let splitString = string.split(' ')
+//     let capString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1))
+//     let joinString = capString.join(' ')
+//     return joinString
+// }
+
+// // function upperCaseWord(strings) {
+// //     return strings.map(string => string).charAt(0).toUpperCase() + string.slice(1)
+// // }
+
+// function addOne(numbers) {
+//     return numbers.map(number => number + 1)
+// }
+
+// function firstCharacterss(names) {
+//     return names.map(name => name.charAt(0))
+// }
+
+// function onlyEvens(numbers) {
+//     let endNums = []
+//     for (x = 0; x < numbers.length; x++) {
+//         let nums = numbers[x]
+//         let evenNums = nums % 2 === 0
+//         if (evenNums) {
+//             endNums.push(nums)
+//         }
+//     }
+//     return endNums
+// }
+
+// function onlySteve(names) {
+//     let endNames = []
+//     for (x = 0; x < names.length; x++) {
+//         let name = names[x]
+//         let onlySteve = name === 'steve'
+//         if (onlySteve) {
+//             endNames.push(name)
+//         }
+//     }
+//     return endNames
+// }
+
+// // function onlyBigEnough(words) {
+// //     return words.map(map => map.length >= 4)
+// // }
+
+// function onlyBigEnough(words) {
+//     let bigWords = []
+//     for (x = 0; x < words.length; x++) {
+//         let word = words[x]
+//         let finalArr = word.length >=4
+//         if (finalArr) {
+//             bigWords.push(word)
+//         }
+//     }
+//     return bigWords
+// }
+
+// function capEachWord(string) {
+//     let splitString = string.split(' ')
+//     let modString = splitString.map( word => word.charAt(0).toUpperCase() + word.slice(1))
+//     let joinString = modString.join(' ')
+//     return joinString
+// }
+
+// // function capEachWord(string) {
+// //     return string.map(word => word.charAt(0) + word.slice(1))
+// // }
+
+// function makeLeagueCharacter(champ, dps, mana) {
+//    let stats = { name: champ,
+//     dps: dps,
+//     mana: mana,
+//    }
+//    return stats
+// }
+
+// function sumCharacterDpses(arr) {
+//     return arr[0].dps + arr[1].dps
+// }
+
+// function prettyPrintStats(champ) {
+//     return `${champ.name} - DPS: ${champ.dps} - Mana: ${champ.mana}`
+// }
+
+// function makeCharacterFromString(string) {
+//     let splitString = string.split(' ')
+//     let stats = {
+//         name: splitString[0],
+//         dps: parseInt(splitString[1]),
+//         mana: parseInt(splitString[2]),
+//     }
+//     return stats
+// }
+
+// function collectCharacterNames(arr) {
+//     return `${arr[0].name}, ${arr[1].name}, ${arr[2].name}`
+// }
+
+// function totalMana(arr) {
+//     let total = arr[0].mana + arr[1].mana + arr[2].mana;
+//     return total
+// }
+
+// function makeTower(health, hit) {
+//     let stats = {
+//         health: health,
+//     }
+//     return stats
+// }
+
+// function hitTower(tower, hit) {
+// let stats = { health: tower.health - hit
+// }
+//     return stats
+// }
+
+// function getFirstSuit(input) {
+//     return input[0].suit
+// }
+
+// function getSecondFace(input) {
+//     return input[1].face
+// }
+
+// function sumFaces(input) {
+//     let endFaces = 0;
+//     for (x = 0; x < input.length; x++) {
+//         let card = input[x].face
+//         let newsum = endFaces + card
+//         endFaces = newsum
+//     }
+//     return endFaces
+// }
+
+// function combineSuits(input) {
+//     return input[0].suit + input[1].suit
+// }
+
+// function getFirstTemp(input) {
+// return input.temps[0]
+// }
+
+// function makeSentence(input) {
+// return `${input[0]} ${input[1]} ${input[2]}`
+// }
+
+// // function averageNumbers(input) {
+// // let total = input[0] + input[1] + input[2] + input[3];
+// // return total / 4
+// // }
+
+// function averageNumbers(input) {
+//     let output = 0;
+//     for (i = 0; i < input.length; i++) {
+//         let nums = input[i];
+//          output = output + nums
+//     }
+//     return output / input.length
+// }
+
+// function countIds(input) {
+//     let output = {
+//         '1': 0,
+//         '2': 0,
+//         '4': 0,
+//     }
+//     for (i = 0; i < input.length; i++) {
+//         let nums = input[i];
+//         let id = nums.id
+//         output[id]++
+//     }
+//     return output
+// }
+
+// function countLetters(input) {
+//     let output = {
+//         e: 0,
+//         h: 0,
+//         l: 0,
+//         o: 0,
+//     }
+//     for (i = 0; i < input.length; i++) {
+//         let letter = input[i];
+//         output[letter]++
+//     }
+//     return output
+// }
+
+// function countNumbersString(numbers) {
+//     let output = {
+//         '1': 0,
+//         '2': 0,
+//         '3': 0
+//     }
+//     for (i = 0; i < numbers.length; i++) {
+//         let number = numbers[i];
+//         output[number]++
+//     }
+//     delete output[',']
+//     return output
+// }
+
+// function countAttendees(input) {
+//     let output = {
+//         jimjam: 0,
+//         shannon: 0,
+//         steve: 0,
+//     }
+//     for (i = 0; i < input.length; i++) {
+//         let name = input[i].name;
+//         output[name]++
+//     }
+//     return output
+// }
+
+// function countAllLettersStringOutput(input) {
+//     let output = {
+//         'a': 0,
+//         'b': 0,
+//         'c': 0,
+//     }
+//     for (i = 0; i < input.length; i++) {
+//         let letter = input[i]
+//         output[letter]++
+//     }
+//     return output.a
+// }
+
+
+// //     function allNumbersTheSame ( element, index, input) {
+// //         return element >= 10;
+// //         input.every()
+// // } // mdn .every
+
+
+// function fizzbuzzConverter(number) {
+//     if (divide(number, 3) && divide(number, 5)) {
+//         return 'fizzbuzz'
+//     } else if (divide(number, 3)) {
+//         return 'fizz'
+//     } else if (divide(number, 5)) {
+//         return 'buzz'
+//     } else {
+//         return number
+//     }
+// }
+
+// function divide (number, num) {
+//     return (number % num === 0)
+// }
+
+// function findMostCommonLetter(input) {
+//     // let objectKey = Object.keys(output)[0]
+//     const output = {
+//         a: 0,
+//         b: 0,
+//         c: 0,
+//     }
+//     // for ( i = 0; i < input.length; i++) {
+//     //     let
+//     // }
+//     console.log(Object.keys(output))
+// }
+
+// function countToTen() {
+//     for (x = 1; x < 11; x++) {
+//         console.log(x)
+//     }
+// }
+
 function fizzbuzzConverter(number) {
-    if (isDivisbleBy(number, 3) & isDivisbleBy(number, 5)) {
+    if (isDivisbleBy(number, 3) && (isDivisbleBy(number, 5))) {
         return 'fizzbuzz'
-    }
-    else if (isDivisbleBy(number, 3)) {
+    } else if (isDivisbleBy(number, 3)) {
         return 'fizz'
     } else if (isDivisbleBy(number, 5)) {
-        return "buzz"
+        return 'buzz'
     } else {
         return number
     }
 }
 
-function isDivisbleBy(larger, smaller) {
-    return (larger % smaller === 0)
+function isDivisbleBy(large, small) {
+    return (large % small === 0)
 }
 
-function helloWorld(name) {
-    return "Hello " + name
+function helloWorld(string) {
+    return 'Hello ' + string
 }
 
-function sumOfSquares(number){
+function sumOfSquares(number) {
     return (number * number) + (number * number)
 }
 
-// function flipFlop(string){
-//     return string.charAt(1) + string.charAt(0)
-// }
+function flipFlop(string) {
+    return string.charAt(1) + string.charAt(0)
+}
 
-function flipFlop(string){
-    let splitString = string.split('')
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
+function mixUp(string) {
+    let splitString = string.split('');
     let reverseString = splitString.reverse()
+    let joinString = reverseString.join('')
+    return joinString.charAt(0).toUpperCase() + joinString.slice(1)
+}
+
+function capFirstLast(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1, -1) + string.slice(-1).toUpperCase()
+}
+
+function reverseString(string) {
+    let splitString = string.split('');
+    let reverseString = splitString.reverse();
     return joinString = reverseString.join('')
 }
 
-function capitalize(name) {
-    return name.charAt(0).toUpperCase() + name.slice(1)
+function upperCaser(strings) {
+    return strings.map(string => string.charAt(0).toUpperCase() + string.slice(1))
 }
 
-function mixUp (name) {
-    let splitName = name.split('')
-    let reverseName = splitName.reverse()
-    let joinName = reverseName.join('')
-    return joinName.charAt(0).toUpperCase() + joinName.slice(1)
-}
-
-function capFirstLast(name){
-    return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase()
-}
-
-function reverseString(name){
-    let splitName = name.split('')
-    let reverseName = splitName.reverse()
-    let joinName = reverseName.join('')
-    return joinName
-}
-
-// function upperCaser(names) {
-//     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
-// }
-
-function upperCaser(names) {
-    let endNames = []
-    for (x = 0; x < names.length; x++) {
-        let name = names[x]
-        let modName = name.charAt(0).toUpperCase() + name.slice(1)
-        endNames.push(modName)
-    }
-    return endNames
-}
-
-function firstCharacters(names) {
-return names.map(name => name.charAt(0))
+function firstCharacters(strings) {
+    return strings.map(string => string.charAt(0))
 }
 
 function plusOne(numbers) {
     return numbers.map(number => number + 1)
 }
 
-function lastLetter(names) {
-    return names.map(name => name.slice(-1).toUpperCase())
+function lastLetter(strings) {
+    return strings.map(string => string.slice(-1).toUpperCase())
 }
 
-function stringCounter(names) {
-    return names.map(name => name.length)
+function stringCounter(strings) {
+    return strings.map(string => string.length)
 }
 
-function isCoolSClub(names) {
-    return names.map(name => name.charAt(0) === 's')
+function isCoolSClub(strings) {
+    return strings.map(string => string.charAt(0) === 's')
 }
 
-function characterNums(names) {
-    return names.map(name => name + ': ' + name.length)
+function characterNums(input) {
+    return input.map(name => name + ': ' + name.length)
 }
 
 function getTemp(data) {
-    return data.temp
+return data.temp
 }
 
 function getStreet(contact) {
-return contact.street
+    return contact.street
 }
 
 function getZipCodes(addresses) {
-    return addresses.map(address => address.zip)
+return addresses.map(address => address.zip)
 }
 
 function upperCaseContactNames(contacts) {
-    return contacts.map(contact => contact.name.toUpperCase())
+return contacts.map(contact => contact.name.toUpperCase())
 }
 
 function incrementZipCode(contact) {
- contact.zip = contact.zip + 1
- return contact
+    contact.zip = contact.zip + 1
+    return contact
 }
 
 function incrementNumber(number) {
@@ -2063,256 +2456,71 @@ function incrementNumber(number) {
 }
 
 function upperCaseFirstLetter(contacts) {
-return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
+    return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
 }
 
 function palindromeName(string) {
-let splitString = string.split('')
-let reverseString = splitString.reverse()
-let joinString = reverseString.join('')
-return string === joinString
+    let splitString = string.split('')
+    let reverseString = splitString.reverse()
+    let joinString = reverseString.join('')
+    if (string === joinString) {
+        return true
+    } else {
+        return false
+    }
+
 }
 
 function alphabetize(string) {
-    let splitString = string.split('')
-    let sortString = splitString.sort()
-    let joinString = sortString.join('')
-    return joinString
+let splitString = string.split('');
+let sortString = splitString.sort();
+let joinString = sortString.join('')
+return joinString
+
 }
 
 function upperCaseWord(string) {
-    let splitString = string.split(' ')
-    let capString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1))
+    let splitString = string.split(' ');
+    let capString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1));
     let joinString = capString.join(' ')
     return joinString
 }
 
-// function upperCaseWord(strings) {
-//     return strings.map(string => string).charAt(0).toUpperCase() + string.slice(1)
-// }
-
-function addOne(numbers) {
-    return numbers.map(number => number + 1)
+function addOne(array) {
+    return array.map(arr => arr + 1)
 }
 
-function firstCharacterss(names) {
-    return names.map(name => name.charAt(0))
+function firstCharacterss(array) {
+    return array.map(arr => arr.charAt(0))
 }
 
-function onlyEvens(numbers) {
-    let endNums = []
-    for (x = 0; x < numbers.length; x++) {
-        let nums = numbers[x]
-        let evenNums = nums % 2 === 0
-        if (evenNums) {
-            endNums.push(nums)
+function onlyEvens(array) {
+    let output = []
+    for (x = 0; x < array.length; x++) {
+        let number = array[x]
+        let num = number % 2 === 0
+        if (num) {
+            output.push(number)
         }
     }
-    return endNums
+    return output
 }
 
 function onlySteve(names) {
-    let endNames = []
+    let output = []
     for (x = 0; x < names.length; x++) {
         let name = names[x]
-        let onlySteve = name === 'steve'
-        if (onlySteve) {
-            endNames.push(name)
+        let num = name === 'steve'
+        if (num) {
+            output.push(name)
         }
     }
-    return endNames
-}
-
-// function onlyBigEnough(words) {
-//     return words.map(map => map.length >= 4)
-// }
-
-function onlyBigEnough(words) {
-    let bigWords = [] 
-    for (x = 0; x < words.length; x++) {
-        let word = words[x] 
-        let finalArr = word.length >=4
-        if (finalArr) {
-            bigWords.push(word)
-        }
-    }
-    return bigWords
-}
-
-function capEachWord(string) {
-    let splitString = string.split(' ')
-    let modString = splitString.map( word => word.charAt(0).toUpperCase() + word.slice(1))
-    let joinString = modString.join(' ')
-    return joinString
-}
-
-// function capEachWord(string) {
-//     return string.map(word => word.charAt(0) + word.slice(1))
-// }
-
-function makeLeagueCharacter(champ, dps, mana) {
-   let stats = { name: champ,
-    dps: dps,
-    mana: mana,
-   } 
-   return stats
-}
-
-function sumCharacterDpses(arr) {
-    return arr[0].dps + arr[1].dps
-}
-
-function prettyPrintStats(champ) {
-    return `${champ.name} - DPS: ${champ.dps} - Mana: ${champ.mana}`
-}
-
-function makeCharacterFromString(string) {
-    let splitString = string.split(' ')
-    let stats = {
-        name: splitString[0],
-        dps: parseInt(splitString[1]),
-        mana: parseInt(splitString[2]),
-    }
-    return stats
-}
-
-function collectCharacterNames(arr) {
-    return `${arr[0].name}, ${arr[1].name}, ${arr[2].name}`
-}
-
-function totalMana(arr) {
-    let total = arr[0].mana + arr[1].mana + arr[2].mana;
-    return total 
-}
-
-function makeTower(health, hit) {
-    let stats = {
-        health: health,
-    }
-    return stats
-}
-
-function hitTower(tower, hit) {
-let stats = { health: tower.health - hit
-}
-    return stats
-}
-
-function getFirstSuit(input) {
-    return input[0].suit
-}
-
-function getSecondFace(input) {
-    return input[1].face
-}
-
-function sumFaces(input) {
-    let endFaces = 0;
-    for (x = 0; x < input.length; x++) {
-        let card = input[x].face
-        let newsum = endFaces + card
-        endFaces = newsum
-    }
-    return endFaces
-}
-
-function combineSuits(input) {
-    return input[0].suit + input[1].suit
-}
-
-function getFirstTemp(input) {
-return input.temps[0]
-}
-
-function makeSentence(input) {
-return `${input[0]} ${input[1]} ${input[2]}`
-}
-
-// function averageNumbers(input) {
-// let total = input[0] + input[1] + input[2] + input[3];
-// return total / 4
-// }
-
-function averageNumbers(input) {
-    let output = 0;
-    for (i = 0; i < input.length; i++) {
-        let nums = input[i];
-         output = output + nums
-    }
-    return output / input.length
-}
-
-function countIds(input) {
-    let output = {
-        '1': 0,
-        '2': 0,
-        '4': 0,
-    } 
-    for (i = 0; i < input.length; i++) {
-        let nums = input[i];
-        let id = nums.id
-        output[id]++
-    }
     return output
 }
 
-function countLetters(input) {
-    let output = {
-        e: 0,
-        h: 0,
-        l: 0,
-        o: 0,
-    }
-    for (i = 0; i < input.length; i++) {
-        let letter = input[i];
-        output[letter]++
-    }
-    return output
-}
-
-function countNumbersString(numbers) {
-    let output = {
-        '1': 0,
-        '2': 0,
-        '3': 0
-    }
-    for (i = 0; i < numbers.length; i++) {
-        let number = numbers[i];
-        output[number]++
-    }
-    delete output[',']
-    return output
-}
-
-function countAttendees(input) {
-    let output = {
-        jimjam: 0,
-        shannon: 0,
-        steve: 0,
-    }
-    for (i = 0; i < input.length; i++) {
-        let name = input[i].name;
-        output[name]++
-    }
-    return output
-}
-
-function countAllLettersStringOutput(input) {
-    let output = {
-        'a': 0,
-        'b': 0,
-        'c': 0,
-    }
-    for (i = 0; i < input.length; i++) {
-        let letter = input[i]
-        output[letter]++
-    }
-    return output.a
-}
 
 module.exports = {
-    fizzbuzzConverter, countAllLettersStringOutput, countAttendees, countNumbersString, countLetters, averageNumbers, countIds, makeSentence, getFirstTemp, combineSuits, hitTower, sumFaces, getSecondFace, getFirstSuit, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, capEachWord, onlyBigEnough, onlySteve, onlyEvens, firstCharacterss, alphabetize, addOne, palindromeName, upperCaseFirstLetter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
-    reverseString, upperCaseWord, incrementNumber, upperCaser, characterNums, getTemp, getStreet, getZipCodes, incrementZipCode,
-     firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub, upperCaseContactNames,
+    upperCaseFirstLetter, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, incrementNumber, characterNums, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+    upperCaser, reverseString, firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub,
 }
 
