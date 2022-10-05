@@ -2353,174 +2353,176 @@ module.exports.upperCaser = (names) => {
 //     }
 // }
 
-function fizzbuzzConverter(number) {
-    if (isDivisbleBy(number, 3) && (isDivisbleBy(number, 5))) {
-        return 'fizzbuzz'
-    } else if (isDivisbleBy(number, 3)) {
-        return 'fizz'
-    } else if (isDivisbleBy(number, 5)) {
-        return 'buzz'
-    } else {
-        return number
-    }
+// function fizzbuzzConverter(number) {
+//     if (isDivisbleBy(number, 3) && (isDivisbleBy(number, 5))) {
+//         return 'fizzbuzz'
+//     } else if (isDivisbleBy(number, 3)) {
+//         return 'fizz'
+//     } else if (isDivisbleBy(number, 5)) {
+//         return 'buzz'
+//     } else {
+//         return number
+//     }
+// }
+
+// function isDivisbleBy(large, small) {
+//     return (large % small === 0)
+// }
+
+// function helloWorld(string) {
+//     return 'Hello ' + string
+// }
+
+// function sumOfSquares(number) {
+//     return (number * number) + (number * number)
+// }
+
+// function flipFlop(string) {
+//     return string.charAt(1) + string.charAt(0)
+// }
+
+// function capitalize(string) {
+//     return string.charAt(0).toUpperCase() + string.slice(1)
+// }
+
+// function mixUp(string) {
+//     let splitString = string.split('');
+//     let reverseString = splitString.reverse()
+//     let joinString = reverseString.join('')
+//     return joinString.charAt(0).toUpperCase() + joinString.slice(1)
+// }
+
+// function capFirstLast(string) {
+//     return string.charAt(0).toUpperCase() + string.slice(1, -1) + string.slice(-1).toUpperCase()
+// }
+
+// function reverseString(string) {
+//     let splitString = string.split('');
+//     let reverseString = splitString.reverse();
+//     return joinString = reverseString.join('')
+// }
+
+// function upperCaser(strings) {
+//     return strings.map(string => string.charAt(0).toUpperCase() + string.slice(1))
+// }
+
+// function firstCharacters(strings) {
+//     return strings.map(string => string.charAt(0))
+// }
+
+// function plusOne(numbers) {
+//     return numbers.map(number => number + 1)
+// }
+
+// function lastLetter(strings) {
+//     return strings.map(string => string.slice(-1).toUpperCase())
+// }
+
+// function stringCounter(strings) {
+//     return strings.map(string => string.length)
+// }
+
+// function isCoolSClub(strings) {
+//     return strings.map(string => string.charAt(0) === 's')
+// }
+
+// function characterNums(input) {
+//     return input.map(name => name + ': ' + name.length)
+// }
+
+// function getTemp(data) {
+// return data.temp
+// }
+
+// function getStreet(contact) {
+//     return contact.street
+// }
+
+// function getZipCodes(addresses) {
+// return addresses.map(address => address.zip)
+// }
+
+// function upperCaseContactNames(contacts) {
+// return contacts.map(contact => contact.name.toUpperCase())
+// }
+
+// function incrementZipCode(contact) {
+//     contact.zip = contact.zip + 1
+//     return contact
+// }
+
+// function incrementNumber(number) {
+//     return number + 1
+// }
+
+// function upperCaseFirstLetter(contacts) {
+//     return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
+// }
+
+// function palindromeName(string) {
+//     let splitString = string.split('')
+//     let reverseString = splitString.reverse()
+//     let joinString = reverseString.join('')
+//     if (string === joinString) {
+//         return true
+//     } else {
+//         return false
+//     }
+
+// }
+
+// function alphabetize(string) {
+// let splitString = string.split('');
+// let sortString = splitString.sort();
+// let joinString = sortString.join('')
+// return joinString
+
+// }
+
+// function upperCaseWord(string) {
+//     let splitString = string.split(' ');
+//     let capString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1));
+//     let joinString = capString.join(' ')
+//     return joinString
+// }
+
+// function addOne(array) {
+//     return array.map(arr => arr + 1)
+// }
+
+// function firstCharacterss(array) {
+//     return array.map(arr => arr.charAt(0))
+// }
+
+// function onlyEvens(array) {
+//     let output = []
+//     for (x = 0; x < array.length; x++) {
+//         let number = array[x]
+//         let num = number % 2 === 0
+//         if (num) {
+//             output.push(number)
+//         }
+//     }
+//     return output
+// }
+
+// function onlySteve(names) {
+//     let output = []
+//     for (x = 0; x < names.length; x++) {
+//         let name = names[x]
+//         let num = name === 'steve'
+//         if (num) {
+//             output.push(name)
+//         }
+//     }
+//     return output
+// }
+
+function helloWorld(name) {
+    return 'Hello ' + name
 }
-
-function isDivisbleBy(large, small) {
-    return (large % small === 0)
-}
-
-function helloWorld(string) {
-    return 'Hello ' + string
-}
-
-function sumOfSquares(number) {
-    return (number * number) + (number * number)
-}
-
-function flipFlop(string) {
-    return string.charAt(1) + string.charAt(0)
-}
-
-function capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1)
-}
-
-function mixUp(string) {
-    let splitString = string.split('');
-    let reverseString = splitString.reverse()
-    let joinString = reverseString.join('')
-    return joinString.charAt(0).toUpperCase() + joinString.slice(1)
-}
-
-function capFirstLast(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1, -1) + string.slice(-1).toUpperCase()
-}
-
-function reverseString(string) {
-    let splitString = string.split('');
-    let reverseString = splitString.reverse();
-    return joinString = reverseString.join('')
-}
-
-function upperCaser(strings) {
-    return strings.map(string => string.charAt(0).toUpperCase() + string.slice(1))
-}
-
-function firstCharacters(strings) {
-    return strings.map(string => string.charAt(0))
-}
-
-function plusOne(numbers) {
-    return numbers.map(number => number + 1)
-}
-
-function lastLetter(strings) {
-    return strings.map(string => string.slice(-1).toUpperCase())
-}
-
-function stringCounter(strings) {
-    return strings.map(string => string.length)
-}
-
-function isCoolSClub(strings) {
-    return strings.map(string => string.charAt(0) === 's')
-}
-
-function characterNums(input) {
-    return input.map(name => name + ': ' + name.length)
-}
-
-function getTemp(data) {
-return data.temp
-}
-
-function getStreet(contact) {
-    return contact.street
-}
-
-function getZipCodes(addresses) {
-return addresses.map(address => address.zip)
-}
-
-function upperCaseContactNames(contacts) {
-return contacts.map(contact => contact.name.toUpperCase())
-}
-
-function incrementZipCode(contact) {
-    contact.zip = contact.zip + 1
-    return contact
-}
-
-function incrementNumber(number) {
-    return number + 1
-}
-
-function upperCaseFirstLetter(contacts) {
-    return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
-}
-
-function palindromeName(string) {
-    let splitString = string.split('')
-    let reverseString = splitString.reverse()
-    let joinString = reverseString.join('')
-    if (string === joinString) {
-        return true
-    } else {
-        return false
-    }
-
-}
-
-function alphabetize(string) {
-let splitString = string.split('');
-let sortString = splitString.sort();
-let joinString = sortString.join('')
-return joinString
-
-}
-
-function upperCaseWord(string) {
-    let splitString = string.split(' ');
-    let capString = splitString.map(string => string.charAt(0).toUpperCase() + string.slice(1));
-    let joinString = capString.join(' ')
-    return joinString
-}
-
-function addOne(array) {
-    return array.map(arr => arr + 1)
-}
-
-function firstCharacterss(array) {
-    return array.map(arr => arr.charAt(0))
-}
-
-function onlyEvens(array) {
-    let output = []
-    for (x = 0; x < array.length; x++) {
-        let number = array[x]
-        let num = number % 2 === 0
-        if (num) {
-            output.push(number)
-        }
-    }
-    return output
-}
-
-function onlySteve(names) {
-    let output = []
-    for (x = 0; x < names.length; x++) {
-        let name = names[x]
-        let num = name === 'steve'
-        if (num) {
-            output.push(name)
-        }
-    }
-    return output
-}
-
 
 module.exports = {
-    upperCaseFirstLetter, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, incrementNumber, characterNums, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
-    upperCaser, reverseString, firstCharacters, plusOne, lastLetter, stringCounter, isCoolSClub,
+helloWorld,
 }
 
