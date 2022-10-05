@@ -18,6 +18,7 @@ function parseFaceValue(cardString) {
         return parseInt(face)
     }
 }
+//test 
 
 function parseCard(cardString) {
     let card = {
