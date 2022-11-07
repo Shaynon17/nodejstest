@@ -2518,13 +2518,52 @@ module.exports.upperCaser = (names) => {
 //     return output
 // }
 
-function helloWorld(name) {
-    return 'Hello ' + name
+// function helloWorld(name) {
+//     return 'Hello ' + name
+// }
+
+//back at it 11/7/22
+
+function fizzbuzzConverter(number) {
+    if (isDivisibleBy(number, 3) && isDivisibleBy(number, 5)) {
+        return "fizzbuzz"
+    } else if (isDivisibleBy(number, 3)) {
+        return 'fizz'
+    } else if (isDivisibleBy(number, 5)) {
+        return 'buzz'
+    } else {
+        return number
+    }
 }
+
+function isDivisibleBy(big, small) {
+    return (big % small === 0)
+}
+
+function helloWorld(name) {
+return 'Hello ' + name
+}
+
+function sumOfSquares(number) {
+return number * number+ number * number
+}
+
+function flipFlop(input) {
+    return input.charAt(1) + input.charAt(0)
+}
+
+function capitalize(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1)
+}
+
+function mixUp(name){
+    let splitName = name.split('')
+    let reverseName = splitName.reverse()
+    let joinName = reverseName.join('')
+    return joinName.charAt(0).toUpperCase() + joinName.slice(1)
+}
+
 
 module.exports = {
-helloWorld,
+    fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp,
 }
-
-//test
-
