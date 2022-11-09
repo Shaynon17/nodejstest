@@ -2573,6 +2573,34 @@ function reverseString(string){
     return joinString = reverseString.join('')
 }
 
+function upperCaser(names) {
+    return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
+}
+
+function firstCharacters(names) {
+    return names.map(name => name.charAt())
+}
+
+function plusOne(numbers) {
+    return numbers.map(number => number + 1)
+}
+
+function lastLetter(names) {
+    return names.map(name => name.slice(-1).toUpperCase())
+}
+
+function stringCounter(names) {
+    return names.map(name => name.length)
+}
+
+function isCoolSClub(names) {
+return names.map(name => name.charAt(0) === 's')
+}
+
+function characterNums(names) {
+    return names.map(name => name + ': ' + name.length)
+}
+
 module.exports = {
-   reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+ upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
 }
