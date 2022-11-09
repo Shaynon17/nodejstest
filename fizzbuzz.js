@@ -2563,7 +2563,16 @@ function mixUp(name){
     return joinName.charAt(0).toUpperCase() + joinName.slice(1)
 }
 
+function capFirstLast (name) {
+    return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase(0)
+}
+
+function reverseString(string){
+    let splitString = string.split('')
+    let reverseString = splitString.reverse()
+    return joinString = reverseString.join('')
+}
 
 module.exports = {
-    fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp,
+   reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
 }

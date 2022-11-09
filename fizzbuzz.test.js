@@ -52,14 +52,14 @@ test('Steve will get inverted and capitalized', () => {
     expect(mixUp('steve')).toBe('Evets')
 })
 
-// test('capitalize first and last', () => {
-//     expect(capFirstLast('shannon')).toBe('ShannoN')
-// })
+test('capitalize first and last', () => {
+    expect(capFirstLast('shannon')).toBe('ShannoN')
+})
 
 
-// test('"123456" will reverse', () => {
-//     expect(reverseString("123456")).toBe("654321")
-// })
+test('"123456" will reverse', () => {
+    expect(reverseString("123456")).toBe("654321")
+})
 
 
 // test('will uppercase each name', () => {
