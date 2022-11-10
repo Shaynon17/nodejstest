@@ -2601,6 +2601,14 @@ function characterNums(names) {
     return names.map(name => name + ': ' + name.length)
 }
 
+function getTemp(data) {
+    return data.temp
+}
+
+function getStreet(contact) {
+    return contact.street
+}
+
 module.exports = {
- upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+ getStreet, getTemp, upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
 }

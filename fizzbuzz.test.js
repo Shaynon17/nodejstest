@@ -102,28 +102,28 @@ test('returns # of characters with name', () => {
         .toStrictEqual(['shannon: 7', 'steve: 5'])
 })
 
-// test('can extract the temp from the object', () => {
-//     let data = {
-//         temp: 47.5,
-//         alt: 1300
-//     }
-//     expect(getTemp(data)).toBe(47.5)
+test('can extract the temp from the object', () => {
+    let data = {
+        temp: 47.5,
+        alt: 1300
+    }
+    expect(getTemp(data)).toBe(47.5)
 
-//     let data2 = {
-//         temp: 50,
-//         alt: 1300
-//     }
-//     expect(getTemp(data2)).toBe(50)
-// })
+    let data2 = {
+        temp: 50,
+        alt: 1300
+    }
+    expect(getTemp(data2)).toBe(50)
+})
 
 
-// test('can return street address from contact', () => {
-//     let contact = {
-//         street: '440 Germanhouse Ave',
-//         zip: 11111
-//     }
-//     expect(getStreet(contact)).toBe('440 Germanhouse Ave')
-// })
+test('can return street address from contact', () => {
+    let contact = {
+        street: '440 Germanhouse Ave',
+        zip: 11111
+    }
+    expect(getStreet(contact)).toBe('440 Germanhouse Ave')
+})
 
 // test('can return zip codes from all addresses', () => {
 //     let addresses = [
