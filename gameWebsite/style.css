@@ -65,6 +65,9 @@
 .main {
     position: relative;
     margin-top: 80px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .tutorials {
@@ -86,4 +89,10 @@
     font-size: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.fannedCards{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
 }
