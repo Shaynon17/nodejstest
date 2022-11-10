@@ -66,3 +66,24 @@
     position: relative;
     margin-top: 80px;
 }
+
+.tutorials {
+    text-align: center;
+}
+
+.tutorials h1{
+    font-size: 80px;
+    padding-bottom: 40px;
+}
+
+.tutorials h2{
+    font-size: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.tutorials ul li {
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
