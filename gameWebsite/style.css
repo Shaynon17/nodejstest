@@ -105,6 +105,10 @@ div.home{
     align-items: center;
 }
 
+div.home img{
+    width: 50%;
+}
+
 div.home2{
     width: 50%;
     display: flex;
