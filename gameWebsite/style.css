@@ -98,6 +98,22 @@
 }
 
 div.home{
-    display: inline-flex;
+    /* width: 600px; */
+    flex-shrink: 2;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+div.home2{
+    width: 50%;
+    display: flex;
+flex-direction: column;
+text-align: center;
+margin: auto;
+}
+
+div.home2 h2{
+    padding-bottom: 20px;
+    font-size: 50px;
 }
