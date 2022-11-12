@@ -106,11 +106,11 @@ div.home{
 }
 
 div.home img{
-    width: 50%;
+    width: 40%;
 }
 
 div.home2{
-    width: 50%;
+    width: 40%;
     display: flex;
 flex-direction: column;
 text-align: center;
@@ -118,6 +118,29 @@ margin: auto;
 }
 
 div.home2 h2{
+    padding-bottom: 20px;
+    font-size: 50px;
+}
+div.home3 {
+    flex-shrink: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.home3 img {
+    width: 40%;
+}
+
+div.home4 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+div.home4 h2 {
     padding-bottom: 20px;
     font-size: 50px;
 }
