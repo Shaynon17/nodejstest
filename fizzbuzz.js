@@ -2609,6 +2609,14 @@ function getStreet(contact) {
     return contact.street
 }
 
+function getZipCodes(addresses) {
+    return addresses.map(address => address.zip)
+}
+
+function upperCaseContactNames(contacts) {
+    return contacts.map(contact => contact.name.toUpperCase())
+}
+
 module.exports = {
- getStreet, getTemp, upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+ getStreet, upperCaseContactNames, getZipCodes, getTemp, upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
 }

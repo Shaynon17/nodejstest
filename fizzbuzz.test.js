@@ -125,33 +125,33 @@ test('can return street address from contact', () => {
     expect(getStreet(contact)).toBe('440 Germanhouse Ave')
 })
 
-// test('can return zip codes from all addresses', () => {
-//     let addresses = [
-//         {
-//             street: '440 Germanhouse Ave',
-//             zip: 11111
-//         },
-//         {
-//             street: '440 Germanhouse Ave',
-//             zip: 44444
-//         }
-//     ];
-//     expect(getZipCodes(addresses)).toStrictEqual([11111, 44444])
-// })
+test('can return zip codes from all addresses', () => {
+    let addresses = [
+        {
+            street: '440 Germanhouse Ave',
+            zip: 11111
+        },
+        {
+            street: '440 Germanhouse Ave',
+            zip: 44444
+        }
+    ];
+    expect(getZipCodes(addresses)).toStrictEqual([11111, 44444])
+})
 
-// test('uppercase all the names of contacts', () => {
-//     let contacts = [
-//         {
-//             name: 'steve',
-//             zip: 11111
-//         },
-//         {
-//             name: 'shannon',
-//             zip: 44444
-//         }
-//     ];
-//     expect(upperCaseContactNames(contacts)).toStrictEqual(["STEVE", "SHANNON"])
-// })
+test('uppercase all the names of contacts', () => {
+    let contacts = [
+        {
+            name: 'steve',
+            zip: 11111
+        },
+        {
+            name: 'shannon',
+            zip: 44444
+        }
+    ];
+    expect(upperCaseContactNames(contacts)).toStrictEqual(["STEVE", "SHANNON"])
+})
 
 // // hint: the body is two lines not one
 // test('changes the zip code to be +1', () => {
