@@ -2617,6 +2617,15 @@ function upperCaseContactNames(contacts) {
     return contacts.map(contact => contact.name.toUpperCase())
 }
 
+function incrementZipCode(contact) {
+    contact.zip = contact.zip + 1
+    return contact
+}
+
+function incrementNumber(number) {
+return number + 1
+}
+
 module.exports = {
- getStreet, upperCaseContactNames, getZipCodes, getTemp, upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+ getStreet, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
 }

@@ -154,24 +154,24 @@ test('uppercase all the names of contacts', () => {
 })
 
 // // hint: the body is two lines not one
-// test('changes the zip code to be +1', () => {
-//     let contact = {
-//         name: 'steve',
-//         zip: 11111
-//     }
+test('changes the zip code to be +1', () => {
+    let contact = {
+        name: 'steve',
+        zip: 11111
+    }
 
-//     contact = incrementZipCode(contact);
+    contact = incrementZipCode(contact);
 
-//     expect(contact.zip).toBe(11112)
-// })
+    expect(contact.zip).toBe(11112)
+})
 
-// test('changes the zip code to be +1', () => {
-//     let number = 5
+test('changes the zip code to be +1', () => {
+    let number = 5
 
-//     number = incrementNumber(number);
+    number = incrementNumber(number);
 
-//     expect(number).toBe(6)
-// })
+    expect(number).toBe(6)
+})
 
 // test('uppercase all the first characters of the names of contacts', () => {
 //     let contacts = [
