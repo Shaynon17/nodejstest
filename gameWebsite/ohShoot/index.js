@@ -16,15 +16,17 @@ function getUserChoice(userInput) {
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 4);
     if (randomNumber === 0) {
-        return 'shoot'
+        return 'punch'
     } else if (randomNumber === 1) {
         return 'reload'
     } else if (randomNumber === 2) {
         return 'block'
     } else if (randomNumber === 3) {
-        return 'punch'
+        return 'shoot'
     }
+    //for getComputerChoice, if the clip has 0 then let randomNumber = Math.floor(Math.random() * 4)
 }
+
 
 // // function getUserChoice
 
@@ -76,6 +78,10 @@ function shoot(shooter) {
     shooter.clip -= 1;
     shooter.holster += 1;
 }
+
+
+
+
 
 // bulletTransfer(player2, player1)
 // reload(player1)
