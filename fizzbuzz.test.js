@@ -173,19 +173,19 @@ test('changes the zip code to be +1', () => {
     expect(number).toBe(6)
 })
 
-// test('uppercase all the first characters of the names of contacts', () => {
-//     let contacts = [
-//         {
-//             name: 'steve',
-//             zip: 11111
-//         },
-//         {
-//             name: 'shannon',
-//             zip: 44444
-//         }
-//     ];
-//     expect(upperCaseFirstLetter(contacts)).toStrictEqual(["Steve", "Shannon"])
-// })
+test('uppercase all the first characters of the names of contacts', () => {
+    let contacts = [
+        {
+            name: 'steve',
+            zip: 11111
+        },
+        {
+            name: 'shannon',
+            zip: 44444
+        }
+    ];
+    expect(upperCaseFirstLetter(contacts)).toStrictEqual(["Steve", "Shannon"])
+})
 
 // test('is a word a palindrome', () => {
 //     expect(palindromeName('madam')).toBe(true)
