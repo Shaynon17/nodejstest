@@ -2471,13 +2471,13 @@ module.exports.upperCaser = (names) => {
 
 // }
 
-// function alphabetize(string) {
-// let splitString = string.split('');
-// let sortString = splitString.sort();
-// let joinString = sortString.join('')
-// return joinString
+function alphabetize(string) {
+let splitString = string.split('');
+let sortString = splitString.sort();
+let joinString = sortString.join('')
+return joinString
 
-// }
+}
 
 // function upperCaseWord(string) {
 //     let splitString = string.split(' ');
@@ -2630,6 +2630,27 @@ function upperCaseFirstLetter(contacts) {
     return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
 }
 
-module.exports = {
- getStreet, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+function palindromeName(name) {
+let splitName = name.split('');
+let reverseName = splitName.reverse();
+let joinName = reverseName.join('');
+return joinName === name
 }
+ 
+function upperCaseWord(string) {
+    let words = string.split(' ');
+    let capWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+return capWords.join(' ')
+}
+
+function addOne(numbers) {
+    return numbers.map(number => number + 1)
+}
+
+function firstCharacterss(names) {
+    return names.map(name => name.charAt())
+}
+
+module.exports = {
+ getStreet, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+ }
