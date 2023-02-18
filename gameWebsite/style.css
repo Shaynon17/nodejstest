@@ -70,6 +70,14 @@
     padding-bottom: 20px;
 }
 
+.mainsub {
+    position: relative;
+    /* margin-top: 80px; */
+    text-align: center;
+    /* padding-top: 40px; */
+    padding-bottom: 20px;
+}
+
 .tutorials {
     text-align: center;
 }
