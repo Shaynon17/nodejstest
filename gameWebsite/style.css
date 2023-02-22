@@ -257,6 +257,36 @@ text-align: left;
     height: 450px;
     width: 600px;
 }
+
+.game .pseo {
+    width: 50%;
+        text-align: center;
+        margin: auto;
+        font-size: 25px;
+}
+
+.game p {
+    width: 50%;
+    text-align: left;
+    margin: auto;
+    font-size: 25px;
+}
+
+.game h1 {
+    font-size: 45px;
+}
+
+.game h2 {
+font-size: 40px;
+}
+
+.game h3 {
+    font-size: 35px;
+    text-align: left;
+    margin: auto;
+    width: 50%;
+}
+
 /* CSS for tutorial page template above */
 
 
