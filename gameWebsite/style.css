@@ -220,8 +220,13 @@ div.home4 h2 {
     width: 600px;
 }
 
-/*DATA TABLE BELOW */
 
+/* CSS for aztutorials.html page below*/
+
+
+
+
+/*DATA TABLE BELOW */
 .content-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -260,6 +265,6 @@ div.home4 h2 {
     font-weight: bold;
     font-size: large;
 }
-
-
 /*DATA TABLE ABOVE*/
+
+/* CSS for aztutorials.html page above*/
