@@ -77,8 +77,7 @@ opacity: 0.5;
 
 /* Below is the CSS for index.html (home page)*/
 
-/* Welcome to practical gaming center */
-
+        /* Welcome to practical gaming center */
  .main {
     position: relative;
     margin-top: 80px;
@@ -89,16 +88,16 @@ opacity: 0.5;
 }
 
 
-
-.mainsub /*The online library of game tutorials */{
+        /*The online library of game tutorials */
+        .mainsub {
     position: relative;
     text-align: center;
     padding-bottom: 20px;
 } 
 
-/*  Home page: A-Z tutorial section below  */
+        /*  Home page: A-Z tutorial section below  */
 
-/* When I add ads to this, derease the width of the text to fit the ads on the side*/
+        /* When I add ads to this, derease the width of the text to fit the ads on the side*/
 
 div.home_tutorials{
     width: 75%;
@@ -113,7 +112,7 @@ div.home_tutorials img {
     width: 40%;
 }
 
-/* Home Page: Digital Gaming Center ad below */
+        /* Home Page: Digital Gaming Center ad below */
 
 div.digital_gaming_center {
     padding-top: 80px;
@@ -159,26 +158,61 @@ div.digital_gaming_center h2 {
 
 /* CSS for aztutorials.html page below */
 
+ .aztutorials {
+     position: relative;
+     margin-top: 80px;
+     text-align: center;
+     padding-top: 40px;
+     padding-bottom: 20px;
+ }
 
-/*DATA TABLE BELOW */
-.content-table {
+ .grow_the_library {
+     width: 75%;
+     text-align: center;
+     margin: auto;
+ }
+
+
+
+        /*DATA TABLE BELOW */
+.content_table {
     border-collapse: collapse;
+    /* border: 1px solid; */
     margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 80%;
-    text-align: left;
+    font-size: 25px;
+        min-width: 95%;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-.content-table td{
+.content_table th:first-child {
+    width: 0%;
+}
+
+.content_table th:nth-child(2) {
+width: 20%;
+text-align: left;
+}
+
+.content_table td {
     padding: 12px 15px;
 }
 
-.content-table tbody tr {
+.content_table tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
+.table_head {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+
+.table_letter {
+    font-weight: bold;
+}
 
 /*below is to make every other row gray */
 /* .content-table tbody tr:nth-of-type(even){
@@ -189,17 +223,7 @@ div.digital_gaming_center h2 {
     border-bottom: 2px solid green;
 } */
 
-.table-head {
-    background-color: black;
-    color: white;
-    text-align: left;
-}
-
-.table-letter {
-    font-weight: bold;
-    font-size: large;
-}
-/*DATA TABLE ABOVE*/
+        /*DATA TABLE ABOVE*/
 
 /* CSS for aztutorials.html page above*/
 
