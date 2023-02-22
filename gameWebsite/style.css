@@ -39,11 +39,10 @@
 .donate_button {
     color: #65ff00;
     padding: 2px 2px;
-    padding-right: 30px;
+    padding-right: 35px;
 }
 .donate_button:hover {
-    font-size: 110%;
-    font-weight: bold;
+opacity: 0.5;
 }
 /* .logo_container button {
     color: white;
@@ -232,32 +231,7 @@ div.digital_gaming_center h2 {
 
 /* CSS for the footer below */
 
-.footer {
-    padding-top: 30px;
-    width: 20%;
-    text-align: center;
-    margin: auto;
-    padding-bottom: 25px;
-}
 
-.footer_etsy {
-    color: orangered;
-    padding: 10px;
-}
-
-.footer_donate {
-    color: #65ff00;
-    background-color: #101010;
-    padding: 5px 20px;
-}
-
-.footer_donate:hover {
-background-color: #65ff00;
-color: #101010;
-font-size: 115%;
-border: #101010 solid 1px;
-font-weight: bold;
-}
 
 /* .footer {
     width: 100vw;
@@ -292,5 +266,31 @@ font-weight: bold;
     color: red;
     font-size: 30px;
 } */
+.footer {
+    padding-top: 30px;
+    width: 20%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 25px;
+}
 
+.footer_etsy {
+    color: orangered;
+    padding: 10px;
+}
+
+
+.footer_donate {
+    color: #101010;
+    background-color: #65ff00;;
+    padding: 5px 20px;
+}
+
+.footer_donate:hover {
+    background-color: #101010;
+    color: #65ff00;
+    font-size: 115%;
+    border: #101010 solid 1px;
+    font-weight: bold;
+}
 /* Above is the CSS for the footer */
