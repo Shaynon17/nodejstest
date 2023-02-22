@@ -37,7 +37,6 @@
     font-weight: 200;
 }
 .donate_button {
-    /* background-color: green; */
     color: #65ff00;
     padding: 2px 2px;
     padding-right: 30px;
@@ -74,75 +73,36 @@
 /* Above is the CSS for the header */
 
 /* Below is the CSS for index.html (home page)*/
-.main {
+
+.main /* Welcome to practical gaming center*/ {
     position: relative;
     margin-top: 80px;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 20px;
-}
+} 
 
-.mainsub {
+.mainsub /*The online library of game tutorials */{
     position: relative;
-    /* margin-top: 80px; */
     text-align: center;
-    /* padding-top: 40px; */
     padding-bottom: 20px;
-}
+} 
 
-.tutorials {
-    text-align: center;
-}
-
-.tutorials h1{
-    font-size: 80px;
-    padding-bottom: 40px;
-}
-
-.tutorials h2{
-    font-size: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.tutorials ul li {
-    font-size: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.fannedCards{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-
-div.home{
-    /* width: 600px; */
-    /* flex-shrink: 2;
-    display: flex; */
-    justify-content: center;
-    align-items: center;
-}
-
-div.home img{
+/*  Home page: A-Z tutorial section below  */
+div.home_tutorials{
     width: 40%;
-}
-
-div.home2{
-    width: 40%;
-    /* display: flex;
-flex-direction: column; */
 text-align: center;
 margin: auto;
 }
-
-div.home2 h2{
+div.home_tutorials h2{
     padding-bottom: 20px;
     font-size: 50px;
 }
+div.home_tutorials img {
+    width: 40%;
+}
 
-
+/* Home Page: Digital Gaming Center ad below */
 
 div.digital_gaming_center {
     padding-top: 80px;
@@ -173,14 +133,20 @@ div.digital_gaming_center h2 {
     text-align: center;
 }
 
-
-.tutorial_pics{
-    height: 450px;
-    width: 600px;
-}
+/* CSS for index.html page above */
 
 
-/* CSS for aztutorials.html page below*/
+
+
+
+
+
+
+
+
+
+
+/* CSS for aztutorials.html page below */
 
 
 /*DATA TABLE BELOW */
@@ -227,48 +193,90 @@ div.digital_gaming_center h2 {
 /* CSS for aztutorials.html page above*/
 
 
-/* Below is the CSS for the footer */
+
+
+
+
+
+
+
+
+/* CSS for tutorial page template below */ 
+
+.tutorial_pics {
+    height: 450px;
+    width: 600px;
+}
+/* CSS for tutorial page template above */
+
+
+
+
+
+
+
+
+
+
+/* CSS for the footer below */
 
 .footer {
+    padding-top: 30px;
+    width: 20%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+.footer_etsy {
+    color: orangered;
+    padding: 10px;
+}
+
+.footer_donate {
+    color: #65ff00;
+    background-color: #101010;
+    padding: 5px 20px;
+}
+
+.footer_donate:hover {
+background-color: #65ff00;
+color: #101010;
+font-size: 150%;
+}
+
+/* .footer {
     width: 100vw;
     display: block;
     overFlow: hidden;
     padding: 70px 0;
     box-sizing: border-box;
-    /* background-color: #18181a; */
 }
-
 .inner_footer {
     display: block;
     margin: 0 auto;
     width: 1100px;
     height: 100%;
-    /* background-color: red; */
 }
-
 .footer_navigation {
     float: center;
     height: 100%;
 }
-
-/* the below is what is causing the red background not to show up  */
 .footer_navigation a {
     height: 100%;
     display: table;
     float: left;
     padding: 0px 20px;
 }
-
-*/ .footer_navigation a:last-child {
+ .footer_navigation a:last-child {
     padding-right: 0;
 }
-
 .footer_navigation a li {
     display: table-cell;
     vertical-align: middle;
     height: 100%;
     color: red;
     font-size: 30px;
-}
+} */
 
 /* Above is the CSS for the footer */
