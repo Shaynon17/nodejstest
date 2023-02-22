@@ -224,13 +224,31 @@ div.home4 h2 {
 
 .content-table {
     border-collapse: collapse;
-    margin: 25px o;
+    margin: 25px 0;
     font-size: 0.9em;
     min-width: 400px;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
 }
+
+.content-table td{
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/*below is to make every other row gray */
+/* .content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+} */
+
+/* .content-table tbody tr:last-of-type{
+    border-bottom: 2px solid green;
+} */
 
 .table-head {
     background-color: black;
@@ -242,4 +260,6 @@ div.home4 h2 {
     font-weight: bold;
     font-size: large;
 }
+
+
 /*DATA TABLE ABOVE*/
