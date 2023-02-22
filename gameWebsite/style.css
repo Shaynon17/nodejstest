@@ -4,7 +4,6 @@
     list-style: none;
     text-decoration: none;
 }
-
 .header{
     position: fixed;
     z-index: 10;
@@ -15,7 +14,6 @@
     display: block;
     background-color: #101010;
 }
-
 .inner_header{
     padding-left: 30px;
     /* width: 1000px; */
@@ -25,13 +23,11 @@
     margin: 0 auto;
     /* background-color: red; */
 }
-
 .logo_container{
     height: 100%;
     display: table;
     float: left;
 }
-
 .logo_container h1 {
     color: white;
     height: 100%;
@@ -40,14 +36,12 @@
     font-size: 32px;
     font-weight: 200;
 }
-
 .donate_button {
     /* background-color: green; */
     color: #65ff00;
     padding: 2px 2px;
     padding-right: 30px;
 }
-
 /* .logo_container button {
     color: white;
     height: 10%;
@@ -56,27 +50,20 @@
     font-size: 15px;
     font-weight: 200;
 } */
-
 .logo_container h1 span {
     font-weight: 800;
 }
-
 .navigation{
     float: right;
     height: 100%;
 }
-
 .navigation a{
     height: 100%;
     display: table;
     float: left;
     padding: 0px 20px;
 }
-
-.navigation a:last-child{
-    padding-right: 0;
-}
-
+.navigation a:last-child { padding-right: 0; }
 .navigation a li{
     display: table-cell;
     vertical-align: middle;
@@ -84,10 +71,9 @@
     color: white;
     font-size: 30px;
 }
-
 /* Above is the CSS for the header */
 
-
+/* Below is the CSS for index.html (home page)*/
 .main {
     position: relative;
     margin-top: 80px;
@@ -133,8 +119,8 @@
 
 div.home{
     /* width: 600px; */
-    flex-shrink: 2;
-    display: flex;
+    /* flex-shrink: 2;
+    display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -145,8 +131,8 @@ div.home img{
 
 div.home2{
     width: 40%;
-    display: flex;
-flex-direction: column;
+    /* display: flex;
+flex-direction: column; */
 text-align: center;
 margin: auto;
 }
@@ -155,26 +141,25 @@ div.home2 h2{
     padding-bottom: 20px;
     font-size: 50px;
 }
-div.home3 {
-    flex-shrink: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-div.home3 img {
-    width: 40%;
-}
 
-div.home4 {
+
+div.digital_gaming_center {
+    padding-top: 80px;
     width: 40%;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     text-align: center;
     margin: auto;
 }
 
-div.home4 h2 {
+div.digital_gaming_center img {
+    width: 40%;
+    padding-top: 10;
+    padding-bottom: 20px;
+}
+
+div.digital_gaming_center h2 {
     padding-bottom: 20px;
     font-size: 50px;
 }
@@ -196,8 +181,6 @@ div.home4 h2 {
 
 
 /* CSS for aztutorials.html page below*/
-
-
 
 
 /*DATA TABLE BELOW */
