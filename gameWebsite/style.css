@@ -41,6 +41,10 @@
     padding: 2px 2px;
     padding-right: 30px;
 }
+.donate_button:hover {
+    font-size: 110%;
+    font-weight: bold;
+}
 /* .logo_container button {
     color: white;
     height: 10%;
@@ -74,13 +78,18 @@
 
 /* Below is the CSS for index.html (home page)*/
 
-.main /* Welcome to practical gaming center*/ {
+/* Welcome to practical gaming center */
+
+ .main {
     position: relative;
     margin-top: 80px;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 20px;
-} 
+    font-size: 50px;
+}
+
+
 
 .mainsub /*The online library of game tutorials */{
     position: relative;
@@ -89,8 +98,11 @@
 } 
 
 /*  Home page: A-Z tutorial section below  */
+
+/* When I add ads to this, derease the width of the text to fit the ads on the side*/
+
 div.home_tutorials{
-    width: 40%;
+    width: 75%;
 text-align: center;
 margin: auto;
 }
@@ -106,7 +118,7 @@ div.home_tutorials img {
 
 div.digital_gaming_center {
     padding-top: 80px;
-    width: 40%;
+    width: 75%;
     /* display: flex;
     flex-direction: column; */
     text-align: center;
@@ -243,6 +255,8 @@ div.digital_gaming_center h2 {
 background-color: #65ff00;
 color: #101010;
 font-size: 115%;
+border: #101010 solid 1px;
+font-weight: bold;
 }
 
 /* .footer {
