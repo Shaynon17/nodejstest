@@ -4,6 +4,8 @@
     list-style: none;
     text-decoration: none;
 }
+
+
 .header{
     position: fixed;
     z-index: 10;
@@ -73,6 +75,10 @@ opacity: 0.5;
     color: white;
     font-size: 30px;
 }
+
+.navigation a li:hover {
+    opacity: 0.5;
+}
 /* Above is the CSS for the header */
 
 /* Below is the CSS for index.html (home page)*/
@@ -110,6 +116,10 @@ div.home_tutorials h2{
 }
 div.home_tutorials img {
     width: 40%;
+}
+
+div.digital_gaming_center a:hover {
+    opacity: 0.5;
 }
 
         /* Home Page: Digital Gaming Center ad below */
@@ -184,6 +194,10 @@ div.digital_gaming_center h2 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.content_table a:hover{
+font-size: 125%;
 }
 
 .content_table th:first-child {
