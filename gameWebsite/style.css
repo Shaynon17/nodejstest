@@ -188,6 +188,7 @@ div.digital_gaming_center h2 {
 
 .content_table th:first-child {
     width: 0%;
+    font-size: 35px;
 }
 
 .content_table th:nth-child(2) {
