@@ -219,3 +219,27 @@ div.home4 h2 {
     height: 450px;
     width: 600px;
 }
+
+/*DATA TABLE BELOW */
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px o;
+    font-size: 0.9em;
+    min-width: 400px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-head {
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+
+.table-letter {
+    font-weight: bold;
+    font-size: large;
+}
+/*DATA TABLE ABOVE*/
