@@ -314,6 +314,14 @@ width: 50%;
 #delete{
     color: red;
 }
+
+.game .type_players_supplies{
+width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+}
+
 /* CSS for tutorial page template above */
 
 
