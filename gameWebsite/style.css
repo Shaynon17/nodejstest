@@ -287,6 +287,9 @@ font-size: 40px;
     width: 50%;
 }
 
+#delete{
+    color: red;
+}
 /* CSS for tutorial page template above */
 
 
