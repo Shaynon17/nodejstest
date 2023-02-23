@@ -81,6 +81,11 @@ opacity: 0.5;
 }
 /* Above is the CSS for the header */
 
+
+
+
+
+
 /* Below is the CSS for index.html (home page)*/
 
         /* Welcome to practical gaming center */
@@ -113,7 +118,13 @@ margin: auto;
 div.home_tutorials h2{
     padding-bottom: 20px;
     font-size: 50px;
+    text-decoration-line: underline;
 }
+
+div.home_tutorials h2:hover {
+   opacity: 0.5;
+}
+
 div.home_tutorials img {
     width: 40%;
 }
