@@ -271,6 +271,7 @@ text-align: left;
 .tutorial_pics {
     height: 450px;
     width: 600px;
+        padding: 10px;
 }
 
 .game .pseo {
@@ -285,14 +286,17 @@ text-align: left;
     text-align: left;
     margin: auto;
     font-size: 25px;
+    padding: 10px;
 }
 
 .game h1 {
     font-size: 45px;
+        padding: 10px;
 }
 
 .game h2 {
 font-size: 40px;
+        padding: 10px;
 }
 
 .game h3 {
@@ -300,6 +304,7 @@ font-size: 40px;
     text-align: left;
     margin: auto;
     width: 50%;
+            padding: 10px;
 }
 
 .game h4 {
@@ -307,6 +312,7 @@ font-size: 40px;
     text-align: left;
     margin: auto;
     width: 50%;
+            padding: 10px;
 }
 
 .game .game_play_list {
