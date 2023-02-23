@@ -229,6 +229,10 @@ text-align: left;
     font-weight: bold;
 }
 
+.hyper_linked_letters {
+    text-decoration: underline;
+}
+
 /*below is to make every other row gray */
 /* .content-table tbody tr:nth-of-type(even){
     background-color: #f3f3f3;
