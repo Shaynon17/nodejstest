@@ -294,6 +294,12 @@ margin: auto;
 width: 50%;
 }
 
+.game .card_value {
+    font-size: 25px;
+    text-align: left;
+    margin: auto;
+    width: 50%;
+}
 #delete{
     color: red;
 }
