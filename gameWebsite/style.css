@@ -322,6 +322,10 @@ margin: auto;
 width: 50%;
 }
 
+.game ul li {
+padding: 10px 0;
+}
+
 .game .card_value {
     font-size: 25px;
     text-align: left;
