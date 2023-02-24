@@ -267,7 +267,7 @@ text-align: left;
 
 
 
-/* CSS for tutorial page template below */ 
+/* CSS for tutorial page template/ article pages below */ 
 
 .tutorial_pics {
     height: 450px;
@@ -342,6 +342,14 @@ width: 50%;
     text-align: center;
     margin: auto;
     font-size: 20px;
+}
+
+.variant_link {
+    text-decoration: underline;
+}
+
+.variant_link:hover {
+opacity: 0.5;
 }
 
 /* CSS for tutorial page template above */
