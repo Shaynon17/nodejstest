@@ -129,17 +129,11 @@ div.home_tutorials img {
     width: 40%;
 }
 
-div.digital_gaming_center a:hover {
-    opacity: 0.5;
-}
-
         /* Home Page: Digital Gaming Center ad below */
 
 div.digital_gaming_center {
     padding-top: 80px;
     width: 75%;
-    /* display: flex;
-    flex-direction: column; */
     text-align: center;
     margin: auto;
 }
@@ -153,7 +147,14 @@ div.digital_gaming_center img {
 div.digital_gaming_center h2 {
     padding-bottom: 20px;
     font-size: 50px;
+    text-decoration: underline;
 }
+
+div.digital_gaming_center a:hover{
+    color: orangered
+}
+
+
 
 .shop {
     padding-top: 80px;
