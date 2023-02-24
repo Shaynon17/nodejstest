@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- to open in browser, go to files > coding > and open websitepractice.html 
+or CAP file:///home/shaynon17/coding/nodejstest/websitepractice.html into browser-->
+
+<!-- - - - - - Ctrl+F = find and replace. replace Beggar My Neighbor with the game title of the current article - - - - -->
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Beggar My Neighbor Rules: How to play Beggar My Neighbor</title> <!-- Fill in SEO ----------------- Must be 60 characters or less-------------------->
+    <meta name="og:title" property="og:title" content="How to play Beggar My Neighbor"> <!-- Fill in SEO ----------- (this is the same as <h1> -------------------->
+    <meta name="description" content="Beggar My Neighbor Rules: How to play Beggar My Neighbor"> <!-- Fill in SEO -------------------------------->
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <h1>Practical<span>GamingCenter</span></h1>
+            </div>
+            <ul class="navigation">
+                <a href="../index.html">
+                    <li>Home</li>
+                </a>
+                <a href="../aztutorials.html">
+                    <li>A-Z Tutorials</li>
+                </a>
+                <a rel="nofollow" target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=3R6SK3PHRWMT8">
+                    <li><span class="donate_button">DONATE</span></li>
+                </a>
+                <li></li>
+                <!-- <a href="shop.html">
+                    <li>Shop</li>
+                </a> -->
+            </ul>
+        </div>
+    </div>
+
+
+<div class="game">
+    <h1>How to Play Beggar My Neighbor</h1>  <!--------------------- Fill in SEO ----------------------------------------------------------------------------->
+        <p class="pseo">(SEO)info about the game</p>  <!--------------------- Fill in SEO ------------------------------------------------------------------>
+    <h2>Beggar My Neighbor Rules</h2>  <!--------------------- Fill in SEO -------------------------------------------------------------------------------->
+   
+<p class="type_players_supplies"><strong>| Players:</strong> 2+ 
+    |<strong> Type:</strong> Chance 
+    |<strong> Supplies:</strong> 1 deck |
+</p>
+
+    <h3>Objective</h3> 
+        <p>The object of the game is to have all the cards.</p>
+  
+    <h3>Deal</h3> 
+        <p>To deal, split the cards evenly amongst players, one at a time. Some players may have one more card than others, this is
+        ok. Each player gathers their cards and keeps them facedown in a pile.</p>
+    
+        <figure>
+        <img class="tutorial_pics" src="../images/tutorialsimage.png" alt="Beggar My Neighbor set up: card layout"> <!----------- Fill in SEO -------------->
+        <figcaption>Beggar My Neighbor set up</figcaption> <!--------------------- Fill in SEO --------------------------------------------------------------------->
+    </figure> 
+   
+    <h3>Game Play</h3> 
+        <p>The player left of the dealer goes first. The player flips the top card of their stack into the middle. If the card is a
+        numbered card (2-10), play continues clockwise to the next player.
+        <br><br>
+        Each player places one card face up in turn order, until a player places an ace or a face card. When this happens, the
+        next person has to play an ace or a face card as well within a certain amount of cards played (during one turn)
+        depending on the card played.<br><br>
+        -If an Ace is played, the next player has four chances to play an ace or a face card.<br><br>
+        -If a King is played, the next player has three chances to play an ace or a face card.<br><br>
+        -If a Queen is played, the next player has two chances to play an ace or a face card.<br><br>
+        -If a Jack is played, the next player has one chance to play an ace or a face card.<br><br>
+        If a face card or an ace is played, play moves to the next player who has to play a face card or an ace in the allotted
+        chances. If no face card or ace is played, the middle pile is taken by the last player to play a face card or an ace.
+        The cards are added to the bottom of the player's card stack.</p>
+   
+    <h3>Winner</h3>  
+       <p>Once a player has all the cards, they win.</p>
+   
+    <h3>Variants</h3> 
+       <p>If you are looking for a challenging version of this game, 
+        check out Egyptian Rat Screw </p> 
+
+</div>
+
+<div class="footer">
+
+    <h3>Contact</h3>
+    <p class="footer_email">PracticalGamingCenter@yahoo.com</p>
+    <ul>
+        <a rel="nofollow" rel="sponsored" target="_blank" href="https://www.etsy.com/shop/DigitalGamingCenter?coupon=HALFOFF">
+            <li class="footer_etsy">Etsy Store</li>
+        </a>
+        <a rel="nofollow" target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=3R6SK3PHRWMT8">
+            <button>
+                <li class="footer_donate">DONATE</li>
+            </button>
+        </a>
+    </ul>
+    <li class="bottom_of_page"></li>
+
+</div>
+</body>
+</html>
