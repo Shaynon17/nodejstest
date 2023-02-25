@@ -261,10 +261,19 @@ text-align: left;
 
 /* CSS for tutorial page template/ article pages below */ 
 
+
+
 .tutorial_pics {
     height: 450px;
     width: 600px;
         padding: 10px;
+}
+
+.game figcaption {
+    /* height: auto; */
+    width: 600px;
+    text-align: center;
+    margin: auto;
 }
 
 .game .pseo {
