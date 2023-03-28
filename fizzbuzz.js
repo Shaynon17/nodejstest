@@ -1,3 +1,5 @@
+//in git : coding/nodejstest/ to commit to git hub
+
 // have 3 = fizz
 //have 5 = buzz
 //have 15 = fizzbuzz
