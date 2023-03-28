@@ -1,4 +1,4 @@
-//in git : coding/nodejstest/ to commit to git hub
+//in git : cd --> cd coding/nodejstest --> git push to commit to git hub
 
 // have 3 = fizz
 //have 5 = buzz
