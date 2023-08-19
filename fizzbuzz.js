@@ -2653,6 +2653,18 @@ module.exports.upperCaser = (names) => {
 //     return names.map(name => name.charAt())
 // }
 
+function helloWorld(name) {
+return 'Hello ' + name
+}
+
+function sumOfSquares(sum) {
+return (sum * sum) + (sum * sum)
+}
+
+function flipFlop(string) {
+    return string.charAt(1) + string.charAt(0)
+}
+
 module.exports = {
- getStreet, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, upperCaser, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, reverseString, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+ helloWorld, sumOfSquares, flipFlop
  }
