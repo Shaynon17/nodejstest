@@ -57,50 +57,50 @@ test('capitalize first and last', () => {
 })
 
 
-// test('"123456" will reverse', () => {
-//     expect(reverseString("123456")).toBe("654321")
-// })
+test('"123456" will reverse', () => {
+    expect(reverseString("123456")).toBe("654321")
+})
 
 
-// test('will uppercase each name', () => {
-//     expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
-// })
+test('will uppercase each name', () => {
+    expect(upperCaser(['steve', 'shannon', 'jimbob'])).toStrictEqual(['Steve', 'Shannon', 'Jimbob'])
+})
 
 
-// test('first letter of each', () => {
-//     expect(firstCharacters(['steve', 'shannon', 'jimbob']))
-//         .toStrictEqual(['s', 's', 'j'])
-// })
+test('first letter of each', () => {
+    expect(firstCharacters(['steve', 'shannon', 'jimbob']))
+        .toStrictEqual(['s', 's', 'j'])
+})
 
-// test('add one', () => {
-//     expect(plusOne([1, 2, 3])).toStrictEqual([2, 3, 4])
-// })
+test('add one', () => {
+    expect(plusOne([1, 2, 3])).toStrictEqual([2, 3, 4])
+})
 
 
-// test('return and cap last letter', () => {
-//     expect(lastLetter(['shannon', 'steve']))
-//         .toStrictEqual(['N', 'E'])
-// })
+test('return and cap last letter', () => {
+    expect(lastLetter(['shannon', 'steve']))
+        .toStrictEqual(['N', 'E'])
+})
 
-// test('returns the length of the strings', () => {
-//     expect(stringCounter(['shannon', 'steve']))
-//         .toStrictEqual([7, 5])
-// })
+test('returns the length of the strings', () => {
+    expect(stringCounter(['shannon', 'steve']))
+        .toStrictEqual([7, 5])
+})
 
-// test('returns true for all strings with a first letter of S', () => {
-//     expect(isCoolSClub(['shannon', 'jim', 'steve']))
-//         .toStrictEqual([true, false, true])
-// })
+test('returns true for all strings with a first letter of S', () => {
+    expect(isCoolSClub(['shannon', 'jim', 'steve']))
+        .toStrictEqual([true, false, true])
+})
 
 
 // // // //['steve', 'shannon']
 // // // //['steve: 5', 'shannon: 7']
 // // // // the input is a name, the output is the name and # of characters
 
-// test('returns # of characters with name', () => {
-//     expect(characterNums(['shannon', 'steve']))
-//         .toStrictEqual(['shannon: 7', 'steve: 5'])
-// })
+test('returns # of characters with name', () => {
+    expect(characterNums(['shannon', 'steve']))
+        .toStrictEqual(['shannon: 7', 'steve: 5'])
+})
 
 // test('can extract the temp from the object', () => {
 //     let data = {

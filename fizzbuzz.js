@@ -2680,6 +2680,40 @@ function capFirstLast(name) {
     return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase()
 }
 
+function reverseString(string) {
+    let splitString = string.split("");
+    let reverse = splitString.reverse();
+    return joinString = reverse.join("")
+}
+
+function upperCaser(names) {
+    return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
+}
+
+function firstCharacters(names) {
+    return names.map(name => name.charAt(0))
+}
+
+function plusOne(numbers) {
+    return numbers.map(number => number + 1)
+}
+
+function lastLetter(names) {
+    return names.map(name => name.slice(-1).toUpperCase())
+}
+
+function stringCounter(names) {
+return names.map(name => name.length)
+}
+
+function isCoolSClub(names) {
+    return names.map(name => name.charAt(0) === "s")
+}
+
+function characterNums(names) {
+    return names.map(name => name + ': ' + name.length)
+}
+
 module.exports = {
- helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
+ firstCharacters, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
  }
