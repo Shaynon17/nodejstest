@@ -2665,6 +2665,21 @@ function flipFlop(string) {
     return string.charAt(1) + string.charAt(0)
 }
 
+function capitalize(name) {
+    return name.charAt(0).toUpperCase() + name.substr(1)
+}
+
+function mixUp(name) {
+let splitName = name.split('');
+let reverseName = splitName.reverse();
+let joinName = reverseName.join('')
+return joinName.charAt(0).toUpperCase() + joinName.slice(1)
+}
+
+function capFirstLast(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase()
+}
+
 module.exports = {
- helloWorld, sumOfSquares, flipFlop
+ helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast,
  }

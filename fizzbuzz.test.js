@@ -44,17 +44,17 @@ test('ST returns as TS', () => {
     expect(flipFlop('st')).toBe('ts')
 })
 
-// test('capitalize will uppercase the first letter', () => {
-//     expect(capitalize('shannon')).toBe('Shannon')
-// })
+test('capitalize will uppercase the first letter', () => {
+    expect(capitalize('shannon')).toBe('Shannon')
+})
 
-// test('Steve will get inverted and capitalized', () => {
-//     expect(mixUp('steve')).toBe('Evets')
-// })
+test('Steve will get inverted and capitalized', () => {
+    expect(mixUp('steve')).toBe('Evets')
+})
 
-// test('capitalize first and last', () => {
-//     expect(capFirstLast('shannon')).toBe('ShannoN')
-// })
+test('capitalize first and last', () => {
+    expect(capFirstLast('shannon')).toBe('ShannoN')
+})
 
 
 // test('"123456" will reverse', () => {
