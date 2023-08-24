@@ -2714,6 +2714,22 @@ function characterNums(names) {
     return names.map(name => name + ': ' + name.length)
 }
 
+function getTemp(data) {
+return data.temp
+}
+
+function getStreet(contact) {
+    return contact.street
+}
+
+function getZipCodes(addresses) {
+return addresses.map(address => address.zip)
+}
+
+function upperCaseContactNames(contacts){
+    return contacts.map(contact => contact.name.toUpperCase())
+}
+
 module.exports = {
- firstCharacters, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
+ firstCharacters, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
  }
