@@ -1,4 +1,4 @@
-const { getIndexForCity, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { getIndexForCity, reverseName, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -153,17 +153,17 @@ test('uppercase all the names of contacts', () => {
     expect(upperCaseContactNames(contacts)).toStrictEqual(["STEVE", "SHANNON"])
 })
 
-// // hint: the body is two lines not one
-// test('changes the zip code to be +1', () => {
-//     let contact = {
-//         name: 'steve',
-//         zip: 11111
-//     }
+// hint: the body is two lines not one
+test('changes the zip code to be +1', () => {
+    let contact = {
+        name: 'steve',
+        zip: 11111
+    }
 
-//     contact = incrementZipCode(contact);
+    contact = incrementZipCode(contact);
 
-//     expect(contact.zip).toBe(11112)
-// })
+    expect(contact.zip).toBe(11112)
+})
 
 // test('changes the zip code to be +1', () => {
 //     let number = 5
@@ -187,36 +187,40 @@ test('uppercase all the names of contacts', () => {
 //     expect(upperCaseFirstLetter(contacts)).toStrictEqual(["Steve", "Shannon"])
 // })
 
-// test('is a word a palindrome', () => {
-//     expect(palindromeName('madam')).toBe(true)
-// })
+test('reverse shannon to nonnahs', () => {
+    expect(reverseName('shannon')).toBe('nonnahs')
+})
 
-// test('is a word a palindrome', () => {
-//     expect(palindromeName('shannon')).toBe(false)
-// })
+test('is a word a palindrome', () => {
+    expect(palindromeName('madam')).toBe(true)
+})
 
-// test('cadb will return abcd', () => {
-//     expect(alphabetize('cdab')).toBe('abcd')
-// })
+test('is a word a palindrome', () => {
+    expect(palindromeName('shannon')).toBe(false)
+})
 
-// test('3524 will return 2345', () => {
-//     expect(alphabetize('3524')).toBe('2345')
-// })
+test('cadb will return abcd', () => {
+    expect(alphabetize('cdab')).toBe('abcd')
+})
 
-// test('capitalize each first letter in each word"', () => {
-//     expect(upperCaseWord('how are you')).toBe('How Are You')
-// })
+test('3524 will return 2345', () => {
+    expect(alphabetize('3524')).toBe('2345')
+})
 
-// test('add one to each number', () => {
-//     expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
-// })
+test('capitalize each first letter in each word"', () => {
+    expect(upperCaseWord('how are you')).toBe('How Are You')
+})
 
+test('add one to each number', () => {
+    expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
+})
 
-// test('first letter of each', () => {
-//     expect(firstCharacterss(['steve', 'shannon', 'jimbob']))
-//         .toStrictEqual(['s', 's', 'j'])
-// })
+test('first letter of each', () => {
+    expect(firstCharacterss(['steve', 'shannon', 'jimbob']))
+        .toStrictEqual(['s', 's', 'j'])
+})
 
+//remember, delierate practice. 
 // //struggled and had to look at previous code
 // test('only evens', () => {
 //     expect(onlyEvens([1, 2, 3, 4, 5, 6]))

@@ -2730,6 +2730,47 @@ function upperCaseContactNames(contacts){
     return contacts.map(contact => contact.name.toUpperCase())
 }
 
+function incrementZipCode(contact) {
+    contact.zip = contact.zip + 1
+    return contact
+}
+
+function reverseName(name) {
+    let splitName = name.split('');
+    let reverseSplit = splitName.reverse();
+    let joinName = reverseSplit.join('');
+    return joinName
+}
+
+
+function palindromeName(name) {
+    if (name === reverseName(name)) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function alphabetize(string) {
+    let splitString = string.split('')
+  let sortString =  splitString.sort();
+  return joinString = sortString.join('')
+}
+
+function upperCaseWord(string){
+let splitString = string.split(' ');
+    let capString = splitString.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+return joinString = capString.join(' ')
+}
+
+function addOne(numbers) {
+    return numbers.map(number => number + 1)
+}
+
+function firstCharacterss(names) {
+    return names.map(name => name.charAt(0))
+}
+
 module.exports = {
- firstCharacters, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
+ firstCharacters, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
  }
