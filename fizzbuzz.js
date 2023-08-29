@@ -2771,6 +2771,49 @@ function firstCharacterss(names) {
     return names.map(name => name.charAt(0))
 }
 
+function isDivisbleBy(big, small) {
+    return (big / small)
+}
+
+function fizzbuzzConverter(number) {
+  
+    if (isDivisbleBy(number, 3) === Math.floor(isDivisbleBy(number, 3)) && isDivisbleBy(number, 5) === Math.floor(isDivisbleBy(number, 5)) )  {
+        return 'fizzbuzz'
+    } else  if (isDivisbleBy(number, 3) === Math.floor(isDivisbleBy(number, 3))) {
+        return 'fizz'
+    } else if (isDivisbleBy(number, 5) === Math.floor(isDivisbleBy(number, 5)))  {
+return 'buzz'
+    } else {
+        return number
+    }
+}
+
+function incrementNumber(number) {
+    return number + 1
+}
+
+function upperCaseFirstLetter(contacts) {
+    return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
+}
+
+function onlyEvens(numbers) {
+    return numbers.filter(number => number % 2 === 0)
+}
+
+function onlySteve(names) {
+    return names.filter(name => name === 'steve')
+}
+
+function onlyBigEnough(words) {
+return words.filter(word => word.length >= 4)
+}
+
+function capEachWord(words) {
+    let splitWords = words.split(' ');
+    let capWords = splitWords.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    return joinWords = capWords.join(' ');
+}
+
 module.exports = {
- firstCharacters, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
+ firstCharacters, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
  }

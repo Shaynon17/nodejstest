@@ -1,36 +1,45 @@
-const { getIndexForCity, reverseName, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, } = require("./fizzbuzz")
+const { getIndexForCity, reverseName, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, isDivisbleBy, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
 //test
 
-// test("fizzbuzzConverter(1) will return 1", () => {
-//     expect(fizzbuzzConverter(1)).toBe(1);
-// })
+test("isDivisbleBy 10, 2 will return 5", () => {
+    expect(isDivisbleBy(10, 2)).toBe(5);
+})
 
-// test("fizzbuzzConverter(3) will return 'fizz'", () => {
-//     expect(fizzbuzzConverter(3)).toBe('fizz');
-// })
 
-// test('fizzbuzzconverter(5) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(5)).toBe('buzz');
-// })
+test("fizzbuzzConverter(1) will return 1", () => {
+    expect(fizzbuzzConverter(1)).toBe(1);
+})
 
-// test('fizzbuzzconverter(15) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(15)).toBe('fizzbuzz');
-// })
+test("fizzbuzzConverter(3) will return 'fizz'", () => {
+    expect(fizzbuzzConverter(3)).toBe('fizz');
+})
 
-// test('fizzbuzzconverter(10) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(10)).toBe('buzz');
-// })
+test('fizzbuzzconverter(5) will return "buzz"', () => {
+    expect(fizzbuzzConverter(5)).toBe('buzz');
+})
 
-// test('fizzbuzzconverter(9) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(9)).toBe('fizz');
-// })
+test('fizzbuzzconverter(15) will return "buzz"', () => {
+    expect(fizzbuzzConverter(15)).toBe('fizzbuzz');
+})
 
-// test('fizzbuzzconverter(150) will return "buzz"', () => {
-//     expect(fizzbuzzConverter(150)).toBe('fizzbuzz');
-// })
+test('fizzbuzzconverter(10) will return "buzz"', () => {
+    expect(fizzbuzzConverter(10)).toBe('buzz');
+})
+
+test('fizzbuzzconverter(9) will return "buzz"', () => {
+    expect(fizzbuzzConverter(9)).toBe('fizz');
+})
+
+test('fizzbuzzconverter(150) will return "buzz"', () => {
+    expect(fizzbuzzConverter(150)).toBe('fizzbuzz');
+})
+
+test('fizzbuzzconverter(7) will return 7', () => {
+    expect(fizzbuzzConverter(7)).toBe(7);
+})
 
 test('Hello world steve returns steve', () => {
     expect(helloWorld('Steve')).toBe('Hello Steve')
@@ -165,27 +174,27 @@ test('changes the zip code to be +1', () => {
     expect(contact.zip).toBe(11112)
 })
 
-// test('changes the zip code to be +1', () => {
-//     let number = 5
+test('changes the zip code to be +1', () => {
+    let number = 5
 
-//     number = incrementNumber(number);
+    number = incrementNumber(number);
 
-//     expect(number).toBe(6)
-// })
+    expect(number).toBe(6)
+})
 
-// test('uppercase all the first characters of the names of contacts', () => {
-//     let contacts = [
-//         {
-//             name: 'steve',
-//             zip: 11111
-//         },
-//         {
-//             name: 'shannon',
-//             zip: 44444
-//         }
-//     ];
-//     expect(upperCaseFirstLetter(contacts)).toStrictEqual(["Steve", "Shannon"])
-// })
+test('uppercase all the first characters of the names of contacts', () => {
+    let contacts = [
+        {
+            name: 'steve',
+            zip: 11111
+        },
+        {
+            name: 'shannon',
+            zip: 44444
+        }
+    ];
+    expect(upperCaseFirstLetter(contacts)).toStrictEqual(["Steve", "Shannon"])
+})
 
 test('reverse shannon to nonnahs', () => {
     expect(reverseName('shannon')).toBe('nonnahs')
@@ -220,26 +229,27 @@ test('first letter of each', () => {
         .toStrictEqual(['s', 's', 'j'])
 })
 
-//remember, delierate practice. 
+
+//remember, deliberate practice. 
 // //struggled and had to look at previous code
-// test('only evens', () => {
-//     expect(onlyEvens([1, 2, 3, 4, 5, 6]))
-//         .toStrictEqual([2, 4, 6])
-// })
+test('only evens', () => {
+    expect(onlyEvens([1, 2, 3, 4, 5, 6]))
+        .toStrictEqual([2, 4, 6])
+})
 
-// test('only steve', () => {
-//     expect(onlySteve(['steve', 'sam', 'steve']))
-//         .toStrictEqual(['steve', 'steve'])
-// })
+test('only steve', () => {
+    expect(onlySteve(['steve', 'sam', 'steve']))
+        .toStrictEqual(['steve', 'steve'])
+})
 
-// test('only words length 4 or more', () => {
-//     expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
-//         .toStrictEqual(['steve', 'horse'])
-// })
+test('only words length 4 or more', () => {
+    expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
+        .toStrictEqual(['steve', 'horse'])
+})
 
-// test('Cap first letter of each word', () => {
-//     expect(capEachWord("how are you")).toBe("How Are You")
-// })
+test('Cap first letter of each word', () => {
+    expect(capEachWord("how are you")).toBe("How Are You")
+})
 
 
 // //had to look at notes
