@@ -283,42 +283,42 @@ test('Cap first letter of each word', () => {
 
 // })
 
-// test('can get out the suit from an array of cards', () => {
-//     let input = [ /* square brackets make an array, curly brackets make an object */
-//         {
-//             suit: 'S',
-//             face: 3
-//         },
-//         {
-//             suit: 'H',
-//             face: 14
-//         }
-//     ];
-//     expect(getFirstSuit(input)).toBe('S');
-//     expect(getSecondFace(input)).toBe(14);
+test('can get out the suit from an array of cards', () => {
+    let input = [ /* square brackets make an array, curly brackets make an object */
+        {
+            suit: 'S',
+            face: 3
+        },
+        {
+            suit: 'H',
+            face: 14
+        }
+    ];
+    expect(getFirstSuit(input)).toBe('S');
+    expect(getSecondFace(input)).toBe(14);
 
-//     // // // do with both hardcoded and for loop
-//     expect(sumFaces(input)).toBe(17);
-//     expect(combineSuits(input)).toBe("SH");
-// })
+    // // // do with both hardcoded and for loop
+    expect(sumFaces(input)).toBe(17);
+    expect(combineSuits(input)).toBe("SH");
+})
 
-// test('can sum array inside an object', () => {
-//     let input =
-//     {
-//         temps: [70, 40, 80],
-//         location: "Philly"
-//     };
-//     // do with both hardcoded and for loop
-//     // expect(sumTemps(input)).toBe(190);
-//     expect(getFirstTemp(input)).toBe(70);
-// })
+test('can sum array inside an object', () => {
+    let input =
+    {
+        temps: [70, 40, 80],
+        location: "Philly"
+    };
+    expect(getFirstTemp(input)).toBe(70);
+        // do with both hardcoded and for loop
+    expect(sumTemps(input)).toBe(190);
+})
 
 // //had to look at notes the day before //most recent time i aced
-// test('can reduce strings into sentence', () => {
-//     let input = ['hey', 'there', 'horseman'];
-//     // do with both hardcoded and for loop
-//     expect(makeSentence(input)).toBe("hey there horseman");
-// })
+test('can reduce strings into sentence', () => {
+    let input = ['hey', 'there', 'horseman'];
+    // do with both hardcoded and for loop
+    expect(makeSentence(input)).toBe("hey there horseman");
+})
 
 // test('can reduce numbers into average', () => {
 //     let input = [10, 20, 30, 40];

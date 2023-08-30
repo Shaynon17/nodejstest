@@ -2814,6 +2814,67 @@ function capEachWord(words) {
     return joinWords = capWords.join(' ');
 }
 
+function getFirstSuit(input) {
+    return input[0].suit
+}
+
+function getSecondFace(input) {
+    return input[1].face
+}
+
+function sumFaces(input){
+    return input[0].face + input[1].face
+}
+
+function combineSuits(input) {
+    return input[0].suit + input[1].suit
+}
+
+//just to look at loops, //
+// function combineSuits(input) {
+//     let endSuits = '';
+//     for (x = 0; x < input.length; x++) {
+//         let card = input[x]
+//         let newSum = endSuits + card.suit
+//         endSuits = newSum
+//     }
+//     return endSuits
+// }
+//just to look at loops, //
+
+// function averageNumbers(input) {
+//     let output = 0;
+//     for (i = 0; i < input.length; i++) {
+//         let nums = input[i];
+//          output = output + nums
+//     }
+//     return output / input.length
+// }
+//just to look at loops, // 
+
+// function sumFaces(input) {
+//     let endFaces = 0;
+//     for (x = 0; x < input.length; x++) {
+//         let card = input[x].face
+//         let newsum = endFaces + card
+//         endFaces = newsum
+//     }
+//     return endFaces
+// }
+
+
+function sumTemps(input) {
+    return input.temps[0] + input.temps[1] + input.temps[2]
+}
+
+function getFirstTemp(input) {
+    return input.temps[0]
+}
+
+function makeSentence(input) {
+    return input[0] + ' ' + input[1] + ' ' + input[2]
+}
+
 module.exports = {
- firstCharacters, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
+ firstCharacters, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
  }
