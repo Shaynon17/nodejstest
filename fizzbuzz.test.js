@@ -320,11 +320,14 @@ test('can reduce strings into sentence', () => {
     expect(makeSentence(input)).toBe("hey there horseman");
 })
 
-// test('can reduce numbers into average', () => {
-//     let input = [10, 20, 30, 40];
-//     // do with both hardcoded and for loop
-//     expect(averageNumbers(input)).toBe(25);
-// })
+test('can reduce numbers into average', () => {
+    let input = [10, 20, 30, 40];
+    // do with both hardcoded and for loop
+    expect(averageNumbers(input)).toBe(25);
+})
+
+// TRY THESE
+//https:avantutor.com/blog/10-simple-javascript-for-loop-exercises/ 
 
 // //had to look at notes
 // test('can count up numbers in array of objects', () => {
