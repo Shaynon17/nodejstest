@@ -2901,8 +2901,26 @@ function averageNumbers(input) {
     return avgNums / input.length
 }
 
+function checkForY(word) {
+    let output = {
+        y: 0
+    }
+    for (x = 0; x < word.length; x++) {
+        let letters = word[x]
+        output[letters]++
+    }
+    if (output.y >= 1) {
+        return true
+    } else {
+
+    }
+}
+
+// function checkForY (input) {
+// return input.includes('y')
+// }
 
 
 module.exports = {
- firstCharacters, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
+ firstCharacters, checkForY, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
  }

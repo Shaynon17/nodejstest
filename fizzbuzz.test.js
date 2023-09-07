@@ -1,4 +1,4 @@
-const { getIndexForCity, reverseName, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, isDivisbleBy, } = require("./fizzbuzz")
+const { getIndexForCity, checkForY, reverseName, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, isDivisbleBy, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -326,6 +326,11 @@ test('can reduce numbers into average', () => {
     expect(averageNumbers(input)).toBe(25);
 })
 
+test('check if string has letter "y"', () => {
+    expect(checkForY("how are you")).toBe(true);
+})
+
+
 // TRY THESE
 //https:avantutor.com/blog/10-simple-javascript-for-loop-exercises/ 
 
@@ -344,8 +349,6 @@ test('can reduce numbers into average', () => {
 //     }
 //     expect(countIds(input)).toStrictEqual(output);
 // })
-
-
 
 // test('will count letters in word', () => {
 //     let output = {
