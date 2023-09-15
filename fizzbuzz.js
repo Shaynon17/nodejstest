@@ -2920,7 +2920,33 @@ function checkForY(word) {
 // return input.includes('y')
 // }
 
+// function sumArray(array) {
+//     return array[0] + array[1] + array[2] + array[3] + array[4] + array[5] + array[6] + array[7] + array[8]
+// }
+
+
+//working test
+// function sumArray(input) {
+//     let sumNums = 0;
+//     for (x = 0; x < input.length; x++) {
+//         let num = input[x];
+//         let comNums = sumNums + num
+//         sumNums = comNums
+//     }
+//     return sumNums
+// }
+
+//trying to get to work
+function sumArray(input) {
+    let sumNums = 0;
+    for (x = 0; x < input.length; x++) {
+        let num = input[x];
+        let comNums = sumNums + num
+        sumNums = comNums
+    }
+    return sumNums
+}
 
 module.exports = {
- firstCharacters, checkForY, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
+    firstCharacters, sumArray, checkForY, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
  }

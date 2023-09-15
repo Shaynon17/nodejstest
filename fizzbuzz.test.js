@@ -1,4 +1,4 @@
-const { getIndexForCity, checkForY, reverseName, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, isDivisbleBy, } = require("./fizzbuzz")
+const { getIndexForCity, sumArray, checkForY, reverseName, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, isDivisbleBy, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -249,6 +249,19 @@ test('only words length 4 or more', () => {
 
 test('Cap first letter of each word', () => {
     expect(capEachWord("how are you")).toBe("How Are You")
+})
+
+
+//making a test below
+
+test('get the sum of an array', () => {
+    let input = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+    expect(sumArray(input)).toBe(25)
+})
+
+test('can reduce numbers into average', () => {
+    let input = [10, 20, 30, 40];
+    expect(averageNumbers(input)).toBe(25);
 })
 
 
