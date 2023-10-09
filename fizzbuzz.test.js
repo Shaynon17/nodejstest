@@ -254,10 +254,10 @@ test('Cap first letter of each word', () => {
 
 //making a test below
 
-test('get the sum of an array', () => {
-    let input = [1, 2, 3, 4, 5, 4, 3, 2, 1];
-    expect(sumArray(input)).toBe(25)
-})
+// test('get the sum of an array', () => {
+//     let input = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+//     expect(sumArray(input)).toBe(25)
+// })
 
 test('can reduce numbers into average', () => {
     let input = [10, 20, 30, 40];
@@ -265,15 +265,14 @@ test('can reduce numbers into average', () => {
 })
 
 
-// //had to look at notes
 // test('make a league character factory', () => {
-//     let xerath = makeLeagueCharacter("Xerath", 4, 300);
-//     expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
+    let xerath = makeLeagueCharacter("Xerath", 4, 300);
+    expect(xerath).toStrictEqual({ name: "Xerath", dps: 4, mana: 300 });
 
-//     let garen = makeLeagueCharacter("Garen", 3, 200);
+    let garen = makeLeagueCharacter("Garen", 3, 200);
 
-//     let totalDps = sumCharacterDpses([xerath, garen]);
-//     expect(totalDps).toBe(7);
+    let totalDps = sumCharacterDpses([xerath, garen]);
+    expect(totalDps).toBe(7);
 
 //     let stats = prettyPrintStats(xerath); 
 //     expect(stats).toBe("Xerath - DPS: 4 - Mana: 300");

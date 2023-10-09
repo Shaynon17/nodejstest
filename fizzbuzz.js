@@ -2937,16 +2937,31 @@ function checkForY(word) {
 // }
 
 //trying to get to work
-function sumArray(input) {
-    let sumNums = 0;
-    for (x = 0; x < input.length; x++) {
-        let num = input[x];
-        let comNums = sumNums + num
-        sumNums = comNums
-    }
-    return sumNums
+// function sumArray(input) {
+//     let sumNums = 0;
+//     for (x = 0; x < input.length; x++) {
+//         let num = input[x];
+//         let comNums = sumNums + num
+//         sumNums = comNums
+//     }
+//     return sumNums
+// }
+
+
+function makeLeagueCharacter(name, dps, mana) {
+let stats = {
+    name: name,
+    dps: dps,
+    mana: mana
+}
+return stats
 }
 
+function sumCharacterDpses([champ, champp]) {
+    return champ.dps + champp.dps
+}
+
+
 module.exports = {
-    firstCharacters, sumArray, checkForY, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
+    firstCharacters, sumCharacterDpses, makeLeagueCharacter, checkForY, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
  }
