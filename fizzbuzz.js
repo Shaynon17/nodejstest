@@ -2961,7 +2961,70 @@ module.exports.upperCaser = (names) => {
 //     return champ.dps + champp.dps
 // }
 
+// function isDivisbleBy (num, num2) {
+//     return num / num2
+// }
+
+const isDivisbleBy = (num, num2) => num / num2;
+
+// function fizzbuzzConverter(num) {
+//     return num 
+// }
+
+const fizzbuzzConverter = num => {
+    if ((num % 3 === 0) && (num % 5 === 0)) {
+        return 'fizzbuzz'
+    }
+    else if (num % 3 === 0) {
+        return 'fizz'
+    } else if (num % 5 === 0) {
+        return 'buzz'
+    } else {
+        return num
+    }
+};
+
+// const fizzbuzzConverter = num => num;
+
+const helloWorld = name => 'Hello ' + name;
+
+// function helloWorld(name) {
+//     return 'Hello ' + name;
+// }
+
+const sumOfSquares = num => (num * num) + (num * num);
+
+function flipFlop(string) {
+    let splitString = string.split('');
+    let reverseString = splitString.reverse();
+    return joinString = reverseString.join('')
+}
+
+const capitalize = name => name.charAt(0).toUpperCase() + name.slice(1);
+
+function reverseString(string) {
+    let splitString = string.split('');
+    let reverseString = splitString.reverse();
+    return joinString = reverseString.join('')
+}
+
+// const mixUp = name => {
+//     name = reverseString(name);
+//     return name.charAt(0).toUpperCase() + name.slice(1)
+// }
+
+const mixUp = name => reverseString(name).charAt(0).toUpperCase() + reverseString(name).slice(1);
+
+const capFirstLast = name => {
+    return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase();
+}
+
+// const capFirstLast = name => name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase();
+
+const upperCaser = names => names.map(name => name.charAt(0).toUpperCase() + name.slice(1));
+
+
 
 module.exports = {
-    
+  upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
  }
