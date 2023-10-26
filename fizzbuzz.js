@@ -2653,182 +2653,182 @@ module.exports.upperCaser = (names) => {
 //     return names.map(name => name.charAt())
 // }
 
-function helloWorld(name) {
-return 'Hello ' + name
-}
+// function helloWorld(name) {
+// return 'Hello ' + name
+// }
 
-function sumOfSquares(sum) {
-return (sum * sum) + (sum * sum)
-}
+// function sumOfSquares(sum) {
+// return (sum * sum) + (sum * sum)
+// }
 
-function flipFlop(string) {
-    return string.charAt(1) + string.charAt(0)
-}
+// function flipFlop(string) {
+//     return string.charAt(1) + string.charAt(0)
+// }
 
-function capitalize(name) {
-    return name.charAt(0).toUpperCase() + name.substr(1)
-}
+// function capitalize(name) {
+//     return name.charAt(0).toUpperCase() + name.substr(1)
+// }
 
-function mixUp(name) {
-let splitName = name.split('');
-let reverseName = splitName.reverse();
-let joinName = reverseName.join('')
-return joinName.charAt(0).toUpperCase() + joinName.slice(1)
-}
+// function mixUp(name) {
+// let splitName = name.split('');
+// let reverseName = splitName.reverse();
+// let joinName = reverseName.join('')
+// return joinName.charAt(0).toUpperCase() + joinName.slice(1)
+// }
 
-function capFirstLast(name) {
-    return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase()
-}
+// function capFirstLast(name) {
+//     return name.charAt(0).toUpperCase() + name.slice(1, -1) + name.slice(-1).toUpperCase()
+// }
 
-function reverseString(string) {
-    let splitString = string.split("");
-    let reverse = splitString.reverse();
-    return joinString = reverse.join("")
-}
+// function reverseString(string) {
+//     let splitString = string.split("");
+//     let reverse = splitString.reverse();
+//     return joinString = reverse.join("")
+// }
 
-function upperCaser(names) {
-    return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
-}
+// function upperCaser(names) {
+//     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1))
+// }
 
-function firstCharacters(names) {
-    return names.map(name => name.charAt(0))
-}
+// function firstCharacters(names) {
+//     return names.map(name => name.charAt(0))
+// }
 
-function plusOne(numbers) {
-    return numbers.map(number => number + 1)
-}
+// function plusOne(numbers) {
+//     return numbers.map(number => number + 1)
+// }
 
-function lastLetter(names) {
-    return names.map(name => name.slice(-1).toUpperCase())
-}
+// function lastLetter(names) {
+//     return names.map(name => name.slice(-1).toUpperCase())
+// }
 
-function stringCounter(names) {
-return names.map(name => name.length)
-}
+// function stringCounter(names) {
+// return names.map(name => name.length)
+// }
 
-function isCoolSClub(names) {
-    return names.map(name => name.charAt(0) === "s")
-}
+// function isCoolSClub(names) {
+//     return names.map(name => name.charAt(0) === "s")
+// }
 
-function characterNums(names) {
-    return names.map(name => name + ': ' + name.length)
-}
+// function characterNums(names) {
+//     return names.map(name => name + ': ' + name.length)
+// }
 
-function getTemp(data) {
-return data.temp
-}
+// function getTemp(data) {
+// return data.temp
+// }
 
-function getStreet(contact) {
-    return contact.street
-}
+// function getStreet(contact) {
+//     return contact.street
+// }
 
-function getZipCodes(addresses) {
-return addresses.map(address => address.zip)
-}
+// function getZipCodes(addresses) {
+// return addresses.map(address => address.zip)
+// }
 
-function upperCaseContactNames(contacts){
-    return contacts.map(contact => contact.name.toUpperCase())
-}
+// function upperCaseContactNames(contacts){
+//     return contacts.map(contact => contact.name.toUpperCase())
+// }
 
-function incrementZipCode(contact) {
-    contact.zip = contact.zip + 1
-    return contact
-}
+// function incrementZipCode(contact) {
+//     contact.zip = contact.zip + 1
+//     return contact
+// }
 
-function reverseName(name) {
-    let splitName = name.split('');
-    let reverseSplit = splitName.reverse();
-    let joinName = reverseSplit.join('');
-    return joinName
-}
+// function reverseName(name) {
+//     let splitName = name.split('');
+//     let reverseSplit = splitName.reverse();
+//     let joinName = reverseSplit.join('');
+//     return joinName
+// }
 
 
-function palindromeName(name) {
-    if (name === reverseName(name)) {
-        return true
-    } else {
-        return false
-    }
-}
+// function palindromeName(name) {
+//     if (name === reverseName(name)) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
 
-function alphabetize(string) {
-    let splitString = string.split('')
-  let sortString =  splitString.sort();
-  return joinString = sortString.join('')
-}
+// function alphabetize(string) {
+//     let splitString = string.split('')
+//   let sortString =  splitString.sort();
+//   return joinString = sortString.join('')
+// }
 
-function upperCaseWord(string){
-let splitString = string.split(' ');
-    let capString = splitString.map(word => word.charAt(0).toUpperCase() + word.slice(1))
-return joinString = capString.join(' ')
-}
+// function upperCaseWord(string){
+// let splitString = string.split(' ');
+//     let capString = splitString.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+// return joinString = capString.join(' ')
+// }
 
-function addOne(numbers) {
-    return numbers.map(number => number + 1)
-}
+// function addOne(numbers) {
+//     return numbers.map(number => number + 1)
+// }
 
-function firstCharacterss(names) {
-    return names.map(name => name.charAt(0))
-}
+// function firstCharacterss(names) {
+//     return names.map(name => name.charAt(0))
+// }
 
-function isDivisbleBy(big, small) {
-    return (big / small)
-}
+// function isDivisbleBy(big, small) {
+//     return (big / small)
+// }
 
-function fizzbuzzConverter(number) {
+// function fizzbuzzConverter(number) {
   
-    if (isDivisbleBy(number, 3) === Math.floor(isDivisbleBy(number, 3)) && isDivisbleBy(number, 5) === Math.floor(isDivisbleBy(number, 5)) )  {
-        return 'fizzbuzz'
-    } else  if (isDivisbleBy(number, 3) === Math.floor(isDivisbleBy(number, 3))) {
-        return 'fizz'
-    } else if (isDivisbleBy(number, 5) === Math.floor(isDivisbleBy(number, 5)))  {
-return 'buzz'
-    } else {
-        return number
-    }
-}
+//     if (isDivisbleBy(number, 3) === Math.floor(isDivisbleBy(number, 3)) && isDivisbleBy(number, 5) === Math.floor(isDivisbleBy(number, 5)) )  {
+//         return 'fizzbuzz'
+//     } else  if (isDivisbleBy(number, 3) === Math.floor(isDivisbleBy(number, 3))) {
+//         return 'fizz'
+//     } else if (isDivisbleBy(number, 5) === Math.floor(isDivisbleBy(number, 5)))  {
+// return 'buzz'
+//     } else {
+//         return number
+//     }
+// }
 
-function incrementNumber(number) {
-    return number + 1
-}
+// function incrementNumber(number) {
+//     return number + 1
+// }
 
-function upperCaseFirstLetter(contacts) {
-    return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
-}
+// function upperCaseFirstLetter(contacts) {
+//     return contacts.map(contact => contact.name.charAt(0).toUpperCase() + contact.name.slice(1))
+// }
 
-function onlyEvens(numbers) {
-    return numbers.filter(number => number % 2 === 0)
-}
+// function onlyEvens(numbers) {
+//     return numbers.filter(number => number % 2 === 0)
+// }
 
-function onlySteve(names) {
-    return names.filter(name => name === 'steve')
-}
+// function onlySteve(names) {
+//     return names.filter(name => name === 'steve')
+// }
 
-function onlyBigEnough(words) {
-return words.filter(word => word.length >= 4)
-}
+// function onlyBigEnough(words) {
+// return words.filter(word => word.length >= 4)
+// }
 
-function capEachWord(words) {
-    let splitWords = words.split(' ');
-    let capWords = splitWords.map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    return joinWords = capWords.join(' ');
-}
+// function capEachWord(words) {
+//     let splitWords = words.split(' ');
+//     let capWords = splitWords.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//     return joinWords = capWords.join(' ');
+// }
 
-function getFirstSuit(input) {
-    return input[0].suit
-}
+// function getFirstSuit(input) {
+//     return input[0].suit
+// }
 
-function getSecondFace(input) {
-    return input[1].face
-}
+// function getSecondFace(input) {
+//     return input[1].face
+// }
 
-function sumFaces(input){
-    return input[0].face + input[1].face
-}
+// function sumFaces(input){
+//     return input[0].face + input[1].face
+// }
 
-function combineSuits(input) {
-    return input[0].suit + input[1].suit
-}
+// function combineSuits(input) {
+//     return input[0].suit + input[1].suit
+// }
 
 //just to look at loops, //
 // function combineSuits(input) {
@@ -2867,54 +2867,54 @@ function combineSuits(input) {
 //     return input.temps[0] + input.temps[1] + input.temps[2]
 // }
 
-function getFirstTemp(input) {
-    return input.temps[0]
-}
+// function getFirstTemp(input) {
+//     return input.temps[0]
+// }
 
-function makeSentence(input) {
-    return input[0] + ' ' + input[1] + ' ' + input[2]
-}
+// function makeSentence(input) {
+//     return input[0] + ' ' + input[1] + ' ' + input[2]
+// }
 
-function sumTemps(input) {
-    let endTemps = 0; {
-        for (x = 0; x < input.temps.length; x++) {
-            let temp = input.temps[x]
-            let comTemps = endTemps + temp
-            endTemps = comTemps
-        }
-        return endTemps
-    }
-}
+// function sumTemps(input) {
+//     let endTemps = 0; {
+//         for (x = 0; x < input.temps.length; x++) {
+//             let temp = input.temps[x]
+//             let comTemps = endTemps + temp
+//             endTemps = comTemps
+//         }
+//         return endTemps
+//     }
+// }
 
 // function averageNumbers(input) {
 //  let comNums = input[0] + input[1] + input[2] + input[3];
 //  return comNums / input.length
 // }
 
-function averageNumbers(input) {
-    let avgNums = 0;
-    for (x = 0; x < input.length; x++){
-        let num = input[x];
-        let comNums= avgNums + num
-        avgNums = comNums 
-    }
-    return avgNums / input.length
-}
+// function averageNumbers(input) {
+//     let avgNums = 0;
+//     for (x = 0; x < input.length; x++){
+//         let num = input[x];
+//         let comNums= avgNums + num
+//         avgNums = comNums 
+//     }
+//     return avgNums / input.length
+// }
 
-function checkForY(word) {
-    let output = {
-        y: 0
-    }
-    for (x = 0; x < word.length; x++) {
-        let letters = word[x]
-        output[letters]++
-    }
-    if (output.y >= 1) {
-        return true
-    } else {
+// function checkForY(word) {
+//     let output = {
+//         y: 0
+//     }
+//     for (x = 0; x < word.length; x++) {
+//         let letters = word[x]
+//         output[letters]++
+//     }
+//     if (output.y >= 1) {
+//         return true
+//     } else {
 
-    }
-}
+//     }
+// }
 
 // function checkForY (input) {
 // return input.includes('y')
@@ -2948,20 +2948,20 @@ function checkForY(word) {
 // }
 
 
-function makeLeagueCharacter(name, dps, mana) {
-let stats = {
-    name: name,
-    dps: dps,
-    mana: mana
-}
-return stats
-}
+// function makeLeagueCharacter(name, dps, mana) {
+// let stats = {
+//     name: name,
+//     dps: dps,
+//     mana: mana
+// }
+// return stats
+// }
 
-function sumCharacterDpses([champ, champp]) {
-    return champ.dps + champp.dps
-}
+// function sumCharacterDpses([champ, champp]) {
+//     return champ.dps + champp.dps
+// }
 
 
 module.exports = {
-    firstCharacters, sumCharacterDpses, makeLeagueCharacter, checkForY, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlySteve, capEachWord, onlyBigEnough, onlyEvens, upperCaseFirstLetter, isDivisbleBy, incrementNumber, fizzbuzzConverter, firstCharacterss, addOne, upperCaseWord, alphabetize, reverseName, palindromeName, incrementZipCode, getZipCodes, upperCaseContactNames, getStreet, getTemp, characterNums, lastLetter, isCoolSClub, stringCounter, plusOne, helloWorld, sumOfSquares, flipFlop, capitalize, mixUp, capFirstLast, reverseString, upperCaser,
+    
  }
