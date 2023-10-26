@@ -3023,8 +3023,58 @@ const capFirstLast = name => {
 
 const upperCaser = names => names.map(name => name.charAt(0).toUpperCase() + name.slice(1));
 
+const firstCharacters = (names) => names.map(name => name.charAt(0));
 
+const plusOne = (numbers) => numbers.map(number => number + 1);
+
+const lastLetter = (names) => {
+    return names.map(name => name.slice(-1).toUpperCase())
+};
+
+const stringCounter = (names) => names.map(name => name.length);
+
+// function isCoolSClub(names) {
+//     return check = names.map(name => if (name.charAt(0) === 's') {
+//         return true
+//     } else {
+//         return false
+//     }
+//     )
+// }
+
+//2132
+
+
+function onlyBigEnough(words) {
+    let bigWords = []
+    for (x = 0; x < words.length; x++) {
+        let word = words[x]
+        let finalArr = word.length >= 4
+        if (finalArr) {
+            bigWords.push(word)
+        }
+    }
+    return bigWords
+}
+
+
+function isCoolSClub(names) {
+// let firstLetter = names.map(name => name.charAt(0));
+
+    // let name = names.map(name => name)
+
+    let output = []
+
+    for (i = 0; i < names.length; i++);
+    let name = names[i]
+    if (name.charAt(0) === 's') {
+        output.push(true)
+    } else {
+        output.push(false)
+    }
+    return output
+}
 
 module.exports = {
-  upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
+    isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
  }
