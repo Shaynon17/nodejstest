@@ -3058,23 +3058,79 @@ function onlyBigEnough(words) {
 }
 
 
-function isCoolSClub(names) {
-// let firstLetter = names.map(name => name.charAt(0));
+// function isCoolSClub(names) {
+// // let firstLetter = names.map(name => name.charAt(0));
 
-    // let name = names.map(name => name)
+//     // let name = names.map(name => name)
 
-    let output = []
+//     let output = []
 
-    for (i = 0; i < names.length; i++);
-    let name = names[i]
-    if (name.charAt(0) === 's') {
-        output.push(true)
-    } else {
-        output.push(false)
-    }
-    return output
+//     for (i = 0; i < names.length; i++);
+//     let name = names[i]
+//     if (name.charAt(0) === 's') {
+//         output.push(true)
+//     } else {
+//         output.push(false)
+//     }
+//     return output
+// }
+
+// function isCoolSClub(names) {
+//     return names.map(name => name.charAt(0) === 's' )
+// }
+
+const isCoolSClub = names => names.map(name => name.charAt(0) === 's');
+
+
+const characterNums = names => names.map(name => name + ": " + name.length);
+
+const getTemp = data => data.temp;
+
+const getStreet = contact => contact.street;
+
+const getZipCodes = addresses => addresses.map(address => address.zip)
+
+function upperCaseContactNames(contacts) {
+    return contacts.map(contact => contact.name.toUpperCase())
 }
 
+const incrementZipCode = contact => {
+    contact.zip = contact.zip + 1;
+    return contact;
+}
+
+const incrementNumber = number => number + 1;
+
+const upperCaseFirstLetter = contact => contact.map(element => element.name.charAt(0).toUpperCase() + element.name.slice(1));
+
+
+
+//Original
+// function reverseName(name) {
+//     let splitName = name.split('');
+//     let reverseName = splitName.reverse();
+//     return joinName = reverseName.join('')
+// }
+
+//Reassigning the vairable over and over
+function reverseName(name) {
+    name = name.split('');
+    name = name.reverse();
+    return name.join('')
+}
+
+const palindromeName = name => {
+    let reverseName = name.split('');
+    reverseName = reverseName.reverse();
+    reverseName = reverseName.join('');
+    if (name === reverseName) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
 module.exports = {
-    isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
+    palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
  }

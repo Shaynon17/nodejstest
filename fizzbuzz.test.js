@@ -102,111 +102,110 @@ test('returns true for all strings with a first letter of S', () => {
 })
 
 
-// // // //['steve', 'shannon']
-// // // //['steve: 5', 'shannon: 7']
-// // // // the input is a name, the output is the name and # of characters
+//['steve', 'shannon']
+//['steve: 5', 'shannon: 7']
+// the input is a name, the output is the name and # of characters
 
-// test('returns # of characters with name', () => {
-//     expect(characterNums(['shannon', 'steve']))
-//         .toStrictEqual(['shannon: 7', 'steve: 5'])
-// })
+test('returns # of characters with name', () => {
+    expect(characterNums(['shannon', 'steve']))
+        .toStrictEqual(['shannon: 7', 'steve: 5'])
+})
 
-// test('can extract the temp from the object', () => {
-//     let data = {
-//         temp: 47.5,
-//         alt: 1300
-//     }
-//     expect(getTemp(data)).toBe(47.5)
+test('can extract the temp from the object', () => {
+    let data = {
+        temp: 47.5,
+        alt: 1300
+    }
+    expect(getTemp(data)).toBe(47.5)
 
-//     let data2 = {
-//         temp: 50,
-//         alt: 1300
-//     }
-//     expect(getTemp(data2)).toBe(50)
-// })
+    let data2 = {
+        temp: 50,
+        alt: 1300
+    }
+    expect(getTemp(data2)).toBe(50)
+})
 
 
-// test('can return street address from contact', () => {
-//     let contact = {
-//         street: '440 Germanhouse Ave',
-//         zip: 11111
-//     }
-//     expect(getStreet(contact)).toBe('440 Germanhouse Ave')
-// })
+test('can return street address from contact', () => {
+    let contact = {
+        street: '440 Germanhouse Ave',
+        zip: 11111
+    }
+    expect(getStreet(contact)).toBe('440 Germanhouse Ave')
+})
 
-// test('can return zip codes from all addresses', () => {
-//     let addresses = [
-//         {
-//             street: '440 Germanhouse Ave',
-//             zip: 11111
-//         },
-//         {
-//             street: '440 Germanhouse Ave',
-//             zip: 44444
-//         }
-//     ];
-//     expect(getZipCodes(addresses)).toStrictEqual([11111, 44444])
-// })
+test('can return zip codes from all addresses', () => {
+    let addresses = [
+        {
+            street: '440 Germanhouse Ave',
+            zip: 11111
+        },
+        {
+            street: '440 Germanhouse Ave',
+            zip: 44444
+        }
+    ];
+    expect(getZipCodes(addresses)).toStrictEqual([11111, 44444])
+})
 
-// test('uppercase all the names of contacts', () => {
-//     let contacts = [
-//         {
-//             name: 'steve',
-//             zip: 11111
-//         },
-//         {
-//             name: 'shannon',
-//             zip: 44444
-//         }
-//     ];
-//     expect(upperCaseContactNames(contacts)).toStrictEqual(["STEVE", "SHANNON"])
-// })
+test('uppercase all the names of contacts', () => {
+    let contacts = [
+        {
+            name: 'steve',
+            zip: 11111
+        },
+        {
+            name: 'shannon',
+            zip: 44444
+        }
+    ];
+    expect(upperCaseContactNames(contacts)).toStrictEqual(["STEVE", "SHANNON"])
+})
 
-// // hint: the body is two lines not one
-// test('changes the zip code to be +1', () => {
-//     let contact = {
-//         name: 'steve',
-//         zip: 11111
-//     }
+test('changes the zip code to be +1', () => {
+    let contact = {
+        name: 'steve',
+        zip: 11111
+    }
 
-//     contact = incrementZipCode(contact);
+    contact = incrementZipCode(contact);
 
-//     expect(contact.zip).toBe(11112)
-// })
+    expect(contact.zip).toBe(11112)
+})
 
-// test('changes the zip code to be +1', () => {
-//     let number = 5
+test('changes the zip code to be +1', () => {
+    let number = 5
 
-//     number = incrementNumber(number);
+    number = incrementNumber(number);
 
-//     expect(number).toBe(6)
-// })
+    expect(number).toBe(6)
+})
 
-// test('uppercase all the first characters of the names of contacts', () => {
-//     let contacts = [
-//         {
-//             name: 'steve',
-//             zip: 11111
-//         },
-//         {
-//             name: 'shannon',
-//             zip: 44444
-//         }
-//     ];
-//     expect(upperCaseFirstLetter(contacts)).toStrictEqual(["Steve", "Shannon"])
-// })
+test('uppercase all the first characters of the names of contacts', () => {
+    let contacts = [
+        {
+            name: 'steve',
+            zip: 11111
+        },
+        {
+            name: 'shannon',
+            zip: 44444
+        }
+    ];
+    expect(upperCaseFirstLetter(contacts)).toStrictEqual(["Steve", "Shannon"])
+})
 
-// test('reverse shannon to nonnahs', () => {
-//     expect(reverseName('shannon')).toBe('nonnahs')
-// })
+test('reverse shannon to nonnahs', () => {
+    expect(reverseName('shannon')).toBe('nonnahs')
+})
 
-// test('is a word a palindrome', () => {
-//     expect(palindromeName('madam')).toBe(true)
-// })
+test('is a word a palindrome', () => {
+    expect(palindromeName('madam')).toBe(true)
+})
 
-// test('is a word a palindrome', () => {
-//     expect(palindromeName('shannon')).toBe(false)
-// })
+test('is a word a palindrome', () => {
+    expect(palindromeName('shannon')).toBe(false)
+})
 
 // test('cadb will return abcd', () => {
 //     expect(alphabetize('cdab')).toBe('abcd')
