@@ -1,4 +1,4 @@
-const { getIndexForCity, sumArray, checkForY, reverseName, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, isDivisbleBy, } = require("./fizzbuzz")
+const { getIndexForCity, averageNumberss, sumArray, checkForY, reverseName, countToTen, allNumbersTheSame, countAttendees, getUserIdWithLongestName, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, getAverageTempForCity, countAllLettersStringOutput, findMostCommonLetter, makeLeagueCharacter, firstCharacterss, countNumbersString, countLetters, countIds, averageNumbers, makeSentence, getFirstTemp, sumTemps, combineSuits, sumFaces, getSecondFace, getFirstSuit, onlyBigEnough, capEachWord, incrementNumber, onlySteve, onlyEvens, isCoolSClub, addOne, addOneMap, alphabetize, palindromeName, upperCaseFirstLetter, incrementZipCode, upperCaseContactNames, getZipCodes, getTemp, getStreet, characterNums, stringCounter, firstCharacters, lastLetter, plusOne, upperCaser, fizzbuzzConverter, reverseString, capFirstLast, mixUp, helloWorld, sumOfSquares, flipFlop, capitalize, reverseNum, palindrome, upperCaseWord, isDivisbleBy, } = require("./fizzbuzz")
 
 // cd ~/coding/nodejstest/
 
@@ -321,41 +321,41 @@ test('can sum array inside an object', () => {
 })
 
 // // //had to look at notes the day before //most recent time i aced
-// test('can reduce strings into sentence', () => {
-//     let input = ['hey', 'there', 'horseman'];
-//     // do with both hardcoded and for loop
-//     expect(makeSentence(input)).toBe("hey there horseman");
-// })
+//easy, < 1 minute
+test('can reduce strings into sentence', () => {
+    let input = ['hey', 'there', 'horseman'];
+    // do with both hardcoded and for loop
+    expect(makeSentence(input)).toBe("hey there horseman");
+})
 
-// test('can reduce numbers into average', () => {
-//     let input = [10, 20, 30, 40];
-//     // do with both hardcoded and for loop
-//     expect(averageNumbers(input)).toBe(25);
-// })
+test('can reduce numbers into average', () => {
+    let input = [10, 20, 30, 40];
+    // do with both hardcoded and for loop
+    expect(averageNumberss(input)).toBe(25);
+})
 
-// test('check if string has letter "y"', () => {
-//     expect(checkForY("how are you")).toBe(true);
-// })
-
+test('check if string has letter "y"', () => {
+    expect(checkForY("how are you")).toBe(true);
+})
 
 // TRY THESE
 //https:avantutor.com/blog/10-simple-javascript-for-loop-exercises/ 
 
-// //had to look at notes
-// test('can count up numbers in array of objects', () => {
-//     let input = [
-//         { id: 4 },
-//         { id: 2 },
-//         { id: 1 },
-//         { id: 4 },
-//     ];
-//     let output = {
-//         '1': 1,
-//         '2': 1,
-//         '4': 2
-//     }
-//     expect(countIds(input)).toStrictEqual(output);
-// })
+//had to look at notes
+test('can count up numbers in array of objects', () => {
+    let input = [
+        { id: 4 },
+        { id: 2 },
+        { id: 1 },
+        { id: 4 },
+    ];
+    let output = {
+        '1': 1,
+        '2': 1,
+        '4': 2
+    }
+    expect(countIds(input)).toStrictEqual(output);
+})
 
 // test('will count letters in word', () => {
 //     let output = {
@@ -418,8 +418,6 @@ test('can sum array inside an object', () => {
 //     expect(getUserIdWithLongestName(input)).toBe(output);
 // })
 
-
-
 //WORK ON THESE NEXT
 
 //line 1766
@@ -466,11 +464,6 @@ test('can sum array inside an object', () => {
 //     expect(numbersNotInBoth([1, 2, 3], [3, 4, 5, 6])).toStrictEqual([1, 2, 4, 5, 6]);
 // })
 
-
-
-
-
-
 // (for), if, function, (array), (objects)
 // map, filter, reduce, forEach, countBy, groupBy
 
@@ -504,4 +497,3 @@ test('can sum array inside an object', () => {
 // adding to
 // numbers, strings     +
 // arrays               Array.prototype.push 
-

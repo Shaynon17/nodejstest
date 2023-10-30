@@ -3296,6 +3296,43 @@ output += temp
     return output
 }
 
+const makeSentence = strings => {
+    return strings.join(' ')
+}
+
+const averageNumberss = input => {
+    let output = 0;
+    input.map(element => output += element);
+    return output / input.length;
+}
+
+function checkForY(string) {
+    let splitString = string.split('');
+    for (i = 0; i < splitString.length; i++) {
+        if (splitString[i] === 'y') {
+            return true
+        }
+    }
+    return false
+}
+
+// https://stackoverflow.com/questions/69422117/counting-characteres-in-string-using-object
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of 
+// above is two good resources for what im trying to do below.
+//i need to use a for...of loop like above. 
+function countIds(input) {
+    let output = {
+        '1': 0,
+        '2': 0,
+        '4': 0,
+    }
+    for (i = 0; i < input.length; i++) {
+        let value = input[i];
+        output += value
+    }
+    return output;
+}
+
 module.exports = {
-    sumTemps, getFirstTemp, combineSuits, sumFaces, getSecondFace, getFirstSuit, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
+    countIds, checkForY, averageNumberss, makeSentence, sumTemps, getFirstTemp, combineSuits, sumFaces, getSecondFace, getFirstSuit, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
  }
