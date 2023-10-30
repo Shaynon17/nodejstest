@@ -3203,12 +3203,63 @@ function sumCharacterDpses(char1) {
 // }
 
 const prettyPrintStats = champ => `${champ.name} - DPS: ${champ.dps} - Mana: ${champ.mana}`;
+const makeCharacterFromString = champ => {
+    champ = champ.split(' ');
+    champName = champ[0];
+    champDps = champ[1];
+    champMana = champ[2];
+    return leagueChamp = makeLeagueCharacter(champName, +champDps, +champMana);
+}
 
-// const makeCharacterFromString = champ => {
-//  champ = champ.split(' ');
-// return champs = champ.map(element => element.parseInt(1))
+function collectCharacterNames(names) {
+    let output = '';
+    for (i = 0; i < names.length; i++) {
+        let champ = names[i].name;
+        output += champ + ', '
+    }
+    return output.slice(0, -2) //slicing is an easy way to delete the unwanted ", "
+}
+
+//below is wrong, i am X the first number 3 times.
+// const totalMana = champs => {
+//     champMana = champs.map(element => element.mana);
+//     let total = 0;
+//     for (i = 0; i < champMana.length; i++) {
+//         let mana = champMana[0]; //HERE! i am always loopin the first index, 
+//instead up updating to the next index each iteartion
+//         total += mana;
+//     }
+//     console.log(champMana) //[300, 200, 500]
+//     return total // 900 ...?
 // }
 
+const totalMana = champs => {
+    champMana = champs.map(element => element.mana);
+    let total = 0;
+    for (i = 0; i < champMana.length; i++) {
+        let mana = champMana[i];
+        total += mana;
+    }
+    return total // 900 ...?
+}
+
+// const totalMana = champs => {
+//     champMana = champs.map(element => element.mana);
+//     return champMana[0] + champMana[1] + champMana[2];
+// }
+
+const makeTower = (health) => {
+let tower = {
+    health: health,
+}
+return tower
+}
+
+const hitTower = (tower, number) => {
+    tower.health -= number;
+    return tower
+}
+
 module.exports = {
- prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
+  hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
  }
