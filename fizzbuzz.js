@@ -3174,6 +3174,41 @@ const averageNumbers = numbers => {
     return output / numbers.length;
 }
 
+function makeLeagueCharacter(name, dps, mana) {
+   let champ = {
+    name: name,
+    dps: dps,
+    mana: mana,
+   }
+   return champ
+}
+
+function sumCharacterDpses(char1) {
+    let output = 0;
+    for (i = 0; i < char1.length; i++) {
+        let champ = char1[i]
+        dps = champ.dps;
+        output += dps
+    }
+    return output
+}
+
+// const sumCharacterDpses = array => {
+//     champDPS = array.map(element => element.dps);
+//     return champDPS[0] + champDPS[1];
+// }
+
+// function sumCharacterDpses(array) {
+//     return array[0].dps + array[1].dps;
+// }
+
+const prettyPrintStats = champ => `${champ.name} - DPS: ${champ.dps} - Mana: ${champ.mana}`;
+
+// const makeCharacterFromString = champ => {
+//  champ = champ.split(' ');
+// return champs = champ.map(element => element.parseInt(1))
+// }
+
 module.exports = {
-averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
+ prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
  }
