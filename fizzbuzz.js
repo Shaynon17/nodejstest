@@ -2875,16 +2875,16 @@ module.exports.upperCaser = (names) => {
 //     return input[0] + ' ' + input[1] + ' ' + input[2]
 // }
 
-// function sumTemps(input) {
-//     let endTemps = 0; {
-//         for (x = 0; x < input.temps.length; x++) {
-//             let temp = input.temps[x]
-//             let comTemps = endTemps + temp
-//             endTemps = comTemps
-//         }
-//         return endTemps
-//     }
-// }
+function sumTemps(input) {
+    let endTemps = 0; {
+        for (x = 0; x < input.temps.length; x++) {
+            let temp = input.temps[x]
+            let comTemps = endTemps + temp
+            endTemps = comTemps
+        }
+        return endTemps
+    }
+}
 
 // function averageNumbers(input) {
 //  let comNums = input[0] + input[1] + input[2] + input[3];
@@ -3045,17 +3045,17 @@ const stringCounter = (names) => names.map(name => name.length);
 //2132
 
 
-function onlyBigEnough(words) {
-    let bigWords = []
-    for (x = 0; x < words.length; x++) {
-        let word = words[x]
-        let finalArr = word.length >= 4
-        if (finalArr) {
-            bigWords.push(word)
-        }
-    }
-    return bigWords
-}
+// function onlyBigEnough(words) {
+//     let bigWords = []
+//     for (x = 0; x < words.length; x++) {
+//         let word = words[x]
+//         let finalArr = word.length >= 4
+//         if (finalArr) {
+//             bigWords.push(word)
+//         }
+//     }
+//     return bigWords
+// }
 
 
 // function isCoolSClub(names) {
@@ -3130,7 +3130,50 @@ const palindromeName = name => {
     }
 }
 
+const alphabetize = word => word.split('').sort().join('');
+
+const upperCaseWord = string => {
+    string = string.split(' ');
+    string = string.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    return string.join(' ');
+}
+
+const addOne = numbers => numbers.map(num => num + 1);
+
+const firstCharacterss = names => names.map(name => name.charAt(0));
+
+const onlyEvens = nums => nums.filter(num => num % 2 ===0);
+
+const onlySteve = names => names.filter(name => name === "steve");
+
+// const capEachWord = words => {
+//     words = words.split(' ');
+//     words = words.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//     return words.join(' ')
+// }
+
+const capEachWord = words => words.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+const onlyBigEnough = names => names.filter(name => name.length >= 4);
+
+const sumArray = numbers => {
+    let output = 0;
+    for (i = 0; i < numbers.length; i++) {
+        let number = numbers[i];
+        output += number
+    }
+    return output
+}
+
+const averageNumbers = numbers => {
+    let output = 0;
+    for (i = 0; i < numbers.length; i++) {
+        let number = numbers[i];
+        output += number;
+    }
+    return output / numbers.length;
+}
 
 module.exports = {
-    palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
+averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
  }

@@ -207,61 +207,55 @@ test('is a word a palindrome', () => {
     expect(palindromeName('shannon')).toBe(false)
 })
 
-// test('cadb will return abcd', () => {
-//     expect(alphabetize('cdab')).toBe('abcd')
-// })
+test('cadb will return abcd', () => {
+    expect(alphabetize('cdab')).toBe('abcd')
+})
 
-// test('3524 will return 2345', () => {
-//     expect(alphabetize('3524')).toBe('2345')
-// })
+test('3524 will return 2345', () => {
+    expect(alphabetize('3524')).toBe('2345')
+})
 
-// test('capitalize each first letter in each word"', () => {
-//     expect(upperCaseWord('how are you')).toBe('How Are You')
-// })
+test('capitalize each first letter in each word"', () => {
+    expect(upperCaseWord('how are you')).toBe('How Are You')
+})
 
-// test('add one to each number', () => {
-//     expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
-// })
+test('add one to each number', () => {
+    expect(addOne([1, 2, 3, 4])).toStrictEqual([2, 3, 4, 5])
+})
 
-// test('first letter of each', () => {
-//     expect(firstCharacterss(['steve', 'shannon', 'jimbob']))
-//         .toStrictEqual(['s', 's', 'j'])
-// })
+test('first letter of each', () => {
+    expect(firstCharacterss(['steve', 'shannon', 'jimbob']))
+        .toStrictEqual(['s', 's', 'j'])
+})
 
+test('only evens', () => {
+    expect(onlyEvens([1, 2, 3, 4, 5, 6]))
+        .toStrictEqual([2, 4, 6])
+})
 
-//remember, deliberate practice. 
-// //struggled and had to look at previous code
-// test('only evens', () => {
-//     expect(onlyEvens([1, 2, 3, 4, 5, 6]))
-//         .toStrictEqual([2, 4, 6])
-// })
+test('only steve', () => {
+    expect(onlySteve(['steve', 'sam', 'steve']))
+        .toStrictEqual(['steve', 'steve'])
+})
 
-// test('only steve', () => {
-//     expect(onlySteve(['steve', 'sam', 'steve']))
-//         .toStrictEqual(['steve', 'steve'])
-// })
+test('only words length 4 or more', () => {
+    expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
+        .toStrictEqual(['steve', 'horse'])
+})
 
-// test('only words length 4 or more', () => {
-//     expect(onlyBigEnough(['steve', 'sam', 'se', 'horse']))
-//         .toStrictEqual(['steve', 'horse'])
-// })
+test('Cap first letter of each word', () => {
+    expect(capEachWord("how are you")).toBe("How Are You")
+})
 
-// test('Cap first letter of each word', () => {
-//     expect(capEachWord("how are you")).toBe("How Are You")
-// })
+test('get the sum of an array', () => {
+    let input = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+    expect(sumArray(input)).toBe(25)
+})
 
-
-//making a test below
-
-// test('get the sum of an array', () => {
-//     let input = [1, 2, 3, 4, 5, 4, 3, 2, 1];
-//     expect(sumArray(input)).toBe(25)
-// })
-
-// test('can reduce numbers into average', () => {
-//     let input = [10, 20, 30, 40];
-//     expect(averageNumbers(input)).toBe(25);
-// })
+test('can reduce numbers into average', () => {
+    let input = [10, 20, 30, 40];
+    expect(averageNumbers(input)).toBe(25);
+})
 
 
 // test('make a league character factory', () => {
