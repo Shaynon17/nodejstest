@@ -2875,16 +2875,16 @@ module.exports.upperCaser = (names) => {
 //     return input[0] + ' ' + input[1] + ' ' + input[2]
 // }
 
-function sumTemps(input) {
-    let endTemps = 0; {
-        for (x = 0; x < input.temps.length; x++) {
-            let temp = input.temps[x]
-            let comTemps = endTemps + temp
-            endTemps = comTemps
-        }
-        return endTemps
-    }
-}
+// function sumTemps(input) {
+//     let endTemps = 0; {
+//         for (x = 0; x < input.temps.length; x++) {
+//             let temp = input.temps[x]
+//             let comTemps = endTemps + temp
+//             endTemps = comTemps
+//         }
+//         return endTemps
+//     }
+// }
 
 // function averageNumbers(input) {
 //  let comNums = input[0] + input[1] + input[2] + input[3];
@@ -3260,6 +3260,42 @@ const hitTower = (tower, number) => {
     return tower
 }
 
+const getFirstSuit = cards => {
+    return cards[0].suit
+}
+
+const getSecondFace = cards => {
+    return cards[1].face
+}
+
+// const sumFaces = cards => cards[0].face + cards[1].face;
+
+const sumFaces = cards => {
+    let output = 0;
+    for (i = 0; i < cards.length; i++) {
+        let face = cards[i].face;
+        output += face
+    }
+    return output
+}
+
+const combineSuits = cards => cards[0].suit + cards[1].suit;
+
+const getFirstTemp = input => input.temps[0];
+
+// const sumTemps = input => {
+//     return input.temps[0] + input.temps[1] + input.temps[2];
+// }
+
+const sumTemps = input => {
+    let output = 0;
+    for(i = 0; i < input.temps.length; i++) {
+let temp = input.temps[i];
+output += temp
+    }
+    return output
+}
+
 module.exports = {
-  hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
+    sumTemps, getFirstTemp, combineSuits, sumFaces, getSecondFace, getFirstSuit, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
  }
