@@ -3324,14 +3324,14 @@ function countIds(input) {
     let output = {
         '1': 0,
         '2': 0,
-        '4': 0,
+        '4': 0
     }
     for (i = 0; i < input.length; i++) {
-        let value = input[i];
-        output += value
+        let num = input[i]
+        let id = num.id
+        output[id]++;
     }
-    return output;
-}
+return output}
 
 module.exports = {
     countIds, checkForY, averageNumberss, makeSentence, sumTemps, getFirstTemp, combineSuits, sumFaces, getSecondFace, getFirstSuit, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,

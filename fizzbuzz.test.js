@@ -341,7 +341,7 @@ test('check if string has letter "y"', () => {
 // TRY THESE
 //https:avantutor.com/blog/10-simple-javascript-for-loop-exercises/ 
 
-//had to look at notes
+//had to look at notes (even on 10/21/23)
 test('can count up numbers in array of objects', () => {
     let input = [
         { id: 4 },
