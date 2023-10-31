@@ -1,65 +1,43 @@
-function parseSuit(cardString) {
-    return cardString.charAt(1)
-}
 
-function parseFaceValue(cardString) {
-    let face = cardString.charAt(0);
-    if (face === 'T') {
+const parseSuit = card => card.charAt(1);
+
+const parseFaceValue = card => {
+    let number = card.charAt(0);
+    if (number === 'K') {
+        return 13;
+    } else if (number === 'Q') {
+        return 12;
+    } else if (number === "J") {
+        return 11;
+    } else if (number === 'T') {
         return 10
-    } else if ( face === 'J') {
-        return 11
-    } else if (face === 'Q') {
-        return 12
-    } else if (face === 'K') {
-        return 13
-    } else if (face === 'A') {
+    } else if (number === "A") {
         return 14
     } else {
-        return parseInt(face)
+        return Number(number)
     }
 }
-//test 
 
-function parseCard(cardString) {
-    let card = {
-        suit: parseSuit(cardString),
-        face: parseFaceValue(cardString),
-
+const parseCard = card => {
+    let object = {
+        suit: parseSuit(card),
+        face: parseFaceValue(card)
     }
-    return card
+    return object
 }
 
-function parseHand(handString) {
-let splitHand = handString.split(' ')
-let cards = splitHand.map(card => parseCard(card))
-return cards
+const parseHand = hand => { //hand = "3S AH"
+    let cards = hand.split(' '); //Cards = ["3S", "AH",]
+    let output = [ ];
+    for (i = 0; i < cards.length; i++) {
+        let card = cards[i]; //card = each card
+        output.push(parseCard(card));
+    }
+    return output
 }
 
-// function detectPair(cardString) {
-//     let parse = parseHand(cardString)
-//     let check = 
-//     let hand = {
-//         '2': 0,
-//         '3': 0,
-//         '4': 0,
-//         '5': 0,
-//         '6': 0,
-//         '7': 0,
-//         '8': 0,
-//         '9': 0,
-//         '10': 0,
-//         '11': 0,
-//         '12': 0,
-//         '13': 0,
-//         '14': 0
-//     }
-//     for (i = 0; i < parse.length; i++) {
-//         let card = parse[i].face
-//         hand[card]++
-//     }
-//     if (hand.filter())
-// }
+
 
 module.exports = {
-    parseSuit, parseFaceValue, parseCard, parseHand,
-    }
+    parseHand, parseCard, parseFaceValue, parseSuit,
+}
