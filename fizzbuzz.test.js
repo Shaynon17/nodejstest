@@ -357,55 +357,54 @@ test('can count up numbers in array of objects', () => {
     expect(countIds(input)).toStrictEqual(output);
 })
 
-// test('will count letters in word', () => {
-//     let output = {
-//         e: 1,
-//         h: 1,
-//         l: 2,
-//         o: 1
-//     }
-//     expect(countLetters("hello")).toStrictEqual(output);
-// })
+test('will count letters in word', () => {
+    let output = {
+        e: 1,
+        h: 1,
+        l: 2,
+        o: 1
+    }
+    expect(countLetters("hello")).toStrictEqual(output);
+})
 
-// // //almost had it
-// test('will count numbers in string', () => {
-//     let output = {
-//         '1': 3,
-//         '2': 1,
-//         '3': 1
-//     }
-//     expect(countNumbersString("1,1,2,3,1")).toStrictEqual(output);
-// })
+test('will count numbers in string', () => {
+    let output = {
+        '1': 3,
+        '2': 1,
+        '3': 1
+    }
+    expect(countNumbersString("1,1,2,3,1")).toStrictEqual(output);
+})
 
 
-// test('will count attendees', () => {
-//     let input = [
-//         { name: "steve" },
-//         { name: "shannon" },
-//         { name: "shannon" },
-//         { name: "shannon" },
-//         { name: "jimjam" },
-//     ];
-//     let output = {
-//         'jimjam': 1,
-//         'shannon': 3,
-//         'steve': 1
-//     }
-//     expect(countAttendees(input)).toStrictEqual(output);
-// })
+test('will count attendees', () => {
+    let input = [
+        { name: "steve" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "shannon" },
+        { name: "jimjam" },
+    ];
+    let output = {
+        'jimjam': 1,
+        'shannon': 3,
+        'steve': 1
+    }
+    expect(countAttendees(input)).toStrictEqual(output);
+})
 
-// test('can find most common letter', () => {
-//     let input = "aabbbbbccccccca";
-//     let output = "c"
-//     expect(findMostCommonLetter(input)).toBe(output);
-// })
+test('can find most common letter', () => {
+    let input = "aabbbbbccccccca";
+    let output = "c"
+    expect(findMostCommonLetter(input)).toBe(output);
+})
 
-////////////////////////check with steve line 1693
-// test('show count of each letter', () => {
-//     let input = "aabbbbbccccccca";
-//     let output = "a: 3, b: 5, c: 7"
-//     expect(countAllLettersStringOutput(input)).toBe(output);
-// })
+//check with steve line 1693
+test('show count of each letter', () => {
+    let input = "aabbbbbccccccca";
+    let output = "a: 3, b: 5, c: 7"
+    expect(countAllLettersStringOutput(input)).toBe(output);
+})
 
 // ///////////do it ALOT
 // test('user id of user with longest name', () => {

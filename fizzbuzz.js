@@ -3333,6 +3333,84 @@ function countIds(input) {
     }
 return output}
 
+const countLetters = string => {
+    let output = {
+        e: 0,
+        h: 0,
+        l: 0,
+        o: 0
+    }
+    let splitWord = string.split('');
+    for (i = 0; i < splitWord.length; i++) {
+        let letter = splitWord[i];
+        output[letter]++
+    }
+    return output
+}
+
+let countNumbersString = string => {
+    let output = {
+        '1': 0,
+        '2': 0,
+        '3': 0
+    }
+    let split = string.split('')
+    for (i = 0; i < split.length; i = i + 2) {
+        let num = split[i];
+        output[num]++
+    }
+    return output
+}
+
+const countAttendees = names => {
+    let output = {
+        jimjam: 0,
+        shannon: 0,
+        steve: 0
+    }
+    for (i = 0; i < names.length; i++) {
+        let eachObject = names[i];
+        let eachKey = eachObject.name
+        output[eachKey]++
+    }
+    return output
+}
+
+const findMostCommonLetter = input => {
+    let count = {
+        a: 0,
+        b: 0,
+        c: 0
+    }
+    let splitInput = input.split('');
+    for(i = 0; i < input.length; i++){
+        let letter = splitInput[i];
+        count[letter]++
+    }
+    if (count.a > count.b && count.a > count.b) {
+        return 'a'
+    } else if (count.b > count.a && count.b > count.b) {
+        return 'b'
+    } else {
+        return 'c'
+    }
+}
+
+const countAllLettersStringOutput = input => {
+    let count = {
+        a: 0,
+        b: 0,
+        c: 0
+    }
+    let splitInput = input.split('');
+    for (i = 0; i < input.length; i++) {
+        let letter = splitInput[i];
+        count[letter]++
+    }
+    return `a: ${count.a}, b: ${count.b}, c: ${count.c}`
+}
+
+
 module.exports = {
-    countIds, checkForY, averageNumberss, makeSentence, sumTemps, getFirstTemp, combineSuits, sumFaces, getSecondFace, getFirstSuit, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
+   countAllLettersStringOutput, findMostCommonLetter, countAttendees, countNumbersString, countLetters, countIds, checkForY, averageNumberss, makeSentence, sumTemps, getFirstTemp, combineSuits, sumFaces, getSecondFace, getFirstSuit, hitTower, makeTower, totalMana, collectCharacterNames, makeCharacterFromString, prettyPrintStats, sumCharacterDpses, makeLeagueCharacter, averageNumbers, sumArray, onlyBigEnough, capEachWord, onlySteve, onlyEvens, firstCharacterss, addOne, upperCaseWord, alphabetize, palindromeName, reverseName, upperCaseFirstLetter, incrementNumber, incrementZipCode, upperCaseContactNames, getZipCodes, getStreet, getTemp, characterNums, isCoolSClub, stringCounter, lastLetter, plusOne, firstCharacters, upperCaser, capFirstLast, mixUp, reverseString, isDivisbleBy, fizzbuzzConverter, helloWorld, sumOfSquares, flipFlop, capitalize,
  }
