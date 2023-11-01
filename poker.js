@@ -237,8 +237,44 @@ const detectFlush = hand => {
     }
 }
 
+const detectTwoPair = hand => {
+    let parsedHand = parseHand(hand); // [{ suit: 'S', face: 6 }, { suit: 'H', face: 14 },{ suit: 'C', face: 3 }, { suit: 'C', face: 5 },{ suit: 'S', face: 3 } ]
+    let allValues = []
+    for (i = 0; i < parsedHand.length; i++) {
+        let faceValue = parsedHand[i].face;
+        allValues.push(faceValue)
+    }
+    // (after loop) 
+    let pairs = toFindDuplicates(allValues);
+    // console.log(pairs)
+    if (pairs.length === 2 && pairs[0] !== pairs[1]) { //cancels out threeof a kind
+        return true
+    } else {
+        return false
+    }
+}
 
+
+//rewrite the test?
+//need an object called HandRank ... and the keys are the hand ranks ive done above.
+const detectHand = () => {
+    let HandRank = {
+        Straight: detectStraight
+        // Straight: false
+        // Straight: detectStraight(hand),
+        // Straight: 0,
+    }
+    // if (detectStraight(hand)) {
+    //     // HandRank + HandRank.Straight
+    //     return HandRank.Straight
+    // }
+
+    // if (HandRank.Straight === true)
+        return HandRank.Straight
+}
+
+//if the objects value is true, return that values key. loop through objects keys
 
 module.exports = {
-    detectAllSameSuit, detectFlush, detectStraight, detectFourOfAKind, detectFullHouse, detectThreeOfAKind, countFaces, detectNumOfPair, toFindDuplicates, detectPair, parseHand, parseCard, parseFaceValue, parseSuit,
+    detectHand, detectTwoPair, detectAllSameSuit, detectFlush, detectStraight, detectFourOfAKind, detectFullHouse, detectThreeOfAKind, countFaces, detectNumOfPair, toFindDuplicates, detectPair, parseHand, parseCard, parseFaceValue, parseSuit,
 }
