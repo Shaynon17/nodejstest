@@ -1,4 +1,4 @@
-const { detectPair, parseSuit, parseHand, parseCard, parseFaceValue, handFaceValues } = require("./poker")
+const {detectAllSameSuit, detectFlush, detectStraight, detectFourOfAKind, detectFullHouse, detectThreeOfAKind, countFaces, detectNumOfPair, detectPair, parseSuit, parseHand, parseCard, parseFaceValue, handFaceValues } = require("./poker")
  
 // whole poker kata
 // pokerWinner('4D 5S KH 3C 8C', '4D 4S 4H 9C TC') => "player two wins: three of a kind"
@@ -73,69 +73,76 @@ test("detectPair will detect pairs", () => {
 });
 
 
-// test("detectNumOfPair will detect number of pair", () => {
-//     expect(detectNumOfPair("3S AH 3C 5C 6S")).toBe(3);
-// });
+test("detectNumOfPair will detect number of pair", () => {
+    expect(detectNumOfPair("3S AH 3C 5C 6S")).toBe(3);
+    expect(detectNumOfPair("4S AH 3C 5C 4S")).toBe(4);
+});
 
-// test("countFaces does what it should", () => {
+test("countFaces does what it should", () => {
+    let expected = {
+        '2': 0,
+        '3': 0,
+        '4': 2,
+        '5': 1,
+        '6': 0,
+        '7': 0,
+        '8': 0,
+        '9': 0,
+        '10': 0,
+        '11': 0,
+        '12': 0,
+        '13': 0,
+        '14': 0
+    }
+    let input = [
+        { face: 4 },
+        { face: 5 },
+        { face: 4 },
+    ]
+    expect(countFaces(input)).toStrictEqual(expected);
+});
 
-//     let expected = {
-//         '2': 0,
-//         '3': 0,
-//         '4': 2,
-//         '5': 1,
-//         '6': 0,
-//         '7': 0,
-//         '8': 0,
-//         '9': 0,
-//         '10': 0,
-//         '11': 0,
-//         '12': 0,
-//         '13': 0,
-//         '14': 0
-//     }
-//     let input = [
-//         { face: 4 },
-//         { face: 5 },
-//         { face: 4 },
-//     ]
-//     expect(countFaces(input)).toStrictEqual(expected);
-// });
+test("detectThreeOfAKind test", () => {
+    // expect(detectThreeOfAKind("5S 3H 3C 5C 5S")).toBe(true); //added extra test, the pair is messing it up
+    expect(detectThreeOfAKind("5S AH 3C 5C 5S")).toBe(true);
+    expect(detectThreeOfAKind("3S AH 4C 5C 6S")).toBe(false);
+    expect(detectThreeOfAKind("3S 3H 3C 3C 6S")).toBe(false);
+});
 
+test("detect a full house test", () => {
+    expect(detectFullHouse("5S 3H 3C 5C 5S")).toBe(true);
+    expect(detectFullHouse("3S AH 4C 5C 6S")).toBe(false);
+    expect(detectFullHouse("5S 5H 4C 5C 6S")).toBe(false);
+});
 
+test("detect a four of a kind test", () => {
+    expect(detectFourOfAKind("5S 5H 3C 5C 5S")).toBe(true);
+    expect(detectFourOfAKind("3S AH 4C 5C 6S")).toBe(false);
+});
 
-// test("detectThreeOfAKind test", () => {
-//     expect(detectThreeOfAKind("5S AH 3C 5C 5S")).toBe(true);
-//     expect(detectThreeOfAKind("3S AH 4C 5C 6S")).toBe(false);
-//     expect(detectThreeOfAKind("3S 3H 3C 3C 6S")).toBe(false);
-// });
+test("detect a straight test", () => {
+    expect(detectStraight("5S 6H 7C 8C 9S")).toBe(true);
+    expect(detectStraight("6H 5S 7C 8C 9S")).toBe(true); //added this test incase numbers arent already in order
+    expect(detectStraight("3S AH 4C 5C 6S")).toBe(false);
+    expect(detectStraight("TS KH QC JC AS")).toBe(true);
+});
 
-// test("detect a full house test", () => {
-//     expect(detectFullHouse("5S 3H 3C 5C 5S")).toBe(true);
-//     expect(detectFullHouse("3S AH 4C 5C 6S")).toBe(false);
-//     expect(detectFullHouse("5S 5H 4C 5C 6S")).toBe(false);
-// });
+test("detect whole hand has the same suit", () => { //added this test to make sure all of the same suits are the same
+    expect(detectAllSameSuit("5S 6S 7S 8S 9S")).toBe(true);
+    expect(detectAllSameSuit("3S AH 4C 5C 6S")).toBe(false);
+    expect(detectAllSameSuit("5S 6S 7S 3S 9S")).toBe(true);
+});
 
-// test("detect a four of a kind test", () => {
-//     expect(detectFourOfAKind("5S 5H 3C 5C 5S")).toBe(true);
-//     expect(detectFourOfAKind("3S AH 4C 5C 6S")).toBe(false);
-// });
+test("detect a flush test", () => {
+    expect(detectFlush("5S 6S 7S 8S 9S")).toBe(true);
+    expect(detectFlush("3S AH 4C 5C 6S")).toBe(false);
+    expect(detectFlush("5S 6H 7S 8S 9S")).toBe(false); //added test (otherwise the straight test past this test)
+});
 
-// test("detect a straight test", () => {
-//     expect(detectStraight("5S 6H 7C 8C 9S")).toBe(true);
-//     expect(detectStraight("3S AH 4C 5C 6S")).toBe(false);
-//     expect(detectStraight("TS KH QC JC AS")).toBe(true);
-// });
-
-// test("detect a flush test", () => {
-//     expect(detectFlush("5S 6S 7S 8S 9S")).toBe(true);
-//     expect(detectFlush("3S AH 4C 5C 6S")).toBe(false);
-// });
-
-// test("detect a two pair", () => {
-//     expect(detectTwoPair("5S 5S 8S 8S 9S")).toBe(true);
-//     expect(detectTwoPair("3S AH 4C 5C 6S")).toBe(false);
-// });
+test("detect a two pair", () => {
+    expect(detectTwoPair("5S 5S 8S 8S 9S")).toBe(true);
+    expect(detectTwoPair("3S AH 4C 5C 6S")).toBe(false);
+});
 
 // test("detect poker hand", () => {
 //     expect(detectHand("5S 6S 7S 8D 9S")).toBe(HandRank.Straight);
