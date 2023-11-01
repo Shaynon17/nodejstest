@@ -46,6 +46,7 @@ const parseHand = hand => { //hand = "3S AH"
 //     return allValues
 // }
 
+const toFindDuplicates = arry => arry.filter((item, index) => arry.indexOf(item) !== index)
 
 //loop through each card and compare cards with a nested loop
 const detectPair = hand => {
@@ -55,23 +56,31 @@ const detectPair = hand => {
         let faceValue = parsedHand[i].face;
         allValues.push(faceValue)
     }
-let array = allValues
-    for (i = 0; i < array.length; i++) {
-        for (j = 0; j < array.length; i++) {
-            if (i !== j) {
-                if (array[i] === array[j]) {
-                    return true
-                } else {
-                    continue;
-                }
-            }
-        }
-    }
+    let pairs = toFindDuplicates(allValues);
+
+    // console.log(pairs)
+    // console.log(pairs.length)
+    if (pairs.length === 1)   {
+        return true
+    } else {
+    return false
+}
 
 }
 
-
+// let array = allValues
+// for (i = 0; i < array.length; i++) {
+//     for (j = 0; j < array.length; i++) {
+//         if (i !== j) {
+//             if (array[i] === array[j]) {
+//                 return true
+//             } else {
+//                 continue;
+//             }
+//         }
+//     }
+// }
 
 module.exports = {
-    detectPair, parseHand, parseCard, parseFaceValue, parseSuit,
+    toFindDuplicates, detectPair, parseHand, parseCard, parseFaceValue, parseSuit,
 }
