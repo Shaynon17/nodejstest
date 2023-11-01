@@ -58,8 +58,8 @@ const detectPair = hand => {
     }
     let pairs = toFindDuplicates(allValues);
 
-    // console.log(pairs)
-    // console.log(pairs.length)
+    console.log(pairs) 
+    console.log(pairs.length)
     if (pairs.length === 1)   {
         return true
     } else {
