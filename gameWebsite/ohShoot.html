@@ -41,12 +41,14 @@ open git and type: npx localview --port 5500
         </div>
     </div>
 
-    <div>
+    <div class="home_tutorials">
         <h1 class="main">Oh Shoot!</h1>
+        <button onclick="resetGame()">Reset</button>
     </div>
 
 <div class="home_tutorials"><br>
     <h3>Enemy</h3><br>
+    <h3><label id="enemyAction"></label></h3><br>
     <h3>
         Loaded:&nbsp<label id="enemyLoaded">0</label><br>
         Holster:&nbsp<label id="enemyHolster">5</label>
@@ -63,6 +65,8 @@ open git and type: npx localview --port 5500
 
 
     <h3>You</h3><br>
+        <h3><label id="playerAction"></label></h3>
+
     <h3>
         Loaded:&nbsp<label id="playerLoaded">0</label><br>
         Holster:&nbsp<label id="playerHolster">5</label>
