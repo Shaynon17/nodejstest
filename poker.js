@@ -254,26 +254,25 @@ const detectTwoPair = hand => {
     }
 }
 
+//Attempt before changing the test
+// //rewrite the test?
+// //need an object called HandRank ... and the keys are the hand ranks ive done above.
+// const detectHand = () => {
+//     let HandRank = {
+//         Straight: detectStraight
+//         // Straight: false
+//         // Straight: detectStraight(hand),
+//         // Straight: 0,
+//     }
+//     // if (detectStraight(hand)) {
+//     //     // HandRank + HandRank.Straight
+//     //     return HandRank.Straight
+//     // }
 
-//rewrite the test?
-//need an object called HandRank ... and the keys are the hand ranks ive done above.
-const detectHand = () => {
-    let HandRank = {
-        Straight: detectStraight
-        // Straight: false
-        // Straight: detectStraight(hand),
-        // Straight: 0,
-    }
-    // if (detectStraight(hand)) {
-    //     // HandRank + HandRank.Straight
-    //     return HandRank.Straight
-    // }
+//     // if (HandRank.Straight === true)
+//         return HandRank.Straight
+// }
 
-    // if (HandRank.Straight === true)
-        return HandRank.Straight
-}
-
-//if the objects value is true, return that values key. loop through objects keys
 
 module.exports = {
     detectHand, detectTwoPair, detectAllSameSuit, detectFlush, detectStraight, detectFourOfAKind, detectFullHouse, detectThreeOfAKind, countFaces, detectNumOfPair, toFindDuplicates, detectPair, parseHand, parseCard, parseFaceValue, parseSuit,

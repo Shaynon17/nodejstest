@@ -144,17 +144,30 @@ test("detect a two pair", () => {
     expect(detectTwoPair("3S AH 4C 5C 6S")).toBe(false);
 });
 
+// test("detect poker hand", () => {
+//     expect(detectHand("5S 6S 7S 8D 9S")).toBe(HandRank.Straight);
+//     expect(detectHand("5S 3S 5S 8S 9S")).toBe(HandRank.Flush);
+//     expect(detectHand("5S 3S 5D 8S 9S")).toBe(HandRank.Pair);
+//     expect(detectHand("5S 8S 5D 8S 9S")).toBe(HandRank.TwoPair);
+//     expect(detectHand("8S 8S 5D 8S 9S")).toBe(HandRank.ThreeOfAKind);
+//     expect(detectHand("8S 8S 5D 8S 5S")).toBe(HandRank.FullHouse);
+//     expect(detectHand("8S 8S 8D 8S 5S")).toBe(HandRank.FourOfAKind);
+//     expect(detectHand("5S 6S 7S 8S 9S")).toBe(HandRank.StraightFlush);
+//     expect(detectHand("5S 5S 5S 5S 5S")).toBe(HandRank.FiveOfAKind);
+//     expect(detectHand("2D 5S 6S 7S QS")).toBe(HandRank.HighCard);
+// });
+
 test("detect poker hand", () => {
-    expect(detectHand("5S 6S 7S 8D 9S")).toBe(HandRank.Straight);
-    // expect(detectHand("5S 3S 5S 8S 9S")).toBe(HandRank.Flush);
-    // expect(detectHand("5S 3S 5D 8S 9S")).toBe(HandRank.Pair);
-    // expect(detectHand("5S 8S 5D 8S 9S")).toBe(HandRank.TwoPair);
-    // expect(detectHand("8S 8S 5D 8S 9S")).toBe(HandRank.ThreeOfAKind);
-    // expect(detectHand("8S 8S 5D 8S 5S")).toBe(HandRank.FullHouse);
-    // expect(detectHand("8S 8S 8D 8S 5S")).toBe(HandRank.FourOfAKind);
-    // expect(detectHand("5S 6S 7S 8S 9S")).toBe(HandRank.StraightFlush);
-    // expect(detectHand("5S 5S 5S 5S 5S")).toBe(HandRank.FiveOfAKind);
-    // expect(detectHand("2D 5S 6S 7S QS")).toBe(HandRank.HighCard);
+    expect(detectHand("5S 6S 7S 8D 9S")).toBe('Straight');
+    expect(detectHand("5S 3S 5S 8S 9S")).toBe("Flush");
+    expect(detectHand("5S 3S 5D 8S 9S")).toBe("Pair");
+    expect(detectHand("5S 8S 5D 8S 9S")).toBe("Two Pair");
+    expect(detectHand("8S 8S 5D 8S 9S")).toBe("Three of a kind");
+    expect(detectHand("8S 8S 5D 8S 5S")).toBe("Full House");
+    expect(detectHand("8S 8S 8D 8S 5S")).toBe("Four of a kind");
+    expect(detectHand("5S 6S 7S 8S 9S")).toBe("Straight Flush");
+    expect(detectHand("5S 5S 5S 5S 5S")).toBe("Five of a Kind");
+    expect(detectHand("2D 5S 6S 7S QS")).toBe("High Card");
 });
 
 // test("detect poker winner", () => {
