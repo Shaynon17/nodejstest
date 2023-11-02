@@ -5,7 +5,26 @@
 // let enemyLoaded = 0;
 // let enemyHolster = 5;
 
+//resets the game and all innerHTML elements to specified values
+function resetGame() {
+    player.loaded = 0,
+        player.holster = 5,
+        enemy.loaded = 0,
+        enemy.holster = 5,
+        document.getElementById("enemyAction").innerHTML = '';
+    document.getElementById("playerLoaded").innerHTML = 0;
+    document.getElementById("playerHolster").innerHTML = 5;
+    document.getElementById("liveAction").innerHTML = "Duel!";
+    document.getElementById("enemyLoaded").innerHTML = 0;
+    document.getElementById("enemyHolster").innerHTML = 5;
+}
 
+//its possible to make it to where two punches mean they cant punch again,
+//have each objects have a key value pair of lastDecision: (insert last decision)
+//after each decision, update the deicison
+//if both last deicision === punch, it may not be used.
+//i would need another algorythm for punch, or rearrange the other 3 and have punch last,
+//and take out punch/math.random changed
 const player = {
     loaded: 0,
     holster: 5,
@@ -15,6 +34,7 @@ const player = {
 const enemy = {
     loaded: 0,
     holster: 5,
+    tsk: 'tsk-tsk'
 }
 
 //alogorithm 1 : reload: 40% | punch: 40% | block: 20% 
@@ -39,7 +59,7 @@ const preparative = () => {
 }
 
 //alogorithm 2 : shoot: 33% | punch: 33% | block: 33% 
-const agressive = () => {
+const aggressive = () => {
     let choice = Math.floor(Math.random() * 3);
     let decision = '?'
     if (choice === 0) {
@@ -81,83 +101,91 @@ const defensive = () => {
 }
 
 
+//this determines which alogrithm for the enemy to use
 const enemyChoice = () => {
-
     if (player.loaded === 0 && enemy.loaded === 0) {
         return preparative()
+    } else if (player.loaded === 1 && enemy.loaded === 0) {
+        return defensive()
+    } else {
+        return aggressive()
     }
-
 }
 
 
-function resetGame() {
-    player.loaded = 0,
-        player.holster = 5,
-        enemy.loaded = 0,
-        enemy.holster = 5,
-        document.getElementById("liveAction").innerHTML = "Duel!";
-    document.getElementById("playerLoaded").innerHTML = 0;
-    document.getElementById("playerHolster").innerHTML = 5;
-    document.getElementById("enemyLoaded").innerHTML = 0;
-    document.getElementById("enemyHolster").innerHTML = 5;
-    document.getElementById("enemyAction").innerHTML = '';
-
-}
-
-// const enemyChoice = () => {
-//     let factor = 3
-//     let choice = Math.floor(Math.random() * factor);
-
-// }
-
-const bothNotLoaded = () => {
-
-}
 
 
-const enemyIsNotLoaded = () => {
-    let choice = Math.floor(Math.random() * 4);
-    let decision = '?'
-    if (choice < 2) {
-        decision = "reload"
-        document.getElementById("enemyAction").innerHTML = "reloaded";
+const reload = () => {
+    let choice = enemyChoice(); //shuld return a decision
+    if (player.loaded === 1) {
+        document.getElementById("liveAction").innerHTML = player.fullClip;
+        document.getElementById("enemyAction").innerHTML = enemy.tsk;
+    } else if (choice === 'reload') {
+        player.loaded = 1;
+        player.holster -= 1;
         enemy.loaded = 1;
         enemy.holster -= 1;
         document.getElementById("enemyLoaded").innerHTML = player.loaded
         document.getElementById("enemyHolster").innerHTML = player.holster;
-    } else if (choice >= 2 && choice < 4) {
-        decision = 'punch'
-        document.getElementById("enemyAction").innerHTML = "punched"
-    } else {
-        decision = 'block'
-        document.getElementById("enemyAction").innerHTML = "blocked"
-    }
-    return decision
-}
-
-const reload = () => {
-    if (player.loaded === 1) {
-        document.getElementById("liveAction").innerHTML = player.fullClip;
-    } else {
-    player.holster -= 1;
-    player.loaded += 1;
         document.getElementById("playerLoaded").innerHTML = player.loaded
-    document.getElementById("playerHolster").innerHTML = player.holster;
-        enemyIsNotLoaded();
+        document.getElementById("playerHolster").innerHTML = player.holster;
+    } else if (choice === 'block') {
+        document.getElementById("playerLoaded").innerHTML = player.loaded
+        document.getElementById("playerHolster").innerHTML = player.holster;
+    } else /* (choice === 'punch')*/ {
+        document.getElementById("liveAction").innerHTML = "The enemy punched you and negated your reload";
     }
-
+    return choice
 }
 
-document.getElementById("reloadBtn").onclick = function () {
-    // count -= 10;
-    playerHolster -= 1;
-    document.getElementById("playerHolster").innerHTML = playerHolster;
+const block = () => {
+    
 }
 
-document.getElementById("ninetyNine_decreaseBtn").onclick = function () {
-    count -= 10;
-    document.getElementById("ninetyNine_countLabel").innerHTML = count;
-}
+// const reload = () => {
+//     if (player.loaded === 1) {
+//         document.getElementById("liveAction").innerHTML = player.fullClip;
+//     } else {
+//         player.holster -= 1;
+//         player.loaded += 1;
+//         document.getElementById("playerLoaded").innerHTML = player.loaded
+//         document.getElementById("playerHolster").innerHTML = player.holster;
+//         enemyIsNotLoaded();
+//     }
+// }
+
+
+// const enemyIsNotLoaded = () => {
+//     let choice = Math.floor(Math.random() * 4);
+//     let decision = '?'
+//     if (choice < 2) {
+//         decision = "reload"
+//         document.getElementById("enemyAction").innerHTML = "reloaded";
+//         enemy.loaded = 1;
+//         enemy.holster -= 1;
+//         document.getElementById("enemyLoaded").innerHTML = player.loaded
+//         document.getElementById("enemyHolster").innerHTML = player.holster;
+//     } else if (choice >= 2 && choice < 4) {
+//         decision = 'punch'
+//         document.getElementById("enemyAction").innerHTML = "punched"
+//     } else {
+//         decision = 'block'
+//         document.getElementById("enemyAction").innerHTML = "blocked"
+//     }
+//     return decision
+// }
+
+
+// document.getElementById("reloadBtn").onclick = function () {
+//     // count -= 10;
+//     playerHolster -= 1;
+//     document.getElementById("playerHolster").innerHTML = playerHolster;
+// }
+
+// document.getElementById("ninetyNine_decreaseBtn").onclick = function () {
+//     count -= 10;
+//     document.getElementById("ninetyNine_countLabel").innerHTML = count;
+// }
 
 
 
