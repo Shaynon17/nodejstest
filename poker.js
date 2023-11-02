@@ -1,4 +1,5 @@
 
+
 const parseSuit = card => card.charAt(1);
 
 const parseFaceValue = card => {
@@ -201,12 +202,11 @@ const detectAllSameSuit = hand => {
     let joinOriginalSuits = allSuits.join('')
     let reverseAllSuits = allSuits.reverse()
     let joinReversedSuits = reverseAllSuits.join('')
-
+let output = false
     if (joinOriginalSuits === joinReversedSuits) {
-        return true
-    } else {
-        return false
-    }
+        output = true
+    } 
+    return output
 
 }
 
@@ -217,24 +217,24 @@ const detectFlush = hand => {
         let faceValue = parsedHand[i].face;
         allValues.push(faceValue)
     }
-
     allValues = allValues.sort((a, b) => a - b)
-
     //The above lines could be a helper function
     let result = false;
     for (i = 1; i < allValues.length; i++) {
         if (allValues[0] === allValues[i] - i) {
             result = true
         } else {
-            return false
+            result = false
         }
     }
+
     let checkSuit = detectAllSameSuit(hand);
     if (checkSuit === true) {
-        return true
+        result = true
     } else {
-        return false
+        result = false
     }
+    return result
 }
 
 const detectTwoPair = hand => {
@@ -273,6 +273,16 @@ const detectTwoPair = hand => {
 //         return HandRank.Straight
 // }
 
+const detectHand = hand => {
+
+    if (detectStraight(hand) === true) {
+        return 'Straight'
+    } else if (detectFlush(hand) === true) {
+        return "Flush"
+    } else if (detectPair(hand) === true) {
+        return "Pair"
+    }
+}
 
 module.exports = {
     detectHand, detectTwoPair, detectAllSameSuit, detectFlush, detectStraight, detectFourOfAKind, detectFullHouse, detectThreeOfAKind, countFaces, detectNumOfPair, toFindDuplicates, detectPair, parseHand, parseCard, parseFaceValue, parseSuit,
