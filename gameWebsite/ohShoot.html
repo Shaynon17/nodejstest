@@ -12,6 +12,7 @@ open git and type: npx localview --port 5500
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Practical Gaming Center</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <script src="ohShoot/index.js"></script>
 </head>
 
 <body>
@@ -45,29 +46,30 @@ open git and type: npx localview --port 5500
     </div>
 
     <div class="home_tutorials">
-        <h3>You</h3>
+        <h3>You</h3><br>
         <h3>
-            <span>Loaded: </span><br>
-            <span>Holster: </span>
-        </h3>
+            Loaded:&nbsp<label id="playerLoaded">Yes</label><br>
+            Holster:&nbsp<label id="playerHolster">5</label>
+        </h3><br>
+     
         <div class="action_Buttons">
-<button>Reload</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-<button>Block</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-<button>Punch</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-<button>Shoot</button><br><br>
+            <button id="reloadBtn" >Reload</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <button id="blockBtn">Block</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <button id="punchBtn">Punch</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <button id="shootBtn">Shoot</button><br><br>
 
         </div>
 
     </div>
-    <div>
-        <p>"What happened"</p>
+    <div class="home_tutorials">
+<label>"Duel!"</label>
     </div>
 
     <div class="home_tutorials" ><br>
-        <h3>Enemy</h3>
+        <h3>Enemy</h3><br>
         <h3>
-            <span>Loaded: </span><br>
-            <span>Holster: </span>
+        Loaded:&nbsp<label id="enemyLoaded">Yes</label><br>
+        Holster:&nbsp<label id="enemyHolster">5</label>
         </h3>
     </div>
 
