@@ -1,16 +1,39 @@
 // must be in this directiory PS C:\Users\shann\coding\nodejstest\gameWebsite\ohShoot> then to rune code type in terminal: node index.js
 
 
-// let playerLoaded = '';
-let playerHolster = 5;
-
-// let enemyLoaded = '';
+// let playerLoaded = 0;
+// let playerHolster = 5;
+// let enemyLoaded = 0;
 // let enemyHolster = 5;
 
 
+const player = {
+    loaded: 0,
+    holster: 5,
+    fullClip: "You may only have 1 bullet loaded at a time"
+}
+
+const enemy = {
+    loaded: 0,
+    holster: 5,
+}
+
+
+// function checkIfLoaded() {
+//     if
+// }
+
+
 const reload = () => {
-    playerHolster -= 1;
-    document.getElementById("playerHolster").innerHTML = playerHolster;
+
+    if (player.loaded === 1) {
+        document.getElementById("liveAction").innherHTML = player.fullClip
+    } else {
+    player.holster -= 1;
+    player.loaded += 1;
+    playerLoaded = document.getElementById("playerLoaded").innerHTML = player.loaded
+    document.getElementById("playerHolster").innerHTML = player.holster;
+    }
 }
 
 
