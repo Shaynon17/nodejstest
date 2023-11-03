@@ -71,6 +71,30 @@
 /* Above is the CSS for the header */
 
 
+#announce {
+font-size: 25px;
+
+}
+
+#announce2 {
+    font-size: 20px;
+
+}
+
+.ohShootBtns {
+    /* color: red; */
+    padding: 15px 25px 15px;
+    /* padding-left: 5; */
+}
+
+.resetBtn {
+    color: red;
+    padding: 15px;
+}
+
+/* above is CSS for oh SHOOT! */
+
+
 
 
 /* Below is the CSS for index.html (home page)*/

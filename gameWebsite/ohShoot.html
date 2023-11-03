@@ -43,16 +43,16 @@ open git and type: npx localview --port 5500
 
     <div class="home_tutorials">
         <h1 class="main">Oh Shoot!</h1>
-        <button onclick="resetGame()">Reset</button>
+        <button class="resetBtn" onclick="resetGame()">Reset</button>
     </div>
 
 <div class="home_tutorials"><br>
     <h3>Enemy <label id="enemyAction"></label></h3><br>
-    <h3></h3><br>
+    <h3></h3>
     <h3>
         Loaded:&nbsp<label id="enemyLoaded">0</label><br>
         Holster:&nbsp<label id="enemyHolster">5</label>
-    </h3><br><br>
+    </h3><br>
 </div>
     </div>
     <div class="home_tutorials">
@@ -63,7 +63,7 @@ open git and type: npx localview --port 5500
 <div class="home_tutorials">
 
     <h3>You <span><label id="playerChoice"></label></h3></span></h3><br>
-        <h3><br>
+        <h3>
 
     <h3>
         Loaded:&nbsp<label id="playerLoaded">0</label><br>
@@ -71,10 +71,10 @@ open git and type: npx localview --port 5500
     </h3><br>
 
     <div class="action_Buttons">
-        <button onclick="reload()" id="reloadBtn">Reload</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-        <button onclick="block()" id="blockBtn">Block</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-        <button onclick="punch()" id="punchBtn">Punch</button>&nbsp&nbsp&nbsp&nbsp&nbsp
-        <button onclick="shoot()" id="shootBtn">Shoot</button><br><br>
+        <button class="ohShootBtns" onclick="reload()" id="reloadBtn">Reload</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button class="ohShootBtns" onclick="block()" id="blockBtn">Block</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button class="ohShootBtns" onclick="punch()" id="punchBtn">Punch</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button class="ohShootBtns" onclick="shoot()" id="shootBtn">Shoot</button><br><br>
 
     </div>
     
