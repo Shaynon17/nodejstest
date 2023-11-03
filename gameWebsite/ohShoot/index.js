@@ -175,7 +175,7 @@ const reload = () => {
         announce("The enemy... blocked?")
     } else if (choice === "shoot") {
         announce("You got shot! You lose one bullet from your holster")
-        player.holster -= 1;
+        player.holster -= 2;
         player.loaded = 1;
         enemy.holster += 2;
         enemy.loaded = 0;
@@ -494,6 +494,6 @@ const shoot = () => {
 
 // console.log(getComputerChoice())
 // console.log(player1())
-console.log(player1)
-console.log(player2)
+// console.log(player1)
+// console.log(player2)
 // console.log(bulletTransfer())
