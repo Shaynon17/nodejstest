@@ -12,9 +12,10 @@ function resetGame() {
         enemy.loaded = 0,
         enemy.holster = 5,
         document.getElementById("enemyAction").innerHTML = '';
+    document.getElementById("playerChoice").innerHTML = '';
     document.getElementById("playerLoaded").innerHTML = 0;
     document.getElementById("playerHolster").innerHTML = 5;
-    document.getElementById("liveAction").innerHTML = "Duel!";
+    document.getElementById("announce").innerHTML = "";
     document.getElementById("enemyLoaded").innerHTML = 0;
     document.getElementById("enemyHolster").innerHTML = 5;
 }
@@ -112,39 +113,144 @@ const enemyChoice = () => {
     }
 }
 
+//reloads the player
+const playerReload = () => {
+    player.loaded = 1;
+    player.holster -= 1;
+    document.getElementById("playerLoaded").innerHTML = player.loaded
+    document.getElementById("playerHolster").innerHTML = player.holster;
+}
 
+//reloads the enemy
+const enemyReload = () => {
+    enemy.loaded = 1;
+    enemy.holster -= 1;
+    document.getElementById("enemyLoaded").innerHTML = enemy.loaded
+    document.getElementById("enemyHolster").innerHTML = enemy.holster;
+}
 
+//announcement of what is happening in game
+function announce(string) {
+    document.getElementById("announce").innerHTML = string
+}
 
+const playerChoice = (choice) => {
+    document.getElementById("playerChoice").innerHTML = choice
+}
+
+const updateScore = () => {
+    document.getElementById("playerLoaded").innerHTML = player.loaded
+    document.getElementById("playerHolster").innerHTML = player.holster;
+    document.getElementById("enemyLoaded").innerHTML = enemy.loaded
+    document.getElementById("enemyHolster").innerHTML = enemy.holster;
+}
+
+const checkWinner = () => {
+    if (player.loaded + player.holster === 0) {
+       resetGame()
+        alert("You LOSE")
+    } else if (enemy.loaded + enemy.holster === 0) {
+       resetGame()
+        alert("You Win!")
+    } else {
+        updateScore()
+    }
+}
+
+//"reload" button onClick
 const reload = () => {
+    playerChoice("reloaded")
     let choice = enemyChoice(); //shuld return a decision
     if (player.loaded === 1) {
-        document.getElementById("liveAction").innerHTML = player.fullClip;
+        document.getElementById("announce").innerHTML = player.fullClip;
         document.getElementById("enemyAction").innerHTML = enemy.tsk;
     } else if (choice === 'reload') {
-        player.loaded = 1;
-        player.holster -= 1;
-        enemy.loaded = 1;
-        enemy.holster -= 1;
-        document.getElementById("enemyLoaded").innerHTML = player.loaded
-        document.getElementById("enemyHolster").innerHTML = player.holster;
-        document.getElementById("playerLoaded").innerHTML = player.loaded
-        document.getElementById("playerHolster").innerHTML = player.holster;
+        playerReload()
+        enemyReload()
+        announce("You both reloaded")
     } else if (choice === 'block') {
-        document.getElementById("playerLoaded").innerHTML = player.loaded
-        document.getElementById("playerHolster").innerHTML = player.holster;
+        playerReload()
+        announce("The enemy... blocked?")
+    } else if (choice === "shoot") {
+        announce("You got shot! You lose one bullet from your holster")
+        player.holster -= 1;
+        enemy.hoslter += 0;
     } else /* (choice === 'punch')*/ {
-        document.getElementById("liveAction").innerHTML = "The enemy punched you and negated your reload";
+        announce("The enemy punched you and negated your reload")
     }
-    return choice
+    updateScore() //needed?
 }
 
+
+
+//"block" button onCLick
 const block = () => {
-    
+    playerChoice("blocked")
+
+    let choice = enemyChoice(); //shuld return a decision
+    if (choice === 'block') {
+        // updateScore();
+        announce("You both blocked! Nothing happens...")
+    } else if (choice === "punch") {
+        enemy.holster += 1;
+        player.holster -= 1;
+        // updateScore();
+        announce("Too bad you were prepared to block a bullet and not a punch! Lose 1 bullet from your holster")
+    } else if (choice === 'reload') {
+        announce("The enemy took advantage of your block and reloaded!")
+        enemyReload()
+        // updateScore();
+    } else if (choice === "shoot") {
+        announce("Good thing you blocked! The enemy is reholstering their bullet")
+        enemy.holster += 1;
+        enemy.loaded = 0;
+        // updateScore();
+    }
+    checkWinner();
 }
+
+
+//"punch" onClick
+// const punch = () => {
+//     playerChoice("punch")
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const reload = () => {
 //     if (player.loaded === 1) {
-//         document.getElementById("liveAction").innerHTML = player.fullClip;
+//         document.getElementById("announce").innerHTML = player.fullClip;
 //     } else {
 //         player.holster -= 1;
 //         player.loaded += 1;
