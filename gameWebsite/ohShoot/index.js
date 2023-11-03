@@ -16,6 +16,7 @@ function resetGame() {
     document.getElementById("playerLoaded").innerHTML = 0;
     document.getElementById("playerHolster").innerHTML = 5;
     document.getElementById("announce").innerHTML = "";
+    document.getElementById("announce2").innerHTML = "";
     document.getElementById("enemyLoaded").innerHTML = 0;
     document.getElementById("enemyHolster").innerHTML = 5;
 }
@@ -117,16 +118,14 @@ const enemyChoice = () => {
 const playerReload = () => {
     player.loaded = 1;
     player.holster -= 1;
-    document.getElementById("playerLoaded").innerHTML = player.loaded
-    document.getElementById("playerHolster").innerHTML = player.holster;
 }
+
+
 
 //reloads the enemy
 const enemyReload = () => {
     enemy.loaded = 1;
     enemy.holster -= 1;
-    document.getElementById("enemyLoaded").innerHTML = enemy.loaded
-    document.getElementById("enemyHolster").innerHTML = enemy.holster;
 }
 
 //announcement of what is happening in game
@@ -174,11 +173,17 @@ const reload = () => {
     } else if (choice === "shoot") {
         announce("You got shot! You lose one bullet from your holster")
         player.holster -= 1;
-        enemy.hoslter += 0;
-    } else /* (choice === 'punch')*/ {
+        enemy.hoslter += 2;
+        enemy.loaded = 0;
+    } else if (choice === "punch") {
         announce("The enemy punched you and negated your reload")
+    } else {
+        announce("Bug in code => check reload function")
     }
+
+    clearAnnounce2()
     updateScore() //needed?
+    checkWinner()
 }
 
 
@@ -205,6 +210,7 @@ const block = () => {
         enemy.loaded = 0;
         // updateScore();
     }
+    clearAnnounce2()
     updateScore()
     checkWinner();
 }
@@ -228,14 +234,72 @@ const punch = () => {
         enemy.holster += 2;
         enemy.loaded = 0;
     }
+    clearAnnounce2()
     updateScore()
     checkWinner()
 }
 
-//"shoot" onClick
-// const shoot = () => {
+const announce2 = (string) => {
+    document.getElementById("announce2").innerHTML = string
+}
 
-// }
+const clearAnnounce2 = () => {
+    document.getElementById("announce2").innerHTML = ""
+}
+
+//"shoot" onClick
+const shoot = () => {
+    playerChoice("shoot")
+    let choice = enemyChoice(); //shuld return a decision
+    if (player.loaded === 0 && choice === "block") {
+        announce("CLICK! You didn't have a bullet loaded!");
+        announce2("Oh well, they blocked anyway");
+    } else if (player.loaded === 1 && choice === "block") {
+        announce("Miss! What a waste of a shot! Time to reload")
+        player.loaded = 0;
+        player.holster += 1;
+        clearAnnounce2();
+    } else if (player.loaded === 1 && choice === "reload") {
+        announce("Good shot! Enjoy that prize bullet!")
+        player.loaded = 0;
+        player.holster += 2;
+        enemy.holster -= 1;
+        clearAnnounce2()
+    } else if (player.loaded === 0 && choice === "reload") {
+        announce("CLICK! You didn't have a bullet loaded!");
+        announce2("But they do now...")
+        enemy.loaded = 1;
+        enemy.holster -= 1;
+// enemyReload()
+
+    } else if (player.loaded === 1 && choice === "punch") {
+        announce("BOOM! Take that free bullet!")
+        enemy.holster -= 1;
+        player.holster += 2;
+        player.loaded = 0;
+        clearAnnounce2()
+    } else if (player.loaded === 0 && choice === "punch") {
+        announce("CLICK! You didn't have a bullet loaded! That would have gone in your favor...");
+        announce2("The enemy gets a free bullet from your mistake.")
+        enemy.holster += 1;
+        player.holster -= 1;
+    } else if (player.loaded === 1 && choice === "shoot") {
+        announce("You both shot and negated the other");
+        player.loaded = 0;
+        player.holster += 1;
+        enemy.loaded = 0;
+        enemy.holster += 1
+        clearAnnounce2()
+    } else if (player.loaded === 0 && choice === "shoot") {
+        announce("CLICK! You didn't have a bullet loaded!");
+        announce2("Thats rough, lose 1 bullet")
+        enemy.loaded = 0;
+        enemy.holster += 2
+        player.holster -= 1;
+    }
+    updateScore()
+    checkWinner()
+}
 
 
 
