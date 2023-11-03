@@ -186,7 +186,6 @@ const reload = () => {
 //"block" button onCLick
 const block = () => {
     playerChoice("blocked")
-
     let choice = enemyChoice(); //shuld return a decision
     if (choice === 'block') {
         // updateScore();
@@ -206,16 +205,37 @@ const block = () => {
         enemy.loaded = 0;
         // updateScore();
     }
+    updateScore()
     checkWinner();
 }
 
 
 //"punch" onClick
-// const punch = () => {
-//     playerChoice("punch")
+const punch = () => {
+    playerChoice("punched")
+    let choice = enemyChoice(); //shuld return a decision
+    if (choice === "punch") {
+        announce("I bet that hurt! Nothing significant happens")
+    } else if (choice === "block") {
+        enemy.holster -= 1;
+        player.holster += 1;
+        announce("I'll take that! You get 1 bullet from the enemy's holster")
+    } else if (choice === 'reload') {
+        announce("Ha, good luck with that! You negated the enemies reload")
+    } else /*shoot*/ {
+        announce("Don't bring a fist to a gun fight. Lose 1 bullet")
+        player.holster -= 1;
+        enemy.holster += 2;
+        enemy.loaded = 0;
+    }
+    updateScore()
+    checkWinner()
+}
+
+//"shoot" onClick
+// const shoot = () => {
 
 // }
-
 
 
 
