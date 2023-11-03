@@ -15,7 +15,7 @@ function resetGame() {
     document.getElementById("playerChoice").innerHTML = '';
     document.getElementById("playerLoaded").innerHTML = 0;
     document.getElementById("playerHolster").innerHTML = 5;
-    document.getElementById("announce").innerHTML = "";
+    document.getElementById("announce").innerHTML = "First one to have all 10 bullets is the winner";
     document.getElementById("announce2").innerHTML = "";
     document.getElementById("enemyLoaded").innerHTML = 0;
     document.getElementById("enemyHolster").innerHTML = 5;
