@@ -164,16 +164,20 @@ const reload = () => {
         document.getElementById("announce").innerHTML = player.fullClip;
         document.getElementById("enemyAction").innerHTML = enemy.tsk;
     } else if (choice === 'reload') {
-        playerReload()
-        enemyReload()
+        enemy.loaded = 1;
+        enemy.holster -= 1;
+        player.loaded = 1;
+        player.holster -= 1;
         announce("You both reloaded")
     } else if (choice === 'block') {
-        playerReload()
+        player.loaded = 1;
+        player.holster -= 1;
         announce("The enemy... blocked?")
     } else if (choice === "shoot") {
         announce("You got shot! You lose one bullet from your holster")
         player.holster -= 1;
-        enemy.hoslter += 2;
+        player.loaded = 1;
+        enemy.holster += 2;
         enemy.loaded = 0;
     } else if (choice === "punch") {
         announce("The enemy punched you and negated your reload")
@@ -247,6 +251,23 @@ const clearAnnounce2 = () => {
     document.getElementById("announce2").innerHTML = ""
 }
 
+// const shoot = () => {
+//     playerChoice("shoot")
+//     let choice = enemyChoice(); //shuld return a decision
+//     if (choice === "block") {
+//         announce("Miss! What a waste of a shot! Time to reload")
+//         player.loaded = 0;
+//         player.holster += 1;
+//     } else if (choice === "reload") {
+//         announce("Good shot! Enjoy that prize bullet!")
+//         player.loaded = 0;
+//         player.holster += 2;
+//         enemy.holster -= 1;
+//         enemy.loaded = 1;
+//     }
+// }
+
+
 //"shoot" onClick
 const shoot = () => {
     playerChoice("shoot")
@@ -263,13 +284,15 @@ const shoot = () => {
         announce("Good shot! Enjoy that prize bullet!")
         player.loaded = 0;
         player.holster += 2;
-        enemy.holster -= 1;
+        enemy.holster -= 2;
+        enemy.loaded = 1;
         clearAnnounce2()
     } else if (player.loaded === 0 && choice === "reload") {
         announce("CLICK! You didn't have a bullet loaded!");
         announce2("But they do now...")
         enemy.loaded = 1;
         enemy.holster -= 1;
+
 // enemyReload()
 
     } else if (player.loaded === 1 && choice === "punch") {
