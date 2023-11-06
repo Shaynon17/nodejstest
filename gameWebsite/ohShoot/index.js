@@ -2,12 +2,13 @@
 
 
 //resets the game and all innerHTML elements to specified values
-function resetGame() {
+function resetEasy() {
     player.loaded = 0,
         player.holster = 5,
         enemy.loaded = 0,
         enemy.holster = 5,
-        document.getElementById("enemyAction").innerHTML = '';
+        gameMode.difficulty = "Easy";
+    document.getElementById("enemyAction").innerHTML = '';
     document.getElementById("playerChoice").innerHTML = '';
     document.getElementById("playerLoaded").innerHTML = 0;
     document.getElementById("playerHolster").innerHTML = 5;
@@ -15,6 +16,7 @@ function resetGame() {
     document.getElementById("announce2").innerHTML = "";
     document.getElementById("enemyLoaded").innerHTML = 0;
     document.getElementById("enemyHolster").innerHTML = 5;
+    document.getElementById("mode").innerHTML = gameMode.difficulty;
 }
 
 //its possible to make it to where two punches mean they cant punch again,
@@ -23,19 +25,25 @@ function resetGame() {
 //if both last deicision === punch, it may not be used.
 //i would need another algorythm for punch, or rearrange the other 3 and have punch last,
 //and take out punch/math.random changed
+
+//Used across all modes
 const player = {
     loaded: 0,
     holster: 5,
     fullClip: "You may only have 1 bullet loaded at a time"
 }
 
+//used across all modes
 const enemy = {
     loaded: 0,
     holster: 5,
     tsk: 'tsk-tsk'
 }
 
-//alogorithm 1 : reload: 40% | punch: 40% | block: 20% 
+//algorthim 1 is easy | .# is which algorithim in easy mode
+
+//alogorithm 1.1 : reload: 40% | punch: 40% | block: 20% 
+//For easy mode
 const preparative = () => {
     let choice = Math.floor(Math.random() * 5);
     let decision = '?'
@@ -52,7 +60,8 @@ const preparative = () => {
     return decision
 }
 
-//alogorithm 2 : shoot: 33% | punch: 33% | block: 33% 
+//alogorithm 1.2 : shoot: 33% | punch: 33% | block: 33%
+//For easy mode
 const aggressive = () => {
     let choice = Math.floor(Math.random() * 3);
     let decision = '?'
@@ -69,7 +78,8 @@ const aggressive = () => {
     return decision
 }
 
-//alogorithm 3 : reload: 33% | punch: 33% | block: 33% 
+//alogorithm 1.3 : reload: 33% | punch: 33% | block: 33%
+//For easy mode
 const defensive = () => {
     let choice = Math.floor(Math.random() * 3);
     let decision = '?'
@@ -88,8 +98,8 @@ const defensive = () => {
 }
 
 
-//this determines which alogrithm for the enemy to use
-const enemyChoice = () => {
+//this determines which alogrithm for the enemy to use (for easy mode)
+const enemyChoiceEasy = () => {
     if (player.loaded === 0 && enemy.loaded === 0) {
         return preparative()
     } else if (player.loaded === 1 && enemy.loaded === 0) {
@@ -98,6 +108,15 @@ const enemyChoice = () => {
         return aggressive()
     }
 }
+
+
+
+
+
+
+
+
+
 
 //reloads the player
 const playerReload = () => {
@@ -131,10 +150,10 @@ const updateScore = () => {
 
 const checkWinner = () => {
     if (player.loaded + player.holster === 0) {
-       resetGame()
+        resetEasy()
         alert("You LOSE")
     } else if (enemy.loaded + enemy.holster === 0) {
-       resetGame()
+        resetEasy()
         alert("You Win!")
     } else {
         updateScore()
@@ -142,9 +161,9 @@ const checkWinner = () => {
 }
 
 //"reload" button onClick
-const reload = () => {
+const reloadEasy = () => {
     playerChoice("reloaded")
-    let choice = enemyChoice(); //shuld return a decision
+    let choice = enemyChoiceEasy(); //shuld return a decision
     if (player.loaded === 1) {
         document.getElementById("announce").innerHTML = player.fullClip;
         document.getElementById("enemyAction").innerHTML = enemy.tsk;
@@ -178,9 +197,9 @@ const reload = () => {
 
 
 //"block" button onCLick
-const block = () => {
+const blockEasy = () => {
     playerChoice("blocked")
-    let choice = enemyChoice(); //shuld return a decision
+    let choice = enemyChoiceEasy(); //shuld return a decision
     if (choice === 'block') {
         // updateScore();
         announce("You both blocked! Nothing happens...")
@@ -206,9 +225,9 @@ const block = () => {
 
 
 //"punch" onClick
-const punch = () => {
+const punchEasy = () => {
     playerChoice("punched")
-    let choice = enemyChoice(); //shuld return a decision
+    let choice = enemyChoiceEasy(); //shuld return a decision
     if (choice === "punch") {
         announce("I bet that hurt! Nothing significant happens")
     } else if (choice === "block") {
@@ -238,9 +257,9 @@ const clearAnnounce2 = () => {
 
 
 //"shoot" onClick
-const shoot = () => {
+const shootEasy = () => {
     playerChoice("shoot")
-    let choice = enemyChoice(); //shuld return a decision
+    let choice = enemyChoiceEasy(); //shuld return a decision
     if (player.loaded === 0 && choice === "block") {
         announce("CLICK! You didn't have a bullet loaded!");
         announce2("Oh well, they blocked anyway");
@@ -298,12 +317,29 @@ const shoot = () => {
 //ABOVE is for easy mode (mode 1)
 
 
+const gameMode = {
+    difficulty: "Easy",
+    lastEnemyCard: "",
+    lastPlayerCard: "",
+}
+
+const reload = () => {
+    if (gameMode.difficulty === "Easy") {
+        reloadEasy()
+    } else if (gameMode.difficulty === "Medium") {
+        reloadMedium()
+    }
+}
+
+
+
 function resetMedium() {
     player.loaded = 1,
         player.holster = 4,
         enemy.loaded = 1,
         enemy.holster = 4,
-        document.getElementById("enemyAction").innerHTML = '';
+        gameMode.difficulty = "Medium";
+    document.getElementById("enemyAction").innerHTML = '';
     document.getElementById("playerChoice").innerHTML = '';
     document.getElementById("playerLoaded").innerHTML = 1;
     document.getElementById("playerHolster").innerHTML = 4;
@@ -311,7 +347,15 @@ function resetMedium() {
     document.getElementById("announce2").innerHTML = "";
     document.getElementById("enemyLoaded").innerHTML = 1;
     document.getElementById("enemyHolster").innerHTML = 4;
+    document.getElementById("mode").innerHTML = gameMode.difficulty;
 }
+
+
+
+const reloadMedium = () => {
+
+}
+
 
 
 
