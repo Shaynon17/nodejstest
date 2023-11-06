@@ -137,8 +137,10 @@ function announce(string) {
     document.getElementById("announce").innerHTML = string
 }
 
+
 const playerChoice = (choice) => {
     document.getElementById("playerChoice").innerHTML = choice
+    gameMode.lastPlayerChoice = choice //needed for medium mode
 }
 
 const updateScore = () => {
@@ -316,21 +318,13 @@ const shootEasy = () => {
 //ABOVE is for easy mode (mode 1)
 //ABOVE is for easy mode (mode 1)
 
+//Determines which game mode we are in which dictaces which algorithms to use
 
 const gameMode = {
     difficulty: "Easy",
-    lastEnemyCard: "",
-    lastPlayerCard: "",
+    lastEnemyChoice: "", //needed to keep track of when both players punch each other
+    lastPlayerChoice: "", //needed to keep track of when both players punch each other
 }
-
-const reload = () => {
-    if (gameMode.difficulty === "Easy") {
-        reloadEasy()
-    } else if (gameMode.difficulty === "Medium") {
-        reloadMedium()
-    }
-}
-
 
 
 function resetMedium() {
@@ -351,11 +345,52 @@ function resetMedium() {
 }
 
 
+const reload = () => {
+    if (gameMode.difficulty === "Easy") {
+        reloadEasy()
+    } else if (gameMode.difficulty === "Medium") {
+        reloadMedium()
+    }
+}
+
 
 const reloadMedium = () => {
 
 }
 
+
+
+//alrogruthms for medium below
+
+
+// Algorithm 2.1 defensiveAggresion
+// Neither loaded. reload 50%, punch 50%
+// 2.1.P reload 100%
+const defensiveAggresion = () => {
+    let choice = Math.floor(Math.random() * 2);
+    let decision = "";
+    if (gameMode.lastEnemyChoice === "punch" && gameMode.lastPlayerChoice === "punch") {
+        decision = "reload";
+        // document.getElementById("enemyAction").innerHTML = "reload"; //missing piece from last mode's algo to this one
+    } else if (choice === 0) {
+        decision = "punch";
+    } else (choice === 1) {
+        decision = "reload"
+    }
+    gameMode.lastEnemyChoice = decision
+    return decision
+}
+
+
+
+// const enemyChoiceMedium = () => {
+//     if (player.loaded === 0 && enemy.loaded === 0) (
+
+// ) else if (player.loaded === 1 && enemy.loaded === 1) {
+
+//     }
+
+// }
 
 
 
