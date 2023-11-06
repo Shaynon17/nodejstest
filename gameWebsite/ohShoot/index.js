@@ -261,9 +261,6 @@ const shoot = () => {
         announce2("But they do now...")
         enemy.loaded = 1;
         enemy.holster -= 1;
-
-// enemyReload()
-
     } else if (player.loaded === 1 && choice === "punch") {
         announce("BOOM! Take that free bullet!")
         enemy.holster -= 1;
@@ -292,6 +289,34 @@ const shoot = () => {
     updateScore()
     checkWinner()
 }
+
+//ABOVE is for easy mode (mode 1)
+//ABOVE is for easy mode (mode 1)
+//ABOVE is for easy mode (mode 1)
+//ABOVE is for easy mode (mode 1)
+//ABOVE is for easy mode (mode 1)
+//ABOVE is for easy mode (mode 1)
+
+
+function resetMedium() {
+    player.loaded = 1,
+        player.holster = 4,
+        enemy.loaded = 1,
+        enemy.holster = 4,
+        document.getElementById("enemyAction").innerHTML = '';
+    document.getElementById("playerChoice").innerHTML = '';
+    document.getElementById("playerLoaded").innerHTML = 1;
+    document.getElementById("playerHolster").innerHTML = 4;
+    document.getElementById("announce").innerHTML = "First one to have all 10 bullets is the winner";
+    document.getElementById("announce2").innerHTML = "";
+    document.getElementById("enemyLoaded").innerHTML = 1;
+    document.getElementById("enemyHolster").innerHTML = 4;
+}
+
+
+
+
+
 
 
 
