@@ -51,7 +51,8 @@ open git and type: npx localview --port 5500
 
 <div class="home_tutorials">
         <button onclick="resetEasy()">Easy</button> &nbsp&nbsp&nbsp&nbsp&nbsp
-        <button onclick="resetMedium()" >Medium</button>
+        <button onclick="resetMedium()" >Medium</button> <br>
+        <label>Moves made: <span id="movesMade">0</span></label>
 
     </div>
 
@@ -87,10 +88,10 @@ open git and type: npx localview --port 5500
 
     </div>
     
-    <!-- <div class="rules=">
+    <div class="rules">
     
         <h3>Rules</h3><br>
-        <p>First player to have all 10 bullets wins
+        <p id="writtenRules">First player to have all 10 bullets wins
             <br><br>
             Reloading removes a bullet from your holster and reloads you. You may only have one bullet loaded at a time.
             <br><br>
@@ -104,7 +105,7 @@ open git and type: npx localview --port 5500
             you take a bullet from their holster. If you punch someone who is reloading, you cancel their reload.
         </p>
         <br><br>
-    </div> -->
+    </div>
 
 
 
