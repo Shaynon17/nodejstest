@@ -520,7 +520,8 @@ const punchMedium = () => {
 
 
 
-
+//Really isnt a difference between this and shootEasy(). 
+//However, i will keep it here until the game is commpletley done then refactor (delete) if needed
 const shootMedium = () => {
     playerChoice("shoot")
     let choice = enemyChoiceEasy(); //shuld return a decision
