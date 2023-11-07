@@ -59,6 +59,7 @@ const preparative = () => {
         decision = 'block'
         document.getElementById("enemyAction").innerHTML = "blocked"
     }
+    gameMode.lastEnemyChoice = decision;
     return decision
 }
 
@@ -77,6 +78,7 @@ const aggressive = () => {
         decision = 'block'
         document.getElementById("enemyAction").innerHTML = "blocked"
     }
+    gameMode.lastEnemyChoice = decision;
     return decision
 }
 
@@ -95,6 +97,7 @@ const defensive = () => {
         decision = 'block'
         document.getElementById("enemyAction").innerHTML = "blocked"
     }
+    gameMode.lastEnemyChoice = decision;
     return decision
     // return decision && document.getElementById("enemyAction").innerHTML = `${decision}`
 }
