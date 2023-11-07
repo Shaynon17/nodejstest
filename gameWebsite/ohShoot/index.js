@@ -423,7 +423,7 @@ const reloadMedium = () => {
         player.holster -= 1;
         announce("You both reloaded");
     } else if (choice === "shoot") {
-        announce("You got shot! You lose one bullet from your holster(test)");
+        announce("You got shot! You lose one bullet from your holster");
         player.holster -= 2;
         player.loaded = 1;
         enemy.holster += 2;
@@ -594,7 +594,7 @@ const shoot = () => {
 const defensiveAggresion = () => {
     let choice = Math.floor(Math.random() * 2);
     let decision = "";
-    if (gameMode.lastEnemyChoice === "punch" && gameMode.lastPlayerChoice === "punch") {
+    if (gameMode.lastEnemyChoice === "punch") {
         decision = "reload";
         // document.getElementById("enemyAction").innerHTML = "reload"; //missing piece from last mode's algo to this one
     } else if (choice === 0) {
@@ -605,6 +605,9 @@ const defensiveAggresion = () => {
     gameMode.lastEnemyChoice = decision
     return decision
 }
+//took out  `&& gameMode.lastPlayerChoice === "punch"` from the if statment
+//since neither can punch twice in a row
+
 
 
 // Algorithm 2.2 mixedAction
@@ -613,7 +616,7 @@ const defensiveAggresion = () => {
 const mixedAction = () => {
     let choice = Math.floor(Math.random() * 2);
     let decision = "";
-    if (gameMode.lastEnemyChoice === "punch" && gameMode.lastPlayerChoice === "punch") {
+    if (gameMode.lastEnemyChoice === "punch") {
         mixedActionPunched()
     } else if (choice === 0) {
         decision = "block"
@@ -627,6 +630,10 @@ const mixedAction = () => {
     gameMode.lastEnemyChoice = decision
     return decision
 }
+//took out  `&& gameMode.lastPlayerChoice === "punch"` from the if statment
+//since neither can punch twice in a row
+
+
 
 //2.2P
 const mixedActionPunched = () => {
@@ -649,7 +656,7 @@ const mixedActionPunched = () => {
 const defensiveMedium = () => {
     let choice = Math.floor(Math.random() * 5);
     let decision = "";
-    if (gameMode.lastEnemyChoice === "punch" && gameMode.lastPlayerChoice === "punch") {
+    if (gameMode.lastEnemyChoice === "punch") {
         defensiveMediumPunched() //2.3.P
     } else if (choice < 2) {
         decision = "reload";
@@ -661,6 +668,9 @@ const defensiveMedium = () => {
     gameMode.lastEnemyChoice = decision;
     return decision;
 }
+//took out  `&& gameMode.lastPlayerChoice === "punch"` from the if statment
+//since neither can punch twice in a row
+
 
 //2.3P
 const defensiveMediumPunched = () => {
@@ -681,7 +691,7 @@ const defensiveMediumPunched = () => {
 const aggresivemedium = () => {
     let choice = Math.floor(Math.random() * 2);
     let decision = "";
-    if (gameMode.lastEnemyChoice === "punch" && gameMode.lastPlayerChoice === "punch") { //2.4.P
+    if (gameMode.lastEnemyChoice === "punch") { //2.4.P
         decision = "shoot";
     } else if (choice === 0) {
         decision = "shoot";
@@ -691,9 +701,8 @@ const aggresivemedium = () => {
     gameMode.lastEnemyChoice = decision;
     return decision;
 }
-
-
-
+//took out  `&& gameMode.lastPlayerChoice === "punch"` from the if statment
+//since neither can punch twice in a row
 
 
 const enemyChoiceMedium = () => {
