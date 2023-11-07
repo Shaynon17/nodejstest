@@ -521,6 +521,69 @@ const punchMedium = () => {
 
 
 
+const shootMedium = () => {
+    playerChoice("shoot")
+    let choice = enemyChoiceEasy(); //shuld return a decision
+     if (player.loaded === 1 && choice === "block") {
+        announce("Miss! The enemy blocked! Time to reload")
+        player.loaded = 0;
+        player.holster += 1;
+        clearAnnounce2();
+    } else if (player.loaded === 1 && choice === "reload") {
+        announce("Good shot! Enjoy that prize bullet!")
+        player.loaded = 0;
+        player.holster += 2;
+        enemy.holster -= 2;
+        enemy.loaded = 1;
+        clearAnnounce2()
+    } else if (player.loaded === 0 && choice === "reload") {
+        announce("CLICK! You didn't have a bullet loaded!");
+        announce2("But they do now...")
+        enemy.loaded = 1;
+        enemy.holster -= 1;
+    } else if (player.loaded === 1 && choice === "punch") {
+        announce("BOOM! Take that free bullet!")
+        enemy.holster -= 1;
+        player.holster += 2;
+        player.loaded = 0;
+        clearAnnounce2()
+    } else if (player.loaded === 0 && choice === "punch") {
+        announce("CLICK! You didn't have a bullet loaded! That would have gone in your favor...");
+        announce2("The enemy gets a free bullet from your mistake.")
+        enemy.holster += 1;
+        player.holster -= 1;
+    } else if (player.loaded === 1 && choice === "shoot") {
+        announce("You both shot and negated the other");
+        player.loaded = 0;
+        player.holster += 1;
+        enemy.loaded = 0;
+        enemy.holster += 1
+        clearAnnounce2()
+    } else if (player.loaded === 0 && choice === "shoot") {
+        announce("CLICK! You didn't have a bullet loaded!");
+        announce2("Thats rough, lose 1 bullet")
+        enemy.loaded = 0;
+        enemy.holster += 2
+        player.holster -= 1;
+    }
+    clearAnnounce2()
+    updateScore()
+    checkWinner()
+}
+
+const shoot = () => {
+    gameMode.moves += 1;
+    if (gameMode.difficulty === "Easy") {
+    shootEasy();
+    } else if (gameMode.difficulty === "Medium") {
+    shootMedium();
+    } else {
+        announce("error in shoot()")
+    }
+}
+
+
+
 //alrogruthms for medium below
 
 
@@ -611,10 +674,10 @@ const defensiveMediumPunched = () => {
     return decision;
 }
 
-// Algorithm 2.4 aggresiveMeidum
+// Algorithm 2.4 aggresivemedium
 // Neither loaded. Shoot: 50%, Punch: 50%.
 // 2.4.P Shoot: 100%
-const aggresiveMeidum = () => {
+const aggresivemedium = () => {
     let choice = Math.floor(Math.random() * 2);
     let decision = "";
     if (gameMode.lastEnemyChoice === "punch" && gameMode.lastPlayerChoice === "punch") { //2.4.P
@@ -638,7 +701,7 @@ const enemyChoiceMedium = () => {
     } else if (player.loaded === 1 && enemy.loaded === 1) {
        return mixedAction();
     } else if (player.loaded === 0 && enemy.loaded === 1) {
-       return aggresiveMeidum();
+       return aggresivemedium();
     } else if (player.loaded === 1 && enemy.loaded === 0) {
        return defensiveMedium();
     } else (
@@ -648,25 +711,6 @@ const enemyChoiceMedium = () => {
 
 
 
-
-
-
-//just so the easy version still works for now until  medium is complete.
-
-
-
-const shoot = () => {
-    gameMode.moves += 1;
-    shootEasy();
-
-    // if (gameMode.difficulty === "Easy") {
-    // shootEasy();
-    // } else if (gameMode.difficulty === "Medium") {
-    // announce("have not coded punchMedium() yet")
-    // } else {
-    //     announce("error in shoot()")
-    // }
-}
 
 
 
