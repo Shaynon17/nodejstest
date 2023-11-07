@@ -9,6 +9,8 @@ function resetEasy() {
         enemy.loaded = 0,
         enemy.holster = 5,
         gameMode.difficulty = "Easy";
+    gameMode.lastEnemyChoice = '';
+    gameMode.lastPlayerChoice = '';
     document.getElementById("enemyAction").innerHTML = '';
     document.getElementById("playerChoice").innerHTML = '';
     document.getElementById("playerLoaded").innerHTML = 0;
@@ -154,7 +156,12 @@ const updateScore = () => {
     document.getElementById("playerHolster").innerHTML = player.holster;
     document.getElementById("enemyLoaded").innerHTML = enemy.loaded
     document.getElementById("enemyHolster").innerHTML = enemy.holster;
-    document.getElementById("enemyAction").innerHTML = gameMode.lastEnemyChoice
+
+    if (gameMode.lastEnemyChoice === "shoot") {
+        document.getElementById("enemyAction").innerHTML = "shot"
+    } else {
+        document.getElementById("enemyAction").innerHTML = gameMode.lastEnemyChoice + 'ed'
+    }
 }
 
 const checkWinner = () => {
@@ -362,6 +369,8 @@ function resetMedium() {
         enemy.loaded = 1,
         enemy.holster = 4,
         gameMode.difficulty = "Medium";
+    gameMode.lastEnemyChoice = '';
+    gameMode.lastPlayerChoice = '';
     document.getElementById("enemyAction").innerHTML = '';
     document.getElementById("playerChoice").innerHTML = '';
     document.getElementById("playerLoaded").innerHTML = player.loaded;
@@ -480,11 +489,15 @@ const punch = () => {
 
 //Havnt gone through all of the details yet. Work on this next
 const punchMedium = () => {
+    if (gameMode.lastPlayerChoice === "punched" ) {
+        gameMode.moves -= 1;
+        return alert('You may not punch twice in a row');
+        // announce("You can't keep punching each other. Let your hand recover!");
+    }
+    console.log(gameMode.lastPlayerChoice, gameMode.lastEnemyChoice)
     playerChoice("punched")
     let choice = enemyChoiceMedium(); //shuld return a decision
-    if(gameMode.lastPlayerChoice === "punched" && gameMode.lastEnemyChoice === "punched") {
-        announce("You can't keep punching each other. Let your hand recover!")
-    } else if (choice === "punch") {
+    if (choice === "punch") {
         announce("I bet that hurt! Nothing significant happens")
     } else if (choice === "block") {
         enemy.holster -= 1;
@@ -644,13 +657,15 @@ const enemyChoiceMedium = () => {
 
 const shoot = () => {
     gameMode.moves += 1;
-    if (gameMode.difficulty === "Easy") {
     shootEasy();
-    } else if (gameMode.difficulty === "Medium") {
-    announce("have not coded punchMedium() yet")
-    } else {
-        announce("error in shoot()")
-    }
+
+    // if (gameMode.difficulty === "Easy") {
+    // shootEasy();
+    // } else if (gameMode.difficulty === "Medium") {
+    // announce("have not coded punchMedium() yet")
+    // } else {
+    //     announce("error in shoot()")
+    // }
 }
 
 
