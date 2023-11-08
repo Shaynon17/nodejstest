@@ -11,8 +11,8 @@ function resetEasy() {
         gameMode.difficulty = "Easy";
     gameMode.lastEnemyChoice = '';
     gameMode.lastPlayerChoice = '';
-    document.getElementById("enemyAction").innerHTML = '';
-    document.getElementById("playerChoice").innerHTML = '';
+    document.getElementById("enemyAction").innerHTML = '...';
+    document.getElementById("playerChoice").innerHTML = 'Pick Your Card';
     document.getElementById("playerLoaded").innerHTML = 0;
     document.getElementById("playerHolster").innerHTML = 5;
     document.getElementById("announce").innerHTML = "First one to have all 10 bullets is the winner";
@@ -146,9 +146,12 @@ function announce(string) {
 
 
 const playerChoice = (choice) => {
-    document.getElementById("playerChoice").innerHTML = choice
     gameMode.lastPlayerChoice = choice //needed for medium mode
+    document.getElementById("playerChoice").innerHTML = capFirstLetter(choice);
 }
+
+//capFirstLetter allows the actions to be returned capitalized
+const capFirstLetter = (input) => input.charAt(0).toUpperCase() + input.slice(1);
 
 //used for all modes
 const updateScore = () => {
@@ -158,9 +161,9 @@ const updateScore = () => {
     document.getElementById("enemyHolster").innerHTML = enemy.holster;
 
     if (gameMode.lastEnemyChoice === "shoot") {
-        document.getElementById("enemyAction").innerHTML = "shot"
+        document.getElementById("enemyAction").innerHTML = "Shot"
     } else {
-        document.getElementById("enemyAction").innerHTML = gameMode.lastEnemyChoice + 'ed'
+        document.getElementById("enemyAction").innerHTML = capFirstLetter(gameMode.lastEnemyChoice) + 'ed'
     }
 }
 
@@ -371,8 +374,8 @@ function resetMedium() {
         gameMode.difficulty = "Medium";
     gameMode.lastEnemyChoice = '';
     gameMode.lastPlayerChoice = '';
-    document.getElementById("enemyAction").innerHTML = '';
-    document.getElementById("playerChoice").innerHTML = '';
+    document.getElementById("enemyAction").innerHTML = '...';
+    document.getElementById("playerChoice").innerHTML = 'Pick Your Card';
     document.getElementById("playerLoaded").innerHTML = player.loaded;
     document.getElementById("playerHolster").innerHTML = player.holster;
     document.getElementById("announce").innerHTML = "First one to have all 10 bullets is the winner";
