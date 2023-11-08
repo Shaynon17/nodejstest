@@ -155,12 +155,12 @@
 
 .playerCards {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     /* background-color: pink; */
 }
 
 .playerCards {
-    height: 200px;
+    height: 150px;
 }
 
 /* .shootCard {
@@ -168,4 +168,11 @@
 } */
 
 /* Above is the CSS for the cards */
+/*/////////////////////////////////////////////////////*/
+/* Below is the CSS for the rules*/
+
+.rules {
+    margin-top: 10px;
+    text-align: center;
+}
 
