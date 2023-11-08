@@ -107,18 +107,38 @@
     padding: 15px;
 } */
 
-
-
-
-
-/* above is CSS for oh SHOOT! */
-/* Below is some left over old */
  .main {
-        margin-top: 90px;
+     padding: 20px;
+     /* temporary to visualize box */
+     background-color: red;
+     margin-top: 90px;
      /* position: relative; */
      /* text-align: center; */
      /* padding-top: 40px; */
      /* padding-bottom: 20px; */
      /* font-size: 50px; */
  }
+
+.mainYou {
+    background-color: yellow;
+}
+
+.mainYourCard {
+    background-color: blueviolet;
+}
+
+.mainMenu {
+    background-color: orange;
+}
+
+.mainEnemyCard {
+    background-color: green;
+}
+
+.mainEnemy {
+    background-color: grey;
+}
+
+/* above is CSS for oh SHOOT! */
+
 

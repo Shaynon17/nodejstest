@@ -25,10 +25,10 @@ open git and type: npx localview --port 5500
             </div>
             <ul class="navigation">
                 <a href="index.html">
-                    <li>Home</li>
+                    <!-- <li>Home</li> -->
                 </a>
                 <a href="aztutorials.html">
-                    <li>A-Z Tutorials</li>
+                    <!-- <li>A-Z Tutorials</li> -->
                 </a>
                 <a rel="nofollow" target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=3R6SK3PHRWMT8">
                     <li><span class="donate_button"></span></li>
@@ -43,43 +43,54 @@ open git and type: npx localview --port 5500
 <!-- //////////////////////////////////////////////////////////////////////////////////// -->
 
     
+<!-- 
+mainYou
+mainYourCard
+mainMenu
+mainEnemyCard
+mainEnemy 
+-->
 
     <div class="main">
-        <h1  >Oh Shoot!</h1>
-        <h3 >Current Mode: <span id="mode">Easy</span></h3>        
-        <!-- <button class="resetBtn" onclick="resetEasy()">Reset</button> -->
-    </div><br>
-
-<div >
-        <button onclick="resetEasy()">Easy</button> &nbsp&nbsp&nbsp&nbsp&nbsp
-        <button onclick="resetMedium()" >Medium</button> <br>
-        <label>Moves made: <span id="movesMade">0</span></label>
-
-    </div>
-
-<div ><br>
-    <h3>Enemy <label id="enemyAction"></label></h3><br>
-    <h3></h3>
-    <h3>
-        Loaded:&nbsp<label id="enemyLoaded">0</label><br>
-        Holster:&nbsp<label id="enemyHolster">5</label>
-    </h3><br>
-</div>
-    </div>
-    <div >
-<label id="announce">First one to have all 10 bullets is the winner</label><br>
-<label id="announce2"></label>
-
-    </div><br><br>
-<div >
-
-    <h3>You <span><label id="playerChoice"></label></h3></span></h3><br>
-        <h3>
-
-    <h3>
-        Loaded:&nbsp<label id="playerLoaded">0</label><br>
-        Holster:&nbsp<label id="playerHolster">5</label>
-    </h3><br>
+        <!-- spacer -->
+        <div class="mainYou">
+            <h3>You </h3>
+            <label id="playerChoice">playerchoice/placeholder</label>
+            <p>
+                Loaded:&nbsp<label id="playerLoaded">0</label><br>
+                Holster:&nbsp<label id="playerHolster">5</label>
+            </p><br>
+        </div>
+        <!-- spacer -->
+        <div class="mainYourCard">
+            <p>player hand picture goes here</p>
+        </div>
+        <!-- spacer -->
+        <div class="mainMenu">
+            <h1>Oh Shoot!</h1>
+            <h3>Current Mode: <span id="mode">Easy</span></h3>
+            <!-- <button class="resetBtn" onclick="resetEasy()">Reset</button> -->
+            <button onclick="resetEasy()">Easy</button> &nbsp&nbsp&nbsp&nbsp&nbsp
+            <button onclick="resetMedium()">Medium</button> <br>
+            <label>Moves made: <span id="movesMade">0</span></label><br>
+            <label id="announce">First one to have all 10 bullets is the winner</label><br>
+            <label id="announce2">PLACEHOLDER</label>
+            </div>
+            <!-- spacer -->
+            <div class="mainEnemyCard">
+                <p>enemy hand picture goes here</p>
+            </div>
+            <!-- spacer -->
+            <div class="mainEnemy">
+                <h3>Enemy</h3>
+                <label id="enemyAction">enemy action placeholder</label>
+                <p>
+                    Loaded: <label id="enemyLoaded">0</label><br>
+                    Holster: <label id="enemyHolster">5</label>
+                </p>
+                </div>
+</div><br>
+         <!-- ///////////////////////// below is in correct order ///////////////////////// -->
 
     <div class="action_Buttons">
         <button class="ohShootBtns" onclick="reload()" id="reloadBtn">Reload</button>
