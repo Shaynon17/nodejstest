@@ -108,10 +108,14 @@
 } */
 
  .main {
-     padding: 20px;
-     /* temporary to visualize box */
+    padding: 20px;
+    display: flex;
+        justify-content: space-evenly;
      background-color: red;
      margin-top: 90px;
+            /* align-items: center; */
+            /* align-content:baseline */
+    /* temporary to visualize box */
      /* position: relative; */
      /* text-align: center; */
      /* padding-top: 40px; */
@@ -120,7 +124,12 @@
  }
 
 .mainYou {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
     background-color: yellow;
+    /* align-content: space-between */
 }
 
 .mainYourCard {
@@ -128,6 +137,10 @@
 }
 
 .mainMenu {
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
     background-color: orange;
 }
 
@@ -136,6 +149,10 @@
 }
 
 .mainEnemy {
+    display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
     background-color: grey;
 }
 
