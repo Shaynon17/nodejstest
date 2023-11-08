@@ -107,6 +107,7 @@
 .mainYourCard {
     min-width: 12%;
     max-width: 12%;
+    padding: 10px 15px;
         /* background-color: blueviolet; */
 }
 
@@ -134,6 +135,7 @@
 .mainEnemyCard {
     min-width: 12%;
     max-width: 12%;
+        padding: 10px 15px;
     /* background-color: green; */
 }
 
