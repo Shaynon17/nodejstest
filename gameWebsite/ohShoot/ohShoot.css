@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #101010;
+}
+
+.inner_header {
+    padding-left: 30px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+.logo_container {
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo_container h1 {
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.donate_button {
+    color: #65ff00;
+    padding: 2px 2px;
+    padding-right: 35px;
+}
+
+.logo_container h1 span {
+    font-weight: 800;
+}
+
+.navigation {
+    float: right;
+    height: 100%;
+}
+
+.navigation a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a:last-child {
+    padding-right: 0;
+}
+
+.navigation a li {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-size: 30px;
+}
+
+.navigation a li:hover {
+    opacity: 0.5;
+}
+
+/* Above is the CSS for the header */
+
+
+
+
+
+
+
+#announce {
+    font-size: 25px;
+
+}
+
+#announce2 {
+    font-size: 20px;
+
+}
+
+.ohShootBtns {
+    /* color: red; */
+    padding: 15px 25px 15px;
+}
+
+/* .resetBtn {
+    color: red;
+    padding: 15px;
+} */
+
+
+
+
+
+/* above is CSS for oh SHOOT! */
+/* Below is some left over old */
+ .main {
+        margin-top: 90px;
+     /* position: relative; */
+     /* text-align: center; */
+     /* padding-top: 40px; */
+     /* padding-bottom: 20px; */
+     /* font-size: 50px; */
+ }
+
