@@ -83,8 +83,14 @@
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
 /* Below is the css for the scoreboard area */
 
+
+.ohShootTitle {
+        margin-top: 80px;
+        text-align: center;
+}
+
  .main {
-    margin-top: 80px;
+    /* margin-top: 80px; */
     max-height: 300px;
     display: flex;
     justify-content: space-evenly;
@@ -117,20 +123,21 @@
 } */
 
 .mainMenu {
+    padding: 40px;
     min-width: 32%;
     max-width: 32%;
     text-align: center;
     /* background-color: orange; */
 }
 
-.comments {
+/* .comments { */
             /* text-align: center; */
     /* display: flex;
         flex-direction: column;
             align-content: space-between; */
-        margin-top: 5px;
+        /* margin-top: 5px; */
     /* background-color: pink; */
-}
+/* } */
 
 .mainEnemyCard {
     min-width: 12%;

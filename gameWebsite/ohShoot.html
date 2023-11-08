@@ -50,13 +50,13 @@ mainMenu
 mainEnemyCard
 mainEnemy 
 -->
-<!-- <div class="ohShootTitle">
+<div class="ohShootTitle">
     <h1>Oh Shoot!</h1>
-</div> -->
+</div>
     <div class="main">
         <!-- Player Card Below -->
         <div class="mainYou">
-            <h3>You</h3>
+            <h2>You</h2>
             <label id="playerChoice">Pick Your Card</label>
             <p>
                 Loaded: <label id="playerLoaded">0</label><br>
@@ -69,21 +69,18 @@ mainEnemy
         
         <!-- Main Menu -->
         <div class="mainMenu">
-            <h1>Oh Shoot!</h1>
-            <h3>Current Mode: <span id="mode">Easy</span></h3>
-            <!-- <button class="resetBtn" onclick="resetEasy()">Reset</button> -->
-           <div><button onclick="resetEasy()">Easy</button> &nbsp&nbsp&nbsp&nbsp&nbsp
-            <button onclick="resetMedium()">Medium</button></div>
-            <label>Moves Made: <span id="movesMade">0</span></label>
-                <div class="comments">
-                <label id="announce">First one to have all 10 bullets is the winner</label>
-                </div>
+            <!-- <h1>Oh Shoot!</h1> -->
+            <h2>Current Mode: <span id="mode">Easy</span></h2>
+            <h3><label>Moves Made: <span id="movesMade">0</span></label></h3><br>
+            <button onclick="resetEasy()">Easy</button>
+            <button onclick="resetMedium()">Medium</button><br><br>
+            <label class="comments" id="announce">First one to have all 10 bullets is the winner</label>
             </div>
             <!-- Right Enemy Hand -->
                     <img class="mainEnemyCard" src="./images/rightHandBlank.png">
             <!-- Enemy Card -->
             <div class="mainEnemy">
-                <h3>Enemy</h3>
+                <h2>Enemy</h2>
                 <label id="enemyAction">...</label>
                 <p>
                     Loaded: <label id="enemyLoaded">0</label><br>
