@@ -111,19 +111,19 @@
 
  .main {
     /* padding: 5px; */
+    margin-top: 80px;
     max-height: 450px;
     display: flex;
-    justify-content:center;
-     background-color: red;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+     background-color: orangered;
         /* margin-top: 85px; */
  }
 
 
-
-
-
 .mainYou {
-    max-width: 14%;
+    min-width: 18%;
+    max-width: 18%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -133,11 +133,18 @@
 }
 
 .mainYourCard {
-    max-width: 20%;
+    min-width: 12%;
+    max-width: 12%;
         background-color: blueviolet;
 }
 
+/* .mainYouCard.img {
+   max-height: 100%;
+    max-width: 42%;
+} */
+
 .mainMenu {
+    min-width: 32%;
     max-width: 32%;
     display: flex;
     flex-direction: column;
@@ -147,11 +154,13 @@
 }
 
 .mainEnemyCard {
-    max-width: 20%;
+    min-width: 12%;
+    max-width: 12%;
     background-color: green;
 }
 
 .mainEnemy {
+    min-width: 18%;
     max-width: 18%;
     display: flex;
     flex-direction: column;
