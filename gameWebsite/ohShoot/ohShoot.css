@@ -80,40 +80,16 @@
 }
 
 /* Above is the CSS for the header */
-
-/* 
-#announce {
-    font-size: 25px;
-
-}
-
-#announce2 {
-    font-size: 20px;
-
-}
-
-.ohShootBtns {
-    padding: 15px 25px 15px;
-} */
-
-/* .resetBtn {
-    color: red;
-    padding: 15px;
-} */
-
-
-
-
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/* Below is the css for the scoreboard area */
 
  .main {
-    /* padding: 5px; */
     margin-top: 80px;
-    max-height: 450px;
+    max-height: 300px;
     display: flex;
-    /* justify-content: space-evenly; */
-    justify-content: center;
-     background-color: orangered;
-        /* margin-top: 85px; */
+    justify-content: space-evenly;
+    /* justify-content: center; */
+     /* background-color: orangered; */
  }
 
 
@@ -124,14 +100,14 @@
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
-    background-color: yellow;
+    /* background-color: yellow; */
     /* align-content: space-between */
 }
 
 .mainYourCard {
     min-width: 12%;
     max-width: 12%;
-        background-color: blueviolet;
+        /* background-color: blueviolet; */
 }
 
 /* .mainYouCard.img {
@@ -143,7 +119,7 @@
     min-width: 32%;
     max-width: 32%;
     text-align: center;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 .comments {
@@ -152,13 +128,13 @@
         flex-direction: column;
             align-content: space-between; */
         margin-top: 5px;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .mainEnemyCard {
     min-width: 12%;
     max-width: 12%;
-    background-color: green;
+    /* background-color: green; */
 }
 
 .mainEnemy {
@@ -168,23 +144,28 @@
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
-    background-color: grey;
+    /* background-color: grey; */
 }
-/* .handPicture {
-    max-width: 90%;
-    max-height: 150px;
+
+
+/* Above is the css for the scoreboard area */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Below is the CSS for the cards */
+
+
+.playerCards {
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: pink; */
+}
+
+.playerCards {
+    height: 200px;
+}
+
+/* .shootCard {
+    height: 150px;
 } */
 
-
-
-
-/* above is CSS for oh SHOOT! */
-/* align-items: center; */
-/* align-content:baseline */
-/* temporary to visualize box */
-/* position: relative; */
-/* text-align: center; */
-/* padding-top: 40px; */
-/* padding-bottom: 20px; */
-/* font-size: 50px; */
+/* Above is the CSS for the cards */
 
