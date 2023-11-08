@@ -81,12 +81,7 @@
 
 /* Above is the CSS for the header */
 
-
-
-
-
-
-
+/* 
 #announce {
     font-size: 25px;
 
@@ -98,32 +93,37 @@
 }
 
 .ohShootBtns {
-    /* color: red; */
     padding: 15px 25px 15px;
-}
+} */
 
 /* .resetBtn {
     color: red;
     padding: 15px;
 } */
 
+
+
+.ohShootTitle {
+    margin-top: 80px; /* change to 80px when finalizing */
+        text-align: center;
+}
+
+
  .main {
-    padding: 20px;
+    /* padding: 5px; */
+    max-height: 450px;
     display: flex;
-        justify-content: space-evenly;
+    justify-content:center;
      background-color: red;
-     margin-top: 90px;
-            /* align-items: center; */
-            /* align-content:baseline */
-    /* temporary to visualize box */
-     /* position: relative; */
-     /* text-align: center; */
-     /* padding-top: 40px; */
-     /* padding-bottom: 20px; */
-     /* font-size: 50px; */
+        /* margin-top: 85px; */
  }
 
+
+
+
+
 .mainYou {
+    max-width: 14%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -133,29 +133,47 @@
 }
 
 .mainYourCard {
-    background-color: blueviolet;
+    max-width: 20%;
+        background-color: blueviolet;
 }
 
 .mainMenu {
+    max-width: 32%;
     display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
     background-color: orange;
 }
 
 .mainEnemyCard {
+    max-width: 20%;
     background-color: green;
 }
 
 .mainEnemy {
+    max-width: 18%;
     display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
     background-color: grey;
 }
+/* .handPicture {
+    max-width: 90%;
+    max-height: 150px;
+} */
+
+
+
 
 /* above is CSS for oh SHOOT! */
-
+/* align-items: center; */
+/* align-content:baseline */
+/* temporary to visualize box */
+/* position: relative; */
+/* text-align: center; */
+/* padding-top: 40px; */
+/* padding-bottom: 20px; */
+/* font-size: 50px; */
 
