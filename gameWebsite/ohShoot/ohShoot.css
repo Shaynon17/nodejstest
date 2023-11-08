@@ -142,11 +142,17 @@
 .mainMenu {
     min-width: 32%;
     max-width: 32%;
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    justify-content: space-evenly;
     background-color: orange;
+}
+
+.comments {
+            /* text-align: center; */
+    /* display: flex;
+        flex-direction: column;
+            align-content: space-between; */
+        margin-top: 5px;
+    background-color: pink;
 }
 
 .mainEnemyCard {

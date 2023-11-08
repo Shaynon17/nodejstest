@@ -16,7 +16,7 @@ function resetEasy() {
     document.getElementById("playerLoaded").innerHTML = 0;
     document.getElementById("playerHolster").innerHTML = 5;
     document.getElementById("announce").innerHTML = "First one to have all 10 bullets is the winner";
-    document.getElementById("announce2").innerHTML = "";
+    // document.getElementById("announce2").innerHTML = "";
     document.getElementById("enemyLoaded").innerHTML = 0;
     document.getElementById("enemyHolster").innerHTML = 5;
     document.getElementById("mode").innerHTML = gameMode.difficulty;
@@ -220,8 +220,6 @@ const reloadEasy = () => {
     } else {
         announce("Bug in code => check reload function")
     }
-
-    clearAnnounce2()
     updateScore() //needed?
     checkWinner()
 }
@@ -250,7 +248,6 @@ const blockEasy = () => {
         enemy.loaded = 0;
         // updateScore();
     }
-    clearAnnounce2()
     updateScore()
     checkWinner();
 }
@@ -274,18 +271,17 @@ const punchEasy = () => {
         enemy.holster += 2;
         enemy.loaded = 0;
     }
-    clearAnnounce2()
     updateScore()
     checkWinner()
 }
 
-const announce2 = (string) => {
-    document.getElementById("announce2").innerHTML = string
-}
+// const announce2 = (string) => {
+//     document.getElementById("announce2").innerHTML = string
+// }
 
-const clearAnnounce2 = () => {
-    document.getElementById("announce2").innerHTML = ""
-}
+// const clearAnnounce2 = () => {
+//     document.getElementById("announce2").innerHTML = ""
+// }
 
 
 //"shoot" onClick
@@ -293,23 +289,21 @@ const shootEasy = () => {
     playerChoice("shot")
     let choice = enemyChoiceEasy(); //shuld return a decision
     if (player.loaded === 0 && choice === "block") {
-        announce("CLICK! You didn't have a bullet loaded!");
-        announce2("Oh well, they blocked anyway");
+        announce("CLICK! You didn't have a bullet loaded! <br> Oh well, they blocked anyway");
+        // announce2("Oh well, they blocked anyway");
     } else if (player.loaded === 1 && choice === "block") {
         announce("Miss! What a waste of a shot! Time to reload")
         player.loaded = 0;
         player.holster += 1;
-        clearAnnounce2();
     } else if (player.loaded === 1 && choice === "reload") {
         announce("Good shot! Enjoy that prize bullet!")
         player.loaded = 0;
         player.holster += 2;
         enemy.holster -= 2;
         enemy.loaded = 1;
-        clearAnnounce2()
     } else if (player.loaded === 0 && choice === "reload") {
-        announce("CLICK! You didn't have a bullet loaded!");
-        announce2("But they do now...")
+        announce("CLICK! You didn't have a bullet loaded! <br> But they do now...");
+        // announce2("But they do now...")
         enemy.loaded = 1;
         enemy.holster -= 1;
     } else if (player.loaded === 1 && choice === "punch") {
@@ -317,10 +311,9 @@ const shootEasy = () => {
         enemy.holster -= 1;
         player.holster += 2;
         player.loaded = 0;
-        clearAnnounce2()
     } else if (player.loaded === 0 && choice === "punch") {
-        announce("CLICK! You didn't have a bullet loaded! That would have gone in your favor...");
-        announce2("The enemy gets a free bullet from your mistake.")
+        announce("CLICK! You didn't have a bullet loaded! That would have gone in your favor... The enemy gets a free bullet from your mistake.");
+        // announce2("The enemy gets a free bullet from your mistake.")
         enemy.holster += 1;
         player.holster -= 1;
     } else if (player.loaded === 1 && choice === "shoot") {
@@ -329,10 +322,9 @@ const shootEasy = () => {
         player.holster += 1;
         enemy.loaded = 0;
         enemy.holster += 1
-        clearAnnounce2()
     } else if (player.loaded === 0 && choice === "shoot") {
-        announce("CLICK! You didn't have a bullet loaded!");
-        announce2("Thats rough, lose 1 bullet")
+        announce("CLICK! You didn't have a bullet loaded!<br>Thats rough, lose 1 bullet");
+        // announce2("Thats rough, lose 1 bullet")
         enemy.loaded = 0;
         enemy.holster += 2
         player.holster -= 1;
@@ -384,7 +376,7 @@ function resetMedium() {
     document.getElementById("playerLoaded").innerHTML = player.loaded;
     document.getElementById("playerHolster").innerHTML = player.holster;
     document.getElementById("announce").innerHTML = "First one to have all 10 bullets is the winner";
-    document.getElementById("announce2").innerHTML = "";
+    // document.getElementById("announce2").innerHTML = "";
     document.getElementById("enemyLoaded").innerHTML = enemy.loaded;
     document.getElementById("enemyHolster").innerHTML = enemy.holster;
     document.getElementById("mode").innerHTML = gameMode.difficulty;
@@ -437,7 +429,6 @@ const reloadMedium = () => {
     } else {
         announce("error in reloadMedium()")
     }
-    clearAnnounce2();
     updateScore();
     checkWinner();
 }
@@ -471,7 +462,6 @@ const blockMedium = () => {
     } else {
         announce("error in blockMedium()")
     }
-    clearAnnounce2()
     updateScore()
     checkWinner();
 }
@@ -513,7 +503,6 @@ const punchMedium = () => {
     } else {
         announce("error in punchMedium()")
     }
-    clearAnnounce2()
     updateScore()
     checkWinner()
 }
@@ -529,17 +518,15 @@ const shootMedium = () => {
         announce("Miss! The enemy blocked! Time to reload")
         player.loaded = 0;
         player.holster += 1;
-        clearAnnounce2();
     } else if (player.loaded === 1 && choice === "reload") {
         announce("Good shot! Enjoy that prize bullet!")
         player.loaded = 0;
         player.holster += 2;
         enemy.holster -= 2;
         enemy.loaded = 1;
-        clearAnnounce2()
     } else if (player.loaded === 0 && choice === "reload") {
-        announce("CLICK! You didn't have a bullet loaded!");
-        announce2("But they do now...")
+         announce("CLICK! You didn't have a bullet loaded!<br>But they do now...");
+        // announce2("")
         enemy.loaded = 1;
         enemy.holster -= 1;
     } else if (player.loaded === 1 && choice === "punch") {
@@ -547,10 +534,9 @@ const shootMedium = () => {
         enemy.holster -= 1;
         player.holster += 2;
         player.loaded = 0;
-        clearAnnounce2()
     } else if (player.loaded === 0 && choice === "punch") {
-        announce("CLICK! You didn't have a bullet loaded! That would have gone in your favor...");
-        announce2("The enemy gets a free bullet from your mistake.")
+         announce("CLICK! You didn't have a bullet loaded! That would have gone in your favor...<br>The enemy gets a free bullet from your mistake.");
+        // announce2("")
         enemy.holster += 1;
         player.holster -= 1;
     } else if (player.loaded === 1 && choice === "shoot") {
@@ -559,16 +545,13 @@ const shootMedium = () => {
         player.holster += 1;
         enemy.loaded = 0;
         enemy.holster += 1
-        clearAnnounce2()
     } else if (player.loaded === 0 && choice === "shoot") {
-        announce("CLICK! You didn't have a bullet loaded!");
-        announce2("Thats rough, lose 1 bullet")
+         announce("CLICK! You didn't have a bullet loaded!<br>Thats rough, lose 1 bullet");
+        // announce2("")
         enemy.loaded = 0;
         enemy.holster += 2
         player.holster -= 1;
     }
-
-    clearAnnounce2()
     updateScore()
     checkWinner()
 }
