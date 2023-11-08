@@ -153,18 +153,23 @@ const playerChoice = (choice) => {
 //capFirstLetter allows the actions to be returned capitalized
 const capFirstLetter = (input) => input.charAt(0).toUpperCase() + input.slice(1);
 
+
+const fixEnemyActionShoot = () => {
+    if (gameMode.lastEnemyChoice === "shoot") {
+        document.getElementById("enemyAction").innerHTML = "Shot"
+    } else {
+        document.getElementById("enemyAction").innerHTML = capFirstLetter(gameMode.lastEnemyChoice) + 'ed'
+    };
+}
+
+
 //used for all modes
 const updateScore = () => {
     document.getElementById("playerLoaded").innerHTML = player.loaded
     document.getElementById("playerHolster").innerHTML = player.holster;
     document.getElementById("enemyLoaded").innerHTML = enemy.loaded
     document.getElementById("enemyHolster").innerHTML = enemy.holster;
-
-    if (gameMode.lastEnemyChoice === "shoot") {
-        document.getElementById("enemyAction").innerHTML = "Shot"
-    } else {
-        document.getElementById("enemyAction").innerHTML = capFirstLetter(gameMode.lastEnemyChoice) + 'ed'
-    }
+    fixEnemyActionShoot(); //might move function insde of here instead of having it as a helper function
 }
 
 const checkWinner = () => {
@@ -285,7 +290,7 @@ const clearAnnounce2 = () => {
 
 //"shoot" onClick
 const shootEasy = () => {
-    playerChoice("shoot")
+    playerChoice("shot")
     let choice = enemyChoiceEasy(); //shuld return a decision
     if (player.loaded === 0 && choice === "block") {
         announce("CLICK! You didn't have a bullet loaded!");
@@ -402,7 +407,7 @@ const reloadMedium = () => {
     playerChoice("reloaded");
     let choice = enemyChoiceMedium();
 
-         announce("test this button")
+        //  announce("test this button")
 
     if (player.loaded === 1 && choice === "block") { 
         announce("You are already loaded, and the enemy blocked. Nothing happens");
@@ -433,7 +438,11 @@ const reloadMedium = () => {
         enemy.loaded = 0;
     } else if (choice === "punch") {
         announce("The enemy punched you and negated your reload");
-    } else {
+    } 
+    // else if (choice === "block") {
+    //     announce("found error in medium!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    // }
+     else {
         announce("error in reloadMedium()")
     }
 
@@ -526,7 +535,7 @@ const punchMedium = () => {
 //Really isnt a difference between this and shootEasy(). 
 //However, i will keep it here until the game is commpletley done then refactor (delete) if needed
 const shootMedium = () => {
-    playerChoice("shoot")
+    playerChoice("shot")
     let choice = enemyChoiceEasy(); //shuld return a decision
      if (player.loaded === 1 && choice === "block") {
         announce("Miss! The enemy blocked! Time to reload")
@@ -570,6 +579,7 @@ const shootMedium = () => {
         enemy.holster += 2
         player.holster -= 1;
     }
+
     clearAnnounce2()
     updateScore()
     checkWinner()
