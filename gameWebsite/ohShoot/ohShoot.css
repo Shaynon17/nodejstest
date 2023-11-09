@@ -83,6 +83,9 @@
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
 /* Below is the css for the scoreboard area */
 
+#gradient {
+    background-image: linear-gradient(to right, #cdffd8, #94b9ff);
+}
 
 .ohShootTitle {
         margin-top: 80px;
@@ -131,6 +134,10 @@
     /* background-color: orange; */
 }
 
+.movesMade {
+    margin-top: 5px;
+    font-size: 20px;
+}
 .modeButtons {
     margin-left: 10px;
     margin-right: 10px;
@@ -146,14 +153,9 @@
     background-color: orange;
     /* font-size: 110%; */
 }
-/* .comments { */
-            /* text-align: center; */
-    /* display: flex;
-        flex-direction: column;
-            align-content: space-between; */
-        /* margin-top: 5px; */
-    /* background-color: pink; */
-/* } */
+.comments {
+    font-size: 25px;
+}
 
 .mainEnemyCard {
     min-width: 12%;
@@ -171,6 +173,21 @@
     justify-content: space-evenly;
 }
 
+h2 {
+    font-size: 30px;
+}
+
+.playerEnemyChoice {
+    font-size: 25px;
+}
+
+.loadedHolster {
+    font-size: 25px;
+}
+
+.loadedHolster label {
+    font-weight: 900;
+}
 /* Above is the css for the scoreboard area */
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Below is the CSS for the cards */
