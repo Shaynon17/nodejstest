@@ -72,8 +72,8 @@ mainEnemy
             <!-- <h1>Oh Shoot!</h1> -->
             <h2>Current Mode: <span id="mode">Easy</span></h2>
             <h3><label>Moves Made: <span id="movesMade">0</span></label></h3><br>
-            <button class="modeButtons" onclick="resetEasy()">Easy</button>
-            <button onclick="resetMedium()">Normal</button><br><br>
+            <button class="modeButtons" onclick="resetEasy()"><strong>Easy</strong></button>
+            <button class="modeButtons" onclick="resetMedium()"><strong>Normal</strong></button><br><br>
             <label class="comments" id="announce">First one to have all 10 bullets is the winner</label>
             </div>
             <!-- Right Enemy Hand -->
@@ -91,10 +91,10 @@ mainEnemy
          <!-- ///////////////////////// below is in correct order ///////////////////////// -->
 
     <div class="playerCards">
-        <img class="shootCard" onclick="shoot()" src="./images/playerShootCard.png">
-        <img onclick="reload()" src="./images/playerReloadCard.png">
-        <img onclick="block()" src="./images/playerBlockCard.png">
-        <img onclick="punch()" src="./images/playerPunchCard.png">
+        <img class="actionCard" onclick="shoot()" src="./images/playerShootCard.png">
+        <img class="actionCard" onclick="reload()" src="./images/playerReloadCard.png">
+        <img class="actionCard" onclick="block()" src="./images/playerBlockCard.png">
+        <img class="actionCard" onclick="punch()" src="./images/playerPunchCard.png">
     </div>
     
     <!-- <button class="ohShootBtns" onclick="reload()" id="reloadBtn">Reload</button>

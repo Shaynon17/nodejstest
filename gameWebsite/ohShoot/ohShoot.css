@@ -89,6 +89,7 @@
         text-align: center;
 }
 
+
  .main {
     /* margin-top: 80px; */
     max-height: 300px;
@@ -130,6 +131,21 @@
     /* background-color: orange; */
 }
 
+.modeButtons {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 30%;
+    padding: 5px;
+    background-color: grey;
+    color: white;
+    font-size: 15px;
+    border: 2px solid black;
+}
+
+.modeButtons:hover {
+    background-color: orange;
+    /* font-size: 110%; */
+}
 /* .comments { */
             /* text-align: center; */
     /* display: flex;
@@ -147,15 +163,13 @@
 }
 
 .mainEnemy {
-    min-width: 18%;
-    max-width: 18%;
+    min-width: 14%;
+    max-width: 14%;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
-    /* background-color: grey; */
 }
-
 
 /* Above is the css for the scoreboard area */
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -165,16 +179,14 @@
 .playerCards {
     display: flex;
     justify-content: center;
-    /* background-color: pink; */
+        height: 150px;
 }
 
-.playerCards {
-    height: 150px;
-}
 
-/* .shootCard {
-    height: 150px;
-} */
+
+.actionCard:hover {
+opacity: 60%;
+}
 
 /* Above is the CSS for the cards */
 /*/////////////////////////////////////////////////////*/
