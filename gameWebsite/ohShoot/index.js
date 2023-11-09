@@ -178,6 +178,13 @@ const changeRightHand = () => {
 
 }
 
+//used to rename medium to normal without interfering with the code
+const mediumToNormal = () => {
+    if (gameMode.difficulty === "Medium") {
+        document.getElementById("mode").innerHTML = "Normal";
+    }
+}
+
 //used for all modes
 const updateScore = () => {
     document.getElementById("playerLoaded").innerHTML = player.loaded
@@ -186,6 +193,7 @@ const updateScore = () => {
     document.getElementById("enemyHolster").innerHTML = enemy.holster;
     fixEnemyActionShoot(); //might move function insde of here instead of having it as a helper function
     changeRightHand();
+    // mediumToNormal();
 }
 
 const checkWinner = () => {
@@ -377,7 +385,6 @@ const gameMode = {
     moves: 0,
 }
 
-
 function resetMedium() {
     gameMode.moves = 0;
     player.loaded = 1,
@@ -400,6 +407,7 @@ function resetMedium() {
     document.getElementById("mode").innerHTML = gameMode.difficulty;
     document.getElementById("movesMade").innerHTML = gameMode.moves;
     // document.getElementById("writtenRules").innerHTML = "Medium rules will go here...";
+    mediumToNormal();
 }
 
 
