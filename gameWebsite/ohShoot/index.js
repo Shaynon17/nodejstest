@@ -11,17 +11,19 @@ function resetEasy() {
         gameMode.difficulty = "Easy";
     gameMode.lastEnemyChoice = '';
     gameMode.lastPlayerChoice = '';
+    document.getElementById('leftHand').src = "./images/leftHandBlank.png";
+    document.getElementById('rightHand').src = "./images/rightHandBlank.png";
     document.getElementById("enemyAction").innerHTML = '...';
     document.getElementById("playerChoice").innerHTML = 'Pick Your Card';
     document.getElementById("playerLoaded").innerHTML = 0;
     document.getElementById("playerHolster").innerHTML = 5;
     document.getElementById("announce").innerHTML = "First one to have all 10 bullets is the winner";
-    // document.getElementById("announce2").innerHTML = "";
     document.getElementById("enemyLoaded").innerHTML = 0;
     document.getElementById("enemyHolster").innerHTML = 5;
     document.getElementById("mode").innerHTML = gameMode.difficulty;
     document.getElementById("movesMade").innerHTML = gameMode.moves;
 }
+
 
 //its possible to make it to where two punches mean they cant punch again,
 //have each objects have a key value pair of lastDecision: (insert last decision)
@@ -163,6 +165,19 @@ const fixEnemyActionShoot = () => {
 }
 
 
+const changeRightHand = () => {
+    if (gameMode.lastEnemyChoice === "block") {
+        document.getElementById('rightHand').src = "./images/RightBlock.png";
+    } else if (gameMode.lastEnemyChoice === "punch") {
+        document.getElementById('rightHand').src = "./images/RightPunch.png";
+    } else if (gameMode.lastEnemyChoice === "shoot") {
+        document.getElementById('rightHand').src = "./images/RightShoot.png";
+    } else if (gameMode.lastEnemyChoice === "reload") {
+        document.getElementById('rightHand').src = "./images/RightReload.png";
+    }
+
+}
+
 //used for all modes
 const updateScore = () => {
     document.getElementById("playerLoaded").innerHTML = player.loaded
@@ -170,6 +185,7 @@ const updateScore = () => {
     document.getElementById("enemyLoaded").innerHTML = enemy.loaded
     document.getElementById("enemyHolster").innerHTML = enemy.holster;
     fixEnemyActionShoot(); //might move function insde of here instead of having it as a helper function
+    changeRightHand();
 }
 
 const checkWinner = () => {
@@ -371,6 +387,8 @@ function resetMedium() {
         gameMode.difficulty = "Medium";
     gameMode.lastEnemyChoice = '';
     gameMode.lastPlayerChoice = '';
+    document.getElementById('leftHand').src = "./images/leftHandBlank.png";
+    document.getElementById('rightHand').src = "./images/rightHandBlank.png";
     document.getElementById("enemyAction").innerHTML = '...';
     document.getElementById("playerChoice").innerHTML = 'Pick Your Card';
     document.getElementById("playerLoaded").innerHTML = player.loaded;
@@ -386,6 +404,7 @@ function resetMedium() {
 
 
 const reload = () => {
+    document.getElementById('leftHand').src = "./images/LeftReload.png";
     gameMode.moves += 1;
     if (gameMode.difficulty === "Easy") {
         reloadEasy()
@@ -435,6 +454,7 @@ const reloadMedium = () => {
 
 
 const block = () => {
+    document.getElementById('leftHand').src = "./images/LeftBlock.png";
     gameMode.moves += 1;
     if (gameMode.difficulty === "Easy") {
         blockEasy()
@@ -469,6 +489,7 @@ const blockMedium = () => {
 
 
 const punch = () => {
+    document.getElementById('leftHand').src = "./images/LeftPunch.png";
     gameMode.moves += 1;
     if (gameMode.difficulty === "Easy") {
         punchEasy()
@@ -557,6 +578,7 @@ const shootMedium = () => {
 }
 
 const shoot = () => {
+    document.getElementById('leftHand').src = "./images/leftShoot.png";
     gameMode.moves += 1;
     if (gameMode.difficulty === "Easy") {
     shootEasy();
