@@ -95,6 +95,8 @@
 
  .main {
     /* margin-top: 80px; */
+    margin-left: 15%;
+    margin-right: 15%;
     max-height: 300px;
     display: flex;
     justify-content: space-evenly;
@@ -165,7 +167,7 @@
     /* font-size: 110%; */
 }
 .comments {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .mainEnemy {
