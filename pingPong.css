@@ -1,0 +1,22 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: red; */
+    text-align: center;
+    width: 25%;
+}
+
+
+button {
+    width: 25%;
+}
+
+label {
+    font-size: 50px;
+}
+
+input {
+    padding: 10px;
+    /* font: 151px; */
+}

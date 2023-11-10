@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello, world!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="pingPong.css" />
+    <script src="pingPong.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <h1>PING PONG SCOREBOARD</h1><br>
+        <label id="player1">0</label><br>
+        <input><br>
+        <div>
+            <button onclick="increasePlayer1()" >+1</button>
+            <button onclick="decreasePlayer1()" >-1</button><br><br>
+        </div>
+
+        <label id="player2">0</label><br>
+        <input><br>
+        <div>
+            <button onclick="increasePlayer2()">+1</button>
+            <button onclick="decreasePlayer2()">-1</button><br><br>
+        </div>
+        <br>
+
+
+        <button onclick="resetGame()" >Reset</button>
+
+    </div>
+
+</body>
+
+</html>
