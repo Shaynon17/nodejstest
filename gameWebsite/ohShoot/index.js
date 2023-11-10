@@ -1,6 +1,17 @@
 // must be in this directiory PS C:\Users\shann\coding\nodejstest\gameWebsite\ohShoot> then to rune code type in terminal: node index.js
 
 
+//alert box
+const rulesBoxClose = () => {
+ document.getElementById("rulesBox").style.display = "none";
+}
+
+const rulesBoxOpen = () => {
+    document.getElementById("rulesBox").style.display = "flex";
+}
+
+
+
 //resets the game and all innerHTML elements to specified values
 function resetEasy() {
     gameMode.moves = 0;
@@ -26,6 +37,8 @@ function resetEasy() {
     document.getElementById("enemyHolster").innerHTML = 5;
     document.getElementById("mode").innerHTML = gameMode.difficulty;
     document.getElementById("movesMade").innerHTML = gameMode.moves;
+    document.getElementById("easyButton").style.backgroundColor = "orange";
+    document.getElementById("mediumButton").style.backgroundColor = "grey";
 }
 
 
@@ -493,6 +506,8 @@ function resetMedium() {
     document.getElementById("enemyHolster").innerHTML = enemy.holster;
     document.getElementById("mode").innerHTML = gameMode.difficulty;
     document.getElementById("movesMade").innerHTML = gameMode.moves;
+    document.getElementById("easyButton").style.backgroundColor = "grey";
+    document.getElementById("mediumButton").style.backgroundColor = "orange";
     // document.getElementById("writtenRules").innerHTML = "Medium rules will go here...";
     mediumToNormal();
 }

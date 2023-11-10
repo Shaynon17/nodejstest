@@ -41,7 +41,7 @@ open git and type: npx localview --port 5500
         </div>
     </div>
 <!-- //////////////////////////////////////////////////////////////////////////////////// -->
-
+<p>Current Mode: <span id="mode">Easy</span></p>
     <p class="loadedHolster">
         Loaded: <label id="playerLoaded">0</label>
         Holster: <label id="playerHolster">5</label>
@@ -54,10 +54,24 @@ mainYourCard
 mainMenu
 mainEnemyCard
 mainEnemy 
+
 -->
+
 <div class="ohShootTitle">
     <h1>Oh Shoot!</h1>
 </div>
+<div id="rulesBox">
+    <h1>Rules: Easy</h1><br>
+    <p>test</p>
+    
+    <button onclick="rulesBoxClose()">Close</button>
+
+    <div>
+        <h2>Rules: Normal</h2>
+    </div>
+
+</div>
+
     <div class="main">
                     <img class="mainYourCard" id="leftHand" src="./images/leftHandBlank.png">
 
@@ -76,10 +90,12 @@ mainEnemy
         <!-- Main Menu -->
         <div  class="mainMenu">
             <!-- <h1>Oh Shoot!</h1> -->
-            <h2>Current Mode: <span id="mode">Easy</span></h2>
-            <h3 class="movesMade" ><label>Moves: <span id="movesMade">0</span></label></h3><br>
-            <button class="modeButtons" onclick="resetEasy()"><strong>Easy</strong></button>
-            <button class="modeButtons" onclick="resetMedium()"><strong>Normal</strong></button><br><br>
+            <!-- <h2>Current Mode: <span id="mode">Easy</span></h2> -->
+                <!-- <button class="modeButtons" onclick="rulesBoxOpen()">Rules</button> -->
+            <button id="easyButton" class="modeButtons" onclick="resetEasy()"><strong>Easy</strong></button>
+            <button id="mediumButton" class="modeButtons" onclick="resetMedium()"><strong>Normal</strong></button><br>
+                        <h3 class="movesMade"><label>Moves: <span id="movesMade">0</span></label></h3><br>
+
             <label class="comments" id="announce">First one to have all 10 bullets is the winner</label>
             </div>
             <!-- Right Enemy Hand -->

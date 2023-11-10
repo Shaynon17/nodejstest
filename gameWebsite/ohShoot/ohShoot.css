@@ -83,6 +83,23 @@
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
 /* Below is the css for the scoreboard area */
 
+#rulesBox {
+    position: fixed;
+        z-index: 11;
+        top: 80px;
+        /* left: 0; */
+        width: 90%;
+        height: 100%;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    width: 80%;
+    margin-left: 10%;
+    /* margin-right: 10%; */
+}
+
 #gradient {
     background-image: linear-gradient(to right, #cdffd8, #94b9ff);
 }
@@ -162,10 +179,34 @@
     border: 2px solid black;
 }
 
-.modeButtons:hover {
+/* .modeButtons:hover {
     background-color: orange;
-    /* font-size: 110%; */
+} */
+
+
+.modeButtons:hover {
+    padding: 5px 7px;
 }
+
+#easyButton {
+    background-color: orange;
+}
+
+
+#mediumButton {
+    background-color: grey;
+}
+
+
+/* 
+#easyButton:hover {
+padding: 5px 7px;
+}
+
+#mediumButton:hover {
+padding: 5px 7px;
+} */
+
 .comments {
     font-size: 20px;
 }
@@ -202,7 +243,7 @@ h2 {
 }
 
 .playerEnemyChoice {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /* .loadedHolster {
