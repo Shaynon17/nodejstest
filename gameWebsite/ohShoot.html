@@ -60,14 +60,49 @@ mainEnemy
 <div class="ohShootTitle">
     <h1>Oh Shoot!</h1>
 </div>
-<div id="rulesBox">
-    <h1>Rules: Easy</h1><br>
-    <p>test</p>
-    
-    <button onclick="rulesBoxClose()">Close</button>
 
-    <div>
-        <h2>Rules: Normal</h2>
+
+<div id="rulesBox">
+        <button onclick="rulesBoxClose()">Close Rules</button>
+            <div class="rulesSection">
+        <h1><span class="rulesSpan">Rules</span>: Easy</h1><br>
+        </div>
+    <div class="rulesSection">
+    <h2>Objective</h2>
+    <p>The first player to have all 10 bullets wins.</p>
+    <br>
+    </div>
+    <div class="rulesSection">
+    <h2>Reload</h2>
+    <p>Reloading removes a bullet from your inventory and reloads you.<br>
+        You may only have one bullet loaded at a time.</p><br>
+    </div>
+    <div class="rulesSection">
+    <h2>Shoot</h2>
+    <p>You must have a bullet loaded to shoot successfully, otherwise you may shoot a blank.<br>
+        After you shoot, the bullet goes back to your inventory.<br>
+        If you shoot someone who is reloading, they still reload, and you get a bullet from their inventory. <br>
+        If you shoot someone who is trying to punch, you get a bullet from their inventory. <br>
+        If both players shoot, the bullets cancel each other out, and go back to each players inventory.<br>
+    </p>
+    <br>
+    </div>
+    <div class="rulesSection">
+    <h2>Block</h2>
+    <p>Blocking only blocks bullets.</p>
+    <br>
+    </div>
+    <div class="rulesSection">
+    <h2>Punch</h2>
+    <p>If you punch someone who is blocking, you take a bullet from their inventory. <br>
+        If you punch someone who is reloading, you cancel their reload. </p><br>
+        </div><br>
+                    <div class="rulesSection">
+    <h1><span class="rulesSpan">Rules</span>: Normal</h1>
+    <p>The same rules as easy apply, plus the following:<br>
+        Each player starts loaded.<br>
+        You may not punch twice in a row<br>
+    </p>
     </div>
 
 </div>
@@ -91,7 +126,7 @@ mainEnemy
         <div  class="mainMenu">
             <!-- <h1>Oh Shoot!</h1> -->
             <!-- <h2>Current Mode: <span id="mode">Easy</span></h2> -->
-                <!-- <button class="modeButtons" onclick="rulesBoxOpen()">Rules</button> -->
+                <button class="modeButtons" onclick="rulesBoxOpen()">Rules</button>
             <button id="easyButton" class="modeButtons" onclick="resetEasy()"><strong>Easy</strong></button>
             <button id="mediumButton" class="modeButtons" onclick="resetMedium()"><strong>Normal</strong></button><br>
                         <h3 class="movesMade"><label>Moves: <span id="movesMade">0</span></label></h3><br>
