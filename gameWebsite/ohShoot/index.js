@@ -13,6 +13,10 @@ function resetEasy() {
     gameMode.lastPlayerChoice = '';
     document.getElementById('leftHand').src = "./images/leftHandBlank.png";
     document.getElementById('rightHand').src = "./images/rightHandBlank.png";
+    document.getElementById("leftBullet").src = "./images/LeftBullet5.png";
+    document.getElementById("leftCylinder").src = "./images/BlankCylinder.png";
+    document.getElementById("rightBullet").src = "./images/RightBullet5.png";
+    document.getElementById("rightCylinder").src = "./images/BlankCylinder.png";
     document.getElementById("enemyAction").innerHTML = '...';
     document.getElementById("playerChoice").innerHTML = 'Pick Your Card';
     document.getElementById("playerLoaded").innerHTML = 0;
@@ -185,6 +189,80 @@ const mediumToNormal = () => {
     }
 }
 
+
+const leftCylinder = () => {
+    if (player.loaded === 0) {
+        document.getElementById("leftCylinder").src = "./images/BlankCylinder.png";
+    } else if (player.loaded === 1) {
+        document.getElementById("leftCylinder").src = "./images/LeftCylinderLoaded.png";
+    }
+}
+
+const rightCylinder = () => {
+    if (enemy.loaded === 0) {
+        document.getElementById("rightCylinder").src = "./images/BlankCylinder.png";
+    } else if (enemy.loaded === 1) {
+        document.getElementById("rightCylinder").src = "./images/RightCylinderLoaded.png";
+    }
+}
+
+
+const leftBullets = () => {
+    if (player.holster === 0) {
+        document.getElementById("leftBullet").src = "./images/NoBullet.png";
+    } else if (player.holster === 1) {
+        document.getElementById("leftBullet").src = "./images/LeftBullet1.png";
+    } else if (player.holster === 2) {
+        document.getElementById("leftBullet").src = "./images/LeftBullet2.png";
+    } else if (player.holster === 3) {
+        document.getElementById("leftBullet").src = "./images/LeftBullet3.png";
+    } else if (player.holster === 4) {
+        document.getElementById("leftBullet").src = "./images/LeftBullet4.png";
+    } else if (player.holster === 5) {
+        document.getElementById("leftBullet").src = "./images/LeftBullet5.png";
+    } else if (player.holster === 6) {
+        document.getElementById("leftBullet").src = "./images/LeftBullet6.png";
+    } else if (player.holster === 7) {
+        document.getElementById("leftBullet").src = "./images/LeftBullet7.png";
+    } else if (player.holster === 8) {
+        document.getElementById("leftBullet").src = "./images/LeftBullet8.png";
+    } else if (player.holster === 9) {
+        document.getElementById("leftBullet").src = "./images/LeftBullet9.png";
+    }
+}
+
+const rightBullets = () => {
+    if (enemy.holster === 0) {
+        document.getElementById("rightBullet").src = "./images/NoBullet.png";
+    } else if (enemy.holster === 1) {
+        document.getElementById("rightBullet").src = "./images/RightBullet1.png";
+    } else if (enemy.holster === 2) {
+        document.getElementById("rightBullet").src = "./images/RightBullet2.png";
+    } else if (enemy.holster === 3) {
+        document.getElementById("rightBullet").src = "./images/RightBullet3.png";
+    } else if (enemy.holster === 4) {
+        document.getElementById("rightBullet").src = "./images/RightBullet4.png";
+    } else if (enemy.holster === 5) {
+        document.getElementById("rightBullet").src = "./images/RightBullet5.png";
+    } else if (enemy.holster === 6) {
+        document.getElementById("rightBullet").src = "./images/RightBullet6.png";
+    } else if (enemy.holster === 7) {
+        document.getElementById("rightBullet").src = "./images/RightBullet7.png";
+    } else if (enemy.holster === 8) {
+        document.getElementById("rightBullet").src = "./images/RightBullet8.png";
+    } else if (enemy.holster === 9) {
+        document.getElementById("rightBullet").src = "./images/RightBullet9.png";
+    }
+}
+
+
+const updateCylindersAndBullets = () => {
+    leftCylinder();
+    leftBullets();
+    rightBullets();
+    rightCylinder();
+}
+
 //used for all modes
 const updateScore = () => {
     document.getElementById("playerLoaded").innerHTML = player.loaded
@@ -193,6 +271,7 @@ const updateScore = () => {
     document.getElementById("enemyHolster").innerHTML = enemy.holster;
     fixEnemyActionShoot(); //might move function insde of here instead of having it as a helper function
     changeRightHand();
+  updateCylindersAndBullets();
     // mediumToNormal();
 }
 
@@ -218,6 +297,10 @@ const checkWinner = () => {
 
 //"reload" button onClick
 const reloadEasy = () => {
+    if (player.loaded === 1) {
+        gameMode.moves -= 1;
+        return alert('You are already loaded!');
+    }
     playerChoice("reloaded") //Updates playerChoice.innerHTML and gameMode.lastPlayerChoice
     let choice = enemyChoiceEasy(); //shuld return a decision
     if (player.loaded === 1) {
@@ -396,6 +479,10 @@ function resetMedium() {
     gameMode.lastPlayerChoice = '';
     document.getElementById('leftHand').src = "./images/leftHandBlank.png";
     document.getElementById('rightHand').src = "./images/rightHandBlank.png";
+    document.getElementById("leftBullet").src = "./images/LeftBullet4.png";
+    document.getElementById("leftCylinder").src = "./images/LeftCylinderLoaded.png";
+    document.getElementById("rightBullet").src = "./images/RightBullet4.png";
+    document.getElementById("rightCylinder").src = "./images/RightCylinderLoaded.png";
     document.getElementById("enemyAction").innerHTML = '...';
     document.getElementById("playerChoice").innerHTML = 'Pick Your Card';
     document.getElementById("playerLoaded").innerHTML = player.loaded;

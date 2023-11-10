@@ -42,7 +42,12 @@ open git and type: npx localview --port 5500
     </div>
 <!-- //////////////////////////////////////////////////////////////////////////////////// -->
 
-    
+    <p class="loadedHolster">
+        Loaded: <label id="playerLoaded">0</label>
+        Holster: <label id="playerHolster">5</label>
+        Loaded: <label id="enemyLoaded">0</label>
+        Holster: <label id="enemyHolster">5</label>
+    </p>
 <!-- 
 mainYou
 mainYourCard
@@ -59,11 +64,11 @@ mainEnemy
         <!-- Player Card Below -->
         <div class="mainYou">
             <h2>You</h2>
+                <img id="leftBullet" src="./images/LeftBullet5.png">
+                <img id="leftCylinder" src="./images/BlankCylinder.png">
+
             <label class="playerEnemyChoice" id="playerChoice">Pick Your Card</label>
-            <p class="loadedHolster" >
-                Loaded: <label id="playerLoaded">0</label><br>
-                Holster: <label id="playerHolster">5</label>
-            </p>
+        
         </div>
         <!-- Left Player Hand -->
             <!-- <p>player hand picture goes here</p> -->
@@ -81,11 +86,11 @@ mainEnemy
             <!-- Enemy Card -->
             <div class="mainEnemy">
                 <h2>Enemy</h2>
+                    <img id="rightBullet" src="./images/LeftBullet5.png">
+                    <img id="rightCylinder" src="./images/BlankCylinder.png">
+
                 <label class="playerEnemyChoice" id="enemyAction">...</label>
-                <p class="loadedHolster" >
-                    Loaded: <label id="enemyLoaded">0</label><br>
-                    Holster: <label id="enemyHolster">5</label>
-                </p>
+                <!-- <p class="loadedHolster" > -->
                 </div>
                     <img class="mainEnemyCard" id="rightHand" src="./images/rightHandBlank.png">
 
