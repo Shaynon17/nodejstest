@@ -644,11 +644,13 @@ const punchMedium = () => {
 //However, i will keep it here until the game is commpletley done then refactor (delete) if needed
 const shootMedium = () => {
     playerChoice("shot")
-    let choice = enemyChoiceEasy(); //shuld return a decision
+    let choice = enemyChoiceMedium(); //shuld return a decision
      if (player.loaded === 1 && choice === "block") {
         announce("Miss! The enemy blocked! Time to reload")
         player.loaded = 0;
         player.holster += 1;
+     } else if (player.loaded === 0 && choice === "block") {
+         announce("Click! You wern't loaded. Good thing they only blocked")
     } else if (player.loaded === 1 && choice === "reload") {
         announce("Good shot! Enjoy that prize bullet!")
         player.loaded = 0;
