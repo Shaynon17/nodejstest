@@ -56,20 +56,108 @@ mainEnemyCard
 mainEnemy 
 
 -->
-
-<div class="ohShootTitle">
+<div id="ohShootTitle">
     <h1>Oh Shoot!</h1>
 </div>
 
+<!-- <div id="rulesTitle">
+    <h1>Oh Shoot!</h1>
+    <button onclick="rulesBoxClose()">Close Rules</button>
+    </div> -->
+    
+    
+    <div id="rulesBox">
+    
+        <div id="ruleSectionLeft">
+    
+            <div class="ruleSectionLeftBoxs">
+                <p>Each hand shows each players choice. <br>
+                    You are blue, the enemy is red.</p>
+                <img src="./images/LeftReload.png">
+            </div>
+            <div class="ruleSectionLeftBoxs">
+                <p>The bullets under "You" represent <br>
+                    how many bullets you have unloaded</p>
+                <img src="./images/LeftBullet7.png">
+            </div>
+            <div class="ruleSectionLeftBoxs">
+                <p>This cylinder represents<br>
+                    you are loaded</p>
+                <img src="./images/LeftCylinderLoaded.png">
+            </div>
+            <div class="ruleSectionLeftBoxs">
+                <p>This cylinder represents<br>
+                    you are not loaded</p>
+                <img src="./images/BlankCylinder.png">
+            </div>
+            
+            </div>
+            
+            <!-- bellow is right rules section  -->
+            <div id="ruleSectionRight">
+            
+                <h1>Easy Rules</h1>
+    
+        <div class="rulesSRCards">
+            <h2  class="test"> Objective</h2>
+            <p   class="test">Each player starts with 5 unloaded bullets. The first player to have all 10 bullets wins.</p>
+        </div>
+        
+        <div class="rulesSRCards">
+            <h2>Reload</h2>
+            <p>Reloading removes a bullet from your inventory and reloads you.<br>
+                You may only have one bullet loaded at a time.</p>
+        </div>
+        
+        <div class="rulesSRCards">
+            <h2>Shoot</h2>
+            <p>You must have a bullet loaded to shoot successfully, otherwise you will shoot a blank.<br>
+                After you shoot, the bullet goes back to your inventory.<br>
+                If you shoot someone who is reloading, they still reload, and you get a bullet from their inventory. <br>
+                If you shoot someone who is trying to punch, you get a bullet from their inventory. <br>
+                If both players shoot, the bullets cancel each other out, and go back to each players inventory.<br></p>
+        </div>
+        
+        <div class="rulesSRCards">
+            <h2>Block</h2>
+            <p>Blocking only blocks bullets.</p>
+        </div>
+        
+        <div class="rulesSRCards">
+            <h2>Punch</h2>
+            <p>If you punch someone who is blocking, you take a bullet from their inventory. <br>
+                If you punch someone who is reloading, you cancel their reload.</p>
+        </div>
+        
+        <h1>Normal Rules</h1>
+        <p class="normalRulesP">Along with the easy rules, each player starts loaded, and you may not punch twice in a row.
+        </p>
+        
+        
+        <div id="rulesPlayerCards">
+            <h2>Click on a card<br>to select your action</h2>
+            <img src="./images/playerShootCard.png">
+            <img src="./images/playerReloadCard.png">
+            <img src="./images/playerBlockCard.png">
+            <img src="./images/playerPunchCard.png">
+        </div>
+        
+        
+        </div>
+        
+        </div>
+        
+        <!-- below is old rules box -->
+        <!-- 
+            <div id="rulesBox">
 
-<div id="rulesBox">
         <button onclick="rulesBoxClose()">Close Rules</button>
             <div class="rulesSection">
         <h1><span class="rulesSpan">Rules</span>: Easy</h1><br>
         </div>
     <div class="rulesSection">
     <h2>Objective</h2>
-    <p>The first player to have all 10 bullets wins.</p>
+    <p>Each player starts with 5 unloaded bullets. The first player to have all 10 bullets wins.</p>
     <br>
     </div>
     <div class="rulesSection">
@@ -79,7 +167,7 @@ mainEnemy
     </div>
     <div class="rulesSection">
     <h2>Shoot</h2>
-    <p>You must have a bullet loaded to shoot successfully, otherwise you may shoot a blank.<br>
+    <p>You must have a bullet loaded to shoot successfully, otherwise you will shoot a blank.<br>
         After you shoot, the bullet goes back to your inventory.<br>
         If you shoot someone who is reloading, they still reload, and you get a bullet from their inventory. <br>
         If you shoot someone who is trying to punch, you get a bullet from their inventory. <br>
@@ -99,13 +187,11 @@ mainEnemy
         </div><br>
                     <div class="rulesSection">
     <h1><span class="rulesSpan">Rules</span>: Normal</h1>
-    <p>The same rules as easy apply, plus the following:<br>
-        Each player starts loaded.<br>
-        You may not punch twice in a row<br>
+    <p>Along with the easy rules, each player starts loaded, and you may not punch twice in a row.
     </p>
     </div>
 
-</div>
+</div> -->
 
     <div class="main">
                     <img class="mainYourCard" id="leftHand" src="./images/leftHandBlank.png">

@@ -4,10 +4,12 @@
 //alert box
 const rulesBoxClose = () => {
  document.getElementById("rulesBox").style.display = "none";
+    document.getElementById("ohShootTitle").style.display = "";
 }
 
 const rulesBoxOpen = () => {
     document.getElementById("rulesBox").style.display = "flex";
+    document.getElementById("ohShootTitle").style.display = "none";
 }
 
 
